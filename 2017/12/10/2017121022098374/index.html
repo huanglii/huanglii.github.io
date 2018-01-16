@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.1" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.1" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hello World">
+<meta property="og:url" content="http://yoursite.com/2018/01/16/hello-world/index.html">
+<meta property="og:site_name" content="giser.xyz">
+<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-01-16T11:56:47.452Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hello World">
+<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/01/16/hello-world/"/>
+
+
+
+
+
+  <title>WEB开发库、插件、工具收藏 | giser.xyz</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">giser.xyz</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">地理与计算机的爱情故事</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />日程表</a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/10/2017121022098374/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="huangli">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="giser.xyz">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">WEB开发库、插件、工具收藏</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-10T22:09:10+08:00">2017-12-10</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/计算机/" itemprop="url" rel="index"><span itemprop="name">计算机</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>本文收藏了曾经使用过的一些库、插件、工具等，会不断更新！</p>
+</blockquote>
+<h2 id="1-色彩"><a href="#1-色彩" class="headerlink" title="1. 色彩"></a>1. 色彩</h2><h3 id="1-1-WebGradients"><a href="#1-1-WebGradients" class="headerlink" title="1.1 WebGradients"></a>1.1 WebGradients</h3><p>GitHub：<a href="https://github.com/itmeo/webgradients" target="_blank" rel="noopener">https://github.com/itmeo/webgradients</a></p>
+<p>项目主页：<a href="https://webgradients.com" target="_blank" rel="noopener">https://webgradients.com</a></p>
+<p>WebGradients 提供了180个渐变色彩，可作为网站任何部分的内容背景。提供多种格式下载，比如 PSD, Sketch, PNG 以及可直接复制 CSS 渐变代码。</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017121022023625.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017121022023625.png" alt="WebGradients"></a></p>
+<h3 id="1-2-Chroma-js"><a href="#1-2-Chroma-js" class="headerlink" title="1.2 Chroma.js"></a>1.2 Chroma.js</h3><p>GitHub：<a href="https://github.com/gka/chroma.js" target="_blank" rel="noopener">https://github.com/gka/chroma.js</a></p>
+<p>项目主页：<a href="http://gka.github.io/chroma.js/" target="_blank" rel="noopener">http://gka.github.io/chroma.js/</a></p>
+<p>Chroma.js 适用于各种颜色处理的，可实现各种颜色的转换和色阶处理。</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017121022032342.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017121022032342.png" alt="Chroma.js"></a></p>
+<h2 id="2-多媒体"><a href="#2-多媒体" class="headerlink" title="2. 多媒体"></a>2. 多媒体</h2><h3 id="2-1-BigPicture-js"><a href="#2-1-BigPicture-js" class="headerlink" title="2.1 BigPicture.js"></a>2.1 BigPicture.js</h3><p>GitHub：<a href="https://github.com/henrygd/bigpicture" target="_blank" rel="noopener">https://github.com/henrygd/bigpicture</a></p>
+<p>DEMO：<a href="https://henrygd.me/bigpicture/" target="_blank" rel="noopener">https://henrygd.me/bigpicture/</a></p>
+<p>BigPicture.js 支持本地和在线的图片、视频，回调函数（animationStart, animationEnd）。</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017121022035033.gif" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017121022035033.gif" alt="BigPicture.js"></a></p>
+<h3 id="2-2-Viewer-js"><a href="#2-2-Viewer-js" class="headerlink" title="2.2 Viewer.js"></a>2.2 Viewer.js</h3><p>GitHub(JS 版本)：<a href="https://github.com/fengyuanchen/viewerjs" target="_blank" rel="noopener">https://github.com/fengyuanchen/viewerjs</a></p>
+<p>GitHub(jQuery 版本)：<a href="https://github.com/fengyuanchen/viewer" target="_blank" rel="noopener">https://github.com/fengyuanchen/viewer</a></p>
+<p>Viewer.js 支持缩放旋转等，回调函数（build, built, show, shown, hide, hidden, view, viewed）。</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017121022041283.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017121022041283.png" alt="Viewer.js"></a></p>
+<h3 id="2-3-baguetteBox-js"><a href="#2-3-baguetteBox-js" class="headerlink" title="2.3 baguetteBox.js"></a>2.3 baguetteBox.js</h3><p>GitHub：<a href="https://github.com/feimosi/baguetteBox.js" target="_blank" rel="noopener">https://github.com/feimosi/baguetteBox.js</a></p>
+<p>项目主页：<a href="https://feimosi.github.io/baguetteBox.js/" target="_blank" rel="noopener">https://feimosi.github.io/baguetteBox.js/</a></p>
+<p>baguetteBox.js 支持移动设备、响应式（本站使用）</p>
+<h2 id="3-动画"><a href="#3-动画" class="headerlink" title="3. 动画"></a>3. 动画</h2><p>JavaScript和CSS3 动效库大全 <a href="http://www.ui.cn/detail/16348.html" target="_blank" rel="noopener">http://www.ui.cn/detail/16348.html</a></p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017121022044137.jpg" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017121022044137.jpg" alt="Web 动画网"></a></p>
+<h2 id="4-图表"><a href="#4-图表" class="headerlink" title="4. 图表"></a>4. 图表</h2><h3 id="4-1-ECharts"><a href="#4-1-ECharts" class="headerlink" title="4.1 ECharts"></a>4.1 ECharts</h3><p>GitHub：<a href="https://github.com/ecomfe/echarts" target="_blank" rel="noopener">https://github.com/ecomfe/echarts</a></p>
+<p>官网： <a href="http://echarts.baidu.com/" target="_blank" rel="noopener">http://echarts.baidu.com/</a></p>
+<p>ECharts 提供了常规的折线图，柱状图，散点图，饼图，K线图，用于统计的盒形图，用于地理数据可视化的地图，热力图，线图，用于关系数据可视化的关系图，treemap，多维数据可视化的平行坐标，还有用于 BI 的漏斗图，仪表盘，并且支持图与图之间的混搭。ECharts 3 开始独立出了“坐标系”的概念，支持了直角坐标系（catesian，同 grid）、极坐标系（polar）、地理坐标系（geo）。图表可以跨坐标系存在，例如折、柱、散点等图可以放在直角坐标系上，也可以放在极坐标系上，甚至可以放在地理坐标系中。</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017121022060125.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017121022060125.png" alt="ECharts"></a></p>
+<h3 id="4-2-Highcharts"><a href="#4-2-Highcharts" class="headerlink" title="4.2 Highcharts"></a>4.2 Highcharts</h3><p>官网：<a href="https://www.highcharts.com/" target="_blank" rel="noopener">https://www.highcharts.com/</a></p>
+<p>Highcharts 是国外的一款功能强大、开源、美观、图表丰富、兼容绝大多数浏览器的纯js图表库。Highcharts针对个人用户及非商业用途免费，商业用途需要购买授权。</p>
+<h3 id="4-3-AntV"><a href="#4-3-AntV" class="headerlink" title="4.3 AntV"></a>4.3 AntV</h3><p>GitHub：<a href="https://github.com/antvis/" target="_blank" rel="noopener">https://github.com/antvis/</a></p>
+<p>官网：<a href="https://antv.alipay.com/zh-cn/index.html" target="_blank" rel="noopener">https://antv.alipay.com/zh-cn/index.html</a></p>
+<p>AntV 是蚂蚁金服全新一代数据可视化解决方案，致力于提供一套简单方便、专业可靠、无限可能的数据可视化最佳实践。</p>
+<p>PC端——G2、移动端——F2、关系图类库——G6</p>
+<h2 id="5-其他（代码高亮、提示框、打字效果、数据处理）"><a href="#5-其他（代码高亮、提示框、打字效果、数据处理）" class="headerlink" title="5. 其他（代码高亮、提示框、打字效果、数据处理）"></a>5. 其他（代码高亮、提示框、打字效果、数据处理）</h2><h3 id="5-1-代码高亮"><a href="#5-1-代码高亮" class="headerlink" title="5.1 代码高亮"></a>5.1 代码高亮</h3><h4 id="5-1-1-highlight-js"><a href="#5-1-1-highlight-js" class="headerlink" title="5.1.1 highlight.js"></a>5.1.1 highlight.js</h4><p>GitHub：<a href="https://github.com/isagalaev/highlight.js" target="_blank" rel="noopener">https://github.com/isagalaev/highlight.js</a></p>
+<p>官网：<a href="https://highlightjs.org/" target="_blank" rel="noopener">https://highlightjs.org/</a></p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017121022064481.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017121022064481.png" alt="highlight.js"></a></p>
+<h3 id="5-2-提示框"><a href="#5-2-提示框" class="headerlink" title="5.2 提示框"></a>5.2 提示框</h3><h4 id="5-2-1-balloon-css"><a href="#5-2-1-balloon-css" class="headerlink" title="5.2.1 balloon.css"></a>5.2.1 balloon.css</h4><p>GitHub：<a href="https://github.com/kazzkiq/balloon.css" target="_blank" rel="noopener">https://github.com/kazzkiq/balloon.css</a> （本站使用）</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017121022072554.gif" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017121022072554.gif" alt="balloon.css"></a></p>
+<h3 id="5-3-打字效果"><a href="#5-3-打字效果" class="headerlink" title="5.3 打字效果"></a>5.3 打字效果</h3><h4 id="5-3-1-TheaterJS"><a href="#5-3-1-TheaterJS" class="headerlink" title="5.3.1 TheaterJS"></a>5.3.1 TheaterJS</h4><p>GitHub：<a href="https://github.com/Zhouzi/TheaterJS" target="_blank" rel="noopener">https://github.com/Zhouzi/TheaterJS</a></p>
+<p>DEMO：<a href="https://codepen.io/Zhouzi/pen/JoRazP" target="_blank" rel="noopener">https://codepen.io/Zhouzi/pen/JoRazP</a></p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017121022074145.gif" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017121022074145.gif" alt="TheaterJS"></a></p>
+<h4 id="5-3-2-typing-js"><a href="#5-3-2-typing-js" class="headerlink" title="5.3.2 typing.js"></a>5.3.2 typing.js</h4><p>GitHub：<a href="https://github.com/coffeedeveloper/typing.js" target="_blank" rel="noopener">https://github.com/coffeedeveloper/typing.js</a></p>
+<p>项目主页：<a href="http://coffeedeveloper.github.io/typing.js/" target="_blank" rel="noopener">http://coffeedeveloper.github.io/typing.js/</a></p>
+<p>DEMO：<a href="http://coffeedeveloper.github.io/typing.js/demo.html" target="_blank" rel="noopener">http://coffeedeveloper.github.io/typing.js/demo.html</a></p>
+<p>带闪烁效果的代码书写DEMO：<a href="http://coffeedeveloper.github.io/typing.js/demo2.html" target="_blank" rel="noopener">http://coffeedeveloper.github.io/typing.js/demo2.html</a></p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017121022080396.gif" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017121022080396.gif" alt="typing.js"></a></p>
+<h3 id="5-4-数值处理"><a href="#5-4-数值处理" class="headerlink" title="5.4 数值处理"></a>5.4 数值处理</h3><h4 id="5-4-1-decimal-js"><a href="#5-4-1-decimal-js" class="headerlink" title="5.4.1 decimal.js"></a>5.4.1 decimal.js</h4><p>GitHub：<a href="https://github.com/MikeMcl/decimal.js" target="_blank" rel="noopener">https://github.com/MikeMcl/decimal.js</a></p>
+<p>项目主页：<a href="http://mikemcl.github.io/decimal.js/" target="_blank" rel="noopener">http://mikemcl.github.io/decimal.js/</a></p>
+<p>任意精度的数值运算，功能齐全</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017121022082777.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017121022082777.png" alt="decimal.js"></a></p>
+<h3 id="5-5-日期处理"><a href="#5-5-日期处理" class="headerlink" title="5.5 日期处理"></a>5.5 日期处理</h3><h4 id="5-5-1-Moment-js"><a href="#5-5-1-Moment-js" class="headerlink" title="5.5.1 Moment.js"></a>5.5.1 Moment.js</h4><p>GitHub：<a href="https://github.com/moment/moment/" target="_blank" rel="noopener">https://github.com/moment/moment/</a></p>
+<p>中文网：<a href="http://momentjs.cn/" target="_blank" rel="noopener">http://momentjs.cn/</a></p>
+<h4 id="5-5-2-date-fns"><a href="#5-5-2-date-fns" class="headerlink" title="5.5.2 date-fns"></a>5.5.2 date-fns</h4><p>GitHub：<a href="https://github.com/date-fns/date-fns" target="_blank" rel="noopener">https://github.com/date-fns/date-fns</a></p>
+<p>中文介绍：<a href="https://coyee.com/article/12360-introduction-to-date-fns-a-lightweight-javascript-date-library" target="_blank" rel="noopener">https://coyee.com/article/12360-introduction-to-date-fns-a-lightweight-javascript-date-library</a></p>
+<blockquote>
+<p>工具虽多，可不要贪用哦！为了节约资源，请谨慎使用！！</p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Web/" rel="tag"># Web</a>
+          
+            <a href="/tags/动画/" rel="tag"># 动画</a>
+          
+            <a href="/tags/可视化/" rel="tag"># 可视化</a>
+          
+            <a href="/tags/工具/" rel="tag"># 工具</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/09/2017120910528357/" rel="next" title="【转】当你进行地图设计时，需要了解这些小知识">
+                <i class="fa fa-chevron-left"></i> 【转】当你进行地图设计时，需要了解这些小知识
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/12/2017121200008780/" rel="prev" title="【转】坐标系常见问题解答">
+                【转】坐标系常见问题解答 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">huangli</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">分类</span>
+                  
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    <span class="site-state-item-count">16</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/huanglii" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:849151701@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-色彩"><span class="nav-number">1.</span> <span class="nav-text">1. 色彩</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-WebGradients"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 WebGradients</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-Chroma-js"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 Chroma.js</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-多媒体"><span class="nav-number">2.</span> <span class="nav-text">2. 多媒体</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-BigPicture-js"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 BigPicture.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-Viewer-js"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 Viewer.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-baguetteBox-js"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 baguetteBox.js</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-动画"><span class="nav-number">3.</span> <span class="nav-text">3. 动画</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-图表"><span class="nav-number">4.</span> <span class="nav-text">4. 图表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-ECharts"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 ECharts</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-Highcharts"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 Highcharts</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-AntV"><span class="nav-number">4.3.</span> <span class="nav-text">4.3 AntV</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-其他（代码高亮、提示框、打字效果、数据处理）"><span class="nav-number">5.</span> <span class="nav-text">5. 其他（代码高亮、提示框、打字效果、数据处理）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-代码高亮"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 代码高亮</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-1-highlight-js"><span class="nav-number">5.1.1.</span> <span class="nav-text">5.1.1 highlight.js</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-提示框"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 提示框</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-1-balloon-css"><span class="nav-number">5.2.1.</span> <span class="nav-text">5.2.1 balloon.css</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-打字效果"><span class="nav-number">5.3.</span> <span class="nav-text">5.3 打字效果</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-1-TheaterJS"><span class="nav-number">5.3.1.</span> <span class="nav-text">5.3.1 TheaterJS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-2-typing-js"><span class="nav-number">5.3.2.</span> <span class="nav-text">5.3.2 typing.js</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-数值处理"><span class="nav-number">5.4.</span> <span class="nav-text">5.4 数值处理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-4-1-decimal-js"><span class="nav-number">5.4.1.</span> <span class="nav-text">5.4.1 decimal.js</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-5-日期处理"><span class="nav-number">5.5.</span> <span class="nav-text">5.5 日期处理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-5-1-Moment-js"><span class="nav-number">5.5.1.</span> <span class="nav-text">5.5.1 Moment.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-5-2-date-fns"><span class="nav-number">5.5.2.</span> <span class="nav-text">5.5.2 date-fns</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">huangli</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.1"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

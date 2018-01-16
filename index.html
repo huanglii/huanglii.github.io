@@ -1,0 +1,2336 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.0.1" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.1" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hello World">
+<meta property="og:url" content="http://yoursite.com/2018/01/16/hello-world/index.html">
+<meta property="og:site_name" content="giser.xyz">
+<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-01-16T11:56:47.452Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hello World">
+<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.0.1',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/01/16/hello-world/"/>
+
+
+
+
+
+  <title>giser.xyz</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">giser.xyz</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">地理与计算机的爱情故事</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />日程表</a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/16/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="huangli">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="giser.xyz">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/16/hello-world/" itemprop="url">Hello World</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-16T19:56:47+08:00">2018-01-16</time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/12/2017121200008780/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="huangli">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="giser.xyz">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/12/2017121200008780/" itemprop="url">【转】坐标系常见问题解答</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-12T00:00:31+08:00">2017-12-12</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/地理/" itemprop="url" rel="index"><span itemprop="name">地理</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><a href="http://bbs.3s001.com/" target="_blank" rel="noopener">地信论坛</a>收集的一些关于坐标系的常见问题：</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017121715190148.jpg" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017121715190148.jpg" alt="高斯克吕格投影分带"></a></p>
+<ul>
+<li>问：我这有2个不同坐标的shp要素，这2个要素是同一地理位置的，但是在arcmap中打开不能显示在同一范围内，所以我将其中一个要素的坐标转换成另一个要素的坐标，但是转换后，2个要素还是不能显示在同一范围内。怎么办？</li>
+<li><p>答： 能不能叠加的关键是各自的坐标系要正确，不一定要相同。检查数据的坐标系，错误的重新定义成正确的即可叠加到一起。</p>
+</li>
+<li><p>问：犯了个错误：有一个shape文件是54坐标系的，我不小心定义成80坐标系了，然后以之为标准对其它shape文件进行空间配准，今天弄分幅图的时候才发现错位了，请问有没有什么办法补救呢？</p>
+</li>
+<li><p>答： 把那些数据都重新定义成54坐标系。</p>
+</li>
+<li><p>问：如何看出定义的坐标系是错误的？我听说是从extent能看出来，但是我怎么看不出来？</p>
+</li>
+<li><p>答： 从extent看出坐标系是否正确要建立在对各种坐标系的坐标形式、坐标范围很了解的条件下。比如wgs84等地理坐标系的范围应满足-180≤X≤180，-90≤Y≤90，再比如Xian_1980_3_Degree_GK_Zone_38坐标系的坐标的形式是（38XXXXXX，YYYYYYY）等，如果你数据的坐标形式是(19XXXXXX,YYYYYYY)而你定义成Xian_1980_3_Degree_GK_Zone_38就错了。当然有些错误从extent是看不出来的，比如你的数据正确的坐标系是Xian_1980_3_Degree_GK_CM_111E而你定义成了Beijing_1954_3_Degree_GK_CM_111E，这个错误从extent是看不出来的。</p>
+</li>
+<li><p>问：我的数据是wgs84坐标系的，在dataframe的属性里将display unit改成米后右下角显示的坐标就会变成以米为单位，我想问这个坐标是怎么计算出来的？</p>
+</li>
+<li><p>答： 是根据赤道长度及经纬度计算出来的。地球长轴为6378137米，赤道长度为2×6378137×π≈40075016.686米，则赤道上1°≈111319.491米。假设某点的经纬度坐标为(63.767584,36.747445)，则将display unit换成meter后其坐标就是(7098574.996427,4090706.892127)，自己验证一下。</p>
+</li>
+<li><p>问：有一个数据有坐标系，是错误的，想进行修改，那么使用哪个工具呢？</p>
+</li>
+<li><p>答： 用define projection重新定义坐标系。</p>
+</li>
+<li><p>问：我的栅格是北京54投影坐标系下的tif格式文件，做裁切后为什么坐标系变成Krasovsky_1940_Transverse_Mercator了，我什么也没设置啊。</p>
+</li>
+<li><p>答： 你存成grid格式了吧？北京54和西安80投影坐标系的栅格转存成grid格式后会自动改变。北京54坐标系会变成Krasovsky_1940_Transverse_Mercator，西安80坐标系会变成User_Defined_Transverse_Mercator，这是历史原因造成的，不必理会它。</p>
+</li>
+<li><p>问：我用arcgis计算面积时，数据的坐标系为WGS_84，求出来的结果是平方度，如何将其转换为平方米？</p>
+</li>
+<li><p>答： 地理坐标系不适合求面积，平方度也不是面积单位，不同纬度1°×1°范围的面积不相同。可将你的数据用project转成WGS 1984 UTM投影坐标系后再求面积。</p>
+</li>
+<li><p>问：有一个无坐标系统的shp层，我用define projection给它定义坐标系统后，然后加到arcmap中来，提示Warning,inconsistent extent!这是什么原因？怎么解决？</p>
+</li>
+<li><p>答： 坐标系定义错误，比如有带号的坐标系数据定义成没带号的坐标系，或者把投影坐标系的数据定义成了地理坐标系等等。找出正确的坐标系并用define projection或在arccatalog里重新定义。</p>
+</li>
+<li><p>问：我想计算中国各大港口之间的欧式距离，但用ArcGIS和google earth两种方式计算的结果相差200多公里，我用ArcGIS计算的步骤如下： a搜集天津港和深圳港的经纬度并制作成Excel表 b在ArcCatalog中创建port点图层（shapefile格式），选择GCS-WGS1984 c在ArcMap中添加port图层，使用Tool-&gt;add XY data创建点图层中要素 d使用project转换port图层，投影坐标系选择PDC-WGS1984 e使用Point Distance计算点间距离<br>以上五步中，哪一步出错了？</p>
+</li>
+<li><p>答： 同样两地在不同坐标系下所求的距离有可能不相等。google earth里求距离、面积等并不是用PDC-WGS1984坐标系算出的，用此坐标系算出的距离、面积和实际的数比有很大的误差。一般计算距离时用等距离投影，计算面积时用等面积投影。</p>
+</li>
+<li><p>问：按理说，计算距离等应该在投影坐标系下进行，书上也说经纬度坐标系不是一种平面坐标系，因为度不是标准的长度单位，不可用其量测面积长度。但是在地理坐标系下（比如WGS84)arcmap的measure工具是可以选择公里为单位进行测量的，请问这个是怎么计算长度的（比如以什么投影系统为基准）？</p>
+</li>
+<li><p>答： 用测量学的方法根据两点的经纬度计算出的球面距离。</p>
+</li>
+<li><p>问：为什么我的数据做了clip后变形很大，原来不相连的地方都连在一起了？</p>
+</li>
+<li><p>答： tolerance的问题。一般原因是地理坐标系数据没有定义坐标系或定义成了投影坐标系。当地理坐标系数据没有定义坐标系或定义成了投影坐标系时系统默认的tolerance是0.001，这对投影坐标系的数据来说是合适的，这样的数据不会出错。当你的数据是地理坐标系时，0.001就显得太大了，相当于投影坐标系的100米左右，当两个节点距离小于这个值时就会合并成一个，所以就会出现处理后的数据不该合并的地方合并了，惨不忍睹。</p>
+</li>
+<li><p>问：在做Extract By Mask时出现错误： An error was encountered while executing ExtractByMask. (“esriGeoAnalyst.GridEngine”) Could not get a valid extent. Failed to execute (ExtractByMask_3). 请问是什么地方出错了？改如何解决呢？</p>
+</li>
+<li><p>答： 检查是否都正确定义了坐标系。</p>
+</li>
+<li><p>问：创建点时出错提示“不能创建要素坐标或测量值超出范围”，这是什么原因？</p>
+</li>
+<li><p>答： 这问题经常出现在空的图层中“随意画”时。要素类或shapefile是有有效范围的，超出这个范围就不能创建要素了。</p>
+</li>
+<li><p>问：我在用ArcGIS计算DEM坡度时，最低0度，最高89度，平均坡度也达到了87度，肯定是不对的，这是什么原因？</p>
+</li>
+<li><p>答： 一般出现这种情况是因为你的数据是经纬度的坐标系。转换成投影坐标系后再做。</p>
+</li>
+<li><p>问：为什么地理坐标系dem求出的slope是错误的呢？</p>
+</li>
+<li><p>答： 因为slope和距离、高程有关，你的数据中XY坐标是度，Z坐标是米，单位不一样，但数据中可能只有X、Y的单位信息，没有Z的单位信息，系统会认为它们单位都一样，所以计算会出错。比如说，在地理坐标系下，两个象元相距0.001度，高程相差1米，在地理坐标系下计算时这两点连线和水平面夹角的正切就是1000，也就是两点连线和水平面的夹角是89.943°</p>
+</li>
+<li><p>问：为什么我的栅格不能做配准，georeferencing工具条中不出现栅格图层名？</p>
+</li>
+<li><p>答： 因为你的栅格的坐标系信息和data frame的坐标系不一致，把data frame的坐标系设成栅格的坐标系后就能做了。</p>
+</li>
+<li><p>问：在arcmap中显示全国地图全图比例尺大概有1比几百万吧，也不知道被我执行了什么操作，地图好像被所缩小了一样，在整个中国全显示的情况下，比例尺竟然达到1:128,请问这是怎么回事？</p>
+</li>
+<li><p>答： 错误的定义了坐标系，将地理坐标系数据定义成了投影坐标系，或者对无坐标系信息的地理坐标系数据在data frame里将map unit设成了meter。</p>
+</li>
+<li><p>问：给shp格式的定义坐标系，用的是define projection，但是定义完后出现了”Datum conflict between map and output”这句绿色字体的警告，什么原因？</p>
+</li>
+<li><p>答： 提示Datum conflict between map and output是因为你的数据的坐标系和dataframe的坐标系不一致，一般可不必理会。</p>
+</li>
+<li><p>问：先打开有地理坐标系的图层1，然后在这个图层上面叠加一个无坐标系统的图层2。图层2也和图层1一样都是地理坐标系，但图层2显示的地理位置却全部错了，飞到老远的地方去了，原来是可以叠加到一起的，这是为什么？</p>
+</li>
+<li><p>答： 那是因为你当前的的dataframe的坐标系统和图层一的不一致，而图层一因为有坐标系统能正确动态投影，而图层二没有坐标系统不能正确投影。你试着打开arcmap后只加进这两个图层看看能否正确叠加。</p>
+</li>
+<li><p>问：我们需要提交shape成果，要求：“以度为单位的地理坐标系数据，大地坐标参照系为1954北京坐标系”，我的数据现在是北京54坐标系，显示的是六位七位的公里网格坐标，我转换了坐标系后还显示的六七位数，不是经纬度，我试了老半天了，开始把投影删了，直接定义投影为地理坐标系里的asia的beijing1954，但是单位还是错的，而且每次一加载还提示一个错误，哪里出问题了？</p>
+</li>
+<li><p>答： 你需要的是转换坐标系而不是重新定义坐标系。转换坐标系要用project（矢量）或 project raster（栅格）来做而不是用define projection来做。</p>
+</li>
+<li><p>问：地理坐标系不是球面坐标系么，如果没有投影的话，为什么能在arcmap这个平面上显示呢？</p>
+</li>
+<li><p>答： 地球表面是球面，但地图是平面的。绘制地图时在平面上建立一个直角坐标系，x轴代表经度，y轴代表纬度，坐标轴单位是度。地球上任意一点都有经纬度，按照这个经纬度在地图上找到对应坐标点即可将球面上的点转绘到平面地图上。</p>
+</li>
+<li><p>问：怎样得到某个投影坐标系的坐标范围？比如西安80，37°带坐标系，它的X、Y最大最小值分别是多少，怎么计算？</p>
+</li>
+<li><p>答： x坐标范围：37500000加减赤道1.5°的长度 y坐标范围：正负二分之一中央经线长度</p>
+</li>
+<li><p>问：UTM 的是“以中央经线投影为纵轴x，赤道投影为横轴y”，高斯克吕格 具体构成方法是“以中央经线为x轴，赤道为y轴”，而在描述投影坐标系统时说的是“中心水平线称为x轴，中心垂直线为y轴”—-以上引号皆摘自清华大学出版的那套上下册的gis书，请问，这到底是为什么？我校正图像的时候都晕乎的，到底哪个是x，哪个是y？</p>
+</li>
+<li><p>答： 数学坐标系（也叫笛卡尔坐标系）水平的是x轴，垂直的是y轴，测量坐标系水平的是y轴垂直的是x轴。你说的那书是以测量坐标系叙述的，而 在gis软件里一般都用笛卡尔坐标系。入乡随俗，既然用gis软件就要按笛卡尔坐标系的规矩来做，不要被书上说的所左右。</p>
+</li>
+<li><p>问：我看一本书上写的是，在使用十进制度的wgs_1984坐标系中，数据精度是1厘米，容限值为（0.01/（63781370.017453292519943299））/10，约等于8.983e-9，当时看了之后不明白为什么要除以（63781370.017453292519943299）这串数字，现在也不明白，我现在的数据的Projected Coordinate System是WGS_1984_UTM_Zone_49N，在按照此作拓扑时，拓扑容限值默认是0.001，而不是8.983e-9，不知为什么，我如果把0.001改成8.983e-9，在结束时就会出错，不知为什么，请大家指教。</p>
+</li>
+<li><p>答： 除以那个数是计算在赤道上1米相当于多少度的一段圆弧。360°=2π赤道半径（≈6378137）米，则1米≈360°/(2π6378137)，而2π/360≈0.017453292519943299，也就是1米≈1/(6378137*0.017453292519943299)° 而一般设为容差为精度的10倍。根据上面的分析不难得出那个结果。 WGS_1984_UTM_Zone_49N的单位是米，所以该设成0.001，而不是设成8.983e-9，只有以度为单位的地理坐标系才能设成8.983e-9</p>
+</li>
+<li><p>问：我的shp数据文件是1980坐标系的，不过没有加大数的，请问如何加大数啊？就是x坐标前面都加一个40.</p>
+</li>
+<li><p>答： 用project或project raster转换到相应有带号的坐标系。</p>
+</li>
+<li><p>问：原始数据为gtopo 1km的全球dem，地理坐标系为wgs84，但经过投影转换后，dem严重变形。我选择的是兰伯特双标准纬线等角圆锥投影，投影参数为：<br>Projection: Lambert_Conformal_Conic False_Easting: 0.000000 False_Northing: 0.000000 Central_Meridian: 97.000000 Standard_Parallel_1: 30.000000 Standard_Parallel_2: 62.000000 Latitude_Of_Origin: 0.000000 Linear Unit: Meter (1.000000)<br>Geographic Coordinate System: GCS_WGS_1984 Angular Unit: Degree (0.017453292519943299) Prime Meridian: Greenwich (0.000000000000000000) Datum: D_WGS_1984 Spheroid: WGS_1984 Semimajor Axis: 6378137.000000000000000000 Semiminor Axis: 6356752.314245179300000000 Inverse Flattening: 298.257223563000030000</p>
+</li>
+<li><p>答： 全球数据不适合用兰伯特双标准纬线等角圆锥投影，可改用Robinson投影坐标系。</p>
+</li>
+<li><p>问：投影信息中有几个参数不是太了解：首先Projection: Gauss_Kruger这个是知道的，下面的Parameters:参数是指什么，通常取什么值呢？还有Angular Unit: Degree(0.017453292519943299) 这个角度为什么取这个特定值，他是怎么计算出来的？还有一个我在程序里看到有个参数，取值是57.29577951308232，这个是代表什么？希望了解的帮忙解释一下</p>
+</li>
+<li><p>答： 每种投影的Parameters个数不一定一样、值也不一定相等，一般有伪偏东false_east、伪偏北false_north、中央经线central_meridian、投影原点latitude_of_origin、线性单位linear unit等。0.017453292519943299是一度等于多少弧度，57.29577951308232是一弧度等于多少度。</p>
+</li>
+<li><p>问：我有一个政区图矢量文件，坐标是（123456，1234567）这样的形式，视图属性里显示无坐标系。我就利用arctoolbox 定义一个地理坐标系，但是定义后显示的经纬度数值没任何变化，这是怎么回事。后来定义投影坐标系数值也是没变化。</p>
+</li>
+<li><p>答： 定义坐标系不会改变坐标的数值。你的数据应该是投影坐标系的数据。先搞清楚正确的坐标系并定义之，需要经纬度的话用project转换到相应的地理坐标系。如果只是要显示经纬度的话，也可以正确定义坐标系后在dataframe的属性里将其坐标系设成相应的地理坐标系，并把display unit设成度或度分秒。</p>
+</li>
+<li><p>问：为什么同一个区域两个坐标系完全一样的SHP文件却无重合？</p>
+</li>
+<li><p>答： 至少有一个数据的坐标系是错误的。能否正确叠加不在于两个数据的坐标系是否一样，而在于是否正确。</p>
+</li>
+<li><p>问：有个投影坐标系的世界地图，中国在边上，出图时怎么能使中国位于中间呢？</p>
+</li>
+<li><p>答： 投影坐标系参数里边有个中央经线（Central_Meridian），将data frame的坐标系设成世界地图的坐标系，并把中央经线设置为105°。</p>
+</li>
+<li><p>问：两个数据坐标系不同，为啥加进arcmap中能够重合？</p>
+</li>
+<li><p>答： arcmap会自动将加进去的数据的坐标系在内存中转换到data frame的坐标系来显示，即所谓的动态投影。它只是在内存中转换，并不改变数据本身的坐标系。</p>
+</li>
+<li><p>问：我将矢量数据从Beijing_1954_3_Degree_GK_CM_111E转换到了Beijing_1954_GK_Zone_19N，为什么坐标值没有变化啊？</p>
+</li>
+<li><p>答： 这两个坐标系的投影方式、中央经线、原点、伪偏东等参数都一样，计算坐标的方法也就一样，所不同的只是包含范围不一样，所以在三度带的范围内所有点在这两个坐标系下的坐标都一样。</p>
+</li>
+<li><p>问：我原来有个数据里的图形是圆形的，现在怎么变成椭圆了，我保证数据没有动过。</p>
+</li>
+<li><p>答： data frame的坐标系和数据的坐标系不一致造成的，比如你数据的坐标系是以地理坐标系，现在用了投影坐标系显示。</p>
+</li>
+<li><p>问：为什么我的全国地图显示出来比较扁，和挂图上的中国地图样子不一样呢？</p>
+</li>
+<li><p>答： 不同坐标系下同一个图的样子可能会不一样，若你的全国数据是在地理坐标系下显示的就会看起来比较扁。</p>
+</li>
+<li><p>问：我的数据坐标系为： China_Lambert_Conformal_Conic Projection: Lambert_Conformal_Conic False_Easting: 0.000000 False_Northing: 0.000000 Central_Meridian: 125.000000 Standard_Parallel_1: 42.000000 Standard_Parallel_2: 51.000000 Latitude_Of_Origin: 0.000000 Linear Unit: Meter<br>GCS_Beijing_1954 Datum: D_Beijing_1954 添加经纬度grid后经线和纬线不是直线，我想要直的经纬线该怎么做啊？</p>
+</li>
+<li><p>答： 将data frame的坐标系设为相应的地理坐标系，即Beijing 1954地理坐标系。</p>
+</li>
+<li><p>问：原有的SHP图层是没有投影的，我用define projection 把投影转成albers，可是为什么中国地图还是扁的，查看图层投影已经是albers了</p>
+</li>
+<li><p>答： 应该先用define projection定义正确的地理坐标系，再用project转换到albers投影坐标系，而不是直接定义成albers投影坐标系。</p>
+</li>
+<li><p>问：我在arcmap里面加载了一副中国省界shp数据。右下角显示的坐标是：102.968 5.936 Meters…单位是米，但是102.968 5.936分别代表的是经纬度啊，这里显示成米，不知道该怎么转换呢？<br>答： 两种可能： 1、无坐标系信息的数据在data frame的特性里将map unit设成了meter 2、错误地将地理坐标系的数据定义了投影坐标系</p>
+</li>
+<li><p>问：地理坐标系数据想转成UTM投影坐标系，数据不在一个6°带范围内该怎么选坐标系？</p>
+</li>
+<li><p>答： 若数据东西跨度不超过6°，可修改已有的坐标系，建个非标准的坐标系，中央经线选你数据范围中间的经度。例如我的数据东西范围是东经105.5°到东经110°，跨WGS_1984_UTM_Zone_48N和WGS_1984_UTM_Zone_49N两条带，我可修改WGS_1984_UTM_Zone_48N坐标系的参数，中央经线设为108°，名称改为WGS_1984_UTM_Zone_48N_A。 若东西跨度超过了6°就不适合用utm坐标系了，用其他投影坐标系吧，例如lambert投影的坐标系。</p>
+</li>
+<li><p>问：现有一批国内某地区的数据，跨带很广，要拼接到一起，那这些数据在投影上应该如何选择，尤其是大比例尺地图，还是用常规的分带投影吗？ 比如按惯例1：10w的数据是6度分带，现在假如有17-21带的数据，放大到一定程度以后如果还是6度分带并且统一到一个带，两边的地图肯定会变形很大；如果不统一到一个带，接缝的地方可以正常拼接吗？ 这种情况下是大比例尺地图也使用WGS84的球面坐标呢？还是将这些数据都投影到一个带，即使变形也不管？</p>
+</li>
+<li><p>答： 研究区域跨多条带拼接时应该用albers、lambert等投影坐标系来做。</p>
+</li>
+<li><p>问：全国数据是albers坐标系的，怎么将经纬网添加上去,线线都是直的呀?</p>
+</li>
+<li><p>答： 检查data frame的坐标系是否是地理坐标系。data frame设成数据的坐标系后应该就正确了。</p>
+</li>
+<li><p>问：我将地理坐标系的全国数据转换到了albers投影坐标系，但转换后最后出来的地图不是北朝上而朝左了，这是哪里出问题了呢？</p>
+</li>
+<li><p>答：检查中央经线设置是否正确，全国albers坐标系的中央经线通常用105°。中央经线决定了图形旋转的方向和角度，与中央经线为105度的图相比较，小于105度就会向左转，大于105度就会向右转。</p>
+</li>
+<li><p>问：DEM栅格图转成点图层，操作Add XY Coordinate时，计算出来的点坐标是以米为单位的，请问我想得到经纬度值应如何操作呢？</p>
+</li>
+<li><p>答：将data frame设成地理坐标系，用calculate geometry按data frame的坐标系计算点的经纬度坐标。</p>
+</li>
+<li><p>问：一个图层从WGS-1984-Albers到xian-1980-Albers，下面的Geographic transformation怎么选择？</p>
+</li>
+<li>答：因WGS-1984-Albers到xian-1980-Albers是不同椭球体之间的坐标转换，精确转换需要用转换参数来定义Geographic transformation。转换参数可去当地测绘部门索取或购买。如果精度要求不是很高的话可用arcgis的动态投影转换，即：将data frame的坐标系设成xian-1980-Albers，按data frame的坐标系导出数据。<blockquote>
+<p>原文链接：<a href="http://mp.weixin.qq.com/s/QqdLUwYcYRnaiTVeE9e9Fg" target="_blank" rel="noopener">坐标系常见问题解答</a></p>
+</blockquote>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/10/2017121022098374/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="huangli">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="giser.xyz">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/10/2017121022098374/" itemprop="url">WEB开发库、插件、工具收藏</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-10T22:09:10+08:00">2017-12-10</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/计算机/" itemprop="url" rel="index"><span itemprop="name">计算机</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>本文收藏了曾经使用过的一些库、插件、工具等，会不断更新！</p>
+</blockquote>
+<h2 id="1-色彩"><a href="#1-色彩" class="headerlink" title="1. 色彩"></a>1. 色彩</h2><h3 id="1-1-WebGradients"><a href="#1-1-WebGradients" class="headerlink" title="1.1 WebGradients"></a>1.1 WebGradients</h3><p>GitHub：<a href="https://github.com/itmeo/webgradients" target="_blank" rel="noopener">https://github.com/itmeo/webgradients</a></p>
+<p>项目主页：<a href="https://webgradients.com" target="_blank" rel="noopener">https://webgradients.com</a></p>
+<p>WebGradients 提供了180个渐变色彩，可作为网站任何部分的内容背景。提供多种格式下载，比如 PSD, Sketch, PNG 以及可直接复制 CSS 渐变代码。</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017121022023625.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017121022023625.png" alt="WebGradients"></a></p>
+<h3 id="1-2-Chroma-js"><a href="#1-2-Chroma-js" class="headerlink" title="1.2 Chroma.js"></a>1.2 Chroma.js</h3><p>GitHub：<a href="https://github.com/gka/chroma.js" target="_blank" rel="noopener">https://github.com/gka/chroma.js</a></p>
+<p>项目主页：<a href="http://gka.github.io/chroma.js/" target="_blank" rel="noopener">http://gka.github.io/chroma.js/</a></p>
+<p>Chroma.js 适用于各种颜色处理的，可实现各种颜色的转换和色阶处理。</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017121022032342.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017121022032342.png" alt="Chroma.js"></a></p>
+<h2 id="2-多媒体"><a href="#2-多媒体" class="headerlink" title="2. 多媒体"></a>2. 多媒体</h2><h3 id="2-1-BigPicture-js"><a href="#2-1-BigPicture-js" class="headerlink" title="2.1 BigPicture.js"></a>2.1 BigPicture.js</h3><p>GitHub：<a href="https://github.com/henrygd/bigpicture" target="_blank" rel="noopener">https://github.com/henrygd/bigpicture</a></p>
+<p>DEMO：<a href="https://henrygd.me/bigpicture/" target="_blank" rel="noopener">https://henrygd.me/bigpicture/</a></p>
+<p>BigPicture.js 支持本地和在线的图片、视频，回调函数（animationStart, animationEnd）。</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017121022035033.gif" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017121022035033.gif" alt="BigPicture.js"></a></p>
+<h3 id="2-2-Viewer-js"><a href="#2-2-Viewer-js" class="headerlink" title="2.2 Viewer.js"></a>2.2 Viewer.js</h3><p>GitHub(JS 版本)：<a href="https://github.com/fengyuanchen/viewerjs" target="_blank" rel="noopener">https://github.com/fengyuanchen/viewerjs</a></p>
+<p>GitHub(jQuery 版本)：<a href="https://github.com/fengyuanchen/viewer" target="_blank" rel="noopener">https://github.com/fengyuanchen/viewer</a></p>
+<p>Viewer.js 支持缩放旋转等，回调函数（build, built, show, shown, hide, hidden, view, viewed）。</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017121022041283.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017121022041283.png" alt="Viewer.js"></a></p>
+<h3 id="2-3-baguetteBox-js"><a href="#2-3-baguetteBox-js" class="headerlink" title="2.3 baguetteBox.js"></a>2.3 baguetteBox.js</h3><p>GitHub：<a href="https://github.com/feimosi/baguetteBox.js" target="_blank" rel="noopener">https://github.com/feimosi/baguetteBox.js</a></p>
+<p>项目主页：<a href="https://feimosi.github.io/baguetteBox.js/" target="_blank" rel="noopener">https://feimosi.github.io/baguetteBox.js/</a></p>
+<p>baguetteBox.js 支持移动设备、响应式（本站使用）</p>
+<h2 id="3-动画"><a href="#3-动画" class="headerlink" title="3. 动画"></a>3. 动画</h2><p>JavaScript和CSS3 动效库大全 <a href="http://www.ui.cn/detail/16348.html" target="_blank" rel="noopener">http://www.ui.cn/detail/16348.html</a></p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017121022044137.jpg" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017121022044137.jpg" alt="Web 动画网"></a></p>
+<h2 id="4-图表"><a href="#4-图表" class="headerlink" title="4. 图表"></a>4. 图表</h2><h3 id="4-1-ECharts"><a href="#4-1-ECharts" class="headerlink" title="4.1 ECharts"></a>4.1 ECharts</h3><p>GitHub：<a href="https://github.com/ecomfe/echarts" target="_blank" rel="noopener">https://github.com/ecomfe/echarts</a></p>
+<p>官网： <a href="http://echarts.baidu.com/" target="_blank" rel="noopener">http://echarts.baidu.com/</a></p>
+<p>ECharts 提供了常规的折线图，柱状图，散点图，饼图，K线图，用于统计的盒形图，用于地理数据可视化的地图，热力图，线图，用于关系数据可视化的关系图，treemap，多维数据可视化的平行坐标，还有用于 BI 的漏斗图，仪表盘，并且支持图与图之间的混搭。ECharts 3 开始独立出了“坐标系”的概念，支持了直角坐标系（catesian，同 grid）、极坐标系（polar）、地理坐标系（geo）。图表可以跨坐标系存在，例如折、柱、散点等图可以放在直角坐标系上，也可以放在极坐标系上，甚至可以放在地理坐标系中。</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017121022060125.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017121022060125.png" alt="ECharts"></a></p>
+<h3 id="4-2-Highcharts"><a href="#4-2-Highcharts" class="headerlink" title="4.2 Highcharts"></a>4.2 Highcharts</h3><p>官网：<a href="https://www.highcharts.com/" target="_blank" rel="noopener">https://www.highcharts.com/</a></p>
+<p>Highcharts 是国外的一款功能强大、开源、美观、图表丰富、兼容绝大多数浏览器的纯js图表库。Highcharts针对个人用户及非商业用途免费，商业用途需要购买授权。</p>
+<h3 id="4-3-AntV"><a href="#4-3-AntV" class="headerlink" title="4.3 AntV"></a>4.3 AntV</h3><p>GitHub：<a href="https://github.com/antvis/" target="_blank" rel="noopener">https://github.com/antvis/</a></p>
+<p>官网：<a href="https://antv.alipay.com/zh-cn/index.html" target="_blank" rel="noopener">https://antv.alipay.com/zh-cn/index.html</a></p>
+<p>AntV 是蚂蚁金服全新一代数据可视化解决方案，致力于提供一套简单方便、专业可靠、无限可能的数据可视化最佳实践。</p>
+<p>PC端——G2、移动端——F2、关系图类库——G6</p>
+<h2 id="5-其他（代码高亮、提示框、打字效果、数据处理）"><a href="#5-其他（代码高亮、提示框、打字效果、数据处理）" class="headerlink" title="5. 其他（代码高亮、提示框、打字效果、数据处理）"></a>5. 其他（代码高亮、提示框、打字效果、数据处理）</h2><h3 id="5-1-代码高亮"><a href="#5-1-代码高亮" class="headerlink" title="5.1 代码高亮"></a>5.1 代码高亮</h3><h4 id="5-1-1-highlight-js"><a href="#5-1-1-highlight-js" class="headerlink" title="5.1.1 highlight.js"></a>5.1.1 highlight.js</h4><p>GitHub：<a href="https://github.com/isagalaev/highlight.js" target="_blank" rel="noopener">https://github.com/isagalaev/highlight.js</a></p>
+<p>官网：<a href="https://highlightjs.org/" target="_blank" rel="noopener">https://highlightjs.org/</a></p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017121022064481.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017121022064481.png" alt="highlight.js"></a></p>
+<h3 id="5-2-提示框"><a href="#5-2-提示框" class="headerlink" title="5.2 提示框"></a>5.2 提示框</h3><h4 id="5-2-1-balloon-css"><a href="#5-2-1-balloon-css" class="headerlink" title="5.2.1 balloon.css"></a>5.2.1 balloon.css</h4><p>GitHub：<a href="https://github.com/kazzkiq/balloon.css" target="_blank" rel="noopener">https://github.com/kazzkiq/balloon.css</a> （本站使用）</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017121022072554.gif" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017121022072554.gif" alt="balloon.css"></a></p>
+<h3 id="5-3-打字效果"><a href="#5-3-打字效果" class="headerlink" title="5.3 打字效果"></a>5.3 打字效果</h3><h4 id="5-3-1-TheaterJS"><a href="#5-3-1-TheaterJS" class="headerlink" title="5.3.1 TheaterJS"></a>5.3.1 TheaterJS</h4><p>GitHub：<a href="https://github.com/Zhouzi/TheaterJS" target="_blank" rel="noopener">https://github.com/Zhouzi/TheaterJS</a></p>
+<p>DEMO：<a href="https://codepen.io/Zhouzi/pen/JoRazP" target="_blank" rel="noopener">https://codepen.io/Zhouzi/pen/JoRazP</a></p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017121022074145.gif" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017121022074145.gif" alt="TheaterJS"></a></p>
+<h4 id="5-3-2-typing-js"><a href="#5-3-2-typing-js" class="headerlink" title="5.3.2 typing.js"></a>5.3.2 typing.js</h4><p>GitHub：<a href="https://github.com/coffeedeveloper/typing.js" target="_blank" rel="noopener">https://github.com/coffeedeveloper/typing.js</a></p>
+<p>项目主页：<a href="http://coffeedeveloper.github.io/typing.js/" target="_blank" rel="noopener">http://coffeedeveloper.github.io/typing.js/</a></p>
+<p>DEMO：<a href="http://coffeedeveloper.github.io/typing.js/demo.html" target="_blank" rel="noopener">http://coffeedeveloper.github.io/typing.js/demo.html</a></p>
+<p>带闪烁效果的代码书写DEMO：<a href="http://coffeedeveloper.github.io/typing.js/demo2.html" target="_blank" rel="noopener">http://coffeedeveloper.github.io/typing.js/demo2.html</a></p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017121022080396.gif" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017121022080396.gif" alt="typing.js"></a></p>
+<h3 id="5-4-数值处理"><a href="#5-4-数值处理" class="headerlink" title="5.4 数值处理"></a>5.4 数值处理</h3><h4 id="5-4-1-decimal-js"><a href="#5-4-1-decimal-js" class="headerlink" title="5.4.1 decimal.js"></a>5.4.1 decimal.js</h4><p>GitHub：<a href="https://github.com/MikeMcl/decimal.js" target="_blank" rel="noopener">https://github.com/MikeMcl/decimal.js</a></p>
+<p>项目主页：<a href="http://mikemcl.github.io/decimal.js/" target="_blank" rel="noopener">http://mikemcl.github.io/decimal.js/</a></p>
+<p>任意精度的数值运算，功能齐全</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017121022082777.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017121022082777.png" alt="decimal.js"></a></p>
+<h3 id="5-5-日期处理"><a href="#5-5-日期处理" class="headerlink" title="5.5 日期处理"></a>5.5 日期处理</h3><h4 id="5-5-1-Moment-js"><a href="#5-5-1-Moment-js" class="headerlink" title="5.5.1 Moment.js"></a>5.5.1 Moment.js</h4><p>GitHub：<a href="https://github.com/moment/moment/" target="_blank" rel="noopener">https://github.com/moment/moment/</a></p>
+<p>中文网：<a href="http://momentjs.cn/" target="_blank" rel="noopener">http://momentjs.cn/</a></p>
+<h4 id="5-5-2-date-fns"><a href="#5-5-2-date-fns" class="headerlink" title="5.5.2 date-fns"></a>5.5.2 date-fns</h4><p>GitHub：<a href="https://github.com/date-fns/date-fns" target="_blank" rel="noopener">https://github.com/date-fns/date-fns</a></p>
+<p>中文介绍：<a href="https://coyee.com/article/12360-introduction-to-date-fns-a-lightweight-javascript-date-library" target="_blank" rel="noopener">https://coyee.com/article/12360-introduction-to-date-fns-a-lightweight-javascript-date-library</a></p>
+<blockquote>
+<p>工具虽多，可不要贪用哦！为了节约资源，请谨慎使用！！</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/09/2017120910528357/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="huangli">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="giser.xyz">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/09/2017120910528357/" itemprop="url">【转】当你进行地图设计时，需要了解这些小知识</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-09T10:52:20+08:00">2017-12-09</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/地理/" itemprop="url" rel="index"><span itemprop="name">地理</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>本文是知识星球<span style="color: #ff0000;"><span style="color: #000000;"><a href="https://t.xiaomiquan.com/UfUBA6A" target="_blank" rel="noopener">GISer入门</a></span></span>密友们的翻译的第一篇文章，我很荣幸参与其中。</p>
+<blockquote>
+<p>本文是一系列有关制图设计主题基础入门知识的介绍。想获得更多进阶信息以及与之相关的更多实操资源，可以访问下面的链接进行扩展阅读。</p>
+<p><a href="https://github.com/maptimeBoston/cartographic-design/blob/master/resources.md" target="_blank" rel="noopener">https://github.com/maptimeBoston/cartographic-design/blob/master/resources.md</a></p>
+</blockquote>
+<h2 id="1-什么是地图？"><a href="#1-什么是地图？" class="headerlink" title="1. 什么是地图？"></a>1. 什么是地图？</h2><p>问题很傻是不是？其实并不傻。这个问题是想让大家了解地图是什么以及为什么要用到地图。地图是对现实世界中某个地方的表现，通过凸显空间中不同要素之间的关系（无论是实际存在的还是需要深入感知的），来对这个地区进行符号化解译。地图反映了制图师的选择和偏见，因为地图上不会也不能够将该地的所有要素都进行表现。为了使地图更加清晰明了地进行呈现，要素必须经过筛选、简化等处理。地图可以分为两大类：参考地图和专题地图。</p>
+<p><strong>参考地图</strong>强调空间现象所处的位置，例如地形图或道路交通图。</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017120911314143.jpg" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017120911314143.jpg" alt="参考地图"></a></p>
+<p><strong>专题地图</strong>强调地理要素属性之间所呈现的空间模式，例如人口密度专题图、居民收入专题图等。专题图根据表现形式的不同又可以进一步细分为以下类别：</p>
+<h3 id="1-1-分级色彩图"><a href="#1-1-分级色彩图" class="headerlink" title="1.1 分级色彩图"></a>1.1 分级色彩图</h3><p>在这类专题图中，通过使用不同的颜色来表示单元空间的数值。分级色彩图可能是最为常见并最为大家所知的一类专题地图，经常被用来表示人口统计数据或行政区域数据。</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017120911323676.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017120911323676.png" alt="分级色彩图"></a></p>
+<h3 id="1-2-比例符号图"><a href="#1-2-比例符号图" class="headerlink" title="1.2 比例符号图"></a>1.2 比例符号图</h3><p>在这类专题图中，所使用的符号（如圆圈）与其所代表的数值成比例地缩放。 符号可能代表点数据，但使用比例符号来表示面数据也十分常见。</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017120911332279.jpg" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017120911332279.jpg" alt="比例符号图"></a></p>
+<h3 id="1-3-点密度图"><a href="#1-3-点密度图" class="headerlink" title="1.3 点密度图"></a>1.3 点密度图</h3><p>在这类专题图中，使用点来表示地理现象的数量特征。点密度图依靠视觉上的分散来展示空间模式。 点密度图中，点可以是一对一的关系，即图中的一个点表示一个具体的事物（例如每个投票站一个点），也可以是一对多的关系，其中每个点代表一定数量的事物。</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017120911334456.jpg" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017120911334456.jpg" alt="点密度图"></a></p>
+<h3 id="1-4-等值线图"><a href="#1-4-等值线图" class="headerlink" title="1.4 等值线图"></a>1.4 等值线图</h3><p>在这类专题图中，通过对离散点进行插值来获得连续的数值。它们通常被用于表示高程或者深度，但也可以用来表示更多的专题现象，例如温度、天气、社会现象等。</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017120911340311.jpg" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017120911340311.jpg" alt="等值线图"></a></p>
+<p>除了以上所列的类别外，还有许多其他的类型。 本文所介绍的内容主要是关于地图设计的通用主题，而不是仅限于特定类型的地图。想获取更多关于某些专题地图的介绍信息，可以访问本文开头处介绍的网址进行扩展阅读。</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017120911343677.jpg" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017120911343677.jpg" alt="专题地图"></a></p>
+<h2 id="2-你需要地图吗？地图需要交互吗？"><a href="#2-你需要地图吗？地图需要交互吗？" class="headerlink" title="2. 你需要地图吗？地图需要交互吗？"></a>2. 你需要地图吗？地图需要交互吗？</h2><p>提前想一下你的数据或者所要讲述的故事中是否含有空间要素是很有必要的，因为如何地理位置不重要，那么地图可能就不是最好的表现形式。另外，如果是在网页展示，想想交互可以给地图带来多少增益效果，很多时候虽然你可以添加更多的交互和数据，但这并不代表这些额外的内容是必须的——它要求你投入更多的设计工作，并且可能会给读者带来潜在的困惑。</p>
+<h3 id="2-1-视觉变量"><a href="#2-1-视觉变量" class="headerlink" title="2.1 视觉变量"></a>2.1 视觉变量</h3><p>视觉变量是表达图形符号变化的基本方式。一些可以快速对符号进行视觉上的分组：如，符号很容易按色彩分组，而不是形状；一些是自然有序的，比如尺寸和明度。你制图的数据是否是有序的（或者是定量的）？这些数据需要强调吗？注意在符号化中使用适当的视觉变量。</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017120911345821.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017120911345821.png" alt="7种“视觉变量”"></a></p>
+<p><em>Jacques Bertin 在《图形符号学》（1967）中提出的7种“视觉变量”（位置、尺寸、形状、明度、色彩、方向、纹理），后来制图学家对其进行了扩充</em></p>
+<h3 id="2-2-视觉层次"><a href="#2-2-视觉层次" class="headerlink" title="2.2 视觉层次"></a>2.2 视觉层次</h3><p>良好的视觉层次对地图设计的整体效果至关重要。视觉层次结构使得有些内容看起来更加突出和重要，而其他内容是次要的。视觉层次结构应该与你构图的思维层次相匹配——从概念上讲，地图中最重要的内容就应该被强调。视觉层次结构依赖于图形-背景关系，强调的是“图形”，模糊的是“背景”（想想照片中的前景和背景）。关键在于形成对比，一般来说，更大更深的内容应该作为前景。</p>
+<p>尝试模糊测试，退远看或眯眼看使地图模糊化，看那些要点是否还突出？</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017120911355667.jpg" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017120911355667.jpg" alt="模糊测试"></a></p>
+<h3 id="2-3-色彩"><a href="#2-3-色彩" class="headerlink" title="2.3 色彩"></a>2.3 色彩</h3><p>色彩是良好地图设计的重要组成部分，虽然完全掌握色彩需要设计师的慧眼和经验，但是有一些通用的要点，如下：</p>
+<ul>
+<li>遵循制图惯例：蓝色表示水，等等。</li>
+<li>避免红绿配色，因为色盲无法辨别。</li>
+<li>看你的色调是否有关联，以及你的内容是否有关联。如果两个内容没有关联，最好用不同的色调。</li>
+<li>多注意细节！在你的层次结构中对重要内容使用一些夸张的色彩。</li>
+<li>当使用渐变色时，试着限制在6-8种颜色或明暗之内。超过这个范围，人眼难以区分。<br>对于分级色彩图，使用色带更合适。如果你的数据是无序的，就用离散型配色方案；如果数据在一个维度上有序，就用连续型配色方案（并不是彩虹主题）；如果数据有序并且可在有意义的断点上下划分，就用极端型配色方案。</li>
+</ul>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017120911362013.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017120911362013.png" alt="配色方案"></a></p>
+<ul>
+<li>Qualitative：离散型，彼此差异明显的颜色，通常用来标记分类数据。</li>
+<li>Sequential：连续型，颜色渐变。</li>
+<li>Diverging：极端型，深色强调两端、浅色表示中部的颜色，可用来标注数据中的离群点。</li>
+</ul>
+<h3 id="2-4-分类和归一化"><a href="#2-4-分类和归一化" class="headerlink" title="2.4 分类和归一化"></a>2.4 分类和归一化</h3><p>大多数分级色彩图需要使用一种分类方法将数据值进行分组归类，理想的是3-7类。这使阅读地图变得更容易——但是不同的分类方法会产生极其不同的成图效果，各自都有优缺点，需要选择一种既容易理解又能阐明数据真实原型的方法。下面是几种常用方法：</p>
+<ul>
+<li>相等间隔：将数值范围等值划分。（相等间隔分类适用于常见的数据范围，如百分比和温度。）</li>
+<li>分位数（等数量）：每个类都含有相等数量的数据值。（分位数分类非常适用于呈线性分布的数据。分位数为每个类分配相等数量的数据值，不存在空类，也不存在值过多或过少的类。）</li>
+<li>自然间断点分级：基于自然分组，最大化类内的相似性和类间的差异性（即类内差异最小,类间差异最大）。（自然间断点不适用于比较使用不同基础信息构建的多个地图。）<br><a href="http://giser.xyz/wp-content/uploads/2017/12/2017120911365879.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017120911365879.png" alt="相等间隔分类"></a></li>
+</ul>
+<p><em>按相等间隔划分4类，第3类没有任何值</em></p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017120911373663.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017120911373663.png" alt="分位数分类"></a></p>
+<p><em>按数量分类，最后的异常值真的属于其他绿色吗？</em></p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017120911381452.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017120911381452.png" alt="自然间断点分类"></a></p>
+<p><em>自然间断点分类，看起来不错，但很难理解</em></p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017120911385874.jpg" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017120911385874.jpg" alt="分类"></a></p>
+<p><em>完全相同的数据，不同的分类方法，不同的成图效果。John Nelson提供的例子</em></p>
+<p>分级色彩图也应该归一化，即映射为某种比例而不是原始数量。你可以看看下面这几张热力图（图片来源：<a href="http://xkcd.com/1138/" target="_blank" rel="noopener">http://xkcd.com/1138/</a>），基本上是基于人口密度制作的。另外，区域的相对大小会影响对值的视觉解译。例如，人口密度或人均GDP比人口数量或GDP总量更有意义。</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017120911401869.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017120911401869.png" alt="热力图"></a></p>
+<h2 id="3-地图投影"><a href="#3-地图投影" class="headerlink" title="3. 地图投影"></a>3. 地图投影</h2><p>在平面的地图上展现曲面的地球（即投影到地图上），必然会产生扭曲。在地图投影过程中，我们可以保持局部的角度（大体的形状）、大小、方向或者距离不变，但无法同时保持以上特征不变。从地图设计的角度，需要考虑以下几点：</p>
+<ul>
+<li>投影方式是否适合地图的类型及制图的目的？</li>
+<li>地图的覆盖范围有多大？</li>
+<li>投影效果合适么？能够识别图中的地理要素么？<br><a href="http://giser.xyz/wp-content/uploads/2017/12/2017120911410037.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017120911410037.png" alt="亚尔勃斯(Albers)等积圆锥投影"></a></li>
+</ul>
+<p>分级色彩图与点密度图应该使用等面积投影，比如在大洲级的地图中使用亚尔勃斯(Albers)等积圆锥投影（上图），或者是在世界地图中使用摩尔维特(Mollweide)伪圆柱等积投影。所以尺寸扭曲不会导致我们误解数据值。</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017120911415741.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017120911415741.png" alt="温克尔三重(Winkel Tripel)投影"></a></p>
+<p>任意投影例如温克尔三重(Winkel Tripel)投影（上图）或者罗宾森(Robinson)投影被设计出来用于产生一种我们熟悉的，不那么扭曲的地图。尽管它们每一个特征都不完美，但这样的世界地图整体看上去很舒服。</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017120911421998.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017120911421998.png" alt="墨卡托(Mercator)正轴等角圆柱投影"></a></p>
+<p>墨卡托(Mercator)正轴等角圆柱投影是最为广泛的投影方式（几乎大部分网络地图都采用这种投影），这种投影保留了每一处的角度相等但在全球尺度上会造成严重的形状扭曲。它适用于在城市或者航海中的导航，但不适合用于专题地图。</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017120911424175.jpg" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017120911424175.jpg" alt="兰勃特(Lambert)等角圆锥投影"></a></p>
+<p>兰勃特(Lambert)等角圆锥投影是在北美或者相似纬度地区常用的投影。它在某种意义上保留了地物的形状，使之看起来“正确”和熟悉。</p>
+<h2 id="4-文字与注记"><a href="#4-文字与注记" class="headerlink" title="4. 文字与注记"></a>4. 文字与注记</h2><p>文字可以通过其含义传递信息，但文字的特征也蕴含了一定喻意。地图中的文字不仅仅存在于注记，还出现在补充信息中，例如图例、数据来源甚至额外的文字框。不要认为任何你使用的字体都能被合理的印刷出来。对字体、风格等的选择会对地图的清晰度、含义和色调产生强烈的影响。</p>
+<ul>
+<li>保持一致。一个好的法则是选择两种字体：一种衬线字体和一种无衬线字体。</li>
+<li>以不同的权重、样式对信息进行编码（粗体、斜体、常规、纤细等）。</li>
+<li>使用与文字有关的视觉和认知法则。让重要的信息更大而突出，不重要的信息小且纤细（直至从图中删去）。</li>
+<li>使用衬线字体标示自然要素（例如水体）是一种惯例，水系的标注通常用斜体标示。<br><a href="http://giser.xyz/wp-content/uploads/2017/12/2017120911430963.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017120911430963.png" alt="字体"></a></li>
+</ul>
+<p>假想的一种标签样式和层次结构。大面积地物的注记通常用更大的字间距（使注记覆盖整个区域）</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017120911435664.jpg" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017120911435664.jpg" alt="遮罩或光晕"></a></p>
+<p>注记周围的遮罩或光晕可以提高其与背景的对比度，使易读性更强。（Daniel Huffman提供的例子）</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017120911441541.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017120911441541.png" alt="注记优先顺序"></a></p>
+<p>在点要素上放置注记的优先顺序。（扩展阅读<a href="https://github.com/maptimeBoston/cartographic-design" target="_blank" rel="noopener">https://github.com/maptimeBoston/cartographic-design</a>）</p>
+<h2 id="5-地图尺度与制图综合"><a href="#5-地图尺度与制图综合" class="headerlink" title="5. 地图尺度与制图综合"></a>5. 地图尺度与制图综合</h2><p>从地图学的核心而言，它是一种对地球的抽象。我们不会单纯的画出所有原始数据，更多的是通过各种方式使之清晰，通常而言，是删除一些不重要的东西。之所以这么做的最主要原因就是相比较于真实的世界，地图的尺寸是非常小的，所以绝不可能在地图中呈现所有的小细节。数据和图形都需要根据地图的尺度进行适当的综合：大比例尺的地图（“放大”的地图）可以保留更多的细节。典型的综合手段包括：</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017120911444055.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017120911444055.png" alt="制图综合"></a></p>
+<h2 id="6-更多资源"><a href="#6-更多资源" class="headerlink" title="6. 更多资源"></a>6. 更多资源</h2><p>想要了解与此主题相关的更多信息和实用工具，可以访问<br><a href="https://github.com/maptimeBoston/cartographic-design/blob/master/resources.md进行扩展阅读。" target="_blank" rel="noopener">https://github.com/maptimeBoston/cartographic-design/blob/master/resources.md进行扩展阅读。</a></p>
+<h2 id="7-关于GISer入门"><a href="#7-关于GISer入门" class="headerlink" title="7. 关于GISer入门"></a>7. 关于GISer入门</h2><p><a href="https://weibo.com/yunjinzh" target="_blank" rel="noopener">@张云金_GISer</a>：GIS不只是只有 ArcGIS,还有众多好玩的 GIS产品……10年 GIS老鸟带你以不一样的视角入门 GIS,学习主流 GIS软件。请使用微信扫描二维码加入星球！</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/12/2017120911531822.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/12/2017120911531822-248x300.png" alt="GISer入门"></a></p>
+<blockquote>
+<p>原文链接：<a href="https://mp.weixin.qq.com/s/47ztsgmvGvOGOu4xN7pLTA" target="_blank" rel="noopener">当你进行地图设计时，需要了解这些小知识</a></p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/15/2017111510241115/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="huangli">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="giser.xyz">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/15/2017111510241115/" itemprop="url">Happy GIS Day！</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-15T10:24:19+08:00">2017-11-15</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/动态/" itemprop="url" rel="index"><span itemprop="name">动态</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>今天是第19个<span style="color: #ff0000;"> GIS Day </span>，属于我们GISer的节日，当然要自己庆祝一下，节日快乐！</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/11/2017111510215350.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/11/2017111510215350.png" alt="GIS Day"></a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/13/2017111314288054/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="huangli">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="giser.xyz">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/13/2017111314288054/" itemprop="url">不是所有的“GIS”都叫“地理信息科学”</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-13T14:28:31+08:00">2017-11-13</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/动态/" itemprop="url" rel="index"><span itemprop="name">动态</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>意外在知网发现了另一个“GIS”。</p>
+<p>在知网以“GIS”为主题搜索文献，做计量可视化分析的时候发现有一个关键词显得格格不入，而我则是第一次看到这个词，那就是“局部放电”。更惊讶的是，数量还不少，共798篇，排名第22。刚开始，我以为又发现了GIS（地理信息科学）不为我知的秘密。</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/11/2017111314244782.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/11/2017111314244782.png" alt="关键词分布"></a></p>
+<p>然后定位到关键词 —— 局部放电，下面是“关键词知网节”给出的解释。</p>
+<blockquote>
+<p>中文：<strong>局部放电</strong></p>
+<p>英文：partial discharge；partial discharge (pd)；partial discharges</p>
+<p>解释：电气设备绝缘结构中局部区域内的放电现象。这种放电只是绝缘在局部范围内被击穿,导体间绝缘并未发生贯穿性击穿,但若局部放电长期存在,则在一定条件下可造成设备绝缘电气强度的破坏。</p>
+<p>—— 中国电力百科全书·电工技术基础卷<br>看来看去，好像跟GIS（地理信息科学）没有任何关系，也没发现任何有关“GIS”的字眼，倒是跟它的“外貌”一样，与“电”有关。先是点开了几篇文献，在摘要中看到了“GIS”：气体绝缘组合开关设备（GIS），但是没有看到它的英文全称，后来再去搜索“气体绝缘组合开关设备”才发现它的真面目 —— <strong>Gas Insulated Switchgear</strong>。</p>
+</blockquote>
+<p>的确，你的缩写也是“GIS”。<br><a href="http://giser.xyz/wp-content/uploads/2017/11/2017111314264418.jpg" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/11/2017111314264418.jpg" alt="厉害了我的哥"></a></p>
+<p>下面，隆重地向大家介绍一下这位新朋友：</p>
+<blockquote>
+<p><strong>气体绝缘组合电器设备，GIS，即Gas Insulated Switchgear。</strong></p>
+<p>指全部或者部分采用气体而不采用处于大气压下的空气作为绝缘介质的金属封闭开关设备。</p>
+<p>它由断路器、隔离开关、接地开关、互感器、避雷器、母线、连接件和出线终端等组成，这些设备或部件全部封闭在金属接地的外壳中，在其内部充有绝缘性能和灭弧性能优异的SF6（六氟化硫）气体作为绝缘和灭弧介质，故也称SF6全封闭组合电器。GIS设备自20世纪60年代实用化以来，已广泛运行于世界各地。GIS不仅在高压、超高压领域被广泛应用，而且在特高压领域也被使用。与常规敞开式变电站相比，GIS的优点在于结构紧凑、占地面积小、可靠性高、配置灵活、安装方便、安全性强、环境适应能力强，维护工作量很小，其主要部件的维修间隔不小于20年。目前，GIS国外生产厂家主要有ABB、东芝、三菱、日立、西门子、阿尔斯通等，国内生产厂家有西开、沈高、平高等。</p>
+<p>—— 百度百科</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/08/2017110817538655/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="huangli">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="giser.xyz">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/08/2017110817538655/" itemprop="url">【转】漫谈北斗：“星间链路”到底是条什么路？</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-08T17:53:20+08:00">2017-11-08</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/地理/" itemprop="url" rel="index"><span itemprop="name">地理</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>作为一个航天大国，我们正向航天强国迈进，我国北斗卫星导航系统将以面向全球、造福全人类的姿态，为祖国、也为世界建设一个精品工程。</p>
+<p>今天，中国北斗的宽广胸怀已经敞开，等待着拥抱全世界。</p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/11/2017110817503184.jpg" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/11/2017110817503184.jpg" alt="科普|星间链路"></a><a href="http://giser.xyz/wp-content/uploads/2017/11/2017110817542674.jpg" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/11/2017110817542674.jpg" alt="科普|星间链路"></a><a href="http://giser.xyz/wp-content/uploads/2017/11/2017110817565579.jpg" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/11/2017110817565579.jpg" alt="科普|星间链路"></a><a href="http://giser.xyz/wp-content/uploads/2017/11/2017110817571252.jpg" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/11/2017110817571252.jpg" alt="科普|星间链路"></a><a href="http://giser.xyz/wp-content/uploads/2017/11/2017110817572542.jpg" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/11/2017110817572542.jpg" alt="科普|星间链路"></a></p>
+<blockquote>
+<p>原文链接：<a href="http://www.cast.cn/Item/Show.asp?m=1&amp;d=6169" target="_blank" rel="noopener">中国空间技术研究院</a></p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/07/2017110713148324/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="huangli">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="giser.xyz">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/07/2017110713148324/" itemprop="url">2017年第十五届Esri中国用户大会资料分享</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-07T13:14:54+08:00">2017-11-07</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/资源共享/" itemprop="url" rel="index"><span itemprop="name">资源共享</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>2017年10月24-25日，在北京国际会议中心举办了第十五届Esri中国用户大会，今年用户大会的主题是：<strong>Applying the Science of Where</strong>。Esri认为地理科学和GIS技术，为我们提供了一种基本的语言，是在组织机构内部以及组织机构之间进行沟通、协同和共享的语言，是我们用于管理和理解的语言。</p>
+<p>下面是大会讲座资料，共3个部分：主题大会、技术论坛、行业论坛。</p>
+<h3 id="1-24日首日主题大会"><a href="#1-24日首日主题大会" class="headerlink" title="1. 24日首日主题大会"></a>1. 24日首日主题大会</h3><ol>
+<li>资料 <a href="http://pan.baidu.com/s/1o7RlbGQ" target="_blank" rel="noopener">http://pan.baidu.com/s/1o7RlbGQ</a></li>
+</ol>
+<h3 id="2-25日技术论坛"><a href="#2-25日技术论坛" class="headerlink" title="2. 25日技术论坛"></a>2. 25日技术论坛</h3><ol>
+<li>ArcGIS平台最新进展 <a href="http://pan.baidu.com/s/1dEYpaLV" target="_blank" rel="noopener">http://pan.baidu.com/s/1dEYpaLV</a></li>
+<li>ArcGIS平台定制与应用开发<a href="http://pan.baidu.com/s/1o7TSOoM" target="_blank" rel="noopener"> http://pan.baidu.com/s/1o7TSOoM</a></li>
+<li>全平台三维视野 <a href="http://pan.baidu.com/s/1pKPNb31" target="_blank" rel="noopener">http://pan.baidu.com/s/1pKPNb31</a></li>
+<li>空间大数据与云GIS <a href="http://pan.baidu.com/s/1kVP54TT" target="_blank" rel="noopener">http://pan.baidu.com/s/1kVP54TT</a></li>
+<li>空间数据处理，分析与挖掘 <a href="http://pan.baidu.com/s/1dESPp3V" target="_blank" rel="noopener">http://pan.baidu.com/s/1dESPp3V</a></li>
+<li>ENVI遥感技术与应用 <a href="http://pan.baidu.com/s/1hspJLuG" target="_blank" rel="noopener">http://pan.baidu.com/s/1hspJLuG</a></li>
+</ol>
+<h3 id="3-25日行业论坛"><a href="#3-25日行业论坛" class="headerlink" title="3. 25日行业论坛"></a>3. 25日行业论坛</h3><ol>
+<li>智慧＋创新－智慧城市行业论坛 <a href="http://pan.baidu.com/s/1bpyH0sv" target="_blank" rel="noopener">http://pan.baidu.com/s/1bpyH0sv</a></li>
+<li>地理信息与测绘实践论坛 <a href="http://pan.baidu.com/s/1eSOtHIy" target="_blank" rel="noopener">http://pan.baidu.com/s/1eSOtHIy</a></li>
+<li>智慧国土论坛 <a href="http://pan.baidu.com/s/1hr9MqR6" target="_blank" rel="noopener">http://pan.baidu.com/s/1hr9MqR6</a></li>
+<li>第三次全国土地调查与自然资源确权登记论坛 <a href="http://pan.baidu.com/s/1sl8yrWp" target="_blank" rel="noopener">http://pan.baidu.com/s/1sl8yrWp</a></li>
+<li>大数据应用论坛 <a href="http://pan.baidu.com/s/1mizKXRE" target="_blank" rel="noopener">http://pan.baidu.com/s/1mizKXRE</a></li>
+<li>城市规划与设计论坛 <a href="http://pan.baidu.com/s/1geNv07T" target="_blank" rel="noopener">http://pan.baidu.com/s/1geNv07T</a></li>
+<li>生态环境大数据应用论坛 <a href="http://pan.baidu.com/s/1jHWIPMI" target="_blank" rel="noopener">http://pan.baidu.com/s/1jHWIPMI</a></li>
+<li>智慧水利论坛 <a href="http://pan.baidu.com/s/1pLSflyj" target="_blank" rel="noopener">http://pan.baidu.com/s/1pLSflyj</a></li>
+<li>地理大数据与轻应用实践论坛 <a href="http://pan.baidu.com/s/1nu8qn8H" target="_blank" rel="noopener">http://pan.baidu.com/s/1nu8qn8H</a></li>
+<li>大数据创新与CIO转型之路 <a href="http://pan.baidu.com/s/1mhHfGFY" target="_blank" rel="noopener">http://pan.baidu.com/s/1mhHfGFY</a><br><a href="http://giser.xyz/wp-content/uploads/2017/11/2017110717310527.jpg" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/11/2017110717310527.jpg" alt="2017UC"></a><blockquote>
+<p>信息来源：<a href="http://www.esrichina.com.cn/market/2017uc/download.html" target="_blank" rel="noopener">Esri中国</a></p>
+</blockquote>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/29/2017102910337053/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="huangli">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="giser.xyz">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/10/29/2017102910337053/" itemprop="url">ArcMap中如何计算Polyline的直线长度</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-29T10:33:29+08:00">2017-10-29</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/地理信息科学/" itemprop="url" rel="index"><span itemprop="name">地理信息科学</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>在做地理数据分析时，有时需要折线的直线长度，比如计算曲折度（Sinuosity = 实际长度L / 直线长度S）。本文记录了我在使用OpenStreetMap数据做分析时，计算直线长度所使用的一种方法，有什么不妥之处，敬请指正！</p>
+</blockquote>
+<h2 id="1-数据"><a href="#1-数据" class="headerlink" title="1. 数据"></a>1. 数据</h2><p><a href="http://giser.xyz/wp-content/uploads/2017/10/2017102910343257.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/10/2017102910343257.png" alt="原始数据(线)"></a></p>
+<h2 id="2-Haversine-formula公式"><a href="#2-Haversine-formula公式" class="headerlink" title="2. Haversine formula公式"></a>2. Haversine formula公式</h2><p>计算直线长度，我首先想到的是，利用<a href="https://en.wikipedia.org/wiki/Haversine_formula" target="_blank" rel="noopener">Haversine formula</a>公式根据起止点的经纬度来计算距离，因为在ArcMap中可以用Calculate Geometry(如下图)计算线的起止点坐标。实际长度用 <em>!shape.length </em>计算。但是在计算曲折度的时候，发现部分线的实际长度比直线长度还小。我就挑选了一条线，用测量工具测算出的距离与Haversine formula公式计算的距离不一致。</p>
+<blockquote>
+<p>猜想原因：①直线长度和实际长度两种计算方法的原理不一致，因此导致了“实际长度比直线长度还小”的问题；②投影问题。<br><a href="http://giser.xyz/wp-content/uploads/2017/10/2017102910350580.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/10/2017102910350580.png" alt="Calculate Geometry"></a></p>
+</blockquote>
+<p>因为我比较懒，我也没去深究ArcMap中 !shape.length 的计算原理，也没去管投影问题，因为只要直线长度和实际长度的计算方法一致，就可以计算曲折度。所以，下面这种方法就诞生了。</p>
+<h2 id="3-计算过程"><a href="#3-计算过程" class="headerlink" title="3. 计算过程"></a>3. 计算过程</h2><p>既然实际长度采用 !shape.length 计算，那么我把起、止点连接成直线，再用同样方法计算，就能保证两个长度的计算方法一致了。那么怎么连接起、止点呢？</p>
+<h3 id="3-1-使用Feature-Vertices-To-Points工具生成起、止点-Points"><a href="#3-1-使用Feature-Vertices-To-Points工具生成起、止点-Points" class="headerlink" title="3.1 使用Feature Vertices To Points工具生成起、止点(Points)"></a>3.1 使用Feature Vertices To Points工具生成起、止点(Points)</h3><p><a href="http://giser.xyz/wp-content/uploads/2017/10/2017102910352270.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/10/2017102910352270.png" alt="Feature Vertices To Points"></a></p>
+<p>生成的起、止点图层如下图。<a href="http://giser.xyz/wp-content/uploads/2017/10/2017102910353656.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/10/2017102910353656.png" alt="起、止点图层"></a></p>
+<h3 id="3-2-合并起、止点图层"><a href="#3-2-合并起、止点图层" class="headerlink" title="3.2 合并起、止点图层"></a>3.2 合并起、止点图层</h3><p>将两个图层合并可以使用Append或者Dissolve工具。在这里，我选择Append工具，将“End”图层追加到“Start”图层。<br><a href="http://giser.xyz/wp-content/uploads/2017/10/2017102910355245.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/10/2017102910355245.png" alt="Append"></a></p>
+<h3 id="3-3-将起、止点连接成线-Points-To-Line"><a href="#3-3-将起、止点连接成线-Points-To-Line" class="headerlink" title="3.3 将起、止点连接成线(Points To Line)"></a>3.3 将起、止点连接成线(Points To Line)</h3><p>将“End”图层追加到“Start”图层后，打开属性表，可以发现起、止点都在同一图层，并且ORIG_FID字段存在相同的值，因为他们表示同一条线的起、止点。（下图为FID=1066的线）<br><a href="http://giser.xyz/wp-content/uploads/2017/10/2017102910361634.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/10/2017102910361634.png" alt="FID=1066的线"></a></p>
+<p>使用Point To Line工具将点转换为线，注意Line Field选择ORIG_FID。<a href="http://giser.xyz/wp-content/uploads/2017/10/2017102910363081.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/10/2017102910363081.png" alt="Point To Line"></a></p>
+<p>生成的结果如图。<a href="http://giser.xyz/wp-content/uploads/2017/10/2017102910364336.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/10/2017102910364336.png" alt="Point To Line结果"></a></p>
+<h3 id="3-4-计算直线长度"><a href="#3-4-计算直线长度" class="headerlink" title="3.4 计算直线长度"></a>3.4 计算直线长度</h3><p>打开属性表，新建字段，使用字段计算器计算长度。<br><a href="http://giser.xyz/wp-content/uploads/2017/10/2017102910370232.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/10/2017102910370232.png" alt="使用字段计算器计算长度"></a></p>
+<h3 id="3-5-将计算结果添加到线图层属性表-Join"><a href="#3-5-将计算结果添加到线图层属性表-Join" class="headerlink" title="3.5 将计算结果添加到线图层属性表(Join)"></a>3.5 将计算结果添加到线图层属性表(Join)</h3><p><a href="http://giser.xyz/wp-content/uploads/2017/10/2017102910372727.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/10/2017102910372727.png" alt="Join"></a></p>
+<h3 id="3-6-结果"><a href="#3-6-结果" class="headerlink" title="3.6 结果"></a>3.6 结果</h3><p><a href="http://giser.xyz/wp-content/uploads/2017/10/2017102910373788.png" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/10/2017102910373788.png" alt="结果"></a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/28/2017102819215690/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="huangli">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="giser.xyz">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/10/28/2017102819215690/" itemprop="url">ArcGIS API for JavaScript 加载天地图WMTS图层</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-28T19:21:52+08:00">2017-10-28</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/地理信息科学/" itemprop="url" rel="index"><span itemprop="name">地理信息科学</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="1-预览"><a href="#1-预览" class="headerlink" title="1. 预览"></a>1. 预览</h2><p>在线预览：<a href="http://huanglii.github.io/TianDiTu/index.html" target="_blank" rel="noopener">http://huanglii.github.io/TianDiTu/index.html</a></p>
+<p><a href="http://giser.xyz/wp-content/uploads/2017/10/2017102819151616.jpg" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/10/2017102819151616.jpg" alt="矢量"></a><br><a href="http://giser.xyz/wp-content/uploads/2017/10/2017102819151642.jpg" target="_blank" rel="noopener"><img src="http://giser.xyz/wp-content/uploads/2017/10/2017102819151642.jpg" alt="影像"></a></p>
+<h2 id="2-变量说明"><a href="#2-变量说明" class="headerlink" title="2. 变量说明"></a>2. 变量说明</h2><pre><code>var map; //地图
+var baseTypeName = &quot;vec&quot;; //底图
+var baseAnnoName = &quot;cva&quot;; //注记
+var typeMatrixSet = &quot;c&quot;; //&quot;c&quot;-地理坐标系，&quot;w&quot;-投影坐标系`&lt;/pre&gt;
+
+## 3\. 添加图层
+
+添加底图不需要参数，注记图层只需传入&quot;ano&quot;参数即可：
+&lt;pre&gt;`var baseLayer = new TianDiTuLayer();
+var annolayer = new TianDiTuLayer(&quot;ano&quot;);
+map.addLayer(baseLayer);
+map.addLayer(annolayer);
+</code></pre><h2 id="4-源码"><a href="#4-源码" class="headerlink" title="4. 源码"></a>4. 源码</h2><p><a href="https://github.com/huanglii/TianDiTu" target="_blank" rel="noopener">GitHub</a></p>
+<h2 id="5-附：天地图类型"><a href="#5-附：天地图类型" class="headerlink" title="5. 附：天地图类型"></a>5. 附：天地图类型</h2><ul>
+<li>vec: 矢量底图</li>
+<li>cva: 矢量注记图层</li>
+<li>eva: 矢量注记图层-英文注记</li>
+<li>img: 影像底图</li>
+<li>cia: 影像注记图层</li>
+<li>eia: 影像注记图层 -英文注记</li>
+<li>ter: 地形底图</li>
+<li>cta: 地形注记图层</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">huangli</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">15</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">分类</span>
+                  
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    <span class="site-state-item-count">16</span>
+                    <span class="site-state-item-name">标签</span>
+                  
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/huanglii" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:849151701@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">huangli</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.0.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.1"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.1"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
