@@ -550,40 +550,13 @@
           
 
   
-  <div onclick="showGitment()" id="gitment_title" class="gitment_title">显示 Gitment 评论</div>
-  <div id="container" style="display:none"></div>
-  <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-  <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-  <script>
-  const myTheme = {
-    render(state, instance) {
-      const container = document.createElement('div');
-      container.lang = "en-US";
-      container.className = 'gitment-container gitment-root-container';
-      container.appendChild(instance.renderHeader(state, instance));
-      container.appendChild(instance.renderEditor(state, instance));
-      container.appendChild(instance.renderComments(state, instance));
-      container.appendChild(instance.renderFooter(state, instance));
-      return container;
-    }
-  }
-  function showGitment() {
-    $("#gitment_title").attr("style", "display:none");
-    $("#container").attr("style", "").addClass("gitment_container");
-    var gitment = new Gitment({
-      id: window.location.pathname,
-      theme: myTheme,
-      owner: '',
-      repo: '',
-      oauth: {
-        client_id: '191f754c42bc3e815bf5',
-        client_secret: '9493ffe86757ee102cb3e4af40efcf938d477417'
-      }
-    });
-    gitment.render('container');
-  }
-  </script>
-	
+    <div class="comments" id="comments">
+      
+        <div onclick="showGitment()" id="gitment-display-button">显示 Gitment 评论</div>
+        <div id="gitment-container" style="display:none"></div>
+      
+    </div>
+
   
 
 
@@ -912,7 +885,11 @@
       }
 
       
-      renderGitment();
+      function showGitment(){
+        document.getElementById("gitment-display-button").style.display = "none";
+        document.getElementById("gitment-container").style.display = "block";
+        renderGitment();
+      }
       
       </script>
     
