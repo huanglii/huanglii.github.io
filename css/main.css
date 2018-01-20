@@ -1987,7 +1987,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #87c683;
+  background: #67ff9e;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3099,4 +3099,15 @@ pre .javascript .function {
   border-radius: 2px;
   color: #f00;
   background-color: #f3f3f3;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: #b9b9b9;
+}
+::-webkit-scrollbar-track {
+  background-color: #b9b9b9;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #222;
 }
