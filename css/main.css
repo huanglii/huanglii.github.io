@@ -1987,7 +1987,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e745ff;
+  background: #f66796;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3112,6 +3112,10 @@ pre .javascript .function {
   border-radius: 2px;
   color: #f00;
   background-color: #f3f3f3;
+}
+.gitment-comment-avatar,
+.gitment-editor-avatar {
+  border: none;
 }
 ::-webkit-scrollbar {
   width: 8px;
