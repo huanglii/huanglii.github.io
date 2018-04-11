@@ -407,7 +407,8 @@
       
 
       
-        <p>在做地理数据分析时，有时需要折线的直线长度，比如计算曲折度（Sinuosity = 实际长度L / 直线长度S）。本文记录了我在使用OpenStreetMap数据做分析时，计算直线长度所使用的一种方法。<br><a id="more"></a></p>
+        <p>在做地理数据分析时，有时需要折线的直线长度，比如计算曲折度（Sinuosity = 实际长度L / 直线长度S）。本文记录了我在使用OpenStreetMap数据做分析时，计算直线长度所使用的一种方法。</p>
+<a id="more"></a>
 <h2 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h2><p><img src="1.png" alt="原始数据(线)"></p>
 <h2 id="Haversine-formula公式"><a href="#Haversine-formula公式" class="headerlink" title="Haversine formula公式"></a>Haversine formula公式</h2><p>计算直线长度，我首先想到的是，利用<a href="https://en.wikipedia.org/wiki/Haversine_formula" target="_blank" rel="noopener">Haversine formula</a>公式根据起止点的经纬度来计算距离，因为在ArcMap中可以用Calculate Geometry(如下图)计算线的起止点坐标。实际长度用 <em>!shape.length </em>计算。但是在计算曲折度的时候，发现部分线的实际长度比直线长度还小。我就挑选了一条线，用测量工具测算出的距离与Haversine formula公式计算的距离不一致。</p>
 <blockquote>
