@@ -1984,7 +1984,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff2fff;
+  background: #ff14ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3315,7 +3315,7 @@ ul.breadcrumb li+li:last-child {
   border-radius: 50%;
 }
 .site-author-name {
-  font-family: consolas;
+  font: 14px consolas;
 }
 .algolia-results .algolia-hit-item a em {
   font-style: normal;
