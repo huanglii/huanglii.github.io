@@ -1984,7 +1984,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #65eeaf;
+  background: #42ffb8;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2450,7 +2450,7 @@ pre .javascript .function {
 .site-uv .busuanzi-value,
 .site-pv .busuanzi-value,
 .page-pv .busuanzi-value {
-  margin: 0 5px;
+  margin: 0;
 }
 .ais-search-box--magnifier svg {
   display: none !important;
