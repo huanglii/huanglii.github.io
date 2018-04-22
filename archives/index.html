@@ -2,14 +2,17 @@
 
 
 
+
+
+
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
 
 
@@ -52,58 +55,56 @@
 
 
 
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Helvetica:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
 
 
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=6.0.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=6.2.0" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.2.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.2.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.2.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=6.0.1" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Leaflet,Vue," />
+  <link rel="mask-icon" href="/images/logo.svg?v=6.2.0" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta name="description" content="这两天折腾Vue，在GitHub上发现了一个开源项目Vue2Leaflet，Vue2Leaflet是一个Vue框架的JavaScript库，封装了Leaflet，它使构建地图变得更简单。本文简单介绍了如何使用该组件，了解更多可查看作者给出的例子Vue-Leaflet-Demo和作者的JSFiddle - Bouchaud Micka。">
-<meta name="keywords" content="Leaflet,Vue">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Leaflet的Vue组件 - Vue2Leaflet">
-<meta property="og:url" content="http://giser.xyz/2018/04/02/20180402-Vue-Leaflet/index.html">
-<meta property="og:site_name" content="GISer空间">
-<meta property="og:description" content="这两天折腾Vue，在GitHub上发现了一个开源项目Vue2Leaflet，Vue2Leaflet是一个Vue框架的JavaScript库，封装了Leaflet，它使构建地图变得更简单。本文简单介绍了如何使用该组件，了解更多可查看作者给出的例子Vue-Leaflet-Demo和作者的JSFiddle - Bouchaud Micka。">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://giser.xyz/2018/04/02/20180402-Vue-Leaflet/1.png">
-<meta property="og:image" content="http://giser.xyz/2018/04/02/20180402-Vue-Leaflet/2.png">
-<meta property="og:image" content="http://giser.xyz/2018/04/02/20180402-Vue-Leaflet/3.png">
-<meta property="og:image" content="http://giser.xyz/2018/04/02/20180402-Vue-Leaflet/4.png">
-<meta property="og:image" content="http://giser.xyz/2018/04/02/20180402-Vue-Leaflet/5.png">
-<meta property="og:updated_time" content="2018-04-11T09:35:18.924Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Leaflet的Vue组件 - Vue2Leaflet">
-<meta name="twitter:description" content="这两天折腾Vue，在GitHub上发现了一个开源项目Vue2Leaflet，Vue2Leaflet是一个Vue框架的JavaScript库，封装了Leaflet，它使构建地图变得更简单。本文简单介绍了如何使用该组件，了解更多可查看作者给出的例子Vue-Leaflet-Demo和作者的JSFiddle - Bouchaud Micka。">
-<meta name="twitter:image" content="http://giser.xyz/2018/04/02/20180402-Vue-Leaflet/1.png">
 
 
 
@@ -112,8 +113,8 @@
   var CONFIG = {
     root: '/',
     scheme: 'Pisces',
-    version: '6.0.1',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":false},
+    version: '6.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -130,15 +131,37 @@
 </script>
 
 
-
-  <link rel="canonical" href="http://giser.xyz/2018/04/02/20180402-Vue-Leaflet/"/>
-
+  
 
 
 
+
+  <meta property="og:type" content="website">
+<meta property="og:title" content="GISer空间">
+<meta property="og:url" content="http://giser.xyz/archives/index.html">
+<meta property="og:site_name" content="GISer空间">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GISer空间">
+
+
+
+
+
+
+  <link rel="canonical" href="http://giser.xyz/archives/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>归档 | GISer空间</title>
   
+
 
 
 
@@ -176,7 +199,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -187,12 +210,12 @@
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"> <div class="site-brand-wrapper">
+      <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">GISer空间</span>
         <span class="logo-line-after"><i></i></span>
@@ -204,7 +227,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -212,37 +235,47 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
-        </li>
-      
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
-        </li>
-      
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
-        </li>
-      
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives menu-item-active">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
 
+      
       
         <li class="menu-item menu-item-search">
           
@@ -253,6 +286,8 @@
         </li>
       
     </ul>
+  
+
   
 
   
@@ -287,7 +322,11 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
 
     
@@ -296,6 +335,29 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
+            
+
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+
+  
+
+
+          
           <div id="content" class="content">
             
 
@@ -306,6 +368,7 @@
     <div id="posts" class="posts-collapse">
       <span class="archive-move-on"></span>
 
+      
       <span class="archive-page-counter">
         
         
@@ -314,6 +377,7 @@
         
         嗯..! 目前共计 16 篇日志。 继续努力。
       </span>
+      
 
       
 
@@ -705,7 +769,7 @@
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -727,6 +791,8 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
     
     <div class="sidebar-inner">
 
@@ -764,6 +830,18 @@
                 
                 <div class="site-state-item site-state-categories">
                   <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
                     <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
@@ -775,6 +853,52 @@
                 
                 <div class="site-state-item site-state-tags">
                   <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
                     <span class="site-state-item-count">22</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
@@ -787,19 +911,17 @@
 
           
             <div class="links-of-author motion-element">
-                
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/huanglii" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="mailto:849151701@qq.com" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
-                  </span>
-                
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/huanglii" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:849151701@qq.com" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
             </div>
           
 
@@ -809,6 +931,9 @@
           
           
 
+          
+            
+          
           
 
         </div>
@@ -829,7 +954,7 @@
     <footer id="footer" class="footer">
       <div class="footer-inner">
         <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">huangli</span>
@@ -840,7 +965,11 @@
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io" rel="external nofollow">Hexo</a> 强力驱动</div>
+  
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" rel="external nofollow" href="https://hexo.io">Hexo</a> 强力驱动 v3.4.4</div>
 
 
 
@@ -848,12 +977,13 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next" rel="external nofollow">NexT.Pisces</a> v6.0.1</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" rel="external nofollow" href="https://github.com/theme-next/hexo-theme-next">NexT.Pisces</a> v6.2.0</div>
 
 
 
 
         
+
 
 
 
@@ -930,28 +1060,28 @@
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=6.0.1"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.2.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=6.0.1"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=6.0.1"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.1"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.2.0"></script>
 
 
 
   
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.2.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.2.0"></script>
+
+
+
+  
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.1"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.2.0"></script>
 
 
 
@@ -1010,7 +1140,7 @@
   <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
   
 
-  <script src="/js/src/algolia-search.js?v=6.0.1"></script>
+  <script src="/js/src/algolia-search.js?v=6.2.0"></script>
 
 
 
@@ -1074,35 +1204,24 @@
             var counter = results[0];
             counter.fetchWhenSave(true);
             counter.increment("time");
+            
             counter.save(null, {
               success: function(counter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+                
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.get('time'));
+                
               },
               error: function(counter, error) {
                 console.log('Failed to save Visitor num, with error message: ' + error.message);
               }
             });
           } else {
-            var newcounter = new Counter();
-            /* Set ACL */
-            var acl = new AV.ACL();
-            acl.setPublicReadAccess(true);
-            acl.setPublicWriteAccess(true);
-            newcounter.setACL(acl);
-            /* End Set ACL */
-            newcounter.set("title", title);
-            newcounter.set("url", url);
-            newcounter.set("time", 1);
-            newcounter.save(null, {
-              success: function(newcounter) {
-                var $element = $(document.getElementById(url));
-                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
-              },
-              error: function(newcounter, error) {
-                console.log('Failed to create');
-              }
-            });
+            
+              var $element = $(document.getElementById(url));
+              $element.find('.leancloud-visitors-count').text('Counter not initialized! See more at console err msg.');
+              console.error('ATTENTION! LeanCloud counter has security bug, see here how to solve it: https://github.com/theme-next/hexo-leancloud-counter-security. \n But you also can use LeanCloud without security, by set \'security\' option to \'false\'.');
+            
           }
         },
         error: function(error) {
@@ -1143,6 +1262,8 @@
 
 
   
+
+  
   
   
   <script src="/lib/needsharebutton/needsharebutton.js"></script>
@@ -1163,6 +1284,10 @@
     
     
   </script>
+
+  
+
+  
 
   
 
