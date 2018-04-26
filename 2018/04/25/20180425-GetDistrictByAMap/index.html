@@ -110,20 +110,20 @@
 
 
 
-  <meta name="description" content="高德地图API提供的行政区划查询，可以获取到行政区域的区号、城市编码、中心点、边界、下辖区域的详细信息。基于该工具进行扩展，对边界数据做转换处理，保存为GeoJson格式文件，方便使用。 现在就去下载CLICK😍ME">
+  <meta name="description" content="高德地图API提供的行政区划查询，可以获取到行政区域的区号、城市编码、中心点、边界、下辖区域的详细信息。基于该工具进行扩展，对边界数据做转换处理，保存为GeoJson格式文件，方便使用，并且还可以选择转为WGS84坐标。 现在就去下载CLICK😍ME">
 <meta name="keywords" content="Vue,GeoJson,高德地图,行政区域">
 <meta property="og:type" content="article">
 <meta property="og:title" content="高德地图API获取行政区域">
 <meta property="og:url" content="http://giser.xyz/2018/04/25/20180425-GetDistrictByAMap/index.html">
 <meta property="og:site_name" content="GISer空间">
-<meta property="og:description" content="高德地图API提供的行政区划查询，可以获取到行政区域的区号、城市编码、中心点、边界、下辖区域的详细信息。基于该工具进行扩展，对边界数据做转换处理，保存为GeoJson格式文件，方便使用。 现在就去下载CLICK😍ME">
+<meta property="og:description" content="高德地图API提供的行政区划查询，可以获取到行政区域的区号、城市编码、中心点、边界、下辖区域的详细信息。基于该工具进行扩展，对边界数据做转换处理，保存为GeoJson格式文件，方便使用，并且还可以选择转为WGS84坐标。 现在就去下载CLICK😍ME">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://giser.xyz/2018/04/25/20180425-GetDistrictByAMap/1.png">
 <meta property="og:image" content="http://giser.xyz/2018/04/25/20180425-GetDistrictByAMap/2.png">
-<meta property="og:updated_time" content="2018-04-26T09:19:47.626Z">
+<meta property="og:updated_time" content="2018-04-26T14:18:01.822Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="高德地图API获取行政区域">
-<meta name="twitter:description" content="高德地图API提供的行政区划查询，可以获取到行政区域的区号、城市编码、中心点、边界、下辖区域的详细信息。基于该工具进行扩展，对边界数据做转换处理，保存为GeoJson格式文件，方便使用。 现在就去下载CLICK😍ME">
+<meta name="twitter:description" content="高德地图API提供的行政区划查询，可以获取到行政区域的区号、城市编码、中心点、边界、下辖区域的详细信息。基于该工具进行扩展，对边界数据做转换处理，保存为GeoJson格式文件，方便使用，并且还可以选择转为WGS84坐标。 现在就去下载CLICK😍ME">
 <meta name="twitter:image" content="http://giser.xyz/2018/04/25/20180425-GetDistrictByAMap/1.png">
 
 
@@ -447,7 +447,7 @@
                 
                   <span class="post-meta-item-text">本文字数</span>
                 
-                <span title="本文字数">1.2k</span>
+                <span title="本文字数">1.6k</span>
               
 
               
@@ -481,7 +481,7 @@
       
 
       
-        <p>高德地图API提供的行政区划查询，可以获取到行政区域的区号、城市编码、中心点、边界、下辖区域的详细信息。基于该工具进行扩展，对边界数据做转换处理，保存为GeoJson格式文件，方便使用。</p>
+        <p>高德地图API提供的行政区划查询，可以获取到行政区域的区号、城市编码、中心点、边界、下辖区域的详细信息。基于该工具进行扩展，对边界数据做转换处理，保存为GeoJson格式文件，方便使用，并且还可以选择转为WGS84坐标。</p>
 <h2 id="现在就去下载"><a href="#现在就去下载" class="headerlink" title="现在就去下载"></a>现在就去下载</h2><p><a href="http://giser.xyz/demo/Dist-AMap/index.html">CLICK😍ME</a></p>
 <a id="more"></a>
 <p><img src="1.png" alt="1"></p>
@@ -498,6 +498,17 @@
 <h2 id="获取流程"><a href="#获取流程" class="headerlink" title="获取流程"></a>获取流程</h2><p><img src="2.png" alt="获取流程"></p>
 <h2 id="生成的GeoJson怎么保存到本地？"><a href="#生成的GeoJson怎么保存到本地？" class="headerlink" title="生成的GeoJson怎么保存到本地？"></a>生成的GeoJson怎么保存到本地？</h2><p><a href="https://github.com/eligrey/FileSaver.js" target="_blank" rel="noopener">FileSaver</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install file-saver --save</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> blob = <span class="keyword">new</span> Blob([<span class="string">"Hello, world!"</span>], &#123;<span class="attr">type</span>: <span class="string">"text/plain;charset=utf-8"</span>&#125;);</span><br><span class="line">FileSaver.saveAs(blob, <span class="string">"hello world.txt"</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="火星坐标转换"><a href="#火星坐标转换" class="headerlink" title="火星坐标转换"></a>火星坐标转换</h2><p>WGS-84(未偏移坐标)、GCJ-02(国家测绘局、高德、谷歌中国地图), BD-09(百度坐标系)</p>
+<h3 id="coordinate-convert"><a href="#coordinate-convert" class="headerlink" title="coordinate-convert"></a><a href="https://github.com/stuarqi/coordinate-convert" target="_blank" rel="noopener">coordinate-convert</a></h3><p>该库实现了以下转换：</p>
+<ul>
+<li>WGS84坐标转GCJ02坐标(wgs2gcj)</li>
+<li>WGS84坐标转GCJ02坐标(gcj2wgs)</li>
+<li>GCJ02坐标转百度BD09坐标(gcj2bd)</li>
+<li>百度DB09坐标转GCJ02坐标(bd2gcj)</li>
+</ul>
+<h3 id="coord-convert"><a href="#coord-convert" class="headerlink" title="coord-convert"></a><a href="https://github.com/sshuair/coord-convert" target="_blank" rel="noopener">coord-convert</a></h3><p>该库实现了三者之间的互相转换，支持文件格式：ESRI Shapefile, GeoJSON。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install coordinate-convert --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> coord = CoordinateConvert.wgs2gcj(<span class="number">116.3997</span>, <span class="number">39.9158</span>)</span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -832,7 +843,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#现在就去下载"><span class="nav-number">1.</span> <span class="nav-text">现在就去下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue项目中使用高德地图"><span class="nav-number">2.</span> <span class="nav-text">Vue项目中使用高德地图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#引入高德地图"><span class="nav-number">2.1.</span> <span class="nav-text">引入高德地图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置webpack"><span class="nav-number">2.2.</span> <span class="nav-text">配置webpack</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建地图"><span class="nav-number">2.3.</span> <span class="nav-text">创建地图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取流程"><span class="nav-number">3.</span> <span class="nav-text">获取流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成的GeoJson怎么保存到本地？"><span class="nav-number">4.</span> <span class="nav-text">生成的GeoJson怎么保存到本地？</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#现在就去下载"><span class="nav-number">1.</span> <span class="nav-text">现在就去下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue项目中使用高德地图"><span class="nav-number">2.</span> <span class="nav-text">Vue项目中使用高德地图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#引入高德地图"><span class="nav-number">2.1.</span> <span class="nav-text">引入高德地图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置webpack"><span class="nav-number">2.2.</span> <span class="nav-text">配置webpack</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建地图"><span class="nav-number">2.3.</span> <span class="nav-text">创建地图</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#获取流程"><span class="nav-number">3.</span> <span class="nav-text">获取流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成的GeoJson怎么保存到本地？"><span class="nav-number">4.</span> <span class="nav-text">生成的GeoJson怎么保存到本地？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#火星坐标转换"><span class="nav-number">5.</span> <span class="nav-text">火星坐标转换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#coordinate-convert"><span class="nav-number">5.1.</span> <span class="nav-text">coordinate-convert</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#coord-convert"><span class="nav-number">5.2.</span> <span class="nav-text">coord-convert</span></a></li></ol></li></ol></div>
             
 
           </div>
