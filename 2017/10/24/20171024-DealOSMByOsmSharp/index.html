@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="ltZ9Hc5Rvj42QuxNfQt-vf1rTVfZCPlmaTnoAi14_0E" />
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="WCDWy7MKsY" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.2.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.2.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.2.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: 'SQXNYRY3J5',
+      apiKey: 'a80c3cedfa9841ae3fbfe19739772751',
+      indexName: 'hexo',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"搜索...","hits_empty":"未发现与 「${query}」相关的内容","hits_stats":"${hits} 条相关条目，耗时 ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="OsmSharp是一个基于.NET的OpenStreetMap(OSM)库。本文对OsmSharp做了简单的介绍，并使用OsmSharp对OSM数据做了常用的数据处理、数据库的存储和应用（路径规划），提供了一些关键代码。">
+<meta name="keywords" content="OpenStreetMap,OsmSharp,路径规划">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用OsmSharp处理OpenStreetMap(OSM)数据">
+<meta property="og:url" content="http://giser.xyz/2017/10/24/20171024-DealOSMByOsmSharp/index.html">
+<meta property="og:site_name" content="GISer空间">
+<meta property="og:description" content="OsmSharp是一个基于.NET的OpenStreetMap(OSM)库。本文对OsmSharp做了简单的介绍，并使用OsmSharp对OSM数据做了常用的数据处理、数据库的存储和应用（路径规划），提供了一些关键代码。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://giser.xyz/2017/10/24/20171024-DealOSMByOsmSharp/1.png">
+<meta property="og:image" content="http://giser.xyz/2017/10/24/20171024-DealOSMByOsmSharp/2.png">
+<meta property="og:image" content="http://giser.xyz/2017/10/24/20171024-DealOSMByOsmSharp/3.jpg">
+<meta property="og:image" content="http://giser.xyz/2017/10/24/20171024-DealOSMByOsmSharp/4.png">
+<meta property="og:image" content="http://giser.xyz/2017/10/24/20171024-DealOSMByOsmSharp/5.png">
+<meta property="og:image" content="http://giser.xyz/2017/10/24/20171024-DealOSMByOsmSharp/6.png">
+<meta property="og:image" content="http://giser.xyz/2017/10/24/20171024-DealOSMByOsmSharp/7.jpg">
+<meta property="og:updated_time" content="2018-04-11T09:31:26.248Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="使用OsmSharp处理OpenStreetMap(OSM)数据">
+<meta name="twitter:description" content="OsmSharp是一个基于.NET的OpenStreetMap(OSM)库。本文对OsmSharp做了简单的介绍，并使用OsmSharp对OSM数据做了常用的数据处理、数据库的存储和应用（路径规划），提供了一些关键代码。">
+<meta name="twitter:image" content="http://giser.xyz/2017/10/24/20171024-DealOSMByOsmSharp/1.png">
+
+
+
+
+
+
+  <link rel="canonical" href="http://giser.xyz/2017/10/24/20171024-DealOSMByOsmSharp/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>使用OsmSharp处理OpenStreetMap(OSM)数据 | GISer空间</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">GISer空间</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">地理与计算机的爱情故事</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://giser.xyz/2017/10/24/20171024-DealOSMByOsmSharp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="huangli">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GISer空间">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">使用OsmSharp处理OpenStreetMap(OSM)数据
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-10-24 19:10:59" itemprop="dateCreated datePublished" datetime="2017-10-24T19:10:59+08:00">2017-10-24</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/地理信息科学/" itemprop="url" rel="index"><span itemprop="name">地理信息科学</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/10/24/20171024-DealOSMByOsmSharp/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论</span> <span class="post-comments-count gitment-comments-count" data-xid="/2017/10/24/20171024-DealOSMByOsmSharp/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-thumbs-o-up"></i>
+             热度 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span>℃</span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数</span>
+                
+                <span title="本文字数">15k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">22 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>OsmSharp是一个基于.NET的OpenStreetMap(OSM)库。<br>本文对OsmSharp做了简单的介绍，并使用OsmSharp对OSM数据做了常用的数据处理、数据库的存储和应用（路径规划），提供了一些关键代码。</p>
+<a id="more"></a>
+<h2 id="OpenStreetMap数据模型"><a href="#OpenStreetMap数据模型" class="headerlink" title="OpenStreetMap数据模型"></a>OpenStreetMap数据模型</h2><p>OSM数据有三个基本对象：Node，Way，Relation。更多信息请查看<a href="http://wiki.openstreetmap.org/wiki/Elements" target="_blank" rel="noopener">OSM-wiki</a>。<br><img src="1.png" alt="OpenStreetMap数据模型"></p>
+<h2 id="OsmSharp介绍"><a href="#OsmSharp介绍" class="headerlink" title="OsmSharp介绍"></a>OsmSharp介绍</h2><p>OsmSharp可以在直接.NET中使用OSM数据，其主要功能有：</p>
+<ul>
+<li>Read/Write OSM-XML.</li>
+<li>Read/Write OSM-PBF.</li>
+<li>Streamed architecture, minimal memory footprint.</li>
+<li>Convert a stream of native OSM objects to ‘complete’ OSM objects: Ways with all their actual nodes, Relations with all members instantiated.</li>
+<li>Convert OSM objects to geometries.</li>
+</ul>
+<h2 id="协作项目"><a href="#协作项目" class="headerlink" title="协作项目"></a>协作项目</h2><p>OsmSharp做过与地图相关的很多事情：路径规划、数据处理、渲染矢量数据。下面是OsmSharp与.NET平台的协作项目：</p>
+<ul>
+<li><a href="https://github.com/NetTopologySuite/NetTopologySuite" target="_blank" rel="noopener">NetTopologySuite(NTS)</a>：一个地理库，可以将其与OsmSharp.Geo一起使用，将OSM数据转换为shapefile或过滤一些数据将其转换为GeoJSON。</li>
+<li><a href="https://github.com/itinero/" target="_blank" rel="noopener">ltinero</a>：.NET的路径规划项目。OsmSharp.Routing作为OsmSharp的一部分，现更名为ltinero。</li>
+<li><a href="https://github.com/pauldendulk/Mapsui" target="_blank" rel="noopener">Mapsui</a>：Mapsui是WPF，Xamarin.Android，Xamarin.iOS和UWP应用程序的.NET Map组件。</li>
+</ul>
+<h2 id="流模型-Streaming-Model"><a href="#流模型-Streaming-Model" class="headerlink" title="流模型(Streaming Model)"></a>流模型(Streaming Model)</h2><p>OsmSharp使用流模型处理OSM数据。所有流模型都实现了泛型IEnumerable&lt;T&gt;接口，这就意味着可以使用LINQ查询处理。<br><img src="2.png" alt="流模型(Streaming Model)"></p>
+<ul>
+<li><strong>OsmStreamSource：</strong><br>XmlOsmStreamSource：读OSM-XML文件<br>PBFOsmStreamSource：读OSM-PBF文件</li>
+<li><strong>OsmStreamTarget：</strong><br>XmlOsmStreamTarget：写OSM-XML文件<br>PBFOsmStreamTarget：写OSM-PBF文件</li>
+<li><strong>OsmStreamFilter：</strong><br>OsmStreamFilterDelegate<br>OsmStreamFilterMerge<br>OsmStreamFilterNode<br>OsmStreamFilterProgress</li>
+</ul>
+<h3 id="读OSM-PBF文件"><a href="#读OSM-PBF文件" class="headerlink" title="读OSM-PBF文件"></a>读OSM-PBF文件</h3><p><a href="https://github.com/huanglii/OsmSharp_Blog/raw/master/luxembourg-latest.osm.pbf" target="_blank" rel="noopener">luxembourg-latest.osm.pbf</a><br><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 读取"luxembourg-latest.osm.pbf"的node、way、relation个数</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建StreamSource</span></span><br><span class="line"><span class="keyword">var</span> source = <span class="keyword">new</span> PBFOsmStreamSource(File.OpenRead(<span class="string">"luxembourg-latest.osm.pbf"</span>));</span><br><span class="line"><span class="keyword">int</span> nodes = <span class="number">0</span>, ways = <span class="number">0</span>, relations = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">foreach</span> (<span class="keyword">var</span> osmGeo <span class="keyword">in</span> source)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (osmGeo.Type == OsmGeoType.Node)</span><br><span class="line">    &#123;</span><br><span class="line">        nodes++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (osmGeo.Type == OsmGeoType.Way)</span><br><span class="line">    &#123;</span><br><span class="line">        ways++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (osmGeo.Type == OsmGeoType.Relation)</span><br><span class="line">    &#123;</span><br><span class="line">        relations++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">Console.WriteLine(<span class="string">"There are &#123;0&#125; nodes, &#123;1&#125; ways, &#123;2&#125; relations."</span>, nodes, ways, relations);</span><br><span class="line"><span class="comment">// 输出：There are 1721051 nodes, 223718 ways, 2511 relations.</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="LINQ查询过滤数据"><a href="#LINQ查询过滤数据" class="headerlink" title="LINQ查询过滤数据"></a>LINQ查询过滤数据</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建StreamSource</span></span><br><span class="line"><span class="keyword">var</span> source = <span class="keyword">new</span> PBFOsmStreamSource(File.OpenRead(<span class="string">"luxembourg-latest.osm.pbf"</span>));</span><br><span class="line"><span class="keyword">int</span> nodes = <span class="number">0</span>, ways = <span class="number">0</span>, relations = <span class="number">0</span>;</span><br><span class="line"><span class="comment">// 使用LINQ查询用户名为"Stilmant Michael"的数据</span></span><br><span class="line"><span class="keyword">var</span> filtered = <span class="keyword">from</span> osmGeo <span class="keyword">in</span> source <span class="keyword">where</span> osmGeo.UserName == <span class="string">"Stilmant Michael"</span> <span class="keyword">select</span> osmGeo;</span><br><span class="line"><span class="keyword">foreach</span> (<span class="keyword">var</span> osmGeo <span class="keyword">in</span> filtered)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (osmGeo.Type == OsmGeoType.Node)</span><br><span class="line">    &#123;</span><br><span class="line">        nodes++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (osmGeo.Type == OsmGeoType.Way)</span><br><span class="line">    &#123;</span><br><span class="line">        ways++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (osmGeo.Type == OsmGeoType.Relation)</span><br><span class="line">    &#123;</span><br><span class="line">        relations++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">Console.WriteLine(<span class="string">"There are &#123;0&#125; nodes, &#123;1&#125; ways, &#123;2&#125; relations are edited by Stilmant Michael."</span>, nodes, ways, relations);</span><br><span class="line"><span class="comment">// 输出：There are 762 nodes, 77 ways, 0 relations are edited by Stilmant Michael.</span></span><br></pre></td></tr></table></figure>
+<h3 id="写入OSM-XML文件"><a href="#写入OSM-XML文件" class="headerlink" title="写入OSM-XML文件"></a>写入OSM-XML文件</h3><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建StreamSource</span></span><br><span class="line"><span class="keyword">var</span> source = <span class="keyword">new</span> PBFOsmStreamSource(File.OpenRead(<span class="string">"luxembourg-latest.osm.pbf"</span>));</span><br><span class="line"><span class="comment">// 过滤</span></span><br><span class="line"><span class="keyword">var</span> filterd = <span class="keyword">from</span> osmGeo <span class="keyword">in</span> source <span class="keyword">where</span> osmGeo.UserName == <span class="string">"Stilmant Michael"</span> <span class="keyword">select</span> osmGeo;</span><br><span class="line"><span class="comment">// 创建StreamTarget</span></span><br><span class="line"><span class="keyword">var</span> target = <span class="keyword">new</span> XmlOsmStreamTarget(File.Open(<span class="string">"filtered.osm"</span>, FileMode.Create));</span><br><span class="line"><span class="comment">// 写入</span></span><br><span class="line">target.RegisterSource(filterd);</span><br><span class="line">target.Pull();</span><br></pre></td></tr></table></figure>
+<p>打开”filtered.osm”文件可查看内容，如下：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">osm</span> <span class="attr">version</span>=<span class="string">"0.6"</span> <span class="attr">generator</span>=<span class="string">"OsmSharp"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">node</span> <span class="attr">id</span>=<span class="string">"25922353"</span> <span class="attr">lat</span>=<span class="string">"49.50871"</span> <span class="attr">lon</span>=<span class="string">"6.010775"</span> <span class="attr">user</span>=<span class="string">"Stilmant Michael"</span> <span class="attr">uid</span>=<span class="string">"26290"</span> <span class="attr">visible</span>=<span class="string">"true"</span> <span class="attr">version</span>=<span class="string">"36766"</span> <span class="attr">changeset</span>=<span class="string">"9218254"</span> <span class="attr">timestamp</span>=<span class="string">"2011-09-05T14:27:47Z"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tag</span> <span class="attr">k</span>=<span class="string">"highway"</span> <span class="attr">v</span>=<span class="string">"crossing"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tag</span> <span class="attr">k</span>=<span class="string">"crossing"</span> <span class="attr">v</span>=<span class="string">"uncontrolled"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">node</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">node</span> <span class="attr">id</span>=<span class="string">"245921260"</span> <span class="attr">lat</span>=<span class="string">"49.60019"</span> <span class="attr">lon</span>=<span class="string">"6.124797"</span> <span class="attr">user</span>=<span class="string">"Stilmant Michael"</span> <span class="attr">uid</span>=<span class="string">"26290"</span> <span class="attr">visible</span>=<span class="string">"true"</span> <span class="attr">version</span>=<span class="string">"10362"</span> <span class="attr">changeset</span>=<span class="string">"44411"</span> <span class="attr">timestamp</span>=<span class="string">"2008-02-05T12:37:48Z"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">node</span> <span class="attr">id</span>=<span class="string">"245923096"</span> <span class="attr">lat</span>=<span class="string">"49.5063"</span> <span class="attr">lon</span>=<span class="string">"6.013138"</span> <span class="attr">user</span>=<span class="string">"Stilmant Michael"</span> <span class="attr">uid</span>=<span class="string">"26290"</span> <span class="attr">visible</span>=<span class="string">"true"</span> <span class="attr">version</span>=<span class="string">"10516"</span> <span class="attr">changeset</span>=<span class="string">"9218254"</span> <span class="attr">timestamp</span>=<span class="string">"2011-09-05T14:27:46Z"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tag</span> <span class="attr">k</span>=<span class="string">"highway"</span> <span class="attr">v</span>=<span class="string">"crossing"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tag</span> <span class="attr">k</span>=<span class="string">"crossing"</span> <span class="attr">v</span>=<span class="string">"uncontrolled"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">node</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">node</span> <span class="attr">id</span>=<span class="string">"245923278"</span> <span class="attr">lat</span>=<span class="string">"49.50129"</span> <span class="attr">lon</span>=<span class="string">"6.014411"</span> <span class="attr">user</span>=<span class="string">"Stilmant Michael"</span> <span class="attr">uid</span>=<span class="string">"26290"</span> <span class="attr">visible</span>=<span class="string">"true"</span> <span class="attr">version</span>=<span class="string">"10557"</span> <span class="attr">changeset</span>=<span class="string">"44411"</span> <span class="attr">timestamp</span>=<span class="string">"2008-02-05T12:57:49Z"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">node</span> <span class="attr">id</span>=<span class="string">"245923344"</span> <span class="attr">lat</span>=<span class="string">"49.49693"</span> <span class="attr">lon</span>=<span class="string">"6.009622"</span> <span class="attr">user</span>=<span class="string">"Stilmant Michael"</span> <span class="attr">uid</span>=<span class="string">"26290"</span> <span class="attr">visible</span>=<span class="string">"true"</span> <span class="attr">version</span>=<span class="string">"10571"</span> <span class="attr">changeset</span>=<span class="string">"44411"</span> <span class="attr">timestamp</span>=<span class="string">"2008-02-05T12:59:12Z"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">node</span> <span class="attr">id</span>=<span class="string">"245923345"</span> <span class="attr">lat</span>=<span class="string">"49.49725"</span> <span class="attr">lon</span>=<span class="string">"6.009501"</span> <span class="attr">user</span>=<span class="string">"Stilmant Michael"</span> <span class="attr">uid</span>=<span class="string">"26290"</span> <span class="attr">visible</span>=<span class="string">"true"</span> <span class="attr">version</span>=<span class="string">"10572"</span> <span class="attr">changeset</span>=<span class="string">"44411"</span> <span class="attr">timestamp</span>=<span class="string">"2008-02-05T12:59:12Z"</span> /&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 略 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">way</span> <span class="attr">id</span>=<span class="string">"22921571"</span> <span class="attr">user</span>=<span class="string">"Stilmant Michael"</span> <span class="attr">uid</span>=<span class="string">"26290"</span> <span class="attr">visible</span>=<span class="string">"true"</span> <span class="attr">version</span>=<span class="string">"1"</span> <span class="attr">changeset</span>=<span class="string">"87062"</span> <span class="attr">timestamp</span>=<span class="string">"2008-02-09T16:29:01Z"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">nd</span> <span class="attr">ref</span>=<span class="string">"246813086"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">nd</span> <span class="attr">ref</span>=<span class="string">"246813087"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">nd</span> <span class="attr">ref</span>=<span class="string">"246813088"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">nd</span> <span class="attr">ref</span>=<span class="string">"246813089"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tag</span> <span class="attr">k</span>=<span class="string">"foot"</span> <span class="attr">v</span>=<span class="string">"yes"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tag</span> <span class="attr">k</span>=<span class="string">"highway"</span> <span class="attr">v</span>=<span class="string">"footway"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tag</span> <span class="attr">k</span>=<span class="string">"created_by"</span> <span class="attr">v</span>=<span class="string">"Potlatch 0.7"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">way</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">way</span> <span class="attr">id</span>=<span class="string">"22921581"</span> <span class="attr">user</span>=<span class="string">"Stilmant Michael"</span> <span class="attr">uid</span>=<span class="string">"26290"</span> <span class="attr">visible</span>=<span class="string">"true"</span> <span class="attr">version</span>=<span class="string">"2"</span> <span class="attr">changeset</span>=<span class="string">"87062"</span> <span class="attr">timestamp</span>=<span class="string">"2008-02-09T16:31:20Z"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">nd</span> <span class="attr">ref</span>=<span class="string">"246813139"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">nd</span> <span class="attr">ref</span>=<span class="string">"246813140"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">nd</span> <span class="attr">ref</span>=<span class="string">"246813141"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">nd</span> <span class="attr">ref</span>=<span class="string">"246813142"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">nd</span> <span class="attr">ref</span>=<span class="string">"246813139"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tag</span> <span class="attr">k</span>=<span class="string">"amenity"</span> <span class="attr">v</span>=<span class="string">"parking"</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tag</span> <span class="attr">k</span>=<span class="string">"created_by"</span> <span class="attr">v</span>=<span class="string">"Potlatch 0.7"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">way</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 略 --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">osm</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="常用数据处理"><a href="#常用数据处理" class="headerlink" title="常用数据处理"></a>常用数据处理</h2><h3 id="裁剪"><a href="#裁剪" class="headerlink" title="裁剪"></a>裁剪</h3><p>以下两种过滤方法可实现裁剪。</p>
+<ul>
+<li>FilterBox(float left, float top, float right, float bottom，bool completeWays)</li>
+<li>FilterSpatial(IPolygon polygon, bool completeWays)</li>
+</ul>
+<p>其中，FilterBox()以边框过滤，需设置左、上、右、下的经纬度。FilterSpatial()以ploygon裁剪，保留polygon以内的所有对象，该方法需要引用OsmSharp.Geo。completeWays默认为false，true和false的区别如下图。（红色为设置为true的结果，绿色为设置为false的结果）<br><img src="3.jpg" alt="不同completeWays裁剪的结果"><br>示例：<br><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> (<span class="keyword">var</span> fileStreamSource = File.OpenRead(<span class="string">"luxembourg-latest.osm.pbf"</span>))</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">using</span> (<span class="keyword">var</span> fileStreamTarget = File.Open(<span class="string">"clip.osm"</span>, FileMode.Create))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">// 创建StreamSource</span></span><br><span class="line">        <span class="keyword">var</span> source = <span class="keyword">new</span> PBFOsmStreamSource(fileStreamSource);</span><br><span class="line">        <span class="comment">// 创建StreamTarget</span></span><br><span class="line">        <span class="keyword">var</span> target = <span class="keyword">new</span> XmlOsmStreamTarget(fileStreamTarget);</span><br><span class="line">        <span class="comment">// 1.以边框过滤</span></span><br><span class="line">        <span class="comment">//var filtered = source.FilterBox(6.238002777099609f, 49.72076145492323f, 6.272850036621093f, 49.69928180928878f);</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2.以polygon过滤</span></span><br><span class="line">        <span class="keyword">var</span> polygon = GetPolygonFromGeoJson(<span class="string">"polygon.geojson"</span>);</span><br><span class="line">        <span class="keyword">var</span> filtered = source.FilterSpatial(polygon, <span class="literal">true</span>);</span><br><span class="line">        target.RegisterSource(filtered);</span><br><span class="line">        target.Pull();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>GetPolygonFromGeoJson(string fileName)方法如下，需添加以下引用。<br><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> GeoAPI.Geometries;</span><br><span class="line"><span class="keyword">using</span> NetTopologySuite.Features;</span><br><span class="line"><span class="keyword">using</span> Newtonsoft.Json;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> 从GeoJson中获取Polygon对象</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name="fileName"&gt;</span>文件名<span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span><span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> IPolygon <span class="title">GetPolygonFromGeoJson</span>(<span class="params"><span class="keyword">string</span> fileName</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">using</span> (<span class="keyword">var</span> stream = <span class="keyword">new</span> StreamReader(fileName))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">var</span> jsonSerializer = <span class="keyword">new</span> NetTopologySuite.IO.GeoJsonSerializer();</span><br><span class="line">        <span class="keyword">var</span> features = jsonSerializer.Deserialize(<span class="keyword">new</span> JsonTextReader(stream));</span><br><span class="line">        <span class="keyword">return</span> features.Features[<span class="number">0</span>].Geometry <span class="keyword">as</span> IPolygon;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="数据库操作"><a href="#数据库操作" class="headerlink" title="数据库操作"></a>数据库操作</h2><h3 id="SQLServer"><a href="#SQLServer" class="headerlink" title="SQLServer"></a>SQLServer</h3><ul>
+<li><a href="https://github.com/huanglii/OsmSharp_Blog/raw/master/OsmSharp.Db.SQLServer.dll" target="_blank" rel="noopener">OsmSharp.Db.SQLServer.dll</a></li>
+<li><a href="https://github.com/huanglii/OsmSharp_Blog/raw/master/OsmSharp.Data.SQLServer.dll" target="_blank" rel="noopener">OsmSharp.Data.SQLServer.dll</a></li>
+</ul>
+<p><a href="https://github.com/OsmSharp" target="_blank" rel="noopener">OsmSharp-GitHub</a>上有两种方式从/向SQL Server数据库读取/写入OSM数据。</p>
+<h4 id="OsmSharp-Db-SQLServer-dll"><a href="#OsmSharp-Db-SQLServer-dll" class="headerlink" title="OsmSharp.Db.SQLServer.dll"></a>OsmSharp.Db.SQLServer.dll</h4><p>使用<a href="https://github.com/OsmSharp/sqlserver-dataprovider" target="_blank" rel="noopener">sqlserver-dataprovider</a>软件包，以SQL Server作为OpenStreetMap数据库。从/向SQL Server数据库读取/写入OSM数据。需添加引用”OsmSharp.Db.SQLServer.dll”，最新的GitHub上找不到这个文件，我上传到自己的GitHub了，点击即可下载。<br><img src="4.png" alt="OsmSharp.Db.SQLServer.dll"></p>
+<h5 id="向SQL-Server数据库写入OSM数据"><a href="#向SQL-Server数据库写入OSM数据" class="headerlink" title="向SQL Server数据库写入OSM数据"></a>向SQL Server数据库写入OSM数据</h5><p>实时数据(Snapshot<em>)和历史数据(History</em>)的插入方法一致，只是数据表的结构不一样。具体的数据表结构请查看<a href="https://github.com/OsmSharp/sqlserver-dataprovider/tree/develop/OsmSharp.Db.SQLServer/Schema" target="_blank" rel="noopener">GitHub</a>中的SQL语句。</p>
+<blockquote>
+<p>历史数据(History*)的导入，会因为id重复，而导致导入数据失败！！！</p>
+</blockquote>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 连接字符串</span></span><br><span class="line"><span class="keyword">string</span> conStr = <span class="string">"Server=*;Database=*;User Id=*;Password=*;MultipleActiveResultSets=true;"</span>;</span><br><span class="line"><span class="comment">// 启用日志记录</span></span><br><span class="line">OsmSharp.Logging.Logger.LogAction = (origin, level, message, parameters) =&gt;</span><br><span class="line">&#123;</span><br><span class="line">    Console.WriteLine(<span class="string">"[&#123;0&#125;-&#123;3&#125;]:&#123;1&#125; - &#123;2&#125;"</span>, origin, level, message, DateTime.Now.ToString());</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// 连接数据库并插入数据</span></span><br><span class="line"><span class="keyword">using</span> (<span class="keyword">var</span> connection = <span class="keyword">new</span> SqlConnection(conStr))</span><br><span class="line">&#123;</span><br><span class="line">    connection.Open();</span><br><span class="line">    <span class="comment">// 创建数据表</span></span><br><span class="line">    Tools.SnapshotDbCreateAndDetect(connection);</span><br><span class="line">    <span class="comment">// 删除数据表内容</span></span><br><span class="line">    Tools.SnapshotDbDeleteAll(connection);</span><br><span class="line">    <span class="keyword">using</span> (<span class="keyword">var</span> stream = File.OpenRead(<span class="string">"luxembourg-latest.osm.pbf"</span>))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">var</span> source = <span class="keyword">new</span> PBFOsmStreamSource(stream);</span><br><span class="line">        <span class="keyword">var</span> target = <span class="keyword">new</span> SnapshotDbStreamTarget(conStr, <span class="literal">true</span>);</span><br><span class="line">        <span class="comment">// 插入数据</span></span><br><span class="line">        target.RegisterSource(source);</span><br><span class="line">        target.Pull();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输出的日志：<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">[Schema.Tools-2017/5/12 13:32:47]:information - Delete all data in snapshot database schema...</span><br><span class="line">[SnapshotDbStreamTarget-2017/5/12 13:32:53]:information - Inserting 1000000 records into node.</span><br><span class="line">[SnapshotDbStreamTarget-2017/5/12 13:33:14]:information - Inserting 80777 records into node_tags.</span><br><span class="line">[SnapshotDbStreamTarget-2017/5/12 13:33:22]:information - Inserting 100000 records into way.</span><br><span class="line">[SnapshotDbStreamTarget-2017/5/12 13:33:23]:information - Inserting 354601 records into way_tags.</span><br><span class="line">[SnapshotDbStreamTarget-2017/5/12 13:33:28]:information - Inserting 1122157 records into way_nodes.</span><br><span class="line">[SnapshotDbStreamTarget-2017/5/12 13:33:43]:information - Inserting 100000 records into way.</span><br><span class="line">[SnapshotDbStreamTarget-2017/5/12 13:33:44]:information - Inserting 256525 records into way_tags.</span><br><span class="line">[SnapshotDbStreamTarget-2017/5/12 13:33:47]:information - Inserting 888866 records into way_nodes.</span><br><span class="line">[SnapshotDbStreamTarget-2017/5/12 13:33:59]:information - Flushing remaining data...</span><br><span class="line">[SnapshotDbStreamTarget-2017/5/12 13:33:59]:information - Inserting 721051 records into node.</span><br><span class="line">[SnapshotDbStreamTarget-2017/5/12 13:34:15]:information - Inserting 55585 records into node_tags.</span><br><span class="line">[SnapshotDbStreamTarget-2017/5/12 13:34:16]:information - Inserting 23718 records into way.</span><br><span class="line">[SnapshotDbStreamTarget-2017/5/12 13:34:16]:information - Inserting 52142 records into way_tags.</span><br><span class="line">[SnapshotDbStreamTarget-2017/5/12 13:34:16]:information - Inserting 282298 records into way_nodes.</span><br><span class="line">[SnapshotDbStreamTarget-2017/5/12 13:34:19]:information - Inserting 2511 records into relation.</span><br><span class="line">[SnapshotDbStreamTarget-2017/5/12 13:34:20]:information - Inserting 14759 records into relation_tags.</span><br><span class="line">[SnapshotDbStreamTarget-2017/5/12 13:34:20]:information - Inserting 146095 records into relation_members.</span><br><span class="line">[SnapshotDbStreamTarget-2017/5/12 13:34:22]:information - Database connection closed.</span><br></pre></td></tr></table></figure></p>
+<p>实时数据的表结构和插入后的数据如下图：<br><img src="5.png" alt="实时数据的表结构和插入后的数据"></p>
+<h5 id="从SQL-Server数据库中读取OSM数据"><a href="#从SQL-Server数据库中读取OSM数据" class="headerlink" title="从SQL Server数据库中读取OSM数据"></a>从SQL Server数据库中读取OSM数据</h5><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 连接字符串</span></span><br><span class="line"><span class="keyword">string</span> conStr = <span class="string">"Server=*;Database=*;User Id=*;Password=*;MultipleActiveResultSets=true;"</span>;</span><br><span class="line"><span class="keyword">using</span> (<span class="keyword">var</span> connection = <span class="keyword">new</span> SqlConnection(conStr))</span><br><span class="line">&#123;</span><br><span class="line">    connection.Open();</span><br><span class="line">    <span class="comment">// 从数据库中读取OSM数据</span></span><br><span class="line">    <span class="keyword">var</span> source = <span class="keyword">new</span> SnapshotDbStreamSource(conStr);</span><br><span class="line">    <span class="keyword">int</span> nodes = <span class="number">0</span>, ways = <span class="number">0</span>, relations = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">foreach</span> (<span class="keyword">var</span> osmGeo <span class="keyword">in</span> source)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (osmGeo.Type == OsmGeoType.Node)</span><br><span class="line">        &#123;</span><br><span class="line">            nodes++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (osmGeo.Type == OsmGeoType.Way)</span><br><span class="line">        &#123;</span><br><span class="line">            ways++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (osmGeo.Type == OsmGeoType.Relation)</span><br><span class="line">        &#123;</span><br><span class="line">            relations++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    Console.WriteLine(<span class="string">"There are &#123;0&#125; nodes, &#123;1&#125; ways, &#123;2&#125; relations."</span>, nodes, ways, relations);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 输出：There are 1721051 nodes, 223718 ways, 2511 relations.</span></span><br></pre></td></tr></table></figure>
+<h4 id="OsmSharp-Data-SQLServer-dll"><a href="#OsmSharp-Data-SQLServer-dll" class="headerlink" title="OsmSharp.Data.SQLServer.dll"></a>OsmSharp.Data.SQLServer.dll</h4><p>使用<a href="https://github.com/OsmSharp/data-providers" target="_blank" rel="noopener">data-providers</a>软件包，可以下载“OsmSharp.Data.SQLServer.dll”文件，添加引用，也可以用NuGet搜索“OsmSharp.SQLServer”安装。</p>
+<blockquote>
+<p>最好使用NuGet安装，这样会自动添加对应版本的OsmSharp库，否则可能出现某种问题。以下是本文所对应的版本号。</p>
+</blockquote>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">packages</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">package</span> <span class="attr">id</span>=<span class="string">"OsmSharp"</span> <span class="attr">version</span>=<span class="string">"4.2.0.723"</span> <span class="attr">targetFramework</span>=<span class="string">"net452"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">package</span> <span class="attr">id</span>=<span class="string">"OsmSharp.SQLServer"</span> <span class="attr">version</span>=<span class="string">"4.2.0.723"</span> <span class="attr">targetFramework</span>=<span class="string">"net452"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">packages</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h5 id="SQL-Server数据库写入OSM数据"><a href="#SQL-Server数据库写入OSM数据" class="headerlink" title="SQL Server数据库写入OSM数据"></a>SQL Server数据库写入OSM数据</h5><p><a href="https://github.com/huanglii/OsmSharp_Blog/raw/master/history.pbf" target="_blank" rel="noopener">history.pbf</a><br>OsmSharp.Data.SQLServer.dll并没有对id作限制，因此有重复id的历史数据也可以直接写入数据库中。<br><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">string</span> conStr = <span class="string">"Server=*;Database=*;User Id=*;Password=*;MultipleActiveResultSets=true;"</span>;</span><br><span class="line"><span class="keyword">using</span> (<span class="keyword">var</span> connection = <span class="keyword">new</span> SqlConnection(conStr))</span><br><span class="line">&#123;</span><br><span class="line">    connection.Open();</span><br><span class="line">    <span class="comment">// 删除原有数据表</span></span><br><span class="line">    SQLServerSchemaTools.Remove(connection);</span><br><span class="line">    <span class="comment">// 创建数据表</span></span><br><span class="line">    SQLServerSchemaTools.CreateAndDetect(connection);</span><br><span class="line">    <span class="comment">// 实时数据</span></span><br><span class="line">    <span class="comment">// using (Stream stream = File.OpenRead("luxembourg-latest.osm.pbf"))</span></span><br><span class="line">    <span class="comment">// 历史数据</span></span><br><span class="line">    <span class="keyword">using</span> (Stream stream = File.OpenRead(<span class="string">"history.pbf"</span>))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">var</span> source = <span class="keyword">new</span> PBFOsmStreamSource(stream);</span><br><span class="line">        <span class="keyword">var</span> target = <span class="keyword">new</span> SQLServerOsmStreamTarget(connection);</span><br><span class="line">        <span class="comment">// 插入数据</span></span><br><span class="line">        target.RegisterSource(source);</span><br><span class="line">        target.Pull();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>下图是历史数据写入的结果，可以看到有重复的id。<br><img src="6.png" alt="历史数据写入结果"></p>
+<h5 id="SQL-Server数据库读取OSM数据"><a href="#SQL-Server数据库读取OSM数据" class="headerlink" title="SQL Server数据库读取OSM数据"></a>SQL Server数据库读取OSM数据</h5><p>OsmSharp.Data.SQLServer.dll好像并不能从SQL Server数据库中读取OSM数据。</p>
+<h2 id="路径规划"><a href="#路径规划" class="headerlink" title="路径规划"></a>路径规划</h2><h3 id="Itinero"><a href="#Itinero" class="headerlink" title="Itinero"></a>Itinero</h3><p><a href="http://www.itinero.tech/" target="_blank" rel="noopener">ltinero</a>：.NET的路径规划项目。</p>
+<ul>
+<li>Itinero.IO.OSM：使用OSM数据</li>
+<li>Itinero.IO.Shape：使用shapefile</li>
+<li>Itinero.IO.Geo：使用NTS</li>
+</ul>
+<p>关键类：<a href="https://github.com/itinero/routing/wiki/RouterDb" target="_blank" rel="noopener">RouterDb</a>，<a href="https://github.com/itinero/routing/wiki/Router" target="_blank" rel="noopener">Router</a>，<a href="https://github.com/itinero/routing/wiki/Profiles" target="_blank" rel="noopener">Profiles</a> 和 RouterPoint</p>
+<ul>
+<li><strong>RouterDb:</strong> Manages the data of one routing network. It holds all data in RAM or uses a memory mapping strategy to load data on demand. It holds all the network geometry, meta data and topology.</li>
+<li><strong>Router:</strong> The main facade for all routing functionality available. It will decide the best algorithm to use based on a combination of what’s requested and what data is available in the RouterDb.</li>
+<li><strong>Profiles:</strong> Definitions of vehicle and their behaviour that can traverse the routing network.</li>
+<li><strong>RouterPoint</strong>: A location on the routing network to use as a start or endpoint of a route. It’s defined by an edge-id and an offset-value uniquely identifying it’s location on the network.</li>
+</ul>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p>下面通过一个简单的示例介绍如何使用OSM数据做路径规划。</p>
+<h4 id="通过NuGet安装Itinero和Itinero-IO-OSM，添加引用"><a href="#通过NuGet安装Itinero和Itinero-IO-OSM，添加引用" class="headerlink" title="通过NuGet安装Itinero和Itinero.IO.OSM，添加引用"></a>通过NuGet安装Itinero和Itinero.IO.OSM，添加引用</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> Itinero;</span><br><span class="line"><span class="keyword">using</span> Itinero.IO.Osm;</span><br><span class="line"><span class="keyword">using</span> Itinero.LocalGeo;</span><br><span class="line"><span class="keyword">using</span> Itinero.Osm.Vehicles;</span><br></pre></td></tr></table></figure>
+<h4 id="加载OSM数据"><a href="#加载OSM数据" class="headerlink" title="加载OSM数据"></a>加载OSM数据</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 加载OSM数据</span></span><br><span class="line"><span class="keyword">var</span> routerDb = <span class="keyword">new</span> RouterDb();</span><br><span class="line"><span class="keyword">using</span> (<span class="keyword">var</span> stream = File.OpenRead(<span class="string">"beijing.osm.pbf"</span>))</span><br><span class="line">&#123;</span><br><span class="line">    routerDb.LoadOsmData(stream, Vehicle.Car);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="创建Router"><a href="#创建Router" class="headerlink" title="创建Router"></a>创建Router</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> router = <span class="keyword">new</span> Router(routerDb);</span><br></pre></td></tr></table></figure>
+<h4 id="计算"><a href="#计算" class="headerlink" title="计算"></a>计算</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> route = router.Calculate(Vehicle.Car.Fastest(), <span class="keyword">new</span> Coordinate(<span class="number">39.9225</span>f, <span class="number">116.3669</span>f), <span class="keyword">new</span> Coordinate(<span class="number">39.9066</span>f, <span class="number">116.4053</span>f));</span><br><span class="line"></span><br><span class="line"><span class="comment">// Vehicle</span></span><br><span class="line"><span class="comment">// public static readonly Profiles.Vehicle Car;</span></span><br><span class="line"><span class="comment">// public static readonly Profiles.Vehicle Pedestrian;</span></span><br><span class="line"><span class="comment">// public static readonly Profiles.Vehicle Bicycle;</span></span><br><span class="line"><span class="comment">// public static readonly Profiles.Vehicle Moped;</span></span><br><span class="line"><span class="comment">// public static readonly Profiles.Vehicle MotorCycle;</span></span><br><span class="line"><span class="comment">// public static readonly Profiles.Vehicle SmallTruck;</span></span><br><span class="line"><span class="comment">// public static readonly Profiles.Vehicle BigTruck;</span></span><br><span class="line"><span class="comment">// public static readonly Profiles.Vehicle Bus;</span></span><br></pre></td></tr></table></figure>
+<h4 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// route.TotalDistance; // 距离</span></span><br><span class="line"><span class="comment">// route.TotalTime;     // 时间</span></span><br><span class="line"><span class="comment">// route.ToGeoJson();   // 转为GeoJson格式:string</span></span><br><span class="line"><span class="comment">// route.WriteGeoJson();// 写入GeoJson文件</span></span><br><span class="line"><span class="comment">// ......</span></span><br></pre></td></tr></table></figure>
+<h4 id="将结果写入GeoJson文件后，添加到geojson-io，计算出的路径如下图"><a href="#将结果写入GeoJson文件后，添加到geojson-io，计算出的路径如下图" class="headerlink" title="将结果写入GeoJson文件后，添加到geojson.io，计算出的路径如下图"></a>将结果写入GeoJson文件后，添加到<a href="http://geojson.io/" target="_blank" rel="noopener">geojson.io</a>，计算出的路径如下图</h4><p><img src="7.jpg" alt="路径规划GeoJson"></p>
+<h3 id="实际应用"><a href="#实际应用" class="headerlink" title="实际应用"></a>实际应用</h3><p>上述示例对于小区域、城市或国家而言，没什么问题，但是当加载大面积数据时，请使用以下方法。</p>
+<ol>
+<li>处理原始数据并写入磁盘。</li>
+<li>从磁盘加载预处理的数据并将其用于路径规划。</li>
+</ol>
+<h4 id="加载原始数据"><a href="#加载原始数据" class="headerlink" title="加载原始数据"></a>加载原始数据</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> routerDb = <span class="keyword">new</span> RouterDb();</span><br><span class="line"><span class="keyword">using</span> (<span class="keyword">var</span> stream = File.OpenRead(<span class="string">"beijing.osm.pbf"</span>))</span><br><span class="line">&#123;</span><br><span class="line">    routerDb.LoadOsmData(stream, Vehicle.Car);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="将routerDb实例写入到磁盘："><a href="#将routerDb实例写入到磁盘：" class="headerlink" title="将routerDb实例写入到磁盘："></a>将routerDb实例写入到磁盘：</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> (<span class="keyword">var</span> stream = File.Create(<span class="string">"osmfile.routing"</span>))</span><br><span class="line">&#123;</span><br><span class="line">    routerDb.Serialize(stream);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="加载routerDb"><a href="#加载routerDb" class="headerlink" title="加载routerDb"></a>加载routerDb</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> (<span class="keyword">var</span> stream = File.OpenRead(<span class="string">"osmfile.routing"</span>))</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">var</span> routerDb = RouterDb.Deserialize(stream, RouterDbProfile.NoCache);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="计算-1"><a href="#计算-1" class="headerlink" title="计算"></a>计算</h4><figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> router = <span class="keyword">new</span> Router(routerDb);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> profile = Vehicle.Car.Fastest();</span><br><span class="line"><span class="keyword">var</span> routerPoint1 = router.TryResolve(profile, <span class="number">39.9225</span>f, <span class="number">116.3669</span>f);</span><br><span class="line"><span class="keyword">if</span>(routerPoint1.IsError)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// do something or retry.</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> routerPoint2 = router.TryResolve(profile, <span class="number">39.9066</span>f, <span class="number">116.4053</span>f);</span><br><span class="line"><span class="keyword">if</span> (routerPoint2.IsError)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// do something or retry.</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> route = router.TryCalculate(Vehicle.Car.Fastest(),</span><br><span class="line">    routerPoint1.Value, routerPoint2.Value);</span><br><span class="line"><span class="keyword">if</span>(route.IsError)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// do something or retry.</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>更过关于路径规划的内容请参考<a href="https://github.com/itinero/" target="_blank" rel="noopener">Itinero-GitHub</a>。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div><hr></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="huangli 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="huangli 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>huangli</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://giser.xyz/2017/10/24/20171024-DealOSMByOsmSharp/" title="使用OsmSharp处理OpenStreetMap(OSM)数据">http://giser.xyz/2017/10/24/20171024-DealOSMByOsmSharp/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/OpenStreetMap/" rel="tag"># OpenStreetMap</a>
+          
+            <a href="/tags/OsmSharp/" rel="tag"># OsmSharp</a>
+          
+            <a href="/tags/路径规划/" rel="tag"># 路径规划</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/10/22/20171022-TutorialofGMap.NET/" rel="next" title="GMap.NET使用教程">
+                <i class="fa fa-chevron-left"></i> GMap.NET使用教程
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/10/28/20171028-ArcGISAPIforJavaScript-GeoJSON/" rel="prev" title="ArcGIS API for JavaScript 加载GeoJSON数据">
+                ArcGIS API for JavaScript 加载GeoJSON数据 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div onclick="showGitment()" id="gitment-display-button">显示 Gitment 评论</div>
+        <div id="gitment-container" style="display:none"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <a href="/" rel="start">
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="huangli" />
+              </a>
+            
+              <p class="site-author-name" itemprop="name">huangli</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">26</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/huanglii" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:849151701@qq.com" target="_blank" title="E-Mail" rel="external nofollow"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#OpenStreetMap数据模型"><span class="nav-number">1.</span> <span class="nav-text">OpenStreetMap数据模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OsmSharp介绍"><span class="nav-number">2.</span> <span class="nav-text">OsmSharp介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#协作项目"><span class="nav-number">3.</span> <span class="nav-text">协作项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#流模型-Streaming-Model"><span class="nav-number">4.</span> <span class="nav-text">流模型(Streaming Model)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#读OSM-PBF文件"><span class="nav-number">4.1.</span> <span class="nav-text">读OSM-PBF文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LINQ查询过滤数据"><span class="nav-number">4.2.</span> <span class="nav-text">LINQ查询过滤数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#写入OSM-XML文件"><span class="nav-number">4.3.</span> <span class="nav-text">写入OSM-XML文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用数据处理"><span class="nav-number">5.</span> <span class="nav-text">常用数据处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#裁剪"><span class="nav-number">5.1.</span> <span class="nav-text">裁剪</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库操作"><span class="nav-number">6.</span> <span class="nav-text">数据库操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SQLServer"><span class="nav-number">6.1.</span> <span class="nav-text">SQLServer</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#OsmSharp-Db-SQLServer-dll"><span class="nav-number">6.1.1.</span> <span class="nav-text">OsmSharp.Db.SQLServer.dll</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#向SQL-Server数据库写入OSM数据"><span class="nav-number">6.1.1.1.</span> <span class="nav-text">向SQL Server数据库写入OSM数据</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#从SQL-Server数据库中读取OSM数据"><span class="nav-number">6.1.1.2.</span> <span class="nav-text">从SQL Server数据库中读取OSM数据</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#OsmSharp-Data-SQLServer-dll"><span class="nav-number">6.1.2.</span> <span class="nav-text">OsmSharp.Data.SQLServer.dll</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#SQL-Server数据库写入OSM数据"><span class="nav-number">6.1.2.1.</span> <span class="nav-text">SQL Server数据库写入OSM数据</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#SQL-Server数据库读取OSM数据"><span class="nav-number">6.1.2.2.</span> <span class="nav-text">SQL Server数据库读取OSM数据</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#路径规划"><span class="nav-number">7.</span> <span class="nav-text">路径规划</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Itinero"><span class="nav-number">7.1.</span> <span class="nav-text">Itinero</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#示例"><span class="nav-number">7.2.</span> <span class="nav-text">示例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#通过NuGet安装Itinero和Itinero-IO-OSM，添加引用"><span class="nav-number">7.2.1.</span> <span class="nav-text">通过NuGet安装Itinero和Itinero.IO.OSM，添加引用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#加载OSM数据"><span class="nav-number">7.2.2.</span> <span class="nav-text">加载OSM数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建Router"><span class="nav-number">7.2.3.</span> <span class="nav-text">创建Router</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#计算"><span class="nav-number">7.2.4.</span> <span class="nav-text">计算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#结果"><span class="nav-number">7.2.5.</span> <span class="nav-text">结果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#将结果写入GeoJson文件后，添加到geojson-io，计算出的路径如下图"><span class="nav-number">7.2.6.</span> <span class="nav-text">将结果写入GeoJson文件后，添加到geojson.io，计算出的路径如下图</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实际应用"><span class="nav-number">7.3.</span> <span class="nav-text">实际应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#加载原始数据"><span class="nav-number">7.3.1.</span> <span class="nav-text">加载原始数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#将routerDb实例写入到磁盘："><span class="nav-number">7.3.2.</span> <span class="nav-text">将routerDb实例写入到磁盘：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#加载routerDb"><span class="nav-number">7.3.3.</span> <span class="nav-text">加载routerDb</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#计算-1"><span class="nav-number">7.3.4.</span> <span class="nav-text">计算</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">huangli</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数</span>
+    
+    <span title="站点总字数">56k</span>
+  
+
+  
+</div>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user-md"></i>
+      访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      浏览量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.2.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.2.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.2.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.2.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.2.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.2.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.2.0"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+      <style>
+        a.gitment-editor-footer-tip { display: none; }
+        .gitment-container.gitment-footer-container { display: none; }
+      </style>
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname,
+            owner: 'huanglii',
+            repo: 'huanglii.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '9493ffe86757ee102cb3e4af40efcf938d477417',
+            
+                client_id: '191f754c42bc3e815bf5'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      function showGitment(){
+        document.getElementById("gitment-display-button").style.display = "none";
+        document.getElementById("gitment-container").style.display = "block";
+        renderGitment();
+      }
+      
+      </script>
+    
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=6.2.0"></script>
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "default";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "topCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Mailto";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
