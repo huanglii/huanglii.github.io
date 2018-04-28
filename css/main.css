@@ -1984,7 +1984,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f585ad;
+  background: #6f3b05;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3317,6 +3317,9 @@ ul.breadcrumb li+li:last-child {
 .site-author-name {
   margin-top: 10px;
   font: 14px consolas;
+}
+.links-of-author {
+  text-align: center;
 }
 .algolia-results .algolia-hit-item a em {
   font-style: normal;
