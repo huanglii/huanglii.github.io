@@ -24,6 +24,13 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-bounce.min.css?v=1.0.2" rel="stylesheet">
+
 
 
 
@@ -51,6 +58,10 @@
 
 
 
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -89,7 +100,7 @@
     scheme: 'Pisces',
     version: '6.2.0',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
-    fancybox: false,
+    fancybox: true,
     fastclick: false,
     lazyload: false,
     tabs: true,
@@ -111,7 +122,7 @@
 
 
   <meta name="description" content="高德地图API提供的行政区划查询，可以获取到行政区域的区号、城市编码、中心点、边界、下辖区域的详细信息。基于该工具进行扩展，对边界数据做转换处理，保存为GeoJson格式文件，方便使用，并且还可以选择转为WGS84坐标。 现在就去下载CLICK😍ME">
-<meta name="keywords" content="GeoJSON,高德地图,行政区域,Vue">
+<meta name="keywords" content="GeoJSON,Vue,高德地图,行政区域">
 <meta property="og:type" content="article">
 <meta property="og:title" content="高德地图API获取行政区域">
 <meta property="og:url" content="https://giser.xyz/2018/04/25/20180425-GetDistrictByAMap/index.html">
@@ -312,6 +323,17 @@
     </header>
 
     
+  
+  
+  
+    
+      
+    
+    <a href="https://github.com/huanglii" class="github-corner" target="_blank" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#222; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg>
+    
+      </a>
+    
+
 
 
     <main id="main" class="main">
@@ -494,7 +516,7 @@
 <h3 id="配置webpack"><a href="#配置webpack" class="headerlink" title="配置webpack"></a>配置webpack</h3><p>文件<strong>webpack.base.conf.js</strong>中，找到<strong>module.exports</strong>项，添加：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">externals: &#123;</span><br><span class="line">  <span class="string">'AMap'</span>: <span class="string">'AMap'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="创建地图"><a href="#创建地图" class="headerlink" title="创建地图"></a>创建地图</h3><p>在需要的页面中引入</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"map-container"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> AMap <span class="keyword">from</span> <span class="string">'AMap'</span></span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="javascript">  name: <span class="string">'AMapDemo'</span>,</span></span><br><span class="line"><span class="undefined">  methods: &#123;</span></span><br><span class="line"><span class="undefined">    initMap()&#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> map = <span class="keyword">new</span> AMap.Map(<span class="string">'map-container'</span>, &#123;</span></span><br><span class="line"><span class="undefined">        center: [116.397428, 39.90923],</span></span><br><span class="line"><span class="undefined">        zoom: 14</span></span><br><span class="line"><span class="undefined">      &#125;)</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  &#125;,</span></span><br><span class="line"><span class="undefined">  mounted()&#123;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">this</span>.initMap()</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">  #map-container &#123;</span></span><br><span class="line"><span class="undefined">    width: 800px;</span></span><br><span class="line"><span class="undefined">    height: 600px;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"map-container"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> AMap <span class="keyword">from</span> <span class="string">'AMap'</span></span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="javascript">  name: <span class="string">'AMapDemo'</span>,</span></span><br><span class="line"><span class="undefined">  methods: &#123;</span></span><br><span class="line"><span class="undefined">    initMap()&#123;</span></span><br><span class="line"><span class="javascript">      <span class="keyword">const</span> map = <span class="keyword">new</span> AMap.Map(<span class="string">'map-container'</span>, &#123;</span></span><br><span class="line"><span class="undefined">        center: [116.397428, 39.90923],</span></span><br><span class="line"><span class="undefined">        zoom: 14</span></span><br><span class="line"><span class="undefined">      &#125;)</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">  &#125;,</span></span><br><span class="line"><span class="undefined">  mounted()&#123;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">this</span>.initMap()</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">scoped</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css">  <span class="selector-id">#map-container</span> &#123;</span></span><br><span class="line"><span class="undefined">    width: 800px;</span></span><br><span class="line"><span class="undefined">    height: 600px;</span></span><br><span class="line"><span class="undefined">  &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h2 id="获取流程"><a href="#获取流程" class="headerlink" title="获取流程"></a>获取流程</h2><p><img src="2.png" alt="获取流程"></p>
 <h2 id="生成的GeoJson怎么保存到本地？"><a href="#生成的GeoJson怎么保存到本地？" class="headerlink" title="生成的GeoJson怎么保存到本地？"></a>生成的GeoJson怎么保存到本地？</h2><p><a href="https://github.com/eligrey/FileSaver.js" target="_blank" rel="noopener">FileSaver</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install file-saver --save</span><br></pre></td></tr></table></figure></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> blob = <span class="keyword">new</span> Blob([<span class="string">"Hello, world!"</span>], &#123;<span class="attr">type</span>: <span class="string">"text/plain;charset=utf-8"</span>&#125;);</span><br><span class="line">FileSaver.saveAs(blob, <span class="string">"hello world.txt"</span>);</span><br></pre></td></tr></table></figure>
@@ -511,6 +533,29 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> coord = CoordinateConvert.wgs2gcj(<span class="number">116.3997</span>, <span class="number">39.9158</span>)</span><br></pre></td></tr></table></figure>
       
     </div>
+
+    
+      
+
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2017/10/28/20171028-ArcGISAPIforJavaScript-GeoJSON/" rel="bookmark">ArcGIS API for JavaScript 加载GeoJSON数据</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2018/04/02/20180402-Vue-Leaflet/" rel="bookmark">Leaflet的Vue组件 — Vue2Leaflet</a></div>
+      
+    </li>
+  
+  </ul>
+
 
     
 
@@ -573,11 +618,11 @@
           
             <a href="/tags/GeoJSON/" rel="tag"># GeoJSON</a>
           
+            <a href="/tags/Vue/" rel="tag"># Vue</a>
+          
             <a href="/tags/高德地图/" rel="tag"># 高德地图</a>
           
             <a href="/tags/行政区域/" rel="tag"># 行政区域</a>
-          
-            <a href="/tags/Vue/" rel="tag"># Vue</a>
           
         </div>
       
@@ -958,6 +1003,8 @@
 
 
 
+  
+
 
 
 
@@ -985,6 +1032,11 @@
   
   
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
   
 
 
