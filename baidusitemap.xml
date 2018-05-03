@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>https://giser.xyz/2017/10/28/20171028-ArcGISAPIforJavaScript-TianDiTuWMTS/</loc>
+    <lastmod>2018-04-29T08:51:37.741Z</lastmod>
+    <data>
+        <display>
+        <title>ArcGIS API for JavaScript 加载天地图WMTS图层</title>
+        <pubTime>2017-10-28T11:21:52.000Z</pubTime>
+        
+        <tag>ArcGIS API for JavaScript</tag>
+         
+        <tag>WMTS</tag>
+         
+         
+           
+             
+              <breadCrumb title="地理信息科学" url="https://giser.xyz/categories/%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://giser.xyz/2018/04/25/20180425-GetDistrictByAMap/</loc>
     <lastmod>2018-04-28T01:38:28.932Z</lastmod>
     <data>
@@ -242,28 +264,6 @@
         <pubTime>2017-10-29T02:33:29.000Z</pubTime>
         
         <tag>ArcGIS</tag>
-         
-         
-           
-             
-              <breadCrumb title="地理信息科学" url="https://giser.xyz/categories/%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://giser.xyz/2017/10/28/20171028-ArcGISAPIforJavaScript-TianDiTuWMTS/</loc>
-    <lastmod>2018-04-11T09:31:51.909Z</lastmod>
-    <data>
-        <display>
-        <title>ArcGIS API for JavaScript 加载天地图WMTS图层</title>
-        <pubTime>2017-10-28T11:21:52.000Z</pubTime>
-        
-        <tag>ArcGIS API for JavaScript</tag>
-         
-        <tag>WMTS</tag>
          
          
            
