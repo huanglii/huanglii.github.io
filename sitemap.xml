@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://giser.xyz/2017/10/28/20171028-ArcGISAPIforJavaScript-TianDiTuWMTS/</loc>
+    <loc>https://giser.xyz/2018/04/25/20180425-GetDistrictByAMap/</loc>
     
-    <lastmod>2018-04-29T08:51:37.741Z</lastmod>
+    <lastmod>2018-05-08T13:17:52.607Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://giser.xyz/2018/04/25/20180425-GetDistrictByAMap/</loc>
+    <loc>https://giser.xyz/2017/10/28/20171028-ArcGISAPIforJavaScript-GeoJSON/</loc>
     
-    <lastmod>2018-04-28T01:38:28.932Z</lastmod>
+    <lastmod>2018-05-08T13:17:19.698Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://giser.xyz/2017/10/28/20171028-ArcGISAPIforJavaScript-TianDiTuWMTS/</loc>
+    
+    <lastmod>2018-05-08T13:14:09.312Z</lastmod>
     
   </url>
   
@@ -89,13 +96,6 @@
     <loc>https://giser.xyz/2017/10/29/20171029-ArcMap-CalculatePolylineLength/</loc>
     
     <lastmod>2018-04-11T09:32:02.652Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://giser.xyz/2017/10/28/20171028-ArcGISAPIforJavaScript-GeoJSON/</loc>
-    
-    <lastmod>2018-04-11T09:31:41.544Z</lastmod>
     
   </url>
   
