@@ -123,28 +123,31 @@
 
 
 
-  <meta name="description" content="意外在知网发现了另一个“GIS”。在知网以“GIS”为主题搜索文献，做计量可视化分析的时候发现有一个关键词显得格格不入，而我则是第一次看到这个词，那就是“局部放电”。更惊讶的是，数量还不少，共798篇，排名第22。刚开始，我以为又发现了GIS（地理信息科学）不为我知的秘密。">
-<meta name="keywords" content="GIS, GISer, ArcGIS, 地理信息科学, 地理信息, 地图, 空间, WEB开发, 教程">
+  <meta name="description" content="什么是 GeoServerGeoServer是一个基于Java的软件服务器，允许用户查看和编辑地理空间数据。使用开放地理空间联盟（OGC）制定的开放标准，GeoServer在地图创建和数据共享方面提供了极大的灵活性。 GeoServer 特性兼容 WMS 和 WFS 特性；支持 PostgreSQL、 Shapefile 、 ArcSDE 、 Oracle 、 VPF 、 MySQL 、 MapI">
+<meta name="keywords" content="Leaflet,GeoServer">
 <meta property="og:type" content="article">
-<meta property="og:title" content="不是所有的“GIS”都叫“地理信息科学”">
-<meta property="og:url" content="https://giser.xyz/2017/11/13/20171113-NotAll“GIS”IsCalled“GIS”/index.html">
+<meta property="og:title" content="GeoServer 安装、发布">
+<meta property="og:url" content="https://giser.xyz/2018/05/16/20180516-RudimentsofGeoServer/index.html">
 <meta property="og:site_name" content="GISer空间">
-<meta property="og:description" content="意外在知网发现了另一个“GIS”。在知网以“GIS”为主题搜索文献，做计量可视化分析的时候发现有一个关键词显得格格不入，而我则是第一次看到这个词，那就是“局部放电”。更惊讶的是，数量还不少，共798篇，排名第22。刚开始，我以为又发现了GIS（地理信息科学）不为我知的秘密。">
+<meta property="og:description" content="什么是 GeoServerGeoServer是一个基于Java的软件服务器，允许用户查看和编辑地理空间数据。使用开放地理空间联盟（OGC）制定的开放标准，GeoServer在地图创建和数据共享方面提供了极大的灵活性。 GeoServer 特性兼容 WMS 和 WFS 特性；支持 PostgreSQL、 Shapefile 、 ArcSDE 、 Oracle 、 VPF 、 MySQL 、 MapI">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://giser.xyz/2017/11/13/20171113-NotAll“GIS”IsCalled“GIS”/1.png">
-<meta property="og:image" content="https://giser.xyz/2017/11/13/20171113-NotAll“GIS”IsCalled“GIS”/2.jpg">
-<meta property="og:updated_time" content="2018-04-11T09:33:22.558Z">
+<meta property="og:image" content="https://giser.xyz/2018/05/16/20180516-RudimentsofGeoServer/1.png">
+<meta property="og:image" content="https://giser.xyz/2018/05/16/20180516-RudimentsofGeoServer/2.png">
+<meta property="og:image" content="https://giser.xyz/2018/05/16/20180516-RudimentsofGeoServer/3.png">
+<meta property="og:image" content="https://giser.xyz/2018/05/16/20180516-RudimentsofGeoServer/4.png">
+<meta property="og:image" content="https://giser.xyz/2018/05/16/20180516-RudimentsofGeoServer/5.png">
+<meta property="og:updated_time" content="2018-05-16T15:08:12.938Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="不是所有的“GIS”都叫“地理信息科学”">
-<meta name="twitter:description" content="意外在知网发现了另一个“GIS”。在知网以“GIS”为主题搜索文献，做计量可视化分析的时候发现有一个关键词显得格格不入，而我则是第一次看到这个词，那就是“局部放电”。更惊讶的是，数量还不少，共798篇，排名第22。刚开始，我以为又发现了GIS（地理信息科学）不为我知的秘密。">
-<meta name="twitter:image" content="https://giser.xyz/2017/11/13/20171113-NotAll“GIS”IsCalled“GIS”/1.png">
+<meta name="twitter:title" content="GeoServer 安装、发布">
+<meta name="twitter:description" content="什么是 GeoServerGeoServer是一个基于Java的软件服务器，允许用户查看和编辑地理空间数据。使用开放地理空间联盟（OGC）制定的开放标准，GeoServer在地图创建和数据共享方面提供了极大的灵活性。 GeoServer 特性兼容 WMS 和 WFS 特性；支持 PostgreSQL、 Shapefile 、 ArcSDE 、 Oracle 、 VPF 、 MySQL 、 MapI">
+<meta name="twitter:image" content="https://giser.xyz/2018/05/16/20180516-RudimentsofGeoServer/1.png">
 
 
 
 
 
 
-  <link rel="canonical" href="https://giser.xyz/2017/11/13/20171113-NotAll“GIS”IsCalled“GIS”/"/>
+  <link rel="canonical" href="https://giser.xyz/2018/05/16/20180516-RudimentsofGeoServer/"/>
 
 
 
@@ -154,7 +157,7 @@
   };
 </script>
 
-  <title>不是所有的“GIS”都叫“地理信息科学” | GISer空间</title>
+  <title>GeoServer 安装、发布 | GISer空间</title>
   
 
 
@@ -364,7 +367,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://giser.xyz/2017/11/13/20171113-NotAll“GIS”IsCalled“GIS”/">
+    <link itemprop="mainEntityOfPage" href="https://giser.xyz/2018/05/16/20180516-RudimentsofGeoServer/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="huangli">
@@ -381,7 +384,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">不是所有的“GIS”都叫“地理信息科学”
+          <h2 class="post-title" itemprop="name headline">GeoServer 安装、发布
               
             
           </h2>
@@ -406,7 +409,7 @@
                 
               
 
-              <time title="创建时间：2017-11-13 14:28:31" itemprop="dateCreated datePublished" datetime="2017-11-13T14:28:31+08:00">2017-11-13</time>
+              <time title="创建时间：2018-05-16 22:20:30" itemprop="dateCreated datePublished" datetime="2018-05-16T22:20:30+08:00">2018-05-16</time>
             
 
             
@@ -424,7 +427,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/动态/" itemprop="url" rel="index"><span itemprop="name">动态</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/地理信息科学/" itemprop="url" rel="index"><span itemprop="name">地理信息科学</span></a></span>
 
                 
                 
@@ -439,8 +442,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/11/13/20171113-NotAll“GIS”IsCalled“GIS”/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论</span> <span class="post-comments-count gitment-comments-count" data-xid="/2017/11/13/20171113-NotAll“GIS”IsCalled“GIS”/" itemprop="commentsCount"></span>
+                <a href="/2018/05/16/20180516-RudimentsofGeoServer/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论</span> <span class="post-comments-count gitment-comments-count" data-xid="/2018/05/16/20180516-RudimentsofGeoServer/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -471,7 +474,7 @@
                 
                   <span class="post-meta-item-text">本文字数</span>
                 
-                <span title="本文字数">960</span>
+                <span title="本文字数">1.1k</span>
               
 
               
@@ -485,7 +488,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1 分钟</span>
+                <span title="阅读时长">2 分钟</span>
               
             </div>
           
@@ -505,19 +508,45 @@
       
 
       
-        <p>意外在知网发现了另一个“GIS”。<br>在知网以“GIS”为主题搜索文献，做计量可视化分析的时候发现有一个关键词显得格格不入，而我则是第一次看到这个词，那就是“局部放电”。更惊讶的是，数量还不少，共798篇，排名第22。刚开始，我以为又发现了GIS（地理信息科学）不为我知的秘密。</p>
+        <h2 id="什么是-GeoServer"><a href="#什么是-GeoServer" class="headerlink" title="什么是 GeoServer"></a>什么是 GeoServer</h2><p>GeoServer是一个基于Java的软件服务器，允许用户查看和编辑地理空间数据。使用开放地理空间联盟（OGC）制定的开放标准，GeoServer在地图创建和数据共享方面提供了极大的灵活性。</p>
+<h2 id="GeoServer-特性"><a href="#GeoServer-特性" class="headerlink" title="GeoServer 特性"></a>GeoServer 特性</h2><p>兼容 WMS 和 WFS 特性；支持 PostgreSQL、 Shapefile 、 ArcSDE 、 Oracle 、 VPF 、 MySQL 、 MapInfo ；支持上百种投影；能够将网络地图输出为 jpeg 、 gif 、 png 、 SVG 、 KML 等格式；能够运行在任何基于 J2EE/Servlet 容器之上；嵌入 MapBuilder 支持 AJAX 的地图客户端OpenLayers；除此之外还包括许多其他的特性。</p>
 <a id="more"></a>
-<p><img src="1.png" alt="关键词分布"><br>然后定位到关键词 —— 局部放电，下面是“关键词知网节”给出的解释。<br><blockquote class="blockquote-center"><p><strong>局部放电</strong>（partial discharge；partial discharge (pd)；partial discharges） </p>
-</blockquote><br>电气设备绝缘结构中局部区域内的放电现象。这种放电只是绝缘在局部范围内被击穿,导体间绝缘并未发生贯穿性击穿,但若局部放电长期存在,则在一定条件下可造成设备绝缘电气强度的破坏。——《中国电力百科全书·电工技术基础卷》</p>
-<p>看来看去，好像跟GIS（地理信息科学）没有任何关系，也没发现任何有关“GIS”的字眼，倒是跟它的“外貌”一样，与“电”有关。先是点开了几篇文献，在摘要中看到了“GIS”：气体绝缘组合开关设备（GIS），但是没有看到它的英文全称，后来再去搜索“气体绝缘组合开关设备”才发现它的真面目 —— <strong>Gas Insulated Switchgear</strong>。<br>的确，你的缩写也是“GIS”。<br><img src="2.jpg" alt="厉害了我的哥"></p>
-<p>下面，隆重地向大家介绍一下这位新朋友：<br><blockquote class="blockquote-center"><p><strong>气体绝缘组合电器设备，GIS，即Gas Insulated Switchgear。</strong> </p>
-</blockquote><br>指全部或者部分采用气体而不采用处于大气压下的空气作为绝缘介质的金属封闭开关设备。它由断路器、隔离开关、接地开关、互感器、避雷器、母线、连接件和出线终端等组成，这些设备或部件全部封闭在金属接地的外壳中，在其内部充有绝缘性能和灭弧性能优异的SF6（六氟化硫）气体作为绝缘和灭弧介质，故也称SF6全封闭组合电器。GIS设备自20世纪60年代实用化以来，已广泛运行于世界各地。GIS不仅在高压、超高压领域被广泛应用，而且在特高压领域也被使用。与常规敞开式变电站相比，GIS的优点在于结构紧凑、占地面积小、可靠性高、配置灵活、安装方便、安全性强、环境适应能力强，维护工作量很小，其主要部件的维修间隔不小于20年。目前，GIS国外生产厂家主要有ABB、东芝、三菱、日立、西门子、阿尔斯通等，国内生产厂家有西开、沈高、平高等。—— 《百度百科》</p>
+<h2 id="GeoServer-安装"><a href="#GeoServer-安装" class="headerlink" title="GeoServer 安装"></a>GeoServer 安装</h2><p>GeoServer的安装方式有多种，帮助文档中建议Windows和Mac OS采用独立安装方式。下面是Windows安装方法：<a href="http://geoserver.org/release/stable/" target="_blank" rel="noopener">『GeoServer的下载地址』</a></p>
+<blockquote>
+<p>安装前请确保已安装Java Runtime Environment (JRE)。<br><img src="1.png" alt="1"></p>
+</blockquote>
+<p>安装过程很简单，选择JRE目录、数据目录、端口号等即可。</p>
+<h2 id="发布图层"><a href="#发布图层" class="headerlink" title="发布图层"></a>发布图层</h2><p>安装后打开管理页面：<a href="http://localhost:8081/geoserver/web/" target="_blank" rel="noopener">http://localhost:8081/geoserver/web/</a><br><img src="2.png" alt="2"><br><img src="3.png" alt="3"></p>
+<h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p>新建工作区 → 新建数据源(矢量、栅格、其他) → 编辑并发布图层</p>
+<h3 id="设置样式-Styles"><a href="#设置样式-Styles" class="headerlink" title="设置样式(Styles)"></a>设置样式(Styles)</h3><p>官方文档：<a href="http://docs.geoserver.org/latest/en/user/styling/index.html#styling" target="_blank" rel="noopener">http://docs.geoserver.org/latest/en/user/styling/index.html#styling</a><br>有4种方式添加样式：</p>
+<ol>
+<li>默认样式(Points, Line, Polygon, Raster, Generic)；</li>
+<li>从已经存在样式拷贝；</li>
+<li>上传样式文件(QGIS可以导出SLD文件)；</li>
+<li>Style Editor：前3种方式都会将样式代码写进样式编辑器。</li>
+</ol>
+<p><img src="4.png" alt="4"></p>
+<h3 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h3><p>在 <strong>Layer Preview</strong> 菜单中可使用 <strong>OpenLayers</strong> 预览已经发布的图层。</p>
+<h2 id="Leaflet-中加载发布的图层"><a href="#Leaflet-中加载发布的图层" class="headerlink" title="Leaflet 中加载发布的图层"></a>Leaflet 中加载发布的图层</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">L.tileLayer.wms(<span class="string">"http://localhost:8081/geoserver/test/wms"</span>, &#123;</span><br><span class="line">    layers: <span class="string">'test:states'</span>,</span><br><span class="line">    format: <span class="string">'image/png'</span>,</span><br><span class="line">    transparent: <span class="literal">true</span>,</span><br><span class="line">    attribution: <span class="string">""</span></span><br><span class="line">&#125;).addTo(mymap);</span><br></pre></td></tr></table></figure>
+<h3 id="预览-1"><a href="#预览-1" class="headerlink" title="预览"></a>预览</h3><p><img src="5.png" alt="5"></p>
 
       
     </div>
 
     
       
+
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2018/04/02/20180402-Vue-Leaflet/" rel="bookmark">Leaflet的Vue组件 — Vue2Leaflet</a></div>
+      
+    </li>
+  
+  </ul>
 
 
     
@@ -566,7 +595,7 @@
     <strong>本文作者： </strong>huangli</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://giser.xyz/2017/11/13/20171113-NotAll“GIS”IsCalled“GIS”/" title="不是所有的“GIS”都叫“地理信息科学”">https://giser.xyz/2017/11/13/20171113-NotAll“GIS”IsCalled“GIS”/</a>
+    <a href="https://giser.xyz/2018/05/16/20180516-RudimentsofGeoServer/" title="GeoServer 安装、发布">https://giser.xyz/2018/05/16/20180516-RudimentsofGeoServer/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -576,6 +605,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Leaflet/" rel="tag"># Leaflet</a>
+          
+            <a href="/tags/GeoServer/" rel="tag"># GeoServer</a>
+          
+        </div>
       
 
       
@@ -601,8 +638,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/08/20171108-TalkingBeidouAboutInterstellarLink/" rel="next" title="【转】漫谈北斗：“星间链路”到底是条什么路？">
-                <i class="fa fa-chevron-left"></i> 【转】漫谈北斗：“星间链路”到底是条什么路？
+              <a href="/2018/04/25/20180425-GetDistrictByAMap/" rel="next" title="高德地图API获取行政区域">
+                <i class="fa fa-chevron-left"></i> 高德地图API获取行政区域
               </a>
             
           </div>
@@ -610,10 +647,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/12/09/20171209-CartographicDesignTips/" rel="prev" title="【转】当你进行地图设计时，需要了解这些小知识">
-                【转】当你进行地图设计时，需要了解这些小知识 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -672,8 +705,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -824,6 +866,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是-GeoServer"><span class="nav-number">1.</span> <span class="nav-text">什么是 GeoServer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GeoServer-特性"><span class="nav-number">2.</span> <span class="nav-text">GeoServer 特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GeoServer-安装"><span class="nav-number">3.</span> <span class="nav-text">GeoServer 安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发布图层"><span class="nav-number">4.</span> <span class="nav-text">发布图层</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#流程"><span class="nav-number">4.1.</span> <span class="nav-text">流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置样式-Styles"><span class="nav-number">4.2.</span> <span class="nav-text">设置样式(Styles)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#预览"><span class="nav-number">4.3.</span> <span class="nav-text">预览</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Leaflet-中加载发布的图层"><span class="nav-number">5.</span> <span class="nav-text">Leaflet 中加载发布的图层</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#预览-1"><span class="nav-number">5.1.</span> <span class="nav-text">预览</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
