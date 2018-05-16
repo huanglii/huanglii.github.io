@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://giser.xyz/2018/01/16/20180116-WordPresstoHexo/</loc>
+    
+    <lastmod>2018-05-16T13:00:33.748Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://giser.xyz/2018/04/25/20180425-GetDistrictByAMap/</loc>
     
     <lastmod>2018-05-08T13:17:52.607Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>https://giser.xyz/2018/02/28/20180228-GISCollection/</loc>
     
     <lastmod>2018-04-11T09:34:50.416Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://giser.xyz/2018/01/16/20180116-WordPresstoHexo/</loc>
-    
-    <lastmod>2018-04-11T09:34:27.038Z</lastmod>
     
   </url>
   

@@ -131,10 +131,12 @@
 <meta property="og:site_name" content="GISer空间">
 <meta property="og:description" content="就在今天，我的博客成功迁移至Hexo。本文讲述了我是怎么把博客从WordPress迁移至Hexo的，主要是Hexo环境的搭建和WordPress的文章怎么迁移到Hexo。之前使用『WordPress』搭建的博客，找了个简约的主题『Akina』，感觉还不错。至于为什么突然换『Hexo』了？还是应为不经意间在掘金上看到2018，你该搭建自己的博客了！了这篇文章，发现Hexo + Next非常符合我的口">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-04-11T09:34:27.038Z">
+<meta property="og:image" content="https://giser.xyz/2018/01/16/20180116-WordPresstoHexo/1.png">
+<meta property="og:updated_time" content="2018-05-16T13:00:33.748Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WordPress 迁移到 Hexo">
 <meta name="twitter:description" content="就在今天，我的博客成功迁移至Hexo。本文讲述了我是怎么把博客从WordPress迁移至Hexo的，主要是Hexo环境的搭建和WordPress的文章怎么迁移到Hexo。之前使用『WordPress』搭建的博客，找了个简约的主题『Akina』，感觉还不错。至于为什么突然换『Hexo』了？还是应为不经意间在掘金上看到2018，你该搭建自己的博客了！了这篇文章，发现Hexo + Next非常符合我的口">
+<meta name="twitter:image" content="https://giser.xyz/2018/01/16/20180116-WordPresstoHexo/1.png">
 
 
 
@@ -468,7 +470,7 @@
                 
                   <span class="post-meta-item-text">本文字数</span>
                 
-                <span title="本文字数">1.9k</span>
+                <span title="本文字数">2k</span>
               
 
               
@@ -537,6 +539,13 @@
 <li>配置SSH Keys</li>
 <li>添加SSH Keys到GitHub上</li>
 </ol>
+<h2 id="Next-主题更新"><a href="#Next-主题更新" class="headerlink" title="Next 主题更新"></a>Next 主题更新</h2><h3 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h3><p>更新主题后，需要重新修改主题配置文件，先备份<br>主题文件夹：themes/next</p>
+<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull</span><br></pre></td></tr></table></figure>
+<p>如果修改过配置文件，是无法直接拉取新内容的，如下：<br><img src="1.png" alt="1"></p>
+<blockquote>
+<p>可选两种方式更新：a. 强制覆盖本地文件；b. 重新clone。</p>
+</blockquote>
+<h3 id="重新修改配置文件"><a href="#重新修改配置文件" class="headerlink" title="重新修改配置文件"></a>重新修改配置文件</h3><p>配置文件夹：themes/next/_config.yml</p>
 
       
     </div>
@@ -872,7 +881,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-Hexo"><span class="nav-number">1.</span> <span class="nav-text">安装 Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装前提"><span class="nav-number">1.1.</span> <span class="nav-text">安装前提</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-Hexo-1"><span class="nav-number">1.2.</span> <span class="nav-text">安装 Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Git部署扩展"><span class="nav-number">1.3.</span> <span class="nav-text">安装Git部署扩展</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改站点配置文件"><span class="nav-number">1.4.</span> <span class="nav-text">修改站点配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo-初始化配置"><span class="nav-number">1.5.</span> <span class="nav-text">Hexo 初始化配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置Next主题"><span class="nav-number">1.6.</span> <span class="nav-text">配置Next主题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#克隆主题"><span class="nav-number">1.6.1.</span> <span class="nav-text">克隆主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#生成“标签”和“分类”页面"><span class="nav-number">1.6.2.</span> <span class="nav-text">生成“标签”和“分类”页面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改站点配置文件-1"><span class="nav-number">1.6.3.</span> <span class="nav-text">修改站点配置文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改主题配置文件"><span class="nav-number">1.6.4.</span> <span class="nav-text">修改主题配置文件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本地查看"><span class="nav-number">1.7.</span> <span class="nav-text">本地查看</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署到GitHub"><span class="nav-number">1.8.</span> <span class="nav-text">部署到GitHub</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WordPress-迁移"><span class="nav-number">2.</span> <span class="nav-text">WordPress 迁移</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-hexo-migrator-wordpress"><span class="nav-number">2.1.</span> <span class="nav-text">安装 hexo-migrator-wordpress</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#导出-WordPress-文章"><span class="nav-number">2.2.</span> <span class="nav-text">导出 WordPress 文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#迁移"><span class="nav-number">2.3.</span> <span class="nav-text">迁移</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重装系统后配置Hexo"><span class="nav-number">3.</span> <span class="nav-text">重装系统后配置Hexo</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-Hexo"><span class="nav-number">1.</span> <span class="nav-text">安装 Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装前提"><span class="nav-number">1.1.</span> <span class="nav-text">安装前提</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-Hexo-1"><span class="nav-number">1.2.</span> <span class="nav-text">安装 Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Git部署扩展"><span class="nav-number">1.3.</span> <span class="nav-text">安装Git部署扩展</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改站点配置文件"><span class="nav-number">1.4.</span> <span class="nav-text">修改站点配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo-初始化配置"><span class="nav-number">1.5.</span> <span class="nav-text">Hexo 初始化配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置Next主题"><span class="nav-number">1.6.</span> <span class="nav-text">配置Next主题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#克隆主题"><span class="nav-number">1.6.1.</span> <span class="nav-text">克隆主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#生成“标签”和“分类”页面"><span class="nav-number">1.6.2.</span> <span class="nav-text">生成“标签”和“分类”页面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改站点配置文件-1"><span class="nav-number">1.6.3.</span> <span class="nav-text">修改站点配置文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改主题配置文件"><span class="nav-number">1.6.4.</span> <span class="nav-text">修改主题配置文件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本地查看"><span class="nav-number">1.7.</span> <span class="nav-text">本地查看</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署到GitHub"><span class="nav-number">1.8.</span> <span class="nav-text">部署到GitHub</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#WordPress-迁移"><span class="nav-number">2.</span> <span class="nav-text">WordPress 迁移</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装-hexo-migrator-wordpress"><span class="nav-number">2.1.</span> <span class="nav-text">安装 hexo-migrator-wordpress</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#导出-WordPress-文章"><span class="nav-number">2.2.</span> <span class="nav-text">导出 WordPress 文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#迁移"><span class="nav-number">2.3.</span> <span class="nav-text">迁移</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重装系统后配置Hexo"><span class="nav-number">3.</span> <span class="nav-text">重装系统后配置Hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Next-主题更新"><span class="nav-number">4.</span> <span class="nav-text">Next 主题更新</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#备份"><span class="nav-number">4.1.</span> <span class="nav-text">备份</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新"><span class="nav-number">4.2.</span> <span class="nav-text">更新</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重新修改配置文件"><span class="nav-number">4.3.</span> <span class="nav-text">重新修改配置文件</span></a></li></ol></li></ol></div>
             
 
           </div>
