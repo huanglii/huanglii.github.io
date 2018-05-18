@@ -123,27 +123,31 @@
 
 
 
-  <meta name="description" content="ArcGIS API for JavaScript不提供GeoJSON数据的加载，但是在Esri GitHub上提供了geojson-layer-js。geojson-layer-js是一个将GeoJSON数据加载到ArcGIS地图中的简单方法。它使用Terraformer将GeoJSON转换为ArcGIS JSON。它是一个自定义的GraphicsLayer，支持GraphicsLayer的所有">
-<meta name="keywords" content="ArcGIS API for JavaScript,GeoJSON">
+  <meta name="description" content="什么是 GeoServerGeoServer是一个基于Java的软件服务器，允许用户查看和编辑地理空间数据。使用开放地理空间联盟（OGC）制定的开放标准，GeoServer在地图创建和数据共享方面提供了极大的灵活性。 GeoServer 特性兼容 WMS 和 WFS 特性；支持 PostgreSQL、 Shapefile 、 ArcSDE 、 Oracle 、 VPF 、 MySQL 、 MapI">
+<meta name="keywords" content="GeoServer,Leaflet">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ArcGIS API for JavaScript 加载GeoJSON数据">
-<meta property="og:url" content="https://giser.xyz/2017/10/28/20171028-ArcGISAPIforJavaScript-GeoJSON/index.html">
+<meta property="og:title" content="GeoServer 安装、发布">
+<meta property="og:url" content="https://giser.xyz/2018/05/16/20180516-RudimentsofGeoServer1/index.html">
 <meta property="og:site_name" content="GISer空间">
-<meta property="og:description" content="ArcGIS API for JavaScript不提供GeoJSON数据的加载，但是在Esri GitHub上提供了geojson-layer-js。geojson-layer-js是一个将GeoJSON数据加载到ArcGIS地图中的简单方法。它使用Terraformer将GeoJSON转换为ArcGIS JSON。它是一个自定义的GraphicsLayer，支持GraphicsLayer的所有">
+<meta property="og:description" content="什么是 GeoServerGeoServer是一个基于Java的软件服务器，允许用户查看和编辑地理空间数据。使用开放地理空间联盟（OGC）制定的开放标准，GeoServer在地图创建和数据共享方面提供了极大的灵活性。 GeoServer 特性兼容 WMS 和 WFS 特性；支持 PostgreSQL、 Shapefile 、 ArcSDE 、 Oracle 、 VPF 、 MySQL 、 MapI">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://giser.xyz/2017/10/28/20171028-ArcGISAPIforJavaScript-GeoJSON/1.jpg">
-<meta property="og:updated_time" content="2018-05-08T13:17:19.698Z">
+<meta property="og:image" content="https://giser.xyz/2018/05/16/20180516-RudimentsofGeoServer1/1.png">
+<meta property="og:image" content="https://giser.xyz/2018/05/16/20180516-RudimentsofGeoServer1/2.png">
+<meta property="og:image" content="https://giser.xyz/2018/05/16/20180516-RudimentsofGeoServer1/3.png">
+<meta property="og:image" content="https://giser.xyz/2018/05/16/20180516-RudimentsofGeoServer1/4.png">
+<meta property="og:image" content="https://giser.xyz/2018/05/16/20180516-RudimentsofGeoServer1/5.png">
+<meta property="og:updated_time" content="2018-05-16T15:08:12.938Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ArcGIS API for JavaScript 加载GeoJSON数据">
-<meta name="twitter:description" content="ArcGIS API for JavaScript不提供GeoJSON数据的加载，但是在Esri GitHub上提供了geojson-layer-js。geojson-layer-js是一个将GeoJSON数据加载到ArcGIS地图中的简单方法。它使用Terraformer将GeoJSON转换为ArcGIS JSON。它是一个自定义的GraphicsLayer，支持GraphicsLayer的所有">
-<meta name="twitter:image" content="https://giser.xyz/2017/10/28/20171028-ArcGISAPIforJavaScript-GeoJSON/1.jpg">
+<meta name="twitter:title" content="GeoServer 安装、发布">
+<meta name="twitter:description" content="什么是 GeoServerGeoServer是一个基于Java的软件服务器，允许用户查看和编辑地理空间数据。使用开放地理空间联盟（OGC）制定的开放标准，GeoServer在地图创建和数据共享方面提供了极大的灵活性。 GeoServer 特性兼容 WMS 和 WFS 特性；支持 PostgreSQL、 Shapefile 、 ArcSDE 、 Oracle 、 VPF 、 MySQL 、 MapI">
+<meta name="twitter:image" content="https://giser.xyz/2018/05/16/20180516-RudimentsofGeoServer1/1.png">
 
 
 
 
 
 
-  <link rel="canonical" href="https://giser.xyz/2017/10/28/20171028-ArcGISAPIforJavaScript-GeoJSON/"/>
+  <link rel="canonical" href="https://giser.xyz/2018/05/16/20180516-RudimentsofGeoServer1/"/>
 
 
 
@@ -153,7 +157,7 @@
   };
 </script>
 
-  <title>ArcGIS API for JavaScript 加载GeoJSON数据 | GISer空间</title>
+  <title>GeoServer 安装、发布 | GISer空间</title>
   
 
 
@@ -363,7 +367,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://giser.xyz/2017/10/28/20171028-ArcGISAPIforJavaScript-GeoJSON/">
+    <link itemprop="mainEntityOfPage" href="https://giser.xyz/2018/05/16/20180516-RudimentsofGeoServer1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="huangli">
@@ -380,7 +384,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">ArcGIS API for JavaScript 加载GeoJSON数据
+          <h2 class="post-title" itemprop="name headline">GeoServer 安装、发布
               
             
           </h2>
@@ -405,7 +409,7 @@
                 
               
 
-              <time title="创建时间：2017-10-28 14:08:33" itemprop="dateCreated datePublished" datetime="2017-10-28T14:08:33+08:00">2017-10-28</time>
+              <time title="创建时间：2018-05-16 22:20:30" itemprop="dateCreated datePublished" datetime="2018-05-16T22:20:30+08:00">2018-05-16</time>
             
 
             
@@ -438,8 +442,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/10/28/20171028-ArcGISAPIforJavaScript-GeoJSON/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论</span> <span class="post-comments-count gitment-comments-count" data-xid="/2017/10/28/20171028-ArcGISAPIforJavaScript-GeoJSON/" itemprop="commentsCount"></span>
+                <a href="/2018/05/16/20180516-RudimentsofGeoServer1/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论</span> <span class="post-comments-count gitment-comments-count" data-xid="/2018/05/16/20180516-RudimentsofGeoServer1/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -470,7 +474,7 @@
                 
                   <span class="post-meta-item-text">本文字数</span>
                 
-                <span title="本文字数">3.8k</span>
+                <span title="本文字数">1.1k</span>
               
 
               
@@ -484,7 +488,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">5 分钟</span>
+                <span title="阅读时长">2 分钟</span>
               
             </div>
           
@@ -504,54 +508,28 @@
       
 
       
-        <p>ArcGIS API for JavaScript不提供GeoJSON数据的加载，但是在<a href="https://github.com/Esri" target="_blank" rel="noopener">Esri GitHub</a>上提供了<a href="https://github.com/Esri/geojson-layer-js" target="_blank" rel="noopener">geojson-layer-js</a>。geojson-layer-js是一个将GeoJSON数据加载到ArcGIS地图中的简单方法。它使用<a href="http://terraformer.io/" target="_blank" rel="noopener">Terraformer</a>将GeoJSON转换为ArcGIS JSON。它是一个自定义的GraphicsLayer，支持GraphicsLayer的所有操作，如：弹出窗口、渲染等。<br>下面简单说明如何使用geojson-layer-js。</p>
+        <h2 id="什么是-GeoServer"><a href="#什么是-GeoServer" class="headerlink" title="什么是 GeoServer"></a>什么是 GeoServer</h2><p>GeoServer是一个基于Java的软件服务器，允许用户查看和编辑地理空间数据。使用开放地理空间联盟（OGC）制定的开放标准，GeoServer在地图创建和数据共享方面提供了极大的灵活性。</p>
+<h2 id="GeoServer-特性"><a href="#GeoServer-特性" class="headerlink" title="GeoServer 特性"></a>GeoServer 特性</h2><p>兼容 WMS 和 WFS 特性；支持 PostgreSQL、 Shapefile 、 ArcSDE 、 Oracle 、 VPF 、 MySQL 、 MapInfo ；支持上百种投影；能够将网络地图输出为 jpeg 、 gif 、 png 、 SVG 、 KML 等格式；能够运行在任何基于 J2EE/Servlet 容器之上；嵌入 MapBuilder 支持 AJAX 的地图客户端OpenLayers；除此之外还包括许多其他的特性。</p>
 <a id="more"></a>
-<h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p>在线预览：<a href="https://giser.xyz/demo/02-ArcGIS-JS-API-GeoJSON/index.html">ArcGIS API for JavaScript 加载GeoJSON数据</a></p>
-<h2 id="geojson-layer-js的特点"><a href="#geojson-layer-js的特点" class="headerlink" title="geojson-layer-js的特点"></a>geojson-layer-js的特点</h2><ul>
-<li>从文件加载GeoJSON；</li>
-<li>从服务器加载GeoJSON；</li>
-<li>从FeatureCollection加载GeoJSON数据。</li>
-</ul>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><table>
-<thead>
-<tr>
-<th style="text-align:center">参数名</th>
-<th style="text-align:center">数据类型</th>
-<th style="text-align:center"></th>
-<th style="text-align:center">描述</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">url</td>
-<td style="text-align:center">String</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">文件或服务器路径，服务器必须在同一个域或启用CORS，或使用代理。</td>
-</tr>
-<tr>
-<td style="text-align:center">data</td>
-<td style="text-align:center">Object[]</td>
-<td style="text-align:center">Optional</td>
-<td style="text-align:center">FeatureCollection，如果同时使用data和url，data会覆盖url。</td>
-</tr>
-<tr>
-<td style="text-align:center">maxdraw</td>
-<td style="text-align:center">Number</td>
-<td style="text-align:center">Optional</td>
-<td style="text-align:center">最大绘制的图形数，默认为1000。</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 从文件加载</span></span><br><span class="line"><span class="keyword">var</span> geoJsonLayer1 = <span class="keyword">new</span> GeoJsonLayer(&#123;</span><br><span class="line">    url: <span class="string">"http://www.myCorsEnabledServer.com/canada.json"</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 从服务器加载</span></span><br><span class="line"><span class="keyword">var</span> geoJsonLayer2 = <span class="keyword">new</span> GeoJsonLayer(&#123;</span><br><span class="line">    url: <span class="string">"http://opendata.dc.gov/datasets/81a9d9885947483aa2088d81b20bfe66_5.geojson"</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 从FeatureCollection加载</span></span><br><span class="line"><span class="keyword">var</span> geoJsonLayer3 = <span class="keyword">new</span> GeoJsonLayer(&#123;</span><br><span class="line">    data: myFeatureCollection </span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 添加到地图</span></span><br><span class="line">map.addLayer(geoJsonLayer1);</span><br><span class="line">map.addLayer(geoJsonLayer2);</span><br><span class="line">map.addLayer(geoJsonLayer3);</span><br></pre></td></tr></table></figure>
-<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2><ul>
-<li>所有GeoJSON数据必须是地理坐标系（wkid 4326）。</li>
-<li>除非使用启用CORS的服务器或代理，否则所有GeoJSON资源都必须位于与应用程序相同的域上。</li>
-<li>Terraformer不支持dojo require（），并且必须直接加载到页面中。如下：</li>
-</ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/terraformer@1.0.7"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/terraformer-arcgis-parser@1.0.5"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><p><img src="1.jpg" alt="加载GeoJSON数据结果"></p>
-<h2 id="源码"><a href="#源码" class="headerlink" title="源码"></a>源码</h2><h3 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h3><p>|– js<br>|– | – geojsonlayer.js （<a href="https://github.com/Esri/geojson-layer-js" target="_blank" rel="noopener">geojson-layer-js</a>可下载该文件）<br>|– data<br>|– | – dc-bike-share.json（GeoJSON数据）</p>
-<h3 id="index-html"><a href="#index-html" class="headerlink" title="index.html"></a>index.html</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1.0"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"X-UA-Compatible"</span> <span class="attr">content</span>=<span class="string">"ie=edge"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>ArcGIS GeoJSON Layer<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"shortcut icon"</span> <span class="attr">href</span>=<span class="string">"//esri.github.io/quickstart-map-js/images/favicon.ico"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- ArcGIS API for JavaScript CSS--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://js.arcgis.com/3.20/esri/css/esri.css"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">        html,</span></span><br><span class="line"><span class="undefined">        body,</span></span><br><span class="line"><span class="undefined">        #mapDiv &#123;</span></span><br><span class="line"><span class="undefined">            height: 100%;</span></span><br><span class="line"><span class="undefined">            width: 100%;</span></span><br><span class="line"><span class="undefined">            padding: 0;</span></span><br><span class="line"><span class="undefined">            margin: 0;</span></span><br><span class="line"><span class="undefined">        &#125;</span></span><br><span class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- ArcGIS API for JavaScript --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://js.arcgis.com/3.20"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- Terraformer --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/terraformer@1.0.7"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://unpkg.com/terraformer-arcgis-parser@1.0.5"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">        <span class="built_in">require</span>([</span></span><br><span class="line"><span class="javascript">            <span class="string">"esri/map"</span>,</span></span><br><span class="line"><span class="javascript">            <span class="string">"js/geojsonlayer.js"</span>,</span></span><br><span class="line"><span class="javascript">            <span class="string">"esri/renderers/SimpleRenderer"</span>,</span></span><br><span class="line"><span class="javascript">            <span class="string">"dojo/on"</span>,</span></span><br><span class="line"><span class="javascript">            <span class="string">"dojo/query"</span>,</span></span><br><span class="line"><span class="javascript">            <span class="string">"dojo/dom"</span>,</span></span><br><span class="line"><span class="javascript">            <span class="string">"dojo/domReady!"</span>],</span></span><br><span class="line"><span class="javascript">            <span class="function"><span class="keyword">function</span> (<span class="params">Map, GeoJsonLayer, SimpleRenderer, on, query, dom</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                <span class="comment">// 创建地图</span></span></span><br><span class="line"><span class="javascript">                <span class="keyword">var</span> map = <span class="keyword">new</span> <span class="built_in">Map</span>(<span class="string">"mapDiv"</span>, &#123;</span></span><br><span class="line"><span class="javascript">                    basemap: <span class="string">"gray"</span>,</span></span><br><span class="line"><span class="undefined">                    zoom: 5</span></span><br><span class="line"><span class="undefined">                &#125;);</span></span><br><span class="line"><span class="javascript">                map.on(<span class="string">"load"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                    addGeoJsonLayer(<span class="string">"data/dc-bike-share.json"</span>);</span></span><br><span class="line"><span class="undefined">                &#125;);</span></span><br><span class="line"><span class="javascript">                <span class="function"><span class="keyword">function</span> <span class="title">addGeoJsonLayer</span>(<span class="params">url</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">                    <span class="comment">// 创建图层</span></span></span><br><span class="line"><span class="javascript">                    <span class="keyword">var</span> geoJsonLayer = <span class="keyword">new</span> GeoJsonLayer(&#123;</span></span><br><span class="line"><span class="undefined">                        url: url</span></span><br><span class="line"><span class="undefined">                    &#125;);</span></span><br><span class="line"><span class="javascript">                    <span class="comment">// 缩放至图层</span></span></span><br><span class="line"><span class="javascript">                    geoJsonLayer.on(<span class="string">"update-end"</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span></span><br><span class="line"><span class="undefined">                        map.setExtent(e.target.extent.expand(1.2));</span></span><br><span class="line"><span class="undefined">                    &#125;);</span></span><br><span class="line"><span class="javascript">                    <span class="comment">// 添加到地图</span></span></span><br><span class="line"><span class="undefined">                    map.addLayer(geoJsonLayer);</span></span><br><span class="line"><span class="undefined">                &#125;</span></span><br><span class="line"><span class="undefined">            &#125;);</span></span><br><span class="line"><span class="undefined">        </span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"mapDiv"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="GeoServer-安装"><a href="#GeoServer-安装" class="headerlink" title="GeoServer 安装"></a>GeoServer 安装</h2><p>GeoServer的安装方式有多种，帮助文档中建议Windows和Mac OS采用独立安装方式。下面是Windows安装方法：<a href="http://geoserver.org/release/stable/" target="_blank" rel="noopener">『GeoServer的下载地址』</a></p>
+<blockquote>
+<p>安装前请确保已安装Java Runtime Environment (JRE)。<br><img src="1.png" alt="1"></p>
+</blockquote>
+<p>安装过程很简单，选择JRE目录、数据目录、端口号等即可。</p>
+<h2 id="发布图层"><a href="#发布图层" class="headerlink" title="发布图层"></a>发布图层</h2><p>安装后打开管理页面：<a href="http://localhost:8081/geoserver/web/" target="_blank" rel="noopener">http://localhost:8081/geoserver/web/</a><br><img src="2.png" alt="2"><br><img src="3.png" alt="3"></p>
+<h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p>新建工作区 → 新建数据源(矢量、栅格、其他) → 编辑并发布图层</p>
+<h3 id="设置样式-Styles"><a href="#设置样式-Styles" class="headerlink" title="设置样式(Styles)"></a>设置样式(Styles)</h3><p>官方文档：<a href="http://docs.geoserver.org/latest/en/user/styling/index.html#styling" target="_blank" rel="noopener">http://docs.geoserver.org/latest/en/user/styling/index.html#styling</a><br>有4种方式添加样式：</p>
+<ol>
+<li>默认样式(Points, Line, Polygon, Raster, Generic)；</li>
+<li>从已经存在样式拷贝；</li>
+<li>上传样式文件(QGIS可以导出SLD文件)；</li>
+<li>Style Editor：前3种方式都会将样式代码写进样式编辑器。</li>
+</ol>
+<p><img src="4.png" alt="4"></p>
+<h3 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h3><p>在 <strong>Layer Preview</strong> 菜单中可使用 <strong>OpenLayers</strong> 预览已经发布的图层。</p>
+<h2 id="Leaflet-中加载发布的图层"><a href="#Leaflet-中加载发布的图层" class="headerlink" title="Leaflet 中加载发布的图层"></a>Leaflet 中加载发布的图层</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">L.tileLayer.wms(<span class="string">"http://localhost:8081/geoserver/test/wms"</span>, &#123;</span><br><span class="line">    layers: <span class="string">'test:states'</span>,</span><br><span class="line">    format: <span class="string">'image/png'</span>,</span><br><span class="line">    transparent: <span class="literal">true</span>,</span><br><span class="line">    attribution: <span class="string">""</span></span><br><span class="line">&#125;).addTo(mymap);</span><br></pre></td></tr></table></figure>
+<h3 id="预览-1"><a href="#预览-1" class="headerlink" title="预览"></a>预览</h3><p><img src="5.png" alt="5"></p>
+
       
     </div>
 
@@ -564,14 +542,14 @@
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/2017/10/28/20171028-ArcGISAPIforJavaScript-TianDiTuWMTS/" rel="bookmark">ArcGIS API for JavaScript 加载天地图WMTS图层</a></div>
+      <div class="popular-posts-title"><a href="/2018/05/16/20180516-RudimentsofGeoServer/" rel="bookmark">GeoServer 安装、发布</a></div>
       
     </li>
   
     <li class="popular-posts-item">
       
       
-      <div class="popular-posts-title"><a href="/2018/04/25/20180425-GetDistrictByAMap/" rel="bookmark">高德地图API获取行政区域</a></div>
+      <div class="popular-posts-title"><a href="/2018/04/02/20180402-Vue-Leaflet/" rel="bookmark">Leaflet的Vue组件 — Vue2Leaflet</a></div>
       
     </li>
   
@@ -624,7 +602,7 @@
     <strong>本文作者： </strong>huangli</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://giser.xyz/2017/10/28/20171028-ArcGISAPIforJavaScript-GeoJSON/" title="ArcGIS API for JavaScript 加载GeoJSON数据">https://giser.xyz/2017/10/28/20171028-ArcGISAPIforJavaScript-GeoJSON/</a>
+    <a href="https://giser.xyz/2018/05/16/20180516-RudimentsofGeoServer1/" title="GeoServer 安装、发布">https://giser.xyz/2018/05/16/20180516-RudimentsofGeoServer1/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -637,9 +615,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/ArcGIS-API-for-JavaScript/" rel="tag"># ArcGIS API for JavaScript</a>
+            <a href="/tags/GeoServer/" rel="tag"># GeoServer</a>
           
-            <a href="/tags/GeoJSON/" rel="tag"># GeoJSON</a>
+            <a href="/tags/Leaflet/" rel="tag"># Leaflet</a>
           
         </div>
       
@@ -667,8 +645,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/24/20171024-DealOSMByOsmSharp/" rel="next" title="使用OsmSharp处理OpenStreetMap(OSM)数据">
-                <i class="fa fa-chevron-left"></i> 使用OsmSharp处理OpenStreetMap(OSM)数据
+              <a href="/2018/05/16/20180516-RudimentsofGeoServer/" rel="next" title="GeoServer 安装、发布">
+                <i class="fa fa-chevron-left"></i> GeoServer 安装、发布
               </a>
             
           </div>
@@ -676,10 +654,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/10/28/20171028-ArcGISAPIforJavaScript-TianDiTuWMTS/" rel="prev" title="ArcGIS API for JavaScript 加载天地图WMTS图层">
-                ArcGIS API for JavaScript 加载天地图WMTS图层 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -909,7 +883,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#预览"><span class="nav-number">1.</span> <span class="nav-text">预览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#geojson-layer-js的特点"><span class="nav-number">2.</span> <span class="nav-text">geojson-layer-js的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用方法"><span class="nav-number">3.</span> <span class="nav-text">使用方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意事项"><span class="nav-number">4.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例"><span class="nav-number">5.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#源码"><span class="nav-number">6.</span> <span class="nav-text">源码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#文件结构"><span class="nav-number">6.1.</span> <span class="nav-text">文件结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#index-html"><span class="nav-number">6.2.</span> <span class="nav-text">index.html</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是-GeoServer"><span class="nav-number">1.</span> <span class="nav-text">什么是 GeoServer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GeoServer-特性"><span class="nav-number">2.</span> <span class="nav-text">GeoServer 特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GeoServer-安装"><span class="nav-number">3.</span> <span class="nav-text">GeoServer 安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发布图层"><span class="nav-number">4.</span> <span class="nav-text">发布图层</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#流程"><span class="nav-number">4.1.</span> <span class="nav-text">流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置样式-Styles"><span class="nav-number">4.2.</span> <span class="nav-text">设置样式(Styles)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#预览"><span class="nav-number">4.3.</span> <span class="nav-text">预览</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Leaflet-中加载发布的图层"><span class="nav-number">5.</span> <span class="nav-text">Leaflet 中加载发布的图层</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#预览-1"><span class="nav-number">5.1.</span> <span class="nav-text">预览</span></a></li></ol></li></ol></div>
             
 
           </div>

@@ -5,15 +5,37 @@
     
   <url>
     <loc>https://giser.xyz/2018/05/16/20180516-RudimentsofGeoServer/</loc>
+    <lastmod>2018-05-18T12:11:08.942Z</lastmod>
+    <data>
+        <display>
+        <title>GeoServer 安装、发布</title>
+        <pubTime>2018-05-16T14:20:30.000Z</pubTime>
+        
+        <tag>GeoServer</tag>
+         
+        <tag>Leaflet</tag>
+         
+         
+           
+             
+              <breadCrumb title="地理信息科学" url="https://giser.xyz/categories/%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://giser.xyz/2018/05/16/20180516-RudimentsofGeoServer1/</loc>
     <lastmod>2018-05-16T15:08:12.938Z</lastmod>
     <data>
         <display>
         <title>GeoServer 安装、发布</title>
         <pubTime>2018-05-16T14:20:30.000Z</pubTime>
         
-        <tag>Leaflet</tag>
-         
         <tag>GeoServer</tag>
+         
+        <tag>Leaflet</tag>
          
          
            
