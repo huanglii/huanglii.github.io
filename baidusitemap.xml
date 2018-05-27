@@ -4,6 +4,32 @@
 
     
   <url>
+    <loc>https://giser.xyz/2018/04/25/20180425-GetDistrictByAMap/</loc>
+    <lastmod>2018-05-27T06:51:07.252Z</lastmod>
+    <data>
+        <display>
+        <title>高德地图API获取行政区域</title>
+        <pubTime>2018-04-25T07:03:52.000Z</pubTime>
+        
+        <tag>GeoJSON</tag>
+         
+        <tag>高德地图</tag>
+         
+        <tag>行政区域</tag>
+         
+        <tag>Vue</tag>
+         
+         
+           
+             
+              <breadCrumb title="地理信息科学" url="https://giser.xyz/categories/%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://giser.xyz/2018/05/16/20180516-RudimentsofGeoServer/</loc>
     <lastmod>2018-05-21T06:41:54.955Z</lastmod>
     <data>
@@ -39,32 +65,6 @@
            
              
               <breadCrumb title="计算机" url="https://giser.xyz/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://giser.xyz/2018/04/25/20180425-GetDistrictByAMap/</loc>
-    <lastmod>2018-05-08T13:17:52.607Z</lastmod>
-    <data>
-        <display>
-        <title>高德地图API获取行政区域</title>
-        <pubTime>2018-04-25T07:03:52.000Z</pubTime>
-        
-        <tag>GeoJSON</tag>
-         
-        <tag>Vue</tag>
-         
-        <tag>高德地图</tag>
-         
-        <tag>行政区域</tag>
-         
-         
-           
-             
-              <breadCrumb title="地理信息科学" url="https://giser.xyz/categories/%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6/"/>
           
         </display>
     </data>
@@ -123,9 +123,9 @@
         <title>Leaflet的Vue组件 — Vue2Leaflet</title>
         <pubTime>2018-04-02T15:59:59.000Z</pubTime>
         
-        <tag>Leaflet</tag>
-         
         <tag>Vue</tag>
+         
+        <tag>Leaflet</tag>
          
          
            
