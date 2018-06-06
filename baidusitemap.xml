@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>https://giser.xyz/2017/10/28/20171028-ArcGISAPIforJavaScript-TianDiTuWMTS/</loc>
+    <lastmod>2018-06-03T06:09:08.668Z</lastmod>
+    <data>
+        <display>
+        <title>ArcGIS API for JavaScript 加载天地图WMTS图层</title>
+        <pubTime>2017-10-28T11:21:52.000Z</pubTime>
+        
+        <tag>ArcGIS API for JavaScript</tag>
+         
+        <tag>WMTS</tag>
+         
+         
+           
+             
+              <breadCrumb title="地理信息科学" url="https://giser.xyz/categories/%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://giser.xyz/2018/04/25/20180425-GetDistrictByAMap/</loc>
     <lastmod>2018-05-27T06:51:07.252Z</lastmod>
     <data>
@@ -13,11 +35,11 @@
         
         <tag>GeoJSON</tag>
          
+        <tag>Vue</tag>
+         
         <tag>高德地图</tag>
          
         <tag>行政区域</tag>
-         
-        <tag>Vue</tag>
          
          
            
@@ -94,28 +116,6 @@
 
     
   <url>
-    <loc>https://giser.xyz/2017/10/28/20171028-ArcGISAPIforJavaScript-TianDiTuWMTS/</loc>
-    <lastmod>2018-05-08T13:14:09.312Z</lastmod>
-    <data>
-        <display>
-        <title>ArcGIS API for JavaScript 加载天地图WMTS图层</title>
-        <pubTime>2017-10-28T11:21:52.000Z</pubTime>
-        
-        <tag>ArcGIS API for JavaScript</tag>
-         
-        <tag>WMTS</tag>
-         
-         
-           
-             
-              <breadCrumb title="地理信息科学" url="https://giser.xyz/categories/%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://giser.xyz/2018/04/02/20180402-Vue-Leaflet/</loc>
     <lastmod>2018-04-27T12:37:15.447Z</lastmod>
     <data>
@@ -123,9 +123,9 @@
         <title>Leaflet的Vue组件 — Vue2Leaflet</title>
         <pubTime>2018-04-02T15:59:59.000Z</pubTime>
         
-        <tag>Vue</tag>
-         
         <tag>Leaflet</tag>
+         
+        <tag>Vue</tag>
          
          
            
