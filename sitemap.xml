@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://giser.xyz/2018/06/30/20180630-GeoServerDeveloperManual/</loc>
+    <loc>https://giser.xyz/2018/06/30/20180630-GeoServerDeveloperManual2/</loc>
     
-    <lastmod>2018-06-30T05:20:53.296Z</lastmod>
+    <lastmod>2018-06-30T05:47:58.429Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://giser.xyz/2018/06/30/20180630-GeoServerDeveloperManual1/</loc>
+    
+    <lastmod>2018-06-30T05:47:57.100Z</lastmod>
     
   </url>
   

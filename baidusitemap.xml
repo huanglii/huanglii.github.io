@@ -4,11 +4,31 @@
 
     
   <url>
-    <loc>https://giser.xyz/2018/06/30/20180630-GeoServerDeveloperManual/</loc>
-    <lastmod>2018-06-30T05:20:53.296Z</lastmod>
+    <loc>https://giser.xyz/2018/06/30/20180630-GeoServerDeveloperManual2/</loc>
+    <lastmod>2018-06-30T05:47:58.429Z</lastmod>
     <data>
         <display>
-        <title>GeoServer 2.14.x Developer Manual</title>
+        <title>GeoServer 2.14.x Developer Manual (二)</title>
+        <pubTime>2018-06-30T04:07:21.000Z</pubTime>
+        
+        <tag>GeoServer</tag>
+         
+         
+           
+             
+              <breadCrumb title="地理信息科学" url="https://giser.xyz/categories/%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://giser.xyz/2018/06/30/20180630-GeoServerDeveloperManual1/</loc>
+    <lastmod>2018-06-30T05:47:57.100Z</lastmod>
+    <data>
+        <display>
+        <title>GeoServer 2.14.x Developer Manual (一)</title>
         <pubTime>2018-06-30T04:07:21.000Z</pubTime>
         
         <tag>GeoServer</tag>

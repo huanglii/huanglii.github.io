@@ -126,8 +126,8 @@
   <meta name="description" content="IntroductionWelcome to GeoServer development. The project makes use of a number of resources:  https://github.com/geoserver/geoserver.github.io/wiki Wiki used for Proposals https://github.com/geoserve">
 <meta name="keywords" content="GeoServer">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GeoServer 2.14.x Developer Manual">
-<meta property="og:url" content="https://giser.xyz/2018/06/30/20180630-GeoServerDeveloperManual/index.html">
+<meta property="og:title" content="GeoServer 2.14.x Developer Manual (一)">
+<meta property="og:url" content="https://giser.xyz/2018/06/30/20180630-GeoServerDeveloperManual1/index.html">
 <meta property="og:site_name" content="GISer空间">
 <meta property="og:description" content="IntroductionWelcome to GeoServer development. The project makes use of a number of resources:  https://github.com/geoserver/geoserver.github.io/wiki Wiki used for Proposals https://github.com/geoserve">
 <meta property="og:locale" content="zh-CN">
@@ -140,18 +140,9 @@
 <meta property="og:image" content="https://giser.xyz/2018/06/30/_images/code_templates.jpg">
 <meta property="og:image" content="https://giser.xyz/2018/06/30/_images/text_editors.jpg">
 <meta property="og:image" content="https://giser.xyz/2018/06/30/_images/compiler.jpg">
-<meta property="og:image" content="https://giser.xyz/2018/06/30/_images/arc_sample.png">
-<meta property="og:image" content="https://giser.xyz/2018/06/30/_images/states_georss.png">
-<meta property="og:image" content="https://giser.xyz/2018/06/30/_images/states_cql.png">
-<meta property="og:image" content="https://giser.xyz/2018/06/30/_images/states_kml_bestguess.png">
-<meta property="og:image" content="https://giser.xyz/2018/06/30/_images/states_kml_sort.png">
-<meta property="og:image" content="https://giser.xyz/2018/06/30/_images/img_sample_kml.png">
-<meta property="og:image" content="https://giser.xyz/2018/06/30/_images/states_template.png">
-<meta property="og:image" content="https://giser.xyz/2018/06/30/_images/states_rasterized.png">
-<meta property="og:image" content="https://giser.xyz/2018/06/30/_images/tewfs-1_0.jpg">
-<meta property="og:updated_time" content="2018-06-30T05:20:53.296Z">
+<meta property="og:updated_time" content="2018-06-30T05:47:57.100Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GeoServer 2.14.x Developer Manual">
+<meta name="twitter:title" content="GeoServer 2.14.x Developer Manual (一)">
 <meta name="twitter:description" content="IntroductionWelcome to GeoServer development. The project makes use of a number of resources:  https://github.com/geoserver/geoserver.github.io/wiki Wiki used for Proposals https://github.com/geoserve">
 <meta name="twitter:image" content="https://giser.xyz/2018/06/30/_images/dd1.jpg">
 
@@ -160,7 +151,7 @@
 
 
 
-  <link rel="canonical" href="https://giser.xyz/2018/06/30/20180630-GeoServerDeveloperManual/"/>
+  <link rel="canonical" href="https://giser.xyz/2018/06/30/20180630-GeoServerDeveloperManual1/"/>
 
 
 
@@ -170,7 +161,7 @@
   };
 </script>
 
-  <title>GeoServer 2.14.x Developer Manual | GISer空间</title>
+  <title>GeoServer 2.14.x Developer Manual (一) | GISer空间</title>
   
 
 
@@ -380,7 +371,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://giser.xyz/2018/06/30/20180630-GeoServerDeveloperManual/">
+    <link itemprop="mainEntityOfPage" href="https://giser.xyz/2018/06/30/20180630-GeoServerDeveloperManual1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="huangli">
@@ -397,7 +388,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">GeoServer 2.14.x Developer Manual
+          <h2 class="post-title" itemprop="name headline">GeoServer 2.14.x Developer Manual (一)
               
             
           </h2>
@@ -455,8 +446,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/06/30/20180630-GeoServerDeveloperManual/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论</span> <span class="post-comments-count gitment-comments-count" data-xid="/2018/06/30/20180630-GeoServerDeveloperManual/" itemprop="commentsCount"></span>
+                <a href="/2018/06/30/20180630-GeoServerDeveloperManual1/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论</span> <span class="post-comments-count gitment-comments-count" data-xid="/2018/06/30/20180630-GeoServerDeveloperManual1/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -487,7 +478,7 @@
                 
                   <span class="post-meta-item-text">本文字数</span>
                 
-                <span title="本文字数">64k</span>
+                <span title="本文字数">33k</span>
               
 
               
@@ -501,7 +492,7 @@
                 
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
-                <span title="阅读时长">1:false</span>
+                <span title="阅读时长">47 分钟</span>
               
             </div>
           
@@ -869,324 +860,7 @@
 <p>For more information on installing and using the Findbugs plugin for Eclipse, see <a href="http://findbugs.sourceforge.net/manual/eclipse.html" target="_blank" rel="noopener">http://findbugs.sourceforge.net/manual/eclipse.html</a> .</p>
 <p>The Findbugs Eclipse perspective browsing the GeoServer Main module</p>
 <h2 id="Fixing-Bugs-from-Findbugs"><a href="#Fixing-Bugs-from-Findbugs" class="headerlink" title="Fixing Bugs from Findbugs"></a>Fixing Bugs from Findbugs</h2><p>We are always looking to eliminate bugs from GeoServer!<br>If you want to help out, one way is to remove one of the Findbugs rules from the exclusion filter, then re-run the analysis locally.<br>Once you fix all the bugs, submit a patch to GeoServer for review.<br>A core developer will review the changes, and we’ll be able to make our “lax” Findbugs filter that much stricter.</p>
-<h1 id="Programming-Guide"><a href="#Programming-Guide" class="headerlink" title="Programming Guide"></a>Programming Guide</h1><ul>
-<li><a href="ows-services/index.html">OWS Services</a></li>
-<li><a href="rest-services/index.html">REST Services</a></li>
-<li><a href="web-ui/index.html">Web User Interface</a></li>
-<li><a href="wicket-pages/index.html">Wicket Development In GeoServer</a></li>
-<li><a href="extension-points/index.html">Extension Points</a></li>
-<li><a href="wps-services/index.html">WPS Services</a></li>
-<li><a href="testing/index.html">Testing</a></li>
-<li><a href="security/index.html">Security</a></li>
-<li><a href="app-schema/index.html">App-Schema Online Tests</a></li>
-</ul>
-<h1 id="Release-Schedule"><a href="#Release-Schedule" class="headerlink" title="Release Schedule"></a>Release Schedule</h1><p>Starting with version 2.2 GeoServer releases follow a time boxed model in which releases occur<br>at regular predictable frequencies rather than at ad-hoc dates. In a time boxed the software is<br>released at predictable frequencies with whatever fixes, improvements, and feature are available<br>at the time of release. This differs from the previous feature based model in which releases occur<br>when a certain number of key features have accumulated.</p>
-<p>To compensate for the inherent unpredictability of the release contents the model includes strict<br>rules about what type of development is appropriate during specific periods of a branches life<br>cycle. These rules include a suitably long hardening period for the unstable branch to mature and<br>eventually become stable.</p>
-<h2 id="Release-branches-1"><a href="#Release-branches-1" class="headerlink" title="Release branches"></a>Release branches</h2><p>At any given time GeoServer is undergoing two to three main branches of development.</p>
-<ol>
-<li>The <strong>stable</strong> branch in which only bug fixing, and smaller scale feature development occurs on</li>
-<li>The <strong>unstable</strong> (master) branch in which more experimental and larger scale feature development occurs</li><li>The <strong>maintenance</strong> branch which was the previously stable branch that is nearing end of life and sees<br>only the most stable development, typically mostly bug fixes.</li>
 
-
-</ol>
-<h2 id="Release-cycle"><a href="#Release-cycle" class="headerlink" title="Release cycle"></a>Release cycle</h2><p>On the stable branches release follow a monthly cycle in a which a new minor release occurs once a<br>month. On the unstable branch releases follow a 6 month cycle in which a new major release occurs<br>once every 6 months. The following diagram illustrates the cycle:</p>
-<p>Things to note:</p>
-<ul>
-<li>monthly releases on the stable branch</li>
-<li>a four month open development period followed by two months hardening period on the unstable branch</li><li>beta releases are supposed to be released out of the unstable series on a monthly basis<br>across the switch between open development and hardening, followed by the first release candidate</li><br><li>release candidates are pushed out every two weeks until we reach a stable code base, which will be released<br>as the new major stable release</li>
-<li>the first release candidate marks the branch off of a new trunk, on which open development starts again</li>
-</ul>
-<p>The time of the first release candidate marks the origin of a new stable branch in which the unstable branch<br>becomes the stable branch, and the stable branches becomes a maintenance branch.</p>
-<p>Every month, on the same day, a new release is issued from the stable branch using whatever revision of<br>GeoServer/Geotools passed the last CITE tests. The release is meant to improve upon the previous release in<br>both functionality and stability, so unless the project steering committee determines reasons to block the release<br>it will happen regardless of what bug reports are in Jira. Pending resourcing, they can be fixed in the next release<br>that comes out one month later.</p>
-<p>At any given point in time there are two branches under the development, the stable branch and the master/unstable<br>branch. Once every six months when the creation of a new stable branch occurs a third active maintenance branch<br>is created. This branch is kept up to date with the stable stable for a period of one-month after which the final<br>release on that branch is created. That said there is nothing against a developer continuing to maintain the branch<br>or creating release from it, it is just not expected.</p>
-<h2 id="Development-phases"><a href="#Development-phases" class="headerlink" title="Development phases"></a>Development phases</h2><p>The type of development that can occur on a branch is dictated by where the branch is in terms of its life cycle.</p>
-<h3 id="Stable-branch"><a href="#Stable-branch" class="headerlink" title="Stable branch"></a>Stable branch</h3><p>The type of acceptable development on the stable branch does not change much over its lifetime. It is meant<br>for bug fixes and new features that do not affect the GeoServer API or significantly affect the stability.<br>A PSC vote (with eventual proposal) can be called in case a significant new feature or change needs<br>to be back ported to the stable branch overriding the above rules.</p>
-<p>If, for any reason, a release is delayed the next release will be rescheduled 30 days after the last release<br>(that is, delaying the whole train of remaining releases).</p>
-<h3 id="Unstable-branch"><a href="#Unstable-branch" class="headerlink" title="Unstable branch"></a>Unstable branch</h3><p>The type of development on the master/unstable branch changes over its lifetime from four months of open<br>development to two months of stable/hardening development.</p>
-<h3 id="Open-development-phase"><a href="#Open-development-phase" class="headerlink" title="Open development phase"></a>Open development phase</h3><p>The open development phase starts when the new stable release is branched off, and ends when hardening<br>starts, four months after the new stable release is made.</p>
-<p>During this phase developers are free to commit stability undermining changes (even significant ones).<br>Those changes still need to be voted as GSIP anyways to ensure, as usual, resourcing checks, API consistency<br>and community review.</p>
-<p>After three months from the release of the stable series a first beta will be released,<br>one month after that the second beta will be released and the branch will switch into hardening mode.</p>
-<h3 id="Hardening-phase"><a href="#Hardening-phase" class="headerlink" title="Hardening phase"></a>Hardening phase</h3><p>The hardening phase starts when the second beta is released and continues through all release candidate (RC)<br>releases. The first RC is released one month after the second beta, and then bi-weekly releases<br>will be issued until no major issues will be reported by the user base, at which point the last RC<br>will be turned into the new stable release.</p>
-<p>During hardening only bug-fixes and new non core plugins can be developed</p>
-<h2 id="Commit-rules"><a href="#Commit-rules" class="headerlink" title="Commit rules"></a>Commit rules</h2><p>The following are guidelines as to what types of commits can occur in any particular phase. While the PSC<br>reserves the right to vote and override the committing guidelines the following rules reflect the<br>current policies.</p>
-<p>The <strong>hardening phase</strong>, and by extension the stable and open phases, can receive any of the following<br>types of commits:</p>
-<ul>
-<li>bug fixes</li>
-<li>documentation improvements</li><li>new plugins contributed as community or extension modules (with a cautionary note that during<br>hardening the attention should be concentrated as much as possible on getting the new release stable)</li>
-
-
-</ul>
-<p>In addition the <strong>stable phase</strong> can receive any of the following types of commits:</p>
-<ul>
-<li>new minor core functionality (e.g. new output format)</li><li>new API that we can commit to for a long period of time (provided it’s not a change to existing API unless the PSC votes otherwise).<br>GeoServer is not a library, so defining API can be hard, but any class that can be used by pluggable<br>extension points should be changed with care, especially so in a stable series</li>
-
-
-</ul>
-<p>In addition to the above the <strong>stable phase</strong> can receive the following types of changes provided there are no<br>reservations or concerns about them from the PSC. Such changes may be subject to voting:</p>
-<ul>
-<li>promotion of extensions to core</li><li>core changes that are unlikely to affect the stability of the upcoming release<br>(if the PSC is ok better land them right after a release to get as a large window for testing as possible)</li>
-<li>back port of larger changes that have proven to be working well on trunk for an extended period of time</li>
-</ul>
-<p>During the <strong>open development phase</strong> all types of commits are fair game but of course large changes are still subject to proposals and reviews.</p>
-<h2 id="During-a-Release"><a href="#During-a-Release" class="headerlink" title="During a Release"></a>During a Release</h2><p>During a release (on any branch) your cooperation is needed:</p>
-<ul>
-<li>We hold off merging fixes several days prior to release, email if you are approaching this deadline and need help</li>
-<li>To help identify any blockers (an email will be sent out prior to release)</li>
-<li>Help test pre-release artifacts prior to their being published for download</li>
-<li>Keep issue tracker status up to date so the release notes are correct</li>
-<li>Please treat our release volunteers with respect, we know deadlines can be stressful</li>
-</ul>
-<h1 id="Release-Guide"><a href="#Release-Guide" class="headerlink" title="Release Guide"></a>Release Guide</h1><p>This guide details the process of performing a GeoServer release.</p>
-<h2 id="Before-you-start"><a href="#Before-you-start" class="headerlink" title="Before you start"></a>Before you start</h2><h3 id="SNAPSHOT-release"><a href="#SNAPSHOT-release" class="headerlink" title="SNAPSHOT release"></a>SNAPSHOT release</h3><p>For any release (including release candidates) a GeoServer release requires an<br>corresponding GeoTools and GeoWebCache release. Therefore before you start you should<br>coordinate a release with these projects. Either performing the release yourself or<br>asking a volunteer to perform the release.</p>
-<ul>
-<li><a href="http://docs.geotools.org/latest/developer/procedures/release.html" target="_blank" rel="noopener">GeoTools Release Guide</a></li>
-<li><a href="https://github.com/GeoWebCache/geowebcache/blob/master/geowebcache/release/RELEASE_GUIDE.txt" target="_blank" rel="noopener">GeoWebCache RELEASE_GUIDE.txt</a></li>
-</ul>
-<h3 id="Notify-developer-list"><a href="#Notify-developer-list" class="headerlink" title="Notify developer list"></a>Notify developer list</h3><p>Send an email to the <a href="https://lists.sourceforge.net/lists/listinfo/geoserver-devel" target="_blank" rel="noopener">GeoServer developer list</a> a few days in advance, even though the release date has been agreed upon before hand. It is a good idea to remind developers to get any fixes 24 hours prior to release day, and to start a team discussion to identify any known blockers.</p>
-<h2 id="Prerequisites"><a href="#Prerequisites" class="headerlink" title="Prerequisites"></a>Prerequisites</h2><p>The following are necessary to perform a GeoServer release:</p>
-<ol>
-<li>Commit access to the GeoServer <a href="https://Github.com/geoserver/geoserver" target="_blank" rel="noopener">Git repository</a></li>
-<li>Build access to <a href="http://build.geoserver.org/jenkins/" target="_blank" rel="noopener">Jenkins</a></li>
-<li>Edit access to the GeoServer <a href="http://blog.geoserver.org" target="_blank" rel="noopener">Blog</a></li>
-<li>Administration rights to GeoServer <a href="https://osgeo-org.atlassian.net/projects/GEOS" target="_blank" rel="noopener">JIRA</a></li>
-<li>Release/file management privileges in <a href="https://sourceforge.net/projects/geoserver/" target="_blank" rel="noopener">SourceForge</a></li>
-</ol>
-<h2 id="Versions-and-revisions"><a href="#Versions-and-revisions" class="headerlink" title="Versions and revisions"></a>Versions and revisions</h2><p>When performing a release we don’t require a “code freeze” in which no developers can commit to the repository. Instead we release from a revision that is known to pass all tests, including unit/integration tests as well as CITE tests.</p>
-<p>To obtain the GeoServer and Geotools revisions that have passed the <a href="https://build.geoserver.org/view/testing-cite/" target="_blank" rel="noopener">CITE test</a>, navigate to the latest Jenkins run of the CITE test  and view it’s console output and select to view its full log. For example:</p>
-<blockquote>
-<p><a href="https://build.geoserver.org/job/2.11-cite-wms-1.1/286/consoleText" target="_blank" rel="noopener">https://build.geoserver.org/job/2.11-cite-wms-1.1/286/consoleText</a></p>
-</blockquote>
-<p>Perform a search on the log for âgit revision’ (this is the GeoServer revision) and you should obtain the following:</p>
-<p>Since most GeoServer releases require an official GeoTools release, the GeoTools revision is usually not needed.</p>
-<h2 id="Release-in-JIRA"><a href="#Release-in-JIRA" class="headerlink" title="Release in JIRA"></a>Release in JIRA</h2><ol>
-<li>Navigate to the <a href="https://osgeo-org.atlassian.net/projects/GEOS?selectedItem=com.atlassian.jira.jira-projects-plugin:release-page&amp;status=released-unreleased" target="_blank" rel="noopener">GeoServer project page</a> in JIRA.</li>
-<li>Add a new version for the next version to be released after the current release. For example, if you are releasing GeoServer 2.11.5, create version 2.11.6.</li>
-<li>Click in the Actions column for the version you are releasing and select Release. Enter the release date when prompted. If there are still unsolved issues remaining in this release, you will be prompted to move them to an unreleased version. If so, choose the new version you created in step 2.</li>
-</ol>
-<h2 id="If-you-are-cutting-the-first-RC-of-a-series-create-the-stable-branch"><a href="#If-you-are-cutting-the-first-RC-of-a-series-create-the-stable-branch" class="headerlink" title="If you are cutting the first RC of a series, create the stable branch"></a>If you are cutting the first RC of a series, create the stable branch</h2><p>When creating the first release candidate of a series, there are some extra steps to create the new stable branch and update the version on master.</p>
-<li>Checkout the master branch and make sure it is up to date and that there are no changes in your local workspace:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">git pull</span><br><span class="line">git status</span><br></pre></td></tr></table></figure><br><br></li><br><li>Create the new stable branch and push it to GitHub; for example, if master is <code>2.11-SNAPSHOT</code> and the remote for the official GeoServer is called <code>geoserver</code>:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b 2.11.x</span><br><span class="line">git push geoserver 2.11.x</span><br></pre></td></tr></table></figure><br><br></li><br><li>Enable <a href="https://github.com/geoserver/geoserver/settings/branches" target="_blank" rel="noopener">GitHub branch protection</a> for the new stable branch: tick “Protect this branch” (only) and press “Save changes”.<br></li><br><li>Checkout the master branch and update the version in all pom.xml files; for example, if changing master from <code>2.11-SNAPSHOT</code> to <code>2.12-SNAPSHOT</code>:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br><span class="line">find . -name pom.xml -<span class="built_in">exec</span> sed -i <span class="string">'s/2.11-SNAPSHOT/2.12-SNAPSHOT/g'</span> &#123;&#125; \;</span><br></pre></td></tr></table></figure><br><br>&gt; Note: sed<code>behaves differently on Linux vs. Mac OS X. If running on OS X, the</code>-i<code>should be followed by</code>‘’ -e<code>for each of these</code>sed<code>commands.
-
-&lt;/li&gt;
-&lt;li&gt;Update release artifact paths and labels, for example, if changing master from</code>2.11-SNAPSHOT<code>to</code>2.12-SNAPSHOT<code>:
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sed -i <span class="string">'s/2.11-SNAPSHOT/2.12-SNAPSHOT/g'</span> src/release/bin.xml</span><br><span class="line">sed -i <span class="string">'s/2.11-SNAPSHOT/2.12-SNAPSHOT/g'</span> src/release/installer/win/GeoServerEXE.nsi</span><br><span class="line">sed -i <span class="string">'s/2.11-SNAPSHOT/2.12-SNAPSHOT/g'</span> src/release/installer/win/wrapper.conf</span><br></pre></td></tr></table></figure>
-
-&gt; Note: hese can be written as a single</code>sed<code>command with multiple files.
-
-&lt;/li&gt;
-&lt;li&gt;Update GeoTools dependency; for example if changing from</code>17-SNAPSHOT<code>to</code>18-SNAPSHOT<code>:
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i <span class="string">'s/17-SNAPSHOT/18-SNAPSHOT/g'</span> src/pom.xml</span><br></pre></td></tr></table></figure>
-
-&lt;/li&gt;
-&lt;li&gt;Update GeoWebCache dependency; for example if changing from</code>1.11-SNAPSHOT<code>to</code>1.12-SNAPSHOT<code>:
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sed -i <span class="string">'s/1.11-SNAPSHOT/1.12-SNAPSHOT/g'</span> src/pom.xml</span><br></pre></td></tr></table></figure>
-
-&lt;/li&gt;
-&lt;li&gt;Manually update hardcoded versions in configuration files:
-&lt;blockquote&gt;
-&lt;ul class=&quot;simple&quot;&gt;
--</code>doc/en/developer/source/conf.py<code>-</code>doc/en/docguide/source/conf.py<code>-</code>doc/en/user/source/conf.py<code>-</code>doc/es/user/source/conf.py<code>-</code>doc/fr/user/source/conf.py<code>&gt; 
-&lt;ul class=&quot;simple&quot;&gt;
--</code>doc/en/developer/source/conf.py<code>-</code>doc/en/docguide/source/conf.py<code>-</code>doc/en/user/source/conf.py<code>-</code>doc/es/user/source/conf.py<code>-</code>doc/fr/user/source/conf.py<code>&lt;/ul&gt;
-
-
-Commit the changes and push to the master branch on GitHub:
-
-Create the new RC version in [JIRA](https://osgeo-org.atlassian.net/projects/GEOS) for issues on master; for example, if master is now</code>2.12-SNAPSHOT<code>, create a Jira version</code>2.12-RC1<code>for the first release of the</code>2.12.x<code>series
-
-Update the main, nightly, geogig-plugin and live-docs jobs on build.geoserver.org:
-
-- disable the maintenance jobs, and remove them from the geoserver view
-- create new jobs, copying from the existing stable jobs, and edit the branch.
-- modify the last line of the live-docs builds, changing</code>stable<code>to</code>maintain<code>for the previous stable branch. The new job you created should publish to</code>stable<code>, and master will continue to publish to</code>latest<code>.
-
-Update the cite tests on build.geoserver.org:
-
-- disable the maintenance jobs, and remove them from the geoserver view
-- create new jobs, copying from the existing master jobs, editing the branch in the build command.
-
-Announce on the developer mailing list that the new stable branch has been created.
-
-Switch to the new branch and update the documentation links, replacing</code>docs.geoserver.org/latest<code>with</code>docs.geoserver.org/2.12.x<code>(for example):
-
--</code>README.md<code>-</code>doc/en/developer/source/conf.py<code>-</code>doc/en/user/source/conf.py<code>## Build the Release
-
-Run the [geoserver-release](https://build.geoserver.org/view/geoserver/job/geoserver-release/) job in Jenkins. The job takes the following parameters:
-
-**BRANCH**
-
-&gt; 
-The branch to release from, &quot;2.2.x&quot;, &quot;2.1.x&quot;, etcâ¦ This must be a stable branch. Releases are not performed from master.
-
-**REV**
-
-&gt; 
-The Git revision number to release from. eg, &quot;24ae10fe662câ¦.&quot;. If left blank the latest revision (ie HEAD) on the</code>BRANCH<code>being released is used.
-
-**VERSION**
-
-&gt; 
-The version/name of the release to build, &quot;2.1.4&quot;, &quot;2.2&quot;, etcâ¦
-
-**GT_VERSION**
-
-&gt; 
-The GeoTools version to include in the release. This may be specified as a version number such as &quot;8.0&quot; or &quot;2.7.5&quot;. Alternatively the version may be specified as a Git branch/revision pair in the form</code>&lt;branch&gt;@&lt;revision&gt;<code>. For example &quot;[master@36ba65jg53](mailto:master%4036ba65jg53)â¦..&quot;. Finally this value may be left blank in which the version currently declared in the geoserver pom will be used (usually a SNAPSHOT). Again, this version must be a version number corresponding to an official GeoTools release.
-
-**GWC_VERSION**
-
-&gt; 
-The GeoWebCache version to include in the release. This may be specified as a version number such as &quot;1.3-RC3&quot;. Alternatively the version may be specified as a Git revision of the form</code>&lt;branch&gt;@&lt;revision&gt;<code>such as &quot;[master@1b3243jb](mailto:master%401b3243jb)â¦&quot;. Finally this value may be left blank in which the version currently declared in the geoserver pom will be used (usually a SNAPSHOT).Git Again, this version must be a version number corresponding to an official GeoTools release.
-
-**GIT_USER**
-
-&gt; 
-The Git username to use for the release.
-
-**GIT_EMAIL**
-
-&gt; 
-The Git email to use for the release.
-
-This job will checkout the specified branch/revision and build the GeoServer
-release artifacts against the GeoTools/GeoWebCache versions specified. When
-successfully complete all release artifacts will be uploaded to the following
-location:
-
-Additionally when the job completes it fires off two jobs for building the
-Windows and OSX installers. These jobs run on different hudson instances.
-When those jobs complete the</code>.exe<code>and</code>.dmg<code>artifacts will be uploaded
-to the location referenced above.
-
-## Test the Artifacts
-
-Download and try out some of the artifacts from the above location and do a
-quick smoke test that there are no issues. Engage other developers to help
-test on the developer list.
-
-## Publish the Release
-
-Run the [geoserver-release-publish](https://build.geoserver.org/view/geoserver/job/geoserver-release-publish/) in Jenkins. The job takes the following parameters:
-
-**VERSION**
-
-&gt; 
-The version being released. The same value s specified for</code>VERSION<code>when running the</code>geoserver-release<code>job.
-
-**BRANCH**
-
-&gt; 
-The branch being released from.  The same value specified for</code>BRANCH<code>when running the</code>geoserver-release<code>job.
-
-This job will rsync all the artifacts located at:
-
-to the SourceForge FRS server. Navigate to [Sourceforge](http://sourceforge.net/projects/geoserver/) and verify that the artifacts have been uploaded properly. If this is the latest stable release, set the necessary flags on the</code>.exe<code>,</code>.dmg<code>and</code>.bin<code>artifacts so that they show up as the appropriate default for users downloading on the Windows, OSX, and Linux platforms.
-
-## Create the download page
-
-The [GeoServer web site](http://geoserver.org/) is managed as a [GitHub Pages repository](https://github.com/geoserver/geoserver.github.io). Follow the [instructions](https://github.com/geoserver/geoserver.github.io#releases) in the repository to create a download page for the release. This requires the url of the blog post announcing the release, so wait until after you have posted the announcement to do this.
-
-## Post the Documentation
-
-&gt; Note: For now, this requires Boundless credentials; if you do not have them, please ask on the [GeoServer developer list](https://lists.sourceforge.net/lists/listinfo/geoserver-devel) for someone to perform this step for you.
-
-&gt; Note: This content will likely move to GitHub in the near future.
-
-&lt;li&gt;Log in to the server.
-&lt;/li&gt;
-&lt;li&gt;Create the following new directories:
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/var/www/docs.geoserver.org/htdocs/a.b.c</span><br><span class="line">/var/www/docs.geoserver.org/htdocs/a.b.c/developer</span><br><span class="line">/var/www/docs.geoserver.org/htdocs/a.b.c/user</span><br></pre></td></tr></table></figure>
-
-where</code>a.b.c<code>is the full release number.
-&lt;/li&gt;
-&lt;li&gt;Download the HTML documentation archive from the GeoServer download page, and extract the contents of both user manuals to the appropriate directory:
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /var/www/docs.geoserver.org/htdocs/a.b.c/</span><br><span class="line">sudo wget http://downloads.sourceforge.net/geoserver/geoserver-a.b.c-htmldoc.zip</span><br><span class="line">sudo unzip geoserver-a.b.c-htmldoc.zip</span><br><span class="line">sudo rm geoserver-a.b.c-htmldoc.zip</span><br></pre></td></tr></table></figure>
-
-&gt; Note: teps 2 and 3 have now been automated by a bash script on the server, and can be completed by executing:
-sudo /var/www/docs.geoserver.org/htdocs/postdocs.sh a.b.c
-
-&lt;/li&gt;
-&lt;li&gt;Open the file</code>/var/www/docs.geoserver.org/htdocs/index.html` in a text editor.<br></li><br><li>Add a new entry in the table for the most recent release:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&amp;lt;tr&amp;gt;</span><br><span class="line">  &amp;lt;td&amp;gt;&amp;lt;strong&amp;gt;&amp;lt;a href=<span class="string">"http://geoserver.org/release/a.b.c/"</span>&amp;gt;a.b.c&amp;lt;/a&amp;gt;&amp;lt;/strong&amp;gt;&amp;lt;/td&amp;gt;</span><br><span class="line">  &amp;lt;td&amp;gt;&amp;lt;a href=<span class="string">"a.b.c/user/"</span>&amp;gt;User Manual&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;</span><br><span class="line">  &amp;lt;td&amp;gt;&amp;lt;a href=<span class="string">"a.b.c/developer/"</span>&amp;gt;Developer Manual&amp;lt;/a&amp;gt;&amp;lt;/td&amp;gt;</span><br><span class="line">&amp;lt;/tr&amp;gt;</span><br></pre></td></tr></table></figure><br><br></li><br><li>Save and close this file.<br></li>
-
-<h2 id="Announce-the-Release"><a href="#Announce-the-Release" class="headerlink" title="Announce the Release"></a>Announce the Release</h2><h3 id="GeoServer-Blog"><a href="#GeoServer-Blog" class="headerlink" title="GeoServer Blog"></a>GeoServer Blog</h3><blockquote>
-<p>Note: This announcement should be made for all releases, including release candidates.</p>
-<p>Note: This step requires an account on <a href="http://blog.geoserver.org/" target="_blank" rel="noopener">http://blog.geoserver.org/</a></p>
-</blockquote>
-<li>Log into the <a href="http://blog.geoserver.org/wp-login.php" target="_blank" rel="noopener">GeoServer Blog</a>.<br></li><br><li><p class="first">Create a new post. The post should be more “colorful” than the average<br>announcement. It is meant to market and show off any and all new<br>features.</p><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">The GeoServer team is pleased to announce the release of</span><br><span class="line">&amp;lt;a href=<span class="string">"http://geoserver.org/release/2.5.1/"</span>&amp;gt;GeoServer 2.5.1&amp;lt;/a&amp;gt;:</span><br><span class="line">&amp;lt;ul&amp;gt;</span><br><span class="line">   &amp;lt;li&amp;gt;Downloads (&amp;lt;a href=<span class="string">"http://sourceforge.net/projects/geoserver/files/GeoServer/2.5.1/geoserver-2.5.1-bin.zip/download"</span>&amp;gt;zip&amp;lt;/a&amp;gt;,</span><br><span class="line">       &amp;lt;a href=<span class="string">"http://sourceforge.net/projects/geoserver/files/GeoServer/2.5.1/geoserver-2.5.1-war.zip/download"</span>&amp;gt;war&amp;lt;/a&amp;gt;,</span><br><span class="line">       &amp;lt;a href=<span class="string">"http://sourceforge.net/projects/geoserver/files/GeoServer/2.5.1/geoserver-2.5.1.dmg/download"</span>&amp;gt;dmg&amp;lt;/a&amp;gt; and</span><br><span class="line">       &amp;lt;a href=<span class="string">"http://sourceforge.net/projects/geoserver/files/GeoServer/2.5.1/geoserver-2.5.1.exe/download"</span>&amp;gt;exe&amp;lt;/a&amp;gt;) are listed on the</span><br><span class="line">       &amp;lt;a href=<span class="string">"http://geoserver.org/release/2.5.1/"</span>&amp;gt;GeoServer 2.5.1&amp;lt;/a&amp;gt; page</span><br><span class="line">       along with documentation and extensions.</span><br><span class="line">      &amp;lt;ul&amp;gt;</span><br><span class="line">         &amp;lt;li&amp;gt;This release includes and is made <span class="keyword">in</span> conjunction with</span><br><span class="line">           &amp;lt;a href=<span class="string">"http://geotoolsnews.blogspot.com/2014/05/geotools-111-released.html"</span>&amp;gt;GeoTools 11.1&amp;lt;/a&amp;gt;.&amp;lt;/li&amp;gt;</span><br><span class="line">      &amp;lt;/ul&amp;gt;</span><br><span class="line">   &amp;lt;/li&amp;gt;</span><br><span class="line">   &amp;lt;li&amp;gt;Thanks to &amp;lt;a href=<span class="string">"http://www.warwickshire.gov.uk/"</span>&amp;gt;Warwickshire County Council&amp;lt;/a&amp;gt;</span><br><span class="line">       <span class="keyword">for</span> some great GeoWebCache integration work:</span><br><span class="line">      &amp;lt;ul&amp;gt;</span><br><span class="line">         &amp;lt;li&amp;gt;GeoWebCache tile layer HTTP cache headers are now taken from GeoServer layer configration&amp;lt;/li&amp;gt;</span><br><span class="line">         &amp;lt;li&amp;gt;GeoWebCache settings are now correctly saved on Windows&amp;lt;/li&amp;gt;</span><br><span class="line">      &amp;lt;/ul&amp;gt;</span><br><span class="line">   &amp;lt;/li&amp;gt;</span><br><span class="line">   &amp;lt;li&amp;gt;A wide range of improvements provided by the community</span><br><span class="line">      &amp;lt;ul&amp;gt;</span><br><span class="line">         &amp;lt;li&amp;gt;Scale hints now exposed <span class="keyword">in</span> WMS GetCapabilities document&amp;lt;/li&amp;gt;</span><br><span class="line">         &amp;lt;li&amp;gt;Fixed Symbology Encoding 1.1 encoding of relative external graphics&amp;lt;/li&amp;gt;</span><br><span class="line">         &amp;lt;li&amp;gt;Addressed axis order issues cascading WMS 1.3.0 services through GeoServer&amp;lt;/li&amp;gt;</span><br><span class="line">      &amp;lt;/ul&amp;gt;</span><br><span class="line">   &amp;lt;/li&amp;gt;</span><br><span class="line">&amp;lt;/ul&amp;gt;</span><br><span class="line">More details can be found <span class="keyword">in</span> the</span><br><span class="line">&amp;lt;a href=<span class="string">"https://osgeo-org.atlassian.net/jira/secure/ReleaseNote.jspa?projectId=10000&amp;amp;version=10164"</span>&amp;gt;GeoServer 2.5.1 Release Notes&amp;lt;/a&amp;gt;.</span><br></pre></td></tr></table></figure><br><br></li><br><li>Examples of content:<br><ul><br><li><p class="first">Link to the <strong>Download Page</strong> in the wiki created above, and possibly to the<br>installers for each platform.</p><br>Example: <a href="http://blog.geoserver.org/2013/07/28/geoserver-2-3-4-released/" target="_blank" rel="noopener">GeoServer 2.3.4 Released</a><br></li><br><li>Indicate which version of GeoTools is used, and thank your employer.<br></li><br><li><p class="first">Link to completed pull requests and Jira tickets, looking for new features or<br>important bug fixes to highlight. Make a point to thank new contributors<br>and sponsors.</p><br>Example: <a href="http://blog.geoserver.org/2013/04/23/geoserver-2-3-1-released/" target="_blank" rel="noopener">GeoServer 2.3.1 released</a><br></li><br><li><p class="first">For the run up to a major release you can build up a list of the new features and<br>change requests.</p><br>Example: <a href="http://blog.geoserver.org/2013/07/22/geoserver-2-4-beta-released/" target="_blank" rel="noopener">GeoServer 2.4 Beta Released</a><br></li><br><li><p class="first">For the major release you can spend a bit more time on the new features, linking<br>to blog posts if they are available.</p><br>Example: <a href="http://blog.geoserver.org/2013/01/29/geoserver-2-3-beta-released/" target="_blank" rel="noopener">GeoServer 2.3-beta released</a><br></li><br></ul><br></li><br><li>Do not publish the post right away. Instead ask the devel list for review.<br></li>
-
-<h3 id="Mailing-lists"><a href="#Mailing-lists" class="headerlink" title="Mailing lists"></a>Mailing lists</h3><blockquote>
-<p>Note: This announcement should be made for all releases, including release candidates.</p>
-</blockquote>
-<p>Send an email to both the developers list and users list announcing the<br>release. The message should be relatively short. You can base it on the blog post.<br>The following is an example:</p>
-<h3 id="OSGeo-Anouncement"><a href="#OSGeo-Anouncement" class="headerlink" title="OSGeo Anouncement"></a>OSGeo Anouncement</h3><p>For major releases OSGeo asks that a news item be submitted:</p>
-<ul>
-<li>Login to the osgeo.org website, create a news item using the release announcement text above.</li>
-</ul>
-<p>And that an announcement is sent to discuss:</p>
-<ul>
-<li>Mail major release announcements to <a href="mailto:discuss%40osgeo.org" target="_blank" rel="noopener">discuss@osgeo.org</a> (you will need to <a href="https://lists.osgeo.org/listinfo/discuss" target="_blank" rel="noopener">subscribe first</a> ).</li>
-</ul>
-<h1 id="Release-Testing-Checklist"><a href="#Release-Testing-Checklist" class="headerlink" title="Release Testing Checklist"></a>Release Testing Checklist</h1><p>A checklist of things to manually test for every release.</p>
-<h2 id="Artifact-size"><a href="#Artifact-size" class="headerlink" title="Artifact size"></a>Artifact size</h2><p>The binary release of GeoServer should be somehere around 45 - 46 megabytes.</p>
-<h2 id="Demos"><a href="#Demos" class="headerlink" title="Demos"></a>Demos</h2><blockquote>
-<p>Note: These are no longer available in GeoServer 2.0, we’ll probably reinstate them later</p>
-</blockquote>
-<p>To do the demo page, <a href="http://localhost:8080/geoserver/demo.do" target="_blank" rel="noopener">http://localhost:8080/geoserver/demo.do</a>, and test all of<br>the demos. This includes:</p>
-<blockquote>
-<ul class="simple"><br>- WFS-T demo<br>- GeoRSS demo with Google Maps, Virtual Earth, and Yahoo Maps<br>- WMS Overlay demo<br>- WMS Example<br></ul>
-
-
-</blockquote>
-<h2 id="Sample-requests"><a href="#Sample-requests" class="headerlink" title="Sample requests"></a>Sample requests</h2><p>Go to the sample request page, <a href="http://localhost:8080/geoserver/web/?wicket:bookmarkablePage=:org.geoserver.web.demo.DemoRequestsPage" target="_blank" rel="noopener">http://localhost:8080/geoserver/web/?wicket:bookmarkablePage=:org.geoserver.web.demo.DemoRequestsPage</a>,<br>and execute every sample request, ensuring the correct response for each<br>request.</p>
-<h2 id="Map-preview"><a href="#Map-preview" class="headerlink" title="Map preview"></a>Map preview</h2><li>Go to the map preview page, <a href="http://atlas.openplans.org:8081/geoserver/web/?wicket:bookmarkablePage=:org.geoserver.web.demo.MapPreviewPage" target="_blank" rel="noopener">http://atlas.openplans.org:8081/geoserver/web/?wicket:bookmarkablePage=:org.geoserver.web.demo.MapPreviewPage</a><br></li><br><li>Click the <code>OpenLayers</code> link next to <code>nurc:ArcSample</code><br><img alt="../_images/arc_sample.png" src="../_images/arc_sample.png"><br></li><br><li><p class="first">Go back to the map preview and click the <code>GeoRSS</code> item in the drop down choice next to<br><code>topp:states</code></p><br><img alt="../_images/states_georss.png" src="../_images/states_georss.png"><br></li><br><li><p class="first">Go back to the map preview and click the <code>OpenLayers</code> link next to<br><code>topp:states</code>.</p><br></li><br><li>Enable the options toolbar and specify the CQL filter:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">STATE_ABBR EQ <span class="string">'TX'</span></span><br></pre></td></tr></table></figure><br><br><img alt="../_images/states_cql.png" src="../_images/states_cql.png"><br></li>
-
-<h2 id="KML"><a href="#KML" class="headerlink" title="KML"></a>KML</h2><li>Go back to the map preview and click the <code>KML</code> link next to <code>topp:states</code><br></li><br><li>Open the result in Google Earth<br></li><br><li><p class="first">Zoom out as far as possible and notice the smaller states (on the east coast)<br>disappear.</p><br><img alt="../_images/states_kml_bestguess.png" src="../_images/states_kml_bestguess.png"><br></li><br><li>Close Google Earth<br><br>Warning<br>&gt; <p cla:="last">If you do not shut down Google Earth it will cache information and throw<br>off the next steps.</p><br><br></li><br><li>Go to the feature type editor page for the <code>topp:states</code> feature type<br></li><br><li><p class="first">Change the <code>KML Regionating Attribute</code> to “SAMP_POP” and change the <code class="docutils literal">KML<br>Regionating Strategy</code> to “external-sorting”:</p><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.. image:: states_kml_config.png</span><br></pre></td></tr></table></figure><br><br></li><br><li>Submit and Apply changes<br></li><br><li><p class="first">Go back to the map preview page and again click the <code>KML</code> link next to<br><code>topp:states</code>, opening the result in Google Earth</p><br></li><br><li><p class="first">Zoom out as far as possible and notice the smaller population states (green)<br>disappear</p><br><img alt="../_images/states_kml_sort.png" src="../_images/states_kml_sort.png"><br></li><br><li><p class="first">Go back to the map preview page and click the <code>KML</code> link next to<br><code>nurc:Img_Sample</code>, opening the result in Google Earth</p><br><img alt="../_images/img_sample_kml.png" src="../_images/img_sample_kml.png"><br></li><br><li>Zoom in and notice tiles load<br></li><br><li><p class="first">Follow the link <a href="http://localhost:8080/geoserver/wms/kml?layers=topp:states&amp;mode=refresh" target="_blank" rel="noopener">http://localhost:8080/geoserver/wms/kml?layers=topp:states&amp;mode=refresh</a><br>, opening the result in Google Earth</p><br></li><br><li>Notice the KML reload every time the camera is stopped<br></li><br><li>Edit the description template for the states layer as follows:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">This is the state of <span class="variable">$&#123;STATE_NAME.value&#125;</span>.</span><br><span class="line"></span><br><span class="line">&amp;lt;img src=<span class="string">"http://www.netstate.com/states/symb/flags/images/<span class="variable">$&#123;STATE_ABBR.value?lower_case&#125;</span>_fi.gif"</span>/&amp;gt;</span><br><span class="line">&amp;lt;br&amp;gt;</span><br><span class="line">For more information visit &amp;lt;a href=<span class="string">"http://en.wikipedia.org/wiki/<span class="variable">$&#123;STATE_NAME.value&#125;</span>"</span>&amp;gt;Wikipedia&amp;lt;/a&amp;gt;</span><br></pre></td></tr></table></figure><br><br></li><br><li>Refresh the KML by moving the camera and click on a placemark<br><img alt="../_images/states_template.png" src="../_images/states_template.png"><br></li><br><li><p class="first">Append the parameter “kmscore=0” to the above link and open the result in<br>Google Earth</p><br></li><br><li>Notice the rasterized version of the KML<br><img alt="../_images/states_rasterized.png" src="../_images/states_rasterized.png"><br></li><br><li><p class="first">Follow the link <a href="http://localhost:8080/geoserver/wms/kml?layers=topp:states&amp;mode=download" target="_blank" rel="noopener">http://localhost:8080/geoserver/wms/kml?layers=topp:states&amp;mode=download</a><br>, saving the result to disk.</p><br></li><br><li><p class="first">Examine the file on disk and notice a raw dump of all placemarks for the<br>layer.</p><br></li>
-
-<h2 id="GeoWebCache"><a href="#GeoWebCache" class="headerlink" title="GeoWebCache"></a>GeoWebCache</h2><ol>
-<li>Go the geowebcache demo page, <a href="http://localhost:8080/geoserver/gwc/demo" target="_blank" rel="noopener">http://localhost:8080/geoserver/gwc/demo</a></li>
-<li>Click the <code>EPSG:4326&quot; link for ``topp:states</code></li>
-<li>Zoom in and notice the tiles load.</li>
-<li>Repeat steps 2 to 3 for <code>EPSG:900913</code></li>
-</ol>
-<h1 id="Cite-Test-Guide"><a href="#Cite-Test-Guide" class="headerlink" title="Cite Test Guide"></a><a href="#id2">Cite Test Guide</a></h1><p>A step by step guide to the GeoServer Compliance Interoperability Test Engine (CITE).</p>
-<p>Contents</p>
-<li><a href="#cite-test-guide">Cite Test Guide</a><ul><br>- <a href="#check-out-cite-tools">Check out CITE tools</a><br>- <a href="#run-wfs-1-0-tests">Run WFS 1.0 tests</a><br>- <a href="#run-wfs-1-1-tests">Run WFS 1.1 tests</a><br>- <a href="#run-wms-1-1-tests">Run WMS 1.1 tests</a><br>- <a href="#run-wcs-1-1-tests">Run WCS 1.1 tests</a><br>- <a href="#run-wcs-1-0-tests">Run WCS 1.0 tests</a><br>- <a href="#teamengine-web-application">Teamengine Web Application</a><br><br>## <a href="#id3">Check out CITE tools</a><br><br>The CITE tools are available at <a href="https://github.com/jdeolive/geoserver-cite-tools" target="_blank" rel="noopener">https://github.com/jdeolive/geoserver-cite-tools</a>. The README file<br>contains the most update documentation of how to checkout and build the tools. The quick version is:<br><br>## <a href="#id4">Run WFS 1.0 tests</a><br><br>&gt; Note: Running WFS 1.0 tests require PostGIS to be installed on the system.<br><br><li>Create a PostGIS user named “cite”:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">createuser cite</span><br></pre></td></tr></table></figure><br><br></li><br><li>Create a PostGIS databased named “cite”, owned by the “cite” user:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">createdb -T template_postgis -U cite cite</span><br></pre></td></tr></table></figure><br><br></li><br><li><p class="first">Change directory to the <code>citewfs-1.0</code> data directory and execute the script<br><code>cite_data.sql</code>:</p><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">psql -U cite cite &amp;lt; cite_data.sql</span><br></pre></td></tr></table></figure><br><br></li><br><li>Start GeoServer with the <code>citewfs-1.0</code> data directory. Example:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> &amp;lt;root of geoserver install&amp;gt;</span><br><span class="line"><span class="built_in">export</span> GEOSERVER_DATA_DIR=&amp;lt;root of geoserver sources&amp;gt;/data/citewfs-1.0</span><br><span class="line">./bin/startup.sh</span><br></pre></td></tr></table></figure><br><br></li><br><li>Change directory back to the cite tools and run the tests:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ant wfs-1.0</span><br></pre></td></tr></table></figure><br><br>With the following parameters:<br><ol class="arabic"><br><li><code>Capabilities URL</code><br><blockquote><br><a href="http://localhost:8080/geoserver/wfs?request=getcapabilities&amp;service=wfs&amp;version=1.0.0" target="_blank" rel="noopener">http://localhost:8080/geoserver/wfs?request=getcapabilities&amp;service=wfs&amp;version=1.0.0</a><br></blockquote><br></li><br><li><code>All</code> tests included<br><img alt="../_images/tewfs-1_0.jpg" src="../_images/tewfs-1_0.jpg"><br></li>
-
-<h2 id="Run-WFS-1-1-tests"><a href="#Run-WFS-1-1-tests" class="headerlink" title="Run WFS 1.1 tests"></a><a href="#id5">Run WFS 1.1 tests</a></h2><blockquote>
-<p>Note: Running WFS 1.1 tests require PostGIS to be installed on the system.</p>
-</blockquote>
-<li>Create a PostGIS user named “cite”:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">createuser cite</span><br></pre></td></tr></table></figure><br><br></li><br><li>Create a PostGIS databased named “cite”, owned by the “cite” user:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">createdb -T template_postgis -U cite cite</span><br></pre></td></tr></table></figure><br><br></li><br><li><p class="first">Change directory to the <code>citewfs-1.1</code> data directory and execute the script<br><code>dataset-sf0.sql</code>:</p><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">psql -U cite cite &amp;lt; dataset-sf0.sql</span><br></pre></td></tr></table></figure><br><br></li><br><li>Start GeoServer with the <code>citewfs-1.1</code> data directory. Example:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> &amp;lt;root of geoserver install&amp;gt;</span><br><span class="line"><span class="built_in">export</span> GEOSERVER_DATA_DIR=&amp;lt;root of geoserver sources&amp;gt;/data/citewfs-1.1</span><br><span class="line">./bin/startup.sh</span><br></pre></td></tr></table></figure><br><br></li><br><li>Change directory back to the cite tools and run the tests:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ant wfs-1.1</span><br></pre></td></tr></table></figure><br><br>With the following parameters:<br><ol class="arabic"><br><li><code>Capabilities URL</code><br><blockquote><br><a href="http://localhost:8080/geoserver/wfs?service=wfs&amp;request=getcapabilities&amp;version=1.1.0" target="_blank" rel="noopener">http://localhost:8080/geoserver/wfs?service=wfs&amp;request=getcapabilities&amp;version=1.1.0</a><br></blockquote><br></li><br><li><code>Supported Conformance Classes</code>:<br><ul class="simple"><br>1. Ensure <code>WFS-Transaction</code> is <strong>checked</strong><br>1. Ensure <code>WFS-Xlink</code> is <strong>unchecked</strong><br></ul><br></li><br><li><code>GML Simple Features</code>: <code>SF-0</code><br></li>
-
-<h2 id="Run-WMS-1-1-tests"><a href="#Run-WMS-1-1-tests" class="headerlink" title="Run WMS 1.1 tests"></a><a href="#id6">Run WMS 1.1 tests</a></h2><li>Start GeoServer with the <code>citewms-1.1</code> data directory.<br></li><br><li>Change directory back to the cite tools and run the tests:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ant wms-1.1</span><br></pre></td></tr></table></figure><br><br>With the following parameters:<br><ol class="arabic"><br><li><code>Capabilities URL</code><br><blockquote><br><a href="http://localhost:8080/geoserver/wms?service=wms&amp;request=getcapabilities&amp;version=1.1.1" target="_blank" rel="noopener">http://localhost:8080/geoserver/wms?service=wms&amp;request=getcapabilities&amp;version=1.1.1</a><br></blockquote><br></li><br><li><code>UpdateSequence Values</code>:<br><ul class="simple"><br>1. Ensure <code>Automatic</code> is selected<br>1. “2” for <code>value that is lexically higher</code><br>1. “0” for <code>value that is lexically lower</code><br></ul><br></li><br><li><code>Certification Profile</code> : <code>QUERYABLE</code><br></li><br><li><code>Optional Tests</code>:<br><ul class="simple"><br>1. Ensure <code>Recommendation Support</code> is <strong>checked</strong><br>1. Ensure <code>GML FeatureInfo</code> is <strong>checked</strong><br>1. Ensure <code>Fees and Access Constraints</code> is <strong>checked</strong><br>1. For <code>BoundingBox Constraints</code> ensure <code>Either</code> is selected<br></ul><br></li><br><li>Click <code>OK</code><br></li>
-
-<ul>
-<li>Ensure <code>Recommendation Support</code> is <strong>checked</strong></li>
-<li>Ensure <code>GML FeatureInfo</code> is <strong>checked</strong></li>
-<li>Ensure <code>Fees and Access Constraints</code> is <strong>checked</strong></li>
-<li>For <code>BoundingBox Constraints</code> ensure <code>Either</code> is selected</li>
-</ul>
-<h2 id="Run-WCS-1-1-tests"><a href="#Run-WCS-1-1-tests" class="headerlink" title="Run WCS 1.1 tests"></a><a href="#id7">Run WCS 1.1 tests</a></h2><li>Start GeoServer with the <code>citewcs-1.1</code> data directory.<br></li><br><li>Change directory back to the cite tools and run the tests:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ant wcs-1.1</span><br></pre></td></tr></table></figure><br><br>With the following parameters:<br><ol class="arabic"><br><li><code>Capabilities URL</code>:<br><blockquote><br><a href="http://localhost:8080/geoserver/wcs?service=wcs&amp;request=getcapabilities&amp;version=1.1.1" target="_blank" rel="noopener">http://localhost:8080/geoserver/wcs?service=wcs&amp;request=getcapabilities&amp;version=1.1.1</a><br></blockquote><br></li>
-
-<p>Click <code>Next</code></p>
-<p>Accept the default values and click <code>Submit</code></p>
-<h2 id="Run-WCS-1-0-tests"><a href="#Run-WCS-1-0-tests" class="headerlink" title="Run WCS 1.0 tests"></a><a href="#id8">Run WCS 1.0 tests</a></h2><blockquote>
-<p>Warning: The WCS specification does not allow a cite compliant WCS 1.0 and<br>1.1 version to co-exist. To successfully run the WCS 1.0 cite tests<br>the <code>wms1_1-&amp;lt;VERSION&amp;gt;.jar</code> must be removed from the geoserver<br><code>WEB-INF/lib</code> directory.</p>
-</blockquote>
-<li>Remove the <code>wcs1_1-&amp;lt;VERSION&amp;gt;.jar</code> from <code>WEB-INF/lib</code> directory.<br></li><br><li>Start GeoServer with the <code>citewcs-1.0</code> data directory.<br></li><br><li>Change directory back to the cite tools and run the tests:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ant wcs-1.0</span><br></pre></td></tr></table></figure><br><br>With the following parameters:<br><ol class="arabic"><br><li><code>Capabilities URL</code>:<br><blockquote><br><a href="http://localhost:8080/geoserver/wcs?service=wcs&amp;request=getcapabilities&amp;version=1.0.0" target="_blank" rel="noopener">http://localhost:8080/geoserver/wcs?service=wcs&amp;request=getcapabilities&amp;version=1.0.0</a><br></blockquote><br></li><br><li><code>MIME Header Setup</code>: “image/tiff”<br></li><br><li><code>Update Sequence Values</code>:<br><ul class="simple"><br>1. “2” for <code>value that is lexically higher</code><br>1. “0” for <code>value that is lexically lower</code><br></ul><br></li><br><li><code>Grid Resolutions</code>:<br><ul class="simple"><br>1. “0.1” for <code>RESX</code><br>1. “0.1” for <code>RESY</code><br></ul><br></li><br><li><code>Options</code>:<br><ul class="simple"><br>1. Ensure <code>Verify that the server supports XML encoding</code> is <strong>checked</strong><br>1. Ensure <code>Verify that the server supports range set axis</code> is <strong>checked</strong><br></ul><br></li><br><li><code>Schemas</code>:<br><ul class="simple"><br>1. Ensure that <code>original schemas</code> is selected<br></ul><br></li><br><li>Click <code>OK</code><br></li>
-
-<ul>
-<li>“0.1” for <code>RESX</code></li>
-<li><p>“0.1” for <code>RESY</code></p>
-</li>
-<li><p>Ensure that <code>original schemas</code> is selected</p>
-</li>
-</ul>
-<h2 id="Teamengine-Web-Application"><a href="#Teamengine-Web-Application" class="headerlink" title="Teamengine Web Application"></a><a href="#id9">Teamengine Web Application</a></h2><p>The Teamengine web application is useful for analyzing results of a test run. To run the web application execute:</p>
-<p>From the cite tools checkout. Once started the web app will be available at:</p>
-<blockquote>
-<p><a href="http://localhost:9090/teamengine" target="_blank" rel="noopener">http://localhost:9090/teamengine</a></p>
-</blockquote>
-<p>To run on a different port pass the <code>-Dengine.port</code> system property to ant command.</p>
-</ol></li></ol></li></ol></li></ol></li></ol></li></ul></li>
       
     </div>
 
@@ -1195,6 +869,13 @@ sudo /var/www/docs.geoserver.org/htdocs/postdocs.sh a.b.c
 
   <div class="popular-posts-header">相关文章</div>
   <ul class="popular-posts">
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2018/06/30/20180630-GeoServerDeveloperManual2/" rel="bookmark">GeoServer 2.14.x Developer Manual (二)</a></div>
+      
+    </li>
   
     <li class="popular-posts-item">
       
@@ -1252,7 +933,7 @@ sudo /var/www/docs.geoserver.org/htdocs/postdocs.sh a.b.c
     <strong>本文作者： </strong>huangli</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://giser.xyz/2018/06/30/20180630-GeoServerDeveloperManual/" title="GeoServer 2.14.x Developer Manual">https://giser.xyz/2018/06/30/20180630-GeoServerDeveloperManual/</a>
+    <a href="https://giser.xyz/2018/06/30/20180630-GeoServerDeveloperManual1/" title="GeoServer 2.14.x Developer Manual (一)">https://giser.xyz/2018/06/30/20180630-GeoServerDeveloperManual1/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -1302,6 +983,10 @@ sudo /var/www/docs.geoserver.org/htdocs/postdocs.sh a.b.c
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/06/30/20180630-GeoServerDeveloperManual2/" rel="prev" title="GeoServer 2.14.x Developer Manual (二)">
+                GeoServer 2.14.x Developer Manual (二) <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -1391,7 +1076,7 @@ sudo /var/www/docs.geoserver.org/htdocs/postdocs.sh a.b.c
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">21</span>
+                    <span class="site-state-item-count">22</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1533,7 +1218,7 @@ sudo /var/www/docs.geoserver.org/htdocs/postdocs.sh a.b.c
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tools"><span class="nav-number">2.</span> <span class="nav-text">Tools</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java"><span class="nav-number">2.1.</span> <span class="nav-text">Java</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Maven"><span class="nav-number">2.2.</span> <span class="nav-text">Maven</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git"><span class="nav-number">2.3.</span> <span class="nav-text">Git</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Source-Code"><span class="nav-number">3.</span> <span class="nav-text">Source Code</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-1"><span class="nav-number">3.1.</span> <span class="nav-text">Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Committing"><span class="nav-number">3.2.</span> <span class="nav-text">Committing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Repository-distribution"><span class="nav-number">3.3.</span> <span class="nav-text">Repository distribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Repository-structure"><span class="nav-number">3.4.</span> <span class="nav-text">Repository structure</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Primary-branches"><span class="nav-number">3.4.1.</span> <span class="nav-text">Primary branches</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Release-branches"><span class="nav-number">3.4.2.</span> <span class="nav-text">Release branches</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Feature-branches"><span class="nav-number">3.4.3.</span> <span class="nav-text">Feature branches</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Codebase-structure"><span class="nav-number">3.5.</span> <span class="nav-text">Codebase structure</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-client-configuration"><span class="nav-number">3.6.</span> <span class="nav-text">Git client configuration</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Development-workflow"><span class="nav-number">3.7.</span> <span class="nav-text">Development workflow</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Updating-from-canonical"><span class="nav-number">3.7.1.</span> <span class="nav-text">Updating from canonical</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Making-local-changes"><span class="nav-number">3.7.2.</span> <span class="nav-text">Making local changes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pushing-changes-to-canonical"><span class="nav-number">3.7.3.</span> <span class="nav-text">Pushing changes to canonical</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Working-with-feature-branches"><span class="nav-number">3.7.4.</span> <span class="nav-text">Working with feature branches</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Merging-feature-branches"><span class="nav-number">3.7.5.</span> <span class="nav-text">Merging feature branches</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Porting-changes-between-primary-branches"><span class="nav-number">3.7.6.</span> <span class="nav-text">Porting changes between primary branches</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cleaning-up-feature-branches"><span class="nav-number">3.7.7.</span> <span class="nav-text">Cleaning up feature branches</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Interactive-rebase"><span class="nav-number">3.7.7.1.</span> <span class="nav-text">Interactive rebase</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Merge-with-squash"><span class="nav-number">3.7.7.2.</span> <span class="nav-text">Merge with squash</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#More-useful-reading"><span class="nav-number">3.8.</span> <span class="nav-text">More useful reading</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Quickstart"><span class="nav-number">4.</span> <span class="nav-text">Quickstart</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Check-out-source-code"><span class="nav-number">4.1.</span> <span class="nav-text">Check out source code</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Build-with-Maven"><span class="nav-number">4.2.</span> <span class="nav-text">Build with Maven</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Import-modules-into-your-IDE"><span class="nav-number">4.3.</span> <span class="nav-text">Import modules into your IDE</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Maven-Guide"><span class="nav-number">5.</span> <span class="nav-text">Maven Guide</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Installing-Maven"><span class="nav-number">5.1.</span> <span class="nav-text">Installing Maven</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Running-Maven"><span class="nav-number">5.2.</span> <span class="nav-text">Running Maven</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Building"><span class="nav-number">5.3.</span> <span class="nav-text">Building</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Skipping-tests"><span class="nav-number">5.4.</span> <span class="nav-text">Skipping tests</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Building-offline"><span class="nav-number">5.5.</span> <span class="nav-text">Building offline</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Building-extensions"><span class="nav-number">5.6.</span> <span class="nav-text">Building extensions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Recover-Build"><span class="nav-number">5.7.</span> <span class="nav-text">Recover Build</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Profiles"><span class="nav-number">5.8.</span> <span class="nav-text">Profiles</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Generating-test-coverage-reports"><span class="nav-number">5.9.</span> <span class="nav-text">Generating test coverage reports</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Eclipse"><span class="nav-number">5.10.</span> <span class="nav-text">Eclipse</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Building-the-web-module"><span class="nav-number">5.11.</span> <span class="nav-text">Building the web module</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Running-the-web-module-with-Jetty"><span class="nav-number">5.12.</span> <span class="nav-text">Running the web module with Jetty</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Installing-the-Oracle-module"><span class="nav-number">5.13.</span> <span class="nav-text">Installing the Oracle module</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Eclipse-Guide"><span class="nav-number">6.</span> <span class="nav-text">Eclipse Guide</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Importing-modules"><span class="nav-number">6.1.</span> <span class="nav-text">Importing modules</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Running-and-debugging"><span class="nav-number">6.2.</span> <span class="nav-text">Running and debugging</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Running-GeoServer-with-Extensions"><span class="nav-number">6.2.1.</span> <span class="nav-text">Running GeoServer with Extensions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Setting-the-data-directory"><span class="nav-number">6.2.2.</span> <span class="nav-text">Setting the data directory</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Changing-the-default-port-for-Jetty"><span class="nav-number">6.2.3.</span> <span class="nav-text">Changing the default port for Jetty</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Configuring-JNDI-resources-in-Jetty"><span class="nav-number">6.2.4.</span> <span class="nav-text">Configuring JNDI resources in Jetty</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Starting-Jetty-with-an-open-SSL-port"><span class="nav-number">6.2.5.</span> <span class="nav-text">Starting Jetty with an open SSL port</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Eclipse-preferences"><span class="nav-number">6.3.</span> <span class="nav-text">Eclipse preferences</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Code-formatting"><span class="nav-number">6.3.1.</span> <span class="nav-text">Code formatting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Code-templates"><span class="nav-number">6.3.2.</span> <span class="nav-text">Code templates</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Text-editors"><span class="nav-number">6.3.3.</span> <span class="nav-text">Text editors</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Compiler"><span class="nav-number">6.3.4.</span> <span class="nav-text">Compiler</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Findbugs-Guide"><span class="nav-number">7.</span> <span class="nav-text">Findbugs Guide</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Running-the-Findbugs-Report-Locally-with-Maven"><span class="nav-number">7.1.</span> <span class="nav-text">Running the Findbugs Report Locally with Maven</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Generating-a-report"><span class="nav-number">7.1.1.</span> <span class="nav-text">Generating a report</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Filters"><span class="nav-number">7.1.2.</span> <span class="nav-text">Filters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Browsing-Bugs"><span class="nav-number">7.1.3.</span> <span class="nav-text">Browsing Bugs</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Using-the-Findbugs-Eclipse-Plugin"><span class="nav-number">7.2.</span> <span class="nav-text">Using the Findbugs Eclipse Plugin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fixing-Bugs-from-Findbugs"><span class="nav-number">7.3.</span> <span class="nav-text">Fixing Bugs from Findbugs</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Programming-Guide"><span class="nav-number">8.</span> <span class="nav-text">Programming Guide</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Release-Schedule"><span class="nav-number">9.</span> <span class="nav-text">Release Schedule</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Release-branches-1"><span class="nav-number">9.1.</span> <span class="nav-text">Release branches</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Release-cycle"><span class="nav-number">9.2.</span> <span class="nav-text">Release cycle</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Development-phases"><span class="nav-number">9.3.</span> <span class="nav-text">Development phases</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Stable-branch"><span class="nav-number">9.3.1.</span> <span class="nav-text">Stable branch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Unstable-branch"><span class="nav-number">9.3.2.</span> <span class="nav-text">Unstable branch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Open-development-phase"><span class="nav-number">9.3.3.</span> <span class="nav-text">Open development phase</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hardening-phase"><span class="nav-number">9.3.4.</span> <span class="nav-text">Hardening phase</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Commit-rules"><span class="nav-number">9.4.</span> <span class="nav-text">Commit rules</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#During-a-Release"><span class="nav-number">9.5.</span> <span class="nav-text">During a Release</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Release-Guide"><span class="nav-number">10.</span> <span class="nav-text">Release Guide</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Before-you-start"><span class="nav-number">10.1.</span> <span class="nav-text">Before you start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SNAPSHOT-release"><span class="nav-number">10.1.1.</span> <span class="nav-text">SNAPSHOT release</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Notify-developer-list"><span class="nav-number">10.1.2.</span> <span class="nav-text">Notify developer list</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Prerequisites"><span class="nav-number">10.2.</span> <span class="nav-text">Prerequisites</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Versions-and-revisions"><span class="nav-number">10.3.</span> <span class="nav-text">Versions and revisions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Release-in-JIRA"><span class="nav-number">10.4.</span> <span class="nav-text">Release in JIRA</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#If-you-are-cutting-the-first-RC-of-a-series-create-the-stable-branch"><span class="nav-number">10.5.</span> <span class="nav-text">If you are cutting the first RC of a series, create the stable branch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Announce-the-Release"><span class="nav-number">10.6.</span> <span class="nav-text">Announce the Release</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GeoServer-Blog"><span class="nav-number">10.6.1.</span> <span class="nav-text">GeoServer Blog</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mailing-lists"><span class="nav-number">10.6.2.</span> <span class="nav-text">Mailing lists</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#OSGeo-Anouncement"><span class="nav-number">10.6.3.</span> <span class="nav-text">OSGeo Anouncement</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Release-Testing-Checklist"><span class="nav-number">11.</span> <span class="nav-text">Release Testing Checklist</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Artifact-size"><span class="nav-number">11.1.</span> <span class="nav-text">Artifact size</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Demos"><span class="nav-number">11.2.</span> <span class="nav-text">Demos</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Sample-requests"><span class="nav-number">11.3.</span> <span class="nav-text">Sample requests</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Map-preview"><span class="nav-number">11.4.</span> <span class="nav-text">Map preview</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#KML"><span class="nav-number">11.5.</span> <span class="nav-text">KML</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GeoWebCache"><span class="nav-number">11.6.</span> <span class="nav-text">GeoWebCache</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Cite-Test-Guide"><span class="nav-number">12.</span> <span class="nav-text">Cite Test Guide</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Run-WFS-1-1-tests"><span class="nav-number">12.1.</span> <span class="nav-text">Run WFS 1.1 tests</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Run-WMS-1-1-tests"><span class="nav-number">12.2.</span> <span class="nav-text">Run WMS 1.1 tests</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Run-WCS-1-1-tests"><span class="nav-number">12.3.</span> <span class="nav-text">Run WCS 1.1 tests</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Run-WCS-1-0-tests"><span class="nav-number">12.4.</span> <span class="nav-text">Run WCS 1.0 tests</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Teamengine-Web-Application"><span class="nav-number">12.5.</span> <span class="nav-text">Teamengine Web Application</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Tools"><span class="nav-number">2.</span> <span class="nav-text">Tools</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java"><span class="nav-number">2.1.</span> <span class="nav-text">Java</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Maven"><span class="nav-number">2.2.</span> <span class="nav-text">Maven</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git"><span class="nav-number">2.3.</span> <span class="nav-text">Git</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Source-Code"><span class="nav-number">3.</span> <span class="nav-text">Source Code</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-1"><span class="nav-number">3.1.</span> <span class="nav-text">Git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Committing"><span class="nav-number">3.2.</span> <span class="nav-text">Committing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Repository-distribution"><span class="nav-number">3.3.</span> <span class="nav-text">Repository distribution</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Repository-structure"><span class="nav-number">3.4.</span> <span class="nav-text">Repository structure</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Primary-branches"><span class="nav-number">3.4.1.</span> <span class="nav-text">Primary branches</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Release-branches"><span class="nav-number">3.4.2.</span> <span class="nav-text">Release branches</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Feature-branches"><span class="nav-number">3.4.3.</span> <span class="nav-text">Feature branches</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Codebase-structure"><span class="nav-number">3.5.</span> <span class="nav-text">Codebase structure</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git-client-configuration"><span class="nav-number">3.6.</span> <span class="nav-text">Git client configuration</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Development-workflow"><span class="nav-number">3.7.</span> <span class="nav-text">Development workflow</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Updating-from-canonical"><span class="nav-number">3.7.1.</span> <span class="nav-text">Updating from canonical</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Making-local-changes"><span class="nav-number">3.7.2.</span> <span class="nav-text">Making local changes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pushing-changes-to-canonical"><span class="nav-number">3.7.3.</span> <span class="nav-text">Pushing changes to canonical</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Working-with-feature-branches"><span class="nav-number">3.7.4.</span> <span class="nav-text">Working with feature branches</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Merging-feature-branches"><span class="nav-number">3.7.5.</span> <span class="nav-text">Merging feature branches</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Porting-changes-between-primary-branches"><span class="nav-number">3.7.6.</span> <span class="nav-text">Porting changes between primary branches</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cleaning-up-feature-branches"><span class="nav-number">3.7.7.</span> <span class="nav-text">Cleaning up feature branches</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Interactive-rebase"><span class="nav-number">3.7.7.1.</span> <span class="nav-text">Interactive rebase</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Merge-with-squash"><span class="nav-number">3.7.7.2.</span> <span class="nav-text">Merge with squash</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#More-useful-reading"><span class="nav-number">3.8.</span> <span class="nav-text">More useful reading</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Quickstart"><span class="nav-number">4.</span> <span class="nav-text">Quickstart</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Check-out-source-code"><span class="nav-number">4.1.</span> <span class="nav-text">Check out source code</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Build-with-Maven"><span class="nav-number">4.2.</span> <span class="nav-text">Build with Maven</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Import-modules-into-your-IDE"><span class="nav-number">4.3.</span> <span class="nav-text">Import modules into your IDE</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Maven-Guide"><span class="nav-number">5.</span> <span class="nav-text">Maven Guide</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Installing-Maven"><span class="nav-number">5.1.</span> <span class="nav-text">Installing Maven</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Running-Maven"><span class="nav-number">5.2.</span> <span class="nav-text">Running Maven</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Building"><span class="nav-number">5.3.</span> <span class="nav-text">Building</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Skipping-tests"><span class="nav-number">5.4.</span> <span class="nav-text">Skipping tests</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Building-offline"><span class="nav-number">5.5.</span> <span class="nav-text">Building offline</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Building-extensions"><span class="nav-number">5.6.</span> <span class="nav-text">Building extensions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Recover-Build"><span class="nav-number">5.7.</span> <span class="nav-text">Recover Build</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Profiles"><span class="nav-number">5.8.</span> <span class="nav-text">Profiles</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Generating-test-coverage-reports"><span class="nav-number">5.9.</span> <span class="nav-text">Generating test coverage reports</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Eclipse"><span class="nav-number">5.10.</span> <span class="nav-text">Eclipse</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Building-the-web-module"><span class="nav-number">5.11.</span> <span class="nav-text">Building the web module</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Running-the-web-module-with-Jetty"><span class="nav-number">5.12.</span> <span class="nav-text">Running the web module with Jetty</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Installing-the-Oracle-module"><span class="nav-number">5.13.</span> <span class="nav-text">Installing the Oracle module</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Eclipse-Guide"><span class="nav-number">6.</span> <span class="nav-text">Eclipse Guide</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Importing-modules"><span class="nav-number">6.1.</span> <span class="nav-text">Importing modules</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Running-and-debugging"><span class="nav-number">6.2.</span> <span class="nav-text">Running and debugging</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Running-GeoServer-with-Extensions"><span class="nav-number">6.2.1.</span> <span class="nav-text">Running GeoServer with Extensions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Setting-the-data-directory"><span class="nav-number">6.2.2.</span> <span class="nav-text">Setting the data directory</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Changing-the-default-port-for-Jetty"><span class="nav-number">6.2.3.</span> <span class="nav-text">Changing the default port for Jetty</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Configuring-JNDI-resources-in-Jetty"><span class="nav-number">6.2.4.</span> <span class="nav-text">Configuring JNDI resources in Jetty</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Starting-Jetty-with-an-open-SSL-port"><span class="nav-number">6.2.5.</span> <span class="nav-text">Starting Jetty with an open SSL port</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Eclipse-preferences"><span class="nav-number">6.3.</span> <span class="nav-text">Eclipse preferences</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Code-formatting"><span class="nav-number">6.3.1.</span> <span class="nav-text">Code formatting</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Code-templates"><span class="nav-number">6.3.2.</span> <span class="nav-text">Code templates</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Text-editors"><span class="nav-number">6.3.3.</span> <span class="nav-text">Text editors</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Compiler"><span class="nav-number">6.3.4.</span> <span class="nav-text">Compiler</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Findbugs-Guide"><span class="nav-number">7.</span> <span class="nav-text">Findbugs Guide</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Running-the-Findbugs-Report-Locally-with-Maven"><span class="nav-number">7.1.</span> <span class="nav-text">Running the Findbugs Report Locally with Maven</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Generating-a-report"><span class="nav-number">7.1.1.</span> <span class="nav-text">Generating a report</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Filters"><span class="nav-number">7.1.2.</span> <span class="nav-text">Filters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Browsing-Bugs"><span class="nav-number">7.1.3.</span> <span class="nav-text">Browsing Bugs</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Using-the-Findbugs-Eclipse-Plugin"><span class="nav-number">7.2.</span> <span class="nav-text">Using the Findbugs Eclipse Plugin</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Fixing-Bugs-from-Findbugs"><span class="nav-number">7.3.</span> <span class="nav-text">Fixing Bugs from Findbugs</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1567,7 +1252,7 @@ sudo /var/www/docs.geoserver.org/htdocs/postdocs.sh a.b.c
     
       <span class="post-meta-item-text">站点总字数</span>
     
-    <span title="站点总字数">121k</span>
+    <span title="站点总字数">124k</span>
   
 
   
