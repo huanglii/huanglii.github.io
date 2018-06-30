@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://giser.xyz/2018/06/30/20180630-GeoServerDeveloperManual/</loc>
+    
+    <lastmod>2018-06-30T05:20:53.296Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://giser.xyz/2018/06/24/20180624-OpenLayersDemos/</loc>
+    
+    <lastmod>2018-06-23T15:36:41.555Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://giser.xyz/2017/10/28/20171028-ArcGISAPIforJavaScript-TianDiTuWMTS/</loc>
     
     <lastmod>2018-06-03T06:09:08.668Z</lastmod>

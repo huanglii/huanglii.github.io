@@ -4,6 +4,46 @@
 
     
   <url>
+    <loc>https://giser.xyz/2018/06/30/20180630-GeoServerDeveloperManual/</loc>
+    <lastmod>2018-06-30T05:20:53.296Z</lastmod>
+    <data>
+        <display>
+        <title>GeoServer 2.14.x Developer Manual</title>
+        <pubTime>2018-06-30T04:07:21.000Z</pubTime>
+        
+        <tag>GeoServer</tag>
+         
+         
+           
+             
+              <breadCrumb title="地理信息科学" url="https://giser.xyz/categories/%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://giser.xyz/2018/06/24/20180624-OpenLayersDemos/</loc>
+    <lastmod>2018-06-23T15:36:41.555Z</lastmod>
+    <data>
+        <display>
+        <title>OpenLayers 示例</title>
+        <pubTime>2018-06-24T00:08:08.000Z</pubTime>
+        
+        <tag>OpenLayers</tag>
+         
+         
+           
+             
+              <breadCrumb title="地理信息科学" url="https://giser.xyz/categories/%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://giser.xyz/2017/10/28/20171028-ArcGISAPIforJavaScript-TianDiTuWMTS/</loc>
     <lastmod>2018-06-03T06:09:08.668Z</lastmod>
     <data>
