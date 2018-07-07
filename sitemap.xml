@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://giser.xyz/2018/06/24/20180624-OpenLayersDemos/</loc>
+    
+    <lastmod>2018-07-07T03:39:26.146Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://giser.xyz/2018/06/30/20180630-GeoServerDeveloperManual2/</loc>
     
     <lastmod>2018-07-01T04:12:32.784Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://giser.xyz/2018/06/30/20180630-GeoServerDeveloperManual1/</loc>
     
     <lastmod>2018-07-01T03:07:22.639Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://giser.xyz/2018/06/24/20180624-OpenLayersDemos/</loc>
-    
-    <lastmod>2018-06-30T05:51:01.400Z</lastmod>
     
   </url>
   
