@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-bounce.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="ltZ9Hc5Rvj42QuxNfQt-vf1rTVfZCPlmaTnoAi14_0E" />
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="WCDWy7MKsY" />
+
+
+
+
+  <meta name="360-site-verification" content="70915ca28ae20fde649f8226dbc73d6d" />
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.2.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.2.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.2.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: 'SQXNYRY3J5',
+      apiKey: 'a80c3cedfa9841ae3fbfe19739772751',
+      indexName: 'hexo',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"搜索...","hits_empty":"未发现与 「${query}」相关的内容","hits_stats":"${hits} 条相关条目，耗时 ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="esri-loaderA tiny library to help load modules from either the 4.x or 3.x versions of the ArcGIS API for JavaScript in non-Dojo applications.">
+<meta name="keywords" content="ArcGIS API for JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Esri Loader">
+<meta property="og:url" content="https://giser.xyz/2018/08/18/20180818-EsriLoader/index.html">
+<meta property="og:site_name" content="GISer空间">
+<meta property="og:description" content="esri-loaderA tiny library to help load modules from either the 4.x or 3.x versions of the ArcGIS API for JavaScript in non-Dojo applications.">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://giser.xyz/2018/08/18/20180818-EsriLoader/1.png">
+<meta property="og:updated_time" content="2018-08-19T09:57:13.432Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Esri Loader">
+<meta name="twitter:description" content="esri-loaderA tiny library to help load modules from either the 4.x or 3.x versions of the ArcGIS API for JavaScript in non-Dojo applications.">
+<meta name="twitter:image" content="https://giser.xyz/2018/08/18/20180818-EsriLoader/1.png">
+
+
+
+
+
+
+  <link rel="canonical" href="https://giser.xyz/2018/08/18/20180818-EsriLoader/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Esri Loader | GISer空间</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">GISer空间</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">地理与计算机的爱情故事</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+  
+    
+      
+    
+    <a href="https://github.com/huanglii" class="github-corner" target="_blank" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#222; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg>
+    
+      </a>
+    
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://giser.xyz/2018/08/18/20180818-EsriLoader/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="huangli">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GISer空间">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Esri Loader
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-08-18 17:41:56" itemprop="dateCreated datePublished" datetime="2018-08-18T17:41:56+08:00">2018-08-18</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/地理信息科学/" itemprop="url" rel="index"><span itemprop="name">地理信息科学</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/08/18/20180818-EsriLoader/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论</span> <span class="post-comments-count gitment-comments-count" data-xid="/2018/08/18/20180818-EsriLoader/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-thumbs-o-up"></i>
+             热度 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span>℃</span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数</span>
+                
+                <span title="本文字数">16k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">22 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="esri-loader"><a href="#esri-loader" class="headerlink" title="esri-loader"></a>esri-loader</h1><p>A tiny library to help load modules from either the <a href="https://developers.arcgis.com/javascript/" target="_blank" rel="noopener">4.x</a> or <a href="https://developers.arcgis.com/javascript/3/" target="_blank" rel="noopener">3.x</a> versions of the <a href="https://developers.arcgis.com/javascript/" target="_blank" rel="noopener">ArcGIS API for JavaScript</a> in non-Dojo applications.</p>
+<a id="more"></a>
+<p><img src="1.png" alt="ArcGIS logo, mended broken heart, Angular logo, Ember logo, Rreact logo, Vue logo"></p>
+<p>See below for more information on <a href="#why-is-this-needed">why this library is needed</a> and how it can help improve application load performance and allow using the ArcGIS API in isomorphic/universal applications.</p>
+<p><strong>NOTE</strong>: If you want to use the ArcGIS API in an <a href="#ember">Ember</a> or <a href="https://angularjs.org/" target="_blank" rel="noopener">AngularJS</a> (1.x) application, you should use one of these libraries instead:</p>
+<ul>
+<li><a href="https://github.com/Esri/ember-esri-loader" target="_blank" rel="noopener">ember-esri-loader</a> - An Ember addon that wraps this library</li>
+<li><a href="https://github.com/Esri/angular-esri-map" target="_blank" rel="noopener">angular-esri-map</a>, which is actually where the code in this library was originally extracted from</li>
+</ul>
+<p>Otherwise you’ll want to follow the <a href="#install">Install</a> and <a href="#usage">Usage</a> instructions below to use this library directly in your application.</p>
+<p>See the <a href="#examples">Examples</a> section below for links to applications that use this library.</p>
+<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save esri-loader</span><br></pre></td></tr></table></figure>
+<p>or</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add esri-loader</span><br></pre></td></tr></table></figure>
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><p>The code snippets below show how to load the ArcGIS API and its modules and then use them to create a map. Where you would place similar code in your application will depend on which application framework you are using. See below for <a href="#examples">example applications</a>.</p>
+<h3 id="Loading-Styles"><a href="#Loading-Styles" class="headerlink" title="Loading Styles"></a>Loading Styles</h3><p>Before you can use the ArcGIS API in your app, you’ll need to load the styles that correspond to the version you are using. You can use the provided <code>loadCss(url)</code> function. For example:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// load esri styles for version 4.8 using loadCss</span></span><br><span class="line">esriLoader.loadCss(<span class="string">'https://js.arcgis.com/4.8/esri/css/main.css'</span>);</span><br></pre></td></tr></table></figure>
+<p>Alternatively, you can manually load them by more traditional means such as adding <code>&lt;link&gt;</code> tags to your HTML, or <code>@import</code> statements to your CSS. For example:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- load esri styles for version 4.8 via a link tag --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://js.arcgis.com/4.8/esri/css/main.css"</span>&gt;</span></span><br><span class="line">@import url('https://js.arcgis.com/4.8/esri/css/main.css');</span><br></pre></td></tr></table></figure>
+<p>or:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* load esri styles for version 3.25 via import */</span></span><br><span class="line">@<span class="keyword">import</span> url(<span class="string">'https://js.arcgis.com/3.25/esri/css/esri.css'</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="Loading-Modules-from-the-ArcGIS-API-for-JavaScript"><a href="#Loading-Modules-from-the-ArcGIS-API-for-JavaScript" class="headerlink" title="Loading Modules from the ArcGIS API for JavaScript"></a>Loading Modules from the ArcGIS API for JavaScript</h3><p>Here’s an example of how you could load and use the 4.x <code>Map</code> and <code>MapView</code> classes in a component to create a map (based on <a href="https://developers.arcgis.com/javascript/latest/sample-code/sandbox/index.html?sample=webmap-basic" target="_blank" rel="noopener">this sample</a>):</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// first, we use Dojo's loader to require the map class</span></span><br><span class="line">esriLoader.loadModules([<span class="string">'esri/views/MapView'</span>, <span class="string">'esri/WebMap'</span>])</span><br><span class="line">.then(<span class="function">(<span class="params">[MapView, WebMap]</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// then we load a web map from an id</span></span><br><span class="line">  <span class="keyword">var</span> webmap = <span class="keyword">new</span> WebMap(&#123;</span><br><span class="line">    portalItem: &#123; <span class="comment">// autocasts as new PortalItem()</span></span><br><span class="line">      id: <span class="string">'f2e9b762544945f390ca4ac3671cfa72'</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="comment">// and we show that map in a container w/ id #viewDiv</span></span><br><span class="line">  <span class="keyword">var</span> view = <span class="keyword">new</span> MapView(&#123;</span><br><span class="line">    map: webmap,</span><br><span class="line">    container: <span class="string">'viewDiv'</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;)</span><br><span class="line">.catch(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// handle any errors</span></span><br><span class="line">  <span class="built_in">console</span>.error(err);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h4 id="Lazy-Loading-the-ArcGIS-API-for-JavaScript"><a href="#Lazy-Loading-the-ArcGIS-API-for-JavaScript" class="headerlink" title="Lazy Loading the ArcGIS API for JavaScript"></a>Lazy Loading the ArcGIS API for JavaScript</h4><p>In the above snippet, the first time <code>loadModules()</code> is called, it will attempt to lazy load the most recent 4.x version of the ArcGIS API if it has not already been loaded by calling <code>loadScript()</code> for you. Subsequent calls to <code>loadModules()</code> will not attempt to load the script once <code>loadScript()</code> has been called.</p>
+<p>If you don’t want to use the latest version of the ArcGIS API hosted on Esri’s CDN, you’ll need to pass options with the URL to whichever version you want to use. For example, the snippet below uses v3.x of the ArcGIS API to create a map.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// if the API hasn't already been loaded (i.e. the frist time this is run)</span></span><br><span class="line"><span class="comment">// loadModules() will call loadScript() and pass these options, which, </span></span><br><span class="line"><span class="comment">// in this case are only needed b/c we're using v3.x instead of the latest 4.x</span></span><br><span class="line"><span class="keyword">const</span> options = &#123;</span><br><span class="line">  url: <span class="string">'https://js.arcgis.com/3.25/'</span></span><br><span class="line">&#125;;</span><br><span class="line">esriLoader.loadModules([<span class="string">'esri/map'</span>], options)</span><br><span class="line">.then(<span class="function">(<span class="params">[<span class="built_in">Map</span>]</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// create map with the given options at a DOM node w/ id 'mapNode'</span></span><br><span class="line">  <span class="keyword">let</span> map = <span class="keyword">new</span> <span class="built_in">Map</span>(<span class="string">'mapNode'</span>, &#123;</span><br><span class="line">    center: [<span class="number">-118</span>, <span class="number">34.5</span>],</span><br><span class="line">    zoom: <span class="number">8</span>,</span><br><span class="line">    basemap: <span class="string">'dark-gray'</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;)</span><br><span class="line">.catch(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// handle any script or module loading errors</span></span><br><span class="line">  <span class="built_in">console</span>.error(err);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>Lazy loading the API is a useful pattern if your users may never end up visiting any routes that need the API (i.e. show a map or 3D scene).</p>
+<p>See the <a href="#advanced-usage">Advanced Usage</a> section below for more advanced techniques such as <a href="#pre-loading-the-arcgis-api-for-javascript">pre-loading the ArcGIS API</a>, <a href="#isomorphicuniversal-applications">using in isomorphic/universal applications</a>, <a href="#configuring-dojo">configuring Dojo</a>, and more.</p>
+<h2 id="Why-is-this-needed"><a href="#Why-is-this-needed" class="headerlink" title="Why is this needed?"></a>Why is this needed?</h2><p>Unfortunately, you can’t simply <code>npm install</code> the ArcGIS API and then <code>import</code> ArcGIS modules directly from other modules in a non-Dojo application. The only reliable way to load ArcGIS API for JavaScript modules is using Dojo’s AMD loader. However, when using the ArcGIS API in an application built with another framework, you typically want to use the tooling and conventions of that framework rather than the Dojo build system. This library lets you do that by providing an ES module that you can <code>import</code> and use to dynamically inject an ArcGIS API script tag in the page and then use its Dojo loader to load only the ArcGIS API modules as needed.</p>
+<p>There are a few different solutions to this problem, but <a href="http://tomwayson.com/2018/01/05/loader-of-the-things-one-library-to-load-them-all/" target="_blank" rel="noopener">this blog post</a> explains why you should be using esri-loader if your ArcGIS web application uses <em>any</em> other module loader besides the Dojo loader (i.e. <a href="http://webpack.github.io/" target="_blank" rel="noopener">webpack</a>, <a href="https://rollupjs.org/" target="_blank" rel="noopener">rollup.js</a>, etc.). Using esri-loader enables you to:</p>
+<ul><br>     <li>Improve initial load performance, especially on mobile</li><br>     <li><a href="#isomorphicuniversal-applications">Use the ArcGIS API in isomorphic/universal (server-rendered) applications</a></li><br>     <li>Use the ArcGIS API with <a href="#examples">whatever cli or boilerplate your team prefers</a></li><br>     <li>Avoid having to load the ArcGIS API just to run your unit tests</li><br></ul>
+
+<p>This is because esri-loader let’s you control when the ArcGIS API and its modules are loaded and used. You can <a href="#lazy-loading-the-arcgis-api-for-javascript">lazy load the API and modules</a> only on routes that require them to render a map, or you can <a href="#pre-loading-the-arcgis-api-for-javascript">pre-load the API</a> without blocking rendering. You can <a href="#isomorphicuniversal-applications">ensure the API and its modules are not loaded/used when rendering on the server</a> where they will cause errors.</p>
+<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><p>Here are some applications and framework-specific wrapper libraries that use this library. We don’t gurantee that these examples are current, so check the version of esri-loader their commit history before using them as a reference. They are presented by framework in alphabetical order - not picking any favories here :stuck_out_tongue_winking_eye::</p>
+<h3 id="Angular"><a href="#Angular" class="headerlink" title="Angular"></a><a href="https://angular.io/" target="_blank" rel="noopener">Angular</a></h3><h4 id="Reusable-libraries-for-Angular"><a href="#Reusable-libraries-for-Angular" class="headerlink" title="Reusable libraries for Angular"></a>Reusable libraries for Angular</h4><ul>
+<li><a href="https://github.com/TheKeithStewart/angular-esri-components" target="_blank" rel="noopener">angular-esri-components</a> - A set of Angular components to work with ArcGIS API for JavaScript v4.3</li>
+</ul>
+<h4 id="Example-Angular-applications"><a href="#Example-Angular-applications" class="headerlink" title="Example Angular applications"></a>Example Angular applications</h4><ul>
+<li><a href="https://github.com/Esri/angular-cli-esri-map" target="_blank" rel="noopener">angular-cli-esri-map</a> - Example of how to build a simple mapping component using Angular CLI.</li>
+</ul>
+<h3 id="CanJS"><a href="#CanJS" class="headerlink" title="CanJS"></a><a href="https://canjs.com/" target="_blank" rel="noopener">CanJS</a></h3><ul>
+<li><a href="https://github.com/roemhildtg/can-arcgis" target="_blank" rel="noopener">can-arcgis</a> - CanJS configureable mapping app (inspired by <a href="https://github.com/cmv/cmv-app" target="_blank" rel="noopener">cmv-app</a>) and components built for the ArcGIS JS API 4.x, bundled with <a href="https://stealjs.com/" target="_blank" rel="noopener">StealJS</a></li>
+</ul>
+<h3 id="Choo"><a href="#Choo" class="headerlink" title="Choo"></a><a href="https://choo.io/" target="_blank" rel="noopener">Choo</a></h3><ul>
+<li><a href="https://github.com/jwasilgeo/esri-choo-example" target="_blank" rel="noopener">esri-choo-example</a> - An example Choo application that shows how to use esri-loader to create a custom map view.</li>
+</ul>
+<h3 id="Electron"><a href="#Electron" class="headerlink" title="Electron"></a><a href="https://electron.atom.io/" target="_blank" rel="noopener">Electron</a></h3><ul>
+<li><a href="https://github.com/TheKeithStewart/ng-cli-electron-esri" target="_blank" rel="noopener">ng-cli-electron-esri</a> - This project is meant to demonstrate how to run a mapping application using the ArcGIS API for JavaScript inside of Electron</li>
+</ul>
+<h3 id="Ember"><a href="#Ember" class="headerlink" title="Ember"></a><a href="https://www.emberjs.com/" target="_blank" rel="noopener">Ember</a></h3><p>See the <a href="https://github.com/Esri/ember-esri-loader/#examples" target="_blank" rel="noopener">examples over at ember-esri-loader</a></p>
+<h3 id="Glimmer-js"><a href="#Glimmer-js" class="headerlink" title="Glimmer.js"></a><a href="https://glimmerjs.com/" target="_blank" rel="noopener">Glimmer.js</a></h3><ul>
+<li><a href="https://github.com/tomwayson/esri-glimmer-example" target="_blank" rel="noopener">esri-glimmer-example</a> - An example of how to use the ArcGIS API for JavaScript in a <a href="https://glimmerjs.com/" target="_blank" rel="noopener">https://glimmerjs.com/</a> application</li>
+</ul>
+<h3 id="Hyperapp"><a href="#Hyperapp" class="headerlink" title="Hyperapp"></a><a href="https://hyperapp.js.org/" target="_blank" rel="noopener">Hyperapp</a></h3><ul>
+<li><a href="https://github.com/jwasilgeo/esri-hyperapp-example" target="_blank" rel="noopener">esri-hyperapp-example</a> - An example Hyperapp application that shows how to use esri-loader to create a custom map view and component.</li>
+</ul>
+<h3 id="Ionic"><a href="#Ionic" class="headerlink" title="Ionic"></a><a href="https://ionicframework.com/" target="_blank" rel="noopener">Ionic</a></h3><ul>
+<li><a href="https://github.com/andygup/ionic2-esri-map" target="_blank" rel="noopener">ionic2-esri-map</a> - Prototype app demonstrating how to use Ionic 3+ with the ArcGIS API for JavaScript</li>
+</ul>
+<h3 id="Preact"><a href="#Preact" class="headerlink" title="Preact"></a><a href="https://github.com/developit/preact" target="_blank" rel="noopener">Preact</a></h3><ul>
+<li><a href="https://github.com/tomwayson/esri-preact-pwa" target="_blank" rel="noopener">esri-preact-pwa</a> - An example progressive web app (PWA) using the ArcGIS API for JavaScript built with Preact</li>
+</ul>
+<h3 id="React"><a href="#React" class="headerlink" title="React"></a><a href="https://facebook.github.io/react/" target="_blank" rel="noopener">React</a></h3><h4 id="Reusable-libraries-for-React"><a href="#Reusable-libraries-for-React" class="headerlink" title="Reusable libraries for React"></a>Reusable libraries for React</h4><ul>
+<li><a href="https://github.com/davetimmins/esri-loader-react" target="_blank" rel="noopener">esri-loader-react</a> - A React component wrapper around esri-loader (<a href="https://davetimmins.github.io/2017/07/19/esri-loader-react/" target="_blank" rel="noopener">blog post</a>)</li>
+<li><a href="https://github.com/nicksenger/react-arcgis" target="_blank" rel="noopener">react-arcgis</a> - React component kit for Esri ArcGIS JS API</li>
+<li><a href="https://github.com/davetimmins/arcgis-react-redux-legend" target="_blank" rel="noopener">arcgis-react-redux-legend</a> - Legend control for ArcGIS JS v4 using React and Redux</li>
+</ul>
+<h4 id="Example-React-applications"><a href="#Example-React-applications" class="headerlink" title="Example React applications"></a>Example React applications</h4><ul>
+<li><a href="https://github.com/tomwayson/esri-loader-react-starter-kit" target="_blank" rel="noopener">esri-loader-react-starter-kit</a> - A fork of the <a href="https://github.com/kriasoft/react-starter-kit" target="_blank" rel="noopener">react-starter-kit</a> showing how to use esri-loader in an isomorphic/universal React application</li>
+<li><a href="https://github.com/tomwayson/esri-react-router-example" target="_blank" rel="noopener">esri-react-router-example</a> - An example react-router application that uses <a href="https://github.com/davetimmins/esri-loader-react" target="_blank" rel="noopener">esri-loader-react</a> to preload the ArcGIS API<ul>
+<li><a href="https://github.com/davetimmins/create-react-app-esri-loader/" target="_blank" rel="noopener">create-react-app-esri-loader</a> - An example create-react-app application that uses <a href="https://github.com/davetimmins/esri-loader-react" target="_blank" rel="noopener">esri-loader-react</a> to load the ArcGIS API</li>
+</ul>
+</li>
+<li><a href="https://github.com/guzhongren/React-Typescript-App-with-ArcGIS-JSAPI" target="_blank" rel="noopener">React-Typescript-App-with-ArcGIS-JSAPI</a> - An example create-react-app application that uses<a href="https://github.com/Esri/esri-loader" target="_blank" rel="noopener">esri-loader</a> ,<a href="https://github.com/davetimmins/esri-loader-react" target="_blank" rel="noopener">esri-loader-react</a>,<a href="http://www.typescriptlang.org/" target="_blank" rel="noopener">Typescript</a>,<a href="https://webpack.js.org/" target="_blank" rel="noopener">Webpack3</a> to create MapView</li>
+</ul>
+<h3 id="Riot"><a href="#Riot" class="headerlink" title="Riot"></a><a href="http://riotjs.com/" target="_blank" rel="noopener">Riot</a></h3><ul>
+<li><a href="https://github.com/jwasilgeo/esri-riot-example" target="_blank" rel="noopener">esri-riot-example</a> - An example Riot application that shows how to use esri-loader to create a custom <code>&lt;esri-map-view&gt;</code> component.</li>
+</ul>
+<h3 id="Stencil"><a href="#Stencil" class="headerlink" title="Stencil"></a><a href="https://stenciljs.com/" target="_blank" rel="noopener">Stencil</a></h3><ul>
+<li><a href="https://github.com/Dzeneralen/esri-stencil-example" target="_blank" rel="noopener">esri-stencil-example</a> - An example Stencil application that shows how to use esri-loader to create a custom map view component and implement some basic routing controlling the map state</li>
+</ul>
+<h3 id="Vue-js"><a href="#Vue-js" class="headerlink" title="Vue.js"></a><a href="https://vuejs.org/" target="_blank" rel="noopener">Vue.js</a></h3><ul>
+<li><a href="https://github.com/oppoudel/CreateMap" target="_blank" rel="noopener">CreateMap</a> - Create Map: City of Baltimore - <a href="https://gis.baltimorecity.gov/createmap/#/" target="_blank" rel="noopener">https://gis.baltimorecity.gov/createmap/#/</a></li>
+<li><a href="https://github.com/oppoudel/MapGallery_Vue" target="_blank" rel="noopener">City of Baltimore: Map Gallery</a> - Map Gallery built with Vue.js that uses this library to load the ArcGIS API</li>
+<li><a href="https://github.com/odoe/vue-jsapi4" target="_blank" rel="noopener">vue-jsapi4</a> - An example of how to use the <a href="https://developers.arcgis.com/javascript/" target="_blank" rel="noopener">ArcGIS API for Javascript</a> in a <a href="https://nuxtjs.org/" target="_blank" rel="noopener">NUXT</a> application (<a href="http://odoe.net/blog/arcgis-api-4-for-js-with-vue-cli-and-nuxt/" target="_blank" rel="noopener">blog post</a>, <a href="https://youtu.be/hqJzzgM8seo" target="_blank" rel="noopener">video</a>)</li>
+<li><a href="https://github.com/tomwayson/esri-vue-cli-example" target="_blank" rel="noopener">esri-vue-cli-example</a> - An example of how to use the <a href="https://developers.arcgis.com/javascript/3/" target="_blank" rel="noopener">ArcGIS API for JavaScript 3.x</a> in a <a href="https://github.com/vuejs/vue-cli" target="_blank" rel="noopener">vue-cli</a> application</li>
+</ul>
+<h2 id="Advanced-Usage"><a href="#Advanced-Usage" class="headerlink" title="Advanced Usage"></a>Advanced Usage</h2><h3 id="Pre-loading-the-ArcGIS-API-for-JavaScript"><a href="#Pre-loading-the-ArcGIS-API-for-JavaScript" class="headerlink" title="Pre-loading the ArcGIS API for JavaScript"></a>Pre-loading the ArcGIS API for JavaScript</h3><p>If you have good reason to believe that the user is going to transition to a map route, you may want to start pre-loading the ArcGIS API as soon as possible w/o blocking rendering, for example:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// preload the ArcGIS API</span></span><br><span class="line"><span class="comment">// <span class="doctag">NOTE:</span> in this case, we're not passing any options to loadScript()</span></span><br><span class="line"><span class="comment">// so it will default to loading the latest 4.x version of the API from the CDN</span></span><br><span class="line"><span class="keyword">this</span>.loadScriptPromise = esriLoader.loadScript();</span><br><span class="line"></span><br><span class="line"><span class="comment">// later, for example once a component has been rendered,</span></span><br><span class="line"><span class="comment">// you can wait for the above promise to resolve (if it hasn't already)</span></span><br><span class="line"><span class="keyword">this</span>.loadScriptPromise</span><br><span class="line">.then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// you can now load the map modules and create the map</span></span><br><span class="line">&#125;)</span><br><span class="line">.catch(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// handle any script loading errors</span></span><br><span class="line">  <span class="built_in">console</span>.error(err);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="Isomorphic-universal-applications"><a href="#Isomorphic-universal-applications" class="headerlink" title="Isomorphic/universal applications"></a>Isomorphic/universal applications</h3><p>This library also allows you to use the ArcGIS API in <a href="https://medium.com/airbnb-engineering/isomorphic-javascript-the-future-of-web-apps-10882b7a2ebc#.4nyzv6jea" target="_blank" rel="noopener">isomorphic or universal</a> applications that are rendered on the server. There’s really no difference in how you invoke the functions exposed by this libary, however you should avoid trying to call them from any code that runs on the server. The easiest way to do this is to use them in component lifecyle hooks that are only invoked in a browser, for example, React’s <a href="https://reactjs.org/docs/react-component.html#componentdidmount" target="_blank" rel="noopener"><code>componentDidMount</code></a> or Vue’s <a href="https://vuejs.org/v2/api/#mounted" target="_blank" rel="noopener">mounted</a>. See <a href="https://github.com/tomwayson/esri-loader-react-starter-kit/" target="_blank" rel="noopener">tomwayson/esri-loader-react-starter-kit</a> for <a href="https://github.com/tomwayson/esri-loader-react-starter-kit/commit/a513b7fe207a809105fcb621a26a687cc47918b4" target="_blank" rel="noopener">an example of a component that lazy loads the ArcGIS API and renders a map only once a specific route is loaded in a browser</a>.</p>
+<p>Alternatively, you could use checks like the following to ensure these functions aren’t invoked on the server:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> <span class="built_in">window</span> !== <span class="string">'undefined'</span>) &#123;</span><br><span class="line">  <span class="comment">// this is running in a browser, </span></span><br><span class="line">  <span class="comment">// pre-load the ArcGIS API for later use in components</span></span><br><span class="line">  <span class="keyword">this</span>.loadScriptPromise = esriLoader.loadScript();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Configuring-Dojo"><a href="#Configuring-Dojo" class="headerlink" title="Configuring Dojo"></a>Configuring Dojo</h3><p>You can pass a <a href="https://dojotoolkit.org/documentation/tutorials/1.10/dojo_config/" target="_blank" rel="noopener"><code>dojoConfig</code></a> option to <code>loadScript()</code> or <code>loadModules()</code> to configure Dojo before the script tag is loaded. This is useful if you want to use esri-loader to load Dojo packages that are not included in the ArcGIS API for JavaScript such as <a href="https://github.com/nickcam/FlareClusterLayer" target="_blank" rel="noopener">FlareClusterLayer</a>.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// in this case options are only needed so we can configure dojo before loading the API</span></span><br><span class="line"><span class="keyword">const</span> options = &#123;</span><br><span class="line">  <span class="comment">// tell Dojo where to load other packages</span></span><br><span class="line">  dojoConfig: &#123;</span><br><span class="line">    <span class="keyword">async</span>: <span class="literal">true</span>,</span><br><span class="line">    packages: [</span><br><span class="line">      &#123;</span><br><span class="line">        location: <span class="string">'/path/to/fcl'</span>,</span><br><span class="line">        name: <span class="string">'fcl'</span></span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">esriLoader.loadModules([<span class="string">'esri/map'</span>, <span class="string">'fcl/FlareClusterLayer_v3'</span>], options)</span><br><span class="line">.then(<span class="function">(<span class="params">[<span class="built_in">Map</span>, FlareClusterLayer]</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// you can now create a new FlareClusterLayer and add it to a new Map</span></span><br><span class="line">&#125;)</span><br><span class="line">.catch(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// handle any errors</span></span><br><span class="line">  <span class="built_in">console</span>.error(err);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="Using-your-own-script-tag"><a href="#Using-your-own-script-tag" class="headerlink" title="Using your own script tag"></a>Using your own script tag</h3><p>It is possible to use this library only to load modules (i.e. not to pre-load or lazy load the ArcGIS API). In this case you will need to add a <code>data-esri-loader</code> attribute to the script tag you use to load the ArcGIS API for JavaScript. Example:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- index.html --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://js.arcgis.com/3.25/"</span> <span class="attr">data-esri-loader</span>=<span class="string">"loaded"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="ArcGIS-Types"><a href="#ArcGIS-Types" class="headerlink" title="ArcGIS Types"></a>ArcGIS Types</h3><p>This library doesn’t make any assumptions about which version of the ArcGIS API you are using, so you will have to manually install the appropriate types.</p>
+<h4 id="4-x-Types"><a href="#4-x-Types" class="headerlink" title="4.x Types"></a>4.x Types</h4><p>Follow <a href="https://github.com/Esri/jsapi-resources/tree/master/4.x/typescript" target="_blank" rel="noopener">these instructions</a> to install the 4.x types.</p>
+<p>NOTE: For Angular CLI applications, you will also need to add “arcgis-js-api” to <code>compilerOptions.types</code> in src/tsconfig.app.json and src/tsconfig.spec.json <a href="https://gist.github.com/tomwayson/e6260adfd56c2529313936528b8adacd#adding-the-arcgis-api-for-javascript-types" target="_blank" rel="noopener">as shown here</a>.</p>
+<p>Then you can use the <code>__esri</code> namespace for the types as seen in <a href="https://github.com/kgs916/angular2-esri4-components/blob/68861b286fd3a4814c495c2bd723e336e917ced2/src/lib/esri4-map/esri4-map.component.ts#L20-L26" target="_blank" rel="noopener">this example</a>.</p>
+<h4 id="3-x-Types"><a href="#3-x-Types" class="headerlink" title="3.x Types"></a>3.x Types</h4><p>Unfortunately the <code>__esri</code> namespace is not defined for 3.x types. You can use <a href="https://github.com/Esri/jsapi-resources/tree/master/3.x/typescript" target="_blank" rel="noopener">these instructions</a> to install the 3.x types, but then <a href="https://github.com/Esri/jsapi-resources/issues/60" target="_blank" rel="noopener">you will still need to use <code>import</code> statements to get the types</a>. This may cause build errors that may or may not result in actual runtime errors depending on your environment.</p>
+<h3 id="Updating-from-previous-versions"><a href="#Updating-from-previous-versions" class="headerlink" title="Updating from previous versions"></a>Updating from previous versions</h3><h4 id="From-lt-v1-5"><a href="#From-lt-v1-5" class="headerlink" title="From &lt; v1.5"></a>From &lt; v1.5</h4><p>If you have an application using a version that is less than v1.5, <a href="https://github.com/odoe/vue-jsapi4/pull/1/commits/4cb6413c0ea31fdd09e94f3a0ce0d1669a9fd5ad" target="_blank" rel="noopener">this commit</a> shows the kinds of changes you’ll need to make. In most cases, you should be able to replace a series of calls to <code>isLoaded()</code>, <code>bootstrap()</code>, and <code>dojoRequire()</code> with a single call to <code>loadModules()</code>.</p>
+<h4 id="From-angular-esri-loader"><a href="#From-angular-esri-loader" class="headerlink" title="From angular-esri-loader"></a>From angular-esri-loader</h4><p>The angular-esri-loader wrapper library is no longer needed and has been deprecated in favor of using esri-loader directly. See <a href="https://github.com/Esri/esri-loader/issues/75" target="_blank" rel="noopener">this issue</a> for suggestions on how to replace angular-esri-loader with the latest version of esri-loader.</p>
+<h2 id="Dependencies"><a href="#Dependencies" class="headerlink" title="Dependencies"></a>Dependencies</h2><h3 id="Browsers"><a href="#Browsers" class="headerlink" title="Browsers"></a>Browsers</h3><p>This library doesn’t have any external dependencies, but the functions it exposes to load the ArcGIS API and its modules expect to be run in a browser. This library officially supports <a href="https://developers.arcgis.com/javascript/latest/guide/system-requirements/index.html#supported-browsers" target="_blank" rel="noopener">the same browers that are supported by the latest version of the ArcGIS API for JavaScript</a>. Since this library also works with <a href="https://developers.arcgis.com/javascript/3/" target="_blank" rel="noopener">v3.x of the ArcGIS API</a>, the community <a href="https://github.com/Esri/esri-loader/pull/67" target="_blank" rel="noopener">has made some effort</a> to get it to work with <a href="https://developers.arcgis.com/javascript/3/jshelp/supported_browsers.html" target="_blank" rel="noopener">some of the older browsers supported by 3.x</a> like IE &lt; 11.</p>
+<p>You cannot run the ArcGIS API for JavaScript in <a href="https://nodejs.org/" target="_blank" rel="noopener">Node.js</a>, but you <em>can</em> use this library in <a href="#isomorphicuniversal-applications">isomorphic/universal applications</a> as well as <a href="#electron">Electron</a>. If you need to exectue requests to ArcGIS REST services from something like a Node.js CLI application, see <a href="https://github.com/Esri/arcgis-rest-js" target="_blank" rel="noopener">arcgis-rest-js</a>.</p>
+<h3 id="Promises"><a href="#Promises" class="headerlink" title="Promises"></a>Promises</h3><p>Since v1.5 asynchronous functions like <code>loadScript()</code> and <code>loadModules()</code> return <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" target="_blank" rel="noopener"><code>Promise</code></a>s, so if your application has to support <a href="https://caniuse.com/#search=promise" target="_blank" rel="noopener">browers that don’t support Promise (i.e. IE)</a> you have a few options.</p>
+<p>If there’s already a Promise implementation loaded on the page you can configure esri-loader to use that implementation. For example, in <a href="https://github.com/Esri/ember-esri-loader" target="_blank" rel="noopener">ember-esri-loader</a>, we configure esri-loader to use the RSVP Promise implementation included with Ember.js.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">init () &#123;</span><br><span class="line">  <span class="keyword">this</span>._super(...arguments);</span><br><span class="line">  <span class="comment">// have esriLoader use Ember's RSVP promise</span></span><br><span class="line">  esriLoader.utils.Promise = Ember.RSVP.Promise;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<p>Otherwise, you should consider using a <a href="https://www.google.com/search?q=promise+polyfill" target="_blank" rel="noopener">Promise polyfill</a>, ideally <a href="https://philipwalton.com/articles/loading-polyfills-only-when-needed/" target="_blank" rel="noopener">only when needed</a>.</p>
+<h2 id="Issues"><a href="#Issues" class="headerlink" title="Issues"></a>Issues</h2><p>Find a bug or want to request a new feature?  Please let us know by <a href="https://github.com/Esri/esri-loader/issues/" target="_blank" rel="noopener">submitting an issue</a>.</p>
+<h2 id="Contributing"><a href="#Contributing" class="headerlink" title="Contributing"></a>Contributing</h2><p>Esri welcomes contributions from anyone and everyone. Please see our <a href="https://github.com/esri/contributing" target="_blank" rel="noopener">guidelines for contributing</a>.</p>
+<h2 id="Licensing"><a href="#Licensing" class="headerlink" title="Licensing"></a>Licensing</h2><p>Copyright 2017 Esri</p>
+<p>Licensed under the Apache License, Version 2.0 (the “License”);<br>you may not use this file except in compliance with the License.<br>You may obtain a copy of the License at</p>
+<p>   <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener">http://www.apache.org/licenses/LICENSE-2.0</a></p>
+<p>Unless required by applicable law or agreed to in writing, software<br>distributed under the License is distributed on an “AS IS” BASIS,<br>WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<br>See the License for the specific language governing permissions and<br>limitations under the License.</p>
+<p>A copy of the license is available in the repository’s <a href="./LICENSE">LICENSE</a> file.</p>
+
+      
+    </div>
+
+    
+      
+
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2017/10/28/20171028-ArcGISAPIforJavaScript-GeoJSON/" rel="bookmark">ArcGIS API for JavaScript 加载GeoJSON数据</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2017/10/28/20171028-ArcGISAPIforJavaScript-TianDiTuWMTS/" rel="bookmark">ArcGIS API for JavaScript 加载天地图WMTS图层</a></div>
+      
+    </li>
+  
+  </ul>
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div><hr></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="huangli 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="huangli 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>huangli</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://giser.xyz/2018/08/18/20180818-EsriLoader/" title="Esri Loader">https://giser.xyz/2018/08/18/20180818-EsriLoader/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ArcGIS-API-for-JavaScript/" rel="tag"># ArcGIS API for JavaScript</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/30/20180630-GeoServerDeveloperManual2/" rel="next" title="GeoServer 2.14.x Developer Manual 2">
+                <i class="fa fa-chevron-left"></i> GeoServer 2.14.x Developer Manual 2
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/19/20180819-MarsCoordinate/" rel="prev" title="一张图看懂“火星坐标系”">
+                一张图看懂“火星坐标系” <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div onclick="showGitment()" id="gitment-display-button">显示 Gitment 评论</div>
+        <div id="gitment-container" style="display:none"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <a href="/" rel="start">
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="huangli" />
+              </a>
+            
+              <p class="site-author-name" itemprop="name">huangli</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">24</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">29</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/huanglii" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://giser.xyz/demo" target="_blank" title="Demo" rel="external nofollow"><i class="fa fa-fw fa-cubes"></i>Demo</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#esri-loader"><span class="nav-number">1.</span> <span class="nav-text">esri-loader</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Install"><span class="nav-number">1.1.</span> <span class="nav-text">Install</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Usage"><span class="nav-number">1.2.</span> <span class="nav-text">Usage</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Loading-Styles"><span class="nav-number">1.2.1.</span> <span class="nav-text">Loading Styles</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Loading-Modules-from-the-ArcGIS-API-for-JavaScript"><span class="nav-number">1.2.2.</span> <span class="nav-text">Loading Modules from the ArcGIS API for JavaScript</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Lazy-Loading-the-ArcGIS-API-for-JavaScript"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">Lazy Loading the ArcGIS API for JavaScript</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Why-is-this-needed"><span class="nav-number">1.3.</span> <span class="nav-text">Why is this needed?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Examples"><span class="nav-number">1.4.</span> <span class="nav-text">Examples</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Angular"><span class="nav-number">1.4.1.</span> <span class="nav-text">Angular</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Reusable-libraries-for-Angular"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">Reusable libraries for Angular</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Example-Angular-applications"><span class="nav-number">1.4.1.2.</span> <span class="nav-text">Example Angular applications</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CanJS"><span class="nav-number">1.4.2.</span> <span class="nav-text">CanJS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Choo"><span class="nav-number">1.4.3.</span> <span class="nav-text">Choo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Electron"><span class="nav-number">1.4.4.</span> <span class="nav-text">Electron</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ember"><span class="nav-number">1.4.5.</span> <span class="nav-text">Ember</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Glimmer-js"><span class="nav-number">1.4.6.</span> <span class="nav-text">Glimmer.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hyperapp"><span class="nav-number">1.4.7.</span> <span class="nav-text">Hyperapp</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ionic"><span class="nav-number">1.4.8.</span> <span class="nav-text">Ionic</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Preact"><span class="nav-number">1.4.9.</span> <span class="nav-text">Preact</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#React"><span class="nav-number">1.4.10.</span> <span class="nav-text">React</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Reusable-libraries-for-React"><span class="nav-number">1.4.10.1.</span> <span class="nav-text">Reusable libraries for React</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Example-React-applications"><span class="nav-number">1.4.10.2.</span> <span class="nav-text">Example React applications</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Riot"><span class="nav-number">1.4.11.</span> <span class="nav-text">Riot</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stencil"><span class="nav-number">1.4.12.</span> <span class="nav-text">Stencil</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue-js"><span class="nav-number">1.4.13.</span> <span class="nav-text">Vue.js</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Advanced-Usage"><span class="nav-number">1.5.</span> <span class="nav-text">Advanced Usage</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Pre-loading-the-ArcGIS-API-for-JavaScript"><span class="nav-number">1.5.1.</span> <span class="nav-text">Pre-loading the ArcGIS API for JavaScript</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Isomorphic-universal-applications"><span class="nav-number">1.5.2.</span> <span class="nav-text">Isomorphic/universal applications</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Configuring-Dojo"><span class="nav-number">1.5.3.</span> <span class="nav-text">Configuring Dojo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Using-your-own-script-tag"><span class="nav-number">1.5.4.</span> <span class="nav-text">Using your own script tag</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ArcGIS-Types"><span class="nav-number">1.5.5.</span> <span class="nav-text">ArcGIS Types</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-x-Types"><span class="nav-number">1.5.5.1.</span> <span class="nav-text">4.x Types</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-x-Types"><span class="nav-number">1.5.5.2.</span> <span class="nav-text">3.x Types</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Updating-from-previous-versions"><span class="nav-number">1.5.6.</span> <span class="nav-text">Updating from previous versions</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#From-lt-v1-5"><span class="nav-number">1.5.6.1.</span> <span class="nav-text">From &lt; v1.5</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#From-angular-esri-loader"><span class="nav-number">1.5.6.2.</span> <span class="nav-text">From angular-esri-loader</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Dependencies"><span class="nav-number">1.6.</span> <span class="nav-text">Dependencies</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Browsers"><span class="nav-number">1.6.1.</span> <span class="nav-text">Browsers</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Promises"><span class="nav-number">1.6.2.</span> <span class="nav-text">Promises</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Issues"><span class="nav-number">1.7.</span> <span class="nav-text">Issues</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Contributing"><span class="nav-number">1.8.</span> <span class="nav-text">Contributing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Licensing"><span class="nav-number">1.9.</span> <span class="nav-text">Licensing</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">huangli</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数</span>
+    
+    <span title="站点总字数">148k</span>
+  
+
+  
+</div>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user-md"></i>
+      访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      浏览量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.2.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.2.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.2.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.2.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.2.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.2.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.2.0"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+      <style>
+        a.gitment-editor-footer-tip { display: none; }
+        .gitment-container.gitment-footer-container { display: none; }
+      </style>
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname,
+            owner: 'huanglii',
+            repo: 'huanglii.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '9493ffe86757ee102cb3e4af40efcf938d477417',
+            
+                client_id: '191f754c42bc3e815bf5'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      function showGitment(){
+        document.getElementById("gitment-display-button").style.display = "none";
+        document.getElementById("gitment-container").style.display = "block";
+        renderGitment();
+      }
+      
+      </script>
+    
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=6.2.0"></script>
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "default";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "topCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Mailto";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
