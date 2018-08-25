@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-bounce.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="ltZ9Hc5Rvj42QuxNfQt-vf1rTVfZCPlmaTnoAi14_0E" />
+
+
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="WCDWy7MKsY" />
+
+
+
+
+  <meta name="360-site-verification" content="70915ca28ae20fde649f8226dbc73d6d" />
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=6.2.0" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.2.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.2.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.2.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '6.2.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":true,"onmobile":true},
+    fancybox: true,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: 'SQXNYRY3J5',
+      apiKey: 'a80c3cedfa9841ae3fbfe19739772751',
+      indexName: 'hexo',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"搜索...","hits_empty":"未发现与 「${query}」相关的内容","hits_stats":"${hits} 条相关条目，耗时 ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="在浏览网页时，多多少少会添加一些书签，但是，之后就再也没去看过。今天终于忍不住整理了以下，以后接着落灰吧！   GIS Awesome GIS GISer 空间 泰伯网 GIS Stack Exchange 地信网 | 论坛 GIS 帝国 | 论坛 华夏土地网 | 论坛 开源空间信息基金会 | OSGeo 2017GIS 软件技术大会 火星坐标转换 | coordtransform  地理信息系统">
+<meta name="keywords" content="ArcGIS API for JavaScript,GeoJSON,可视化,ArcGIS Desktop&#x2F;Pro,OpenLayers,Leaflet,Arc Engine,PostgreSQL,PostGIS,GeoServer,QGIS,OSM,Osmosis">
+<meta property="og:type" content="article">
+<meta property="og:title" content="那些落灰的书签(GIS)">
+<meta property="og:url" content="https://giser.xyz/2018/08/25/20180228-GISCollection/index.html">
+<meta property="og:site_name" content="GISer空间">
+<meta property="og:description" content="在浏览网页时，多多少少会添加一些书签，但是，之后就再也没去看过。今天终于忍不住整理了以下，以后接着落灰吧！   GIS Awesome GIS GISer 空间 泰伯网 GIS Stack Exchange 地信网 | 论坛 GIS 帝国 | 论坛 华夏土地网 | 论坛 开源空间信息基金会 | OSGeo 2017GIS 软件技术大会 火星坐标转换 | coordtransform  地理信息系统">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-08-25T08:22:47.947Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="那些落灰的书签(GIS)">
+<meta name="twitter:description" content="在浏览网页时，多多少少会添加一些书签，但是，之后就再也没去看过。今天终于忍不住整理了以下，以后接着落灰吧！   GIS Awesome GIS GISer 空间 泰伯网 GIS Stack Exchange 地信网 | 论坛 GIS 帝国 | 论坛 华夏土地网 | 论坛 开源空间信息基金会 | OSGeo 2017GIS 软件技术大会 火星坐标转换 | coordtransform  地理信息系统">
+
+
+
+
+
+
+  <link rel="canonical" href="https://giser.xyz/2018/08/25/20180228-GISCollection/"/>
+
+
+
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>那些落灰的书签(GIS) | GISer空间</title>
+  
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">GISer空间</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">地理与计算机的爱情故事</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分类</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+  
+  
+  
+    
+      
+    
+    <a href="https://github.com/huanglii" class="github-corner" target="_blank" title="Follow me on GitHub" aria-label="Follow me on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#222; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg>
+    
+      </a>
+    
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://giser.xyz/2018/08/25/20180228-GISCollection/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="huangli">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GISer空间">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">那些落灰的书签(GIS)
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-08-25 21:11:32" itemprop="dateCreated datePublished" datetime="2018-08-25T21:11:32+08:00">2018-08-25</time>
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/地理信息科学/" itemprop="url" rel="index"><span itemprop="name">地理信息科学</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/08/25/20180228-GISCollection/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论</span> <span class="post-comments-count gitment-comments-count" data-xid="/2018/08/25/20180228-GISCollection/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-thumbs-o-up"></i>
+             热度 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span>℃</span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数</span>
+                
+                <span title="本文字数">2.1k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">3 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote class="blockquote-center"><p>在浏览网页时，多多少少会添加一些书签，但是，之后就再也没去看过。今天终于忍不住整理了以下，以后接着落灰吧！ </p>
+</blockquote>
+<h2 id="GIS"><a href="#GIS" class="headerlink" title="GIS"></a>GIS</h2><ul>
+<li><a href="https://github.com/sshuair/awesome-gis" target="_blank" rel="noopener">Awesome GIS</a></li>
+<li><a href="https://giser.xyz/">GISer 空间</a></li>
+<li><a href="http://www.3snews.net/" target="_blank" rel="noopener">泰伯网</a></li>
+<li><a href="https://gis.stackexchange.com/" target="_blank" rel="noopener">GIS Stack Exchange</a></li>
+<li><a href="http://bbs.3s001.com/" target="_blank" rel="noopener">地信网 | 论坛</a></li>
+<li><a href="http://gisempire.com/bbs/" target="_blank" rel="noopener">GIS 帝国 | 论坛</a></li>
+<li><a href="http://bbs.hxland.com/" target="_blank" rel="noopener">华夏土地网 | 论坛</a></li>
+<li><a href="http://www.osgeo.cn/" target="_blank" rel="noopener">开源空间信息基金会 | OSGeo</a></li>
+<li><a href="https://www.supermap.com/events/gtc2017/" target="_blank" rel="noopener">2017GIS 软件技术大会</a></li>
+<li><a href="https://github.com/wandergis/coordtransform" target="_blank" rel="noopener">火星坐标转换 | coordtransform </a></li>
+<li><a href="http://www.cnblogs.com/e3e4/articles/3699984.html" target="_blank" rel="noopener">地理信息系统专用名词英语【2014-04-29】</a></li>
+<li><a href="http://blog.sina.com.cn/s/blog_be8e37a80101fr7c.html" target="_blank" rel="noopener">语义相似度算法简介【2013-08-29】</a></li>
+<li><a href="http://www.cnblogs.com/softfair/p/distance_of_two_latitude_and_longitude_points.html" target="_blank" rel="noopener">根据2个经纬度点，计算这2个经纬度点之间的距离(通过经度纬度得到距离)【2015-05-02】</a></li>
+</ul>
+<a id="more"></a>
+<h2 id="ArcGIS"><a href="#ArcGIS" class="headerlink" title="ArcGIS"></a><a href="https://www.esri.com/zh-cn/home" target="_blank" rel="noopener">ArcGIS</a></h2><p>@(Git)[ArcGIS Desktop/Pro, ArcGIS API for JavaScript, Arc Engine, GeoJSON, PostgreSQL, PostGIS, Osmosis]</p>
+<ul>
+<li><a href="https://github.com/Esri" target="_blank" rel="noopener">Esri GitHub</a></li>
+<li><a href="https://developers.arcgis.com/" target="_blank" rel="noopener">ArcGIS for Developers</a></li>
+<li><a href="http://learn.arcgis.com/zh-cn/" target="_blank" rel="noopener">Learn ArcGIS | 基于现实问题的指导课程</a></li>
+<li><a href="https://community.esri.com/" target="_blank" rel="noopener">GeoNET | Esri 社区</a></li>
+<li><a href="https://www.esri.com/arcgis-blog/overview/" target="_blank" rel="noopener">ArcGIS Blog</a></li>
+<li><a href="https://desktop.arcgis.com/zh-cn/documentation/" target="_blank" rel="noopener">ArcGIS Desktop/Pro | 文档</a></li>
+<li><a href="http://resources.arcgis.com/en/help/" target="_blank" rel="noopener">ArcGIS Documentation Archive (10.2 and earlier)</a></li>
+<li><a href="http://www.higis.cn/" target="_blank" rel="noopener">ArcGIS 中国培训中心</a></li>
+<li><a href="http://zhihu.esrichina.com.cn/" target="_blank" rel="noopener">ArcGIS 知乎</a></li>
+<li><a href="http://www.cnblogs.com/zhumuniao/archive/2013/05/10/3070002.html" target="_blank" rel="noopener">ArcEngine 几何网络分析（整理-最短路径）【2013-05-10】</a></li>
+<li><a href="http://www.cnblogs.com/skyofbitbit/p/3724479.html" target="_blank" rel="noopener">在 Arcmap 中加载互联网地图资源的 4 种方法【2014-05-12】</a></li>
+<li><a href="http://www.cnblogs.com/easonxu/p/6588529.html" target="_blank" rel="noopener">利用 Arcgis for javascript API 绘制 GeoJSON 并同时弹出多个 Popup【2017-03-20】</a></li>
+<li><a href=""></a></li>
+<li><a href="http://www.cnblogs.com/esrichina/archive/2013/02/04/2891505.html" target="_blank" rel="noopener">ArcGIS 中的日期类型【2013-02-04】</a></li>
+</ul>
+<h2 id="OpenLayers"><a href="#OpenLayers" class="headerlink" title="OpenLayers"></a><a href="http://openlayers.org/" target="_blank" rel="noopener">OpenLayers</a></h2><ul>
+<li><a href="http://weilin.me/ol3-primer/index.html" target="_blank" rel="noopener">OpenLayers 3 Primer</a></li>
+</ul>
+<h2 id="Leaflet"><a href="#Leaflet" class="headerlink" title="Leaflet"></a><a href="https://leafletjs.com/" target="_blank" rel="noopener">Leaflet</a></h2><ul>
+<li><a href="https://github.com/zrysmt/leaflet-viz" target="_blank" rel="noopener">leaflet-viz | Leaflet可视化平台</a></li>
+</ul>
+<h2 id="PostGIS"><a href="#PostGIS" class="headerlink" title="PostGIS"></a><a href="http://postgis.net/" target="_blank" rel="noopener">PostGIS</a></h2><ul>
+<li><a href="https://blog.csdn.net/qwdafedv/article/details/68486742" target="_blank" rel="noopener">PostgreSQL+PostGIS 的使用【2017-03-30】</a></li>
+</ul>
+<h2 id="GeoServer"><a href="#GeoServer" class="headerlink" title="GeoServer"></a><a href="http://blog.geoserver.org/" target="_blank" rel="noopener">GeoServer</a></h2><ul>
+<li><a href="https://blog.csdn.net/freeland1/article/details/78579971" target="_blank" rel="noopener">GeoServer实现NetCDF气象文件自动发布【2017-11-20】</a></li>
+<li><a href="https://blog.csdn.net/sinat_35582093/article/details/80182019" target="_blank" rel="noopener">geowave+geoserver+hbase安装部署导入shapefile并可视化【2018-05-03】</a></li>
+<li><a href="https://www.linkedin.com/pulse/testing-big-spatial-data-software-hadoop-hbase-geowave-alvaro-huarte/" target="_blank" rel="noopener">Testing Big Spatial Data software (Hadoop + HBase + GeoWave + GeoServer)【2017-10-17】</a></li>
+<li><a href="https://github.com/ahuarte47/geobigdata" target="_blank" rel="noopener">Experimental software to test the integration of a Big Spatial Data platform</a></li>
+<li><a href="https://www.cnblogs.com/escage/p/5612794.html" target="_blank" rel="noopener">关于如何在你的Web项目中实现对空间数据访问权限的控制（一）【2016-06-24】</a></li>
+</ul>
+<h2 id="QGIS"><a href="#QGIS" class="headerlink" title="QGIS"></a><a href="https://www.qgis.org" target="_blank" rel="noopener">QGIS</a></h2><ul>
+<li><a href="https://medium.com/@tjukanov/animated-routes-with-qgis-9377c1f16021" target="_blank" rel="noopener">Animated routes with QGIS</a></li>
+<li><a href="https://github.com/charleyglynn/OSM-Shapefile-QGIS-stylesheets" target="_blank" rel="noopener">OSM Shapefile QGIS stylesheets</a></li>
+<li><a href="https://github.com/mixedbredie/QGIS-styles" target="_blank" rel="noopener">QGIS-styles</a></li>
+</ul>
+<h2 id="OSM"><a href="#OSM" class="headerlink" title="OSM"></a><a href="https://www.openstreetmap.org/" target="_blank" rel="noopener">OSM</a></h2><p>@(TAG)[PostgreSQL|PostGIS|Osmosis]</p>
+<ul>
+<li><a href="https://learnosm.org/zh_CN/beginner/" target="_blank" rel="noopener">Learn OSM</a></li>
+<li><a href="https://forum.openstreetmap.org/index.php" target="_blank" rel="noopener">OpenStreetMap Forum</a></li>
+<li><a href="http://www.osmsharp.com/" target="_blank" rel="noopener">OsmSharp - OpenStreetMap (OSM) Library and Tools developed in C#</a></li>
+<li><a href="https://github.com/Esri/arcgis-osm-editor" target="_blank" rel="noopener">ArcGIS OSM Editor</a></li>
+<li><a href="https://blog.csdn.net/scy411082514/article/category/1130386" target="_blank" rel="noopener">Mr.An 的专栏 | OpenStreetMap</a></li>
+<li><a href="https://blog.csdn.net/bobantangzlt/article/details/17091625" target="_blank" rel="noopener">PostgreSQL+PostGIS安装以及用Osmosis导入openstreetmap地图数据【2013-12-03】</a></li>
+<li><a href="http://www.cnblogs.com/LBSer/p/4451471.html" target="_blank" rel="noopener">利用OpenStreetMap（OSM）数据搭建一个地图服务【2015-04-23】</a></li>
+<li><a href="https://www.oschina.net/news/49389/openstreetmap-rise" target="_blank" rel="noopener">OpenStreetMap 的崛起：挑战谷歌地图帝国【2014-03-04】</a></li>
+<li><a href="https://tyrasd.github.io/osm-node-density/" target="_blank" rel="noopener">OpenStreetMap Node Density</a></li>
+<li><a href="https://wiki.openstreetmap.org/wiki/Stats" target="_blank" rel="noopener">Stats - OpenStreetMap Wiki</a></li>
+<li><a href="https://blog.csdn.net/huangli0/article/details/80147227" target="_blank" rel="noopener">使用OsmSharp处理OpenStreetMap(OSM)数据【2017-10-24】</a></li>
+</ul>
+<h2 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h2><ul>
+<li><a href="https://www.oschina.net/translate/geojson-spec" target="_blank" rel="noopener">GeoJSON 格式规范说明 (The GeoJSON Format Specification)【2013-07-19】</a></li>
+<li><a href="https://blog.csdn.net/kikitamoon/article/details/46124935" target="_blank" rel="noopener">Web Mercator 公开的小秘密【2015-05-29】</a></li>
+<li><a href="https://earthquake.usgs.gov/" target="_blank" rel="noopener">USGS Earthquake Hazards Program</a></li>
+<li><a href="https://figshare.com/" target="_blank" rel="noopener">fig share</a></li>
+</ul>
+<h2 id="地图"><a href="#地图" class="headerlink" title="地图"></a>地图</h2><ul>
+<li><a href="http://www.esri.com/products/maps-we-love" target="_blank" rel="noopener">Maps We LoveExplore. Learn. Be Inspired</a></li>
+<li><a href="http://openwhatevermap.xyz/#4/37.09/103.75" target="_blank" rel="noopener">OpenWhateverMap :: An Open Awsumnez Map</a></li>
+<li><a href="https://snazzymaps.com/editor" target="_blank" rel="noopener">Snazzy Map</a></li>
+<li><a href="http://www.dwzone-it.com/StyledMapWizard/StyledMapWizard.asp" target="_blank" rel="noopener">Google Maps API Styled Map Wizard</a></li>
+</ul>
+<h2 id="可视化"><a href="#可视化" class="headerlink" title="可视化"></a>可视化</h2><ul>
+<li><a href="https://blog.csdn.net/happyduoduo1/article/details/51775778" target="_blank" rel="noopener">55 个实用的大数据可视化分析工具【2016-06-28】</a></li>
+<li><a href="http://www.sohu.com/a/142127127_313185" target="_blank" rel="noopener">九种地理可视化方法，我们只能帮你到这了｜沙龙分享【2017-05-20】</a></li>
+</ul>
+<h2 id="GMap-NET"><a href="#GMap-NET" class="headerlink" title="GMap.NET"></a><a href="https://archive.codeplex.com/?p=greatmaps" target="_blank" rel="noopener">GMap.NET</a></h2><ul>
+<li><a href="https://blog.csdn.net/huangli0/article/details/80147243" target="_blank" rel="noopener">GMap.NET使用教程【2017-10-22】</a></li>
+<li><a href="http://geekswithblogs.net/saifkhan/archive/2011/08/03/using-gmap.net-ndash-great-maps-for-windows-forms-amp-presentation.aspx" target="_blank" rel="noopener">Using GMap.NET – Great Maps for Windows Forms &amp; Presentation【2011-08-03】</a></li>
+</ul>
+
+      
+    </div>
+
+    
+      
+
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2017/10/28/20171028-ArcGISAPIforJavaScript-GeoJSON/" rel="bookmark">ArcGIS API for JavaScript 加载GeoJSON数据</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2018/05/16/20180516-RudimentsofGeoServer/" rel="bookmark">GeoServer 安装、发布</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2017/10/28/20171028-ArcGISAPIforJavaScript-TianDiTuWMTS/" rel="bookmark">ArcGIS API for JavaScript 加载天地图WMTS图层</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2018/08/18/20180818-EsriLoader/" rel="bookmark">Esri Loader</a></div>
+      
+    </li>
+  
+    <li class="popular-posts-item">
+      
+      
+      <div class="popular-posts-title"><a href="/2018/04/25/20180425-GetDistrictByAMap/" rel="bookmark">高德地图API获取行政区域</a></div>
+      
+    </li>
+  
+  </ul>
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div><hr></div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="huangli 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="huangli 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>huangli</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://giser.xyz/2018/08/25/20180228-GISCollection/" title="那些落灰的书签(GIS)">https://giser.xyz/2018/08/25/20180228-GISCollection/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ArcGIS-API-for-JavaScript/" rel="tag"># ArcGIS API for JavaScript</a>
+          
+            <a href="/tags/GeoJSON/" rel="tag"># GeoJSON</a>
+          
+            <a href="/tags/可视化/" rel="tag"># 可视化</a>
+          
+            <a href="/tags/ArcGIS-Desktop-Pro/" rel="tag"># ArcGIS Desktop/Pro</a>
+          
+            <a href="/tags/OpenLayers/" rel="tag"># OpenLayers</a>
+          
+            <a href="/tags/Leaflet/" rel="tag"># Leaflet</a>
+          
+            <a href="/tags/Arc-Engine/" rel="tag"># Arc Engine</a>
+          
+            <a href="/tags/PostgreSQL/" rel="tag"># PostgreSQL</a>
+          
+            <a href="/tags/PostGIS/" rel="tag"># PostGIS</a>
+          
+            <a href="/tags/GeoServer/" rel="tag"># GeoServer</a>
+          
+            <a href="/tags/QGIS/" rel="tag"># QGIS</a>
+          
+            <a href="/tags/OSM/" rel="tag"># OSM</a>
+          
+            <a href="/tags/Osmosis/" rel="tag"># Osmosis</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/19/20180819-MarsCoordinate/" rel="next" title="一张图看懂“火星坐标系”">
+                <i class="fa fa-chevron-left"></i> 一张图看懂“火星坐标系”
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div onclick="showGitment()" id="gitment-display-button">显示 Gitment 评论</div>
+        <div id="gitment-container" style="display:none"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <a href="/" rel="start">
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="huangli" />
+              </a>
+            
+              <p class="site-author-name" itemprop="name">huangli</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">24</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  <a href="/categories/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">36</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/huanglii" target="_blank" title="GitHub" rel="external nofollow"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                  
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://giser.xyz/demo" target="_blank" title="Demo" rel="external nofollow"><i class="fa fa-fw fa-cubes"></i>Demo</a>
+                  
+                </span>
+              
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#GIS"><span class="nav-number">1.</span> <span class="nav-text">GIS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ArcGIS"><span class="nav-number">2.</span> <span class="nav-text">ArcGIS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OpenLayers"><span class="nav-number">3.</span> <span class="nav-text">OpenLayers</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Leaflet"><span class="nav-number">4.</span> <span class="nav-text">Leaflet</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PostGIS"><span class="nav-number">5.</span> <span class="nav-text">PostGIS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GeoServer"><span class="nav-number">6.</span> <span class="nav-text">GeoServer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#QGIS"><span class="nav-number">7.</span> <span class="nav-text">QGIS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OSM"><span class="nav-number">8.</span> <span class="nav-text">OSM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据"><span class="nav-number">9.</span> <span class="nav-text">数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#地图"><span class="nav-number">10.</span> <span class="nav-text">地图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可视化"><span class="nav-number">11.</span> <span class="nav-text">可视化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GMap-NET"><span class="nav-number">12.</span> <span class="nav-text">GMap.NET</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">huangli</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">站点总字数</span>
+    
+    <span title="站点总字数">150k</span>
+  
+
+  
+</div>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user-md"></i>
+      访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+    <span class="post-meta-divider">|</span>
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      浏览量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.2.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.2.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.2.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.2.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.2.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.2.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.2.0"></script>
+
+
+
+  
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+      <style>
+        a.gitment-editor-footer-tip { display: none; }
+        .gitment-container.gitment-footer-container { display: none; }
+      </style>
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname,
+            owner: 'huanglii',
+            repo: 'huanglii.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '9493ffe86757ee102cb3e4af40efcf938d477417',
+            
+                client_id: '191f754c42bc3e815bf5'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      function showGitment(){
+        document.getElementById("gitment-display-button").style.display = "none";
+        document.getElementById("gitment-container").style.display = "block";
+        renderGitment();
+      }
+      
+      </script>
+    
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=6.2.0"></script>
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "default";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "topCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Mailto";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -4,6 +4,50 @@
 
     
   <url>
+    <loc>https://giser.xyz/2018/08/25/20180228-GISCollection/</loc>
+    <lastmod>2018-08-25T08:22:47.947Z</lastmod>
+    <data>
+        <display>
+        <title>那些落灰的书签(GIS)</title>
+        <pubTime>2018-08-25T13:11:32.000Z</pubTime>
+        
+        <tag>ArcGIS API for JavaScript</tag>
+         
+        <tag>GeoJSON</tag>
+         
+        <tag>可视化</tag>
+         
+        <tag>ArcGIS Desktop/Pro</tag>
+         
+        <tag>OpenLayers</tag>
+         
+        <tag>Leaflet</tag>
+         
+        <tag>Arc Engine</tag>
+         
+        <tag>PostgreSQL</tag>
+         
+        <tag>PostGIS</tag>
+         
+        <tag>GeoServer</tag>
+         
+        <tag>QGIS</tag>
+         
+        <tag>OSM</tag>
+         
+        <tag>Osmosis</tag>
+         
+         
+           
+             
+              <breadCrumb title="地理信息科学" url="https://giser.xyz/categories/%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://giser.xyz/2018/08/19/20180819-MarsCoordinate/</loc>
     <lastmod>2018-08-19T11:32:16.399Z</lastmod>
     <data>
@@ -135,11 +179,11 @@
         
         <tag>GeoJSON</tag>
          
+        <tag>Vue</tag>
+         
         <tag>高德地图</tag>
          
         <tag>行政区域</tag>
-         
-        <tag>Vue</tag>
          
          
            
@@ -223,9 +267,9 @@
         <title>Leaflet的Vue组件 — Vue2Leaflet</title>
         <pubTime>2018-04-02T15:59:59.000Z</pubTime>
         
-        <tag>Vue</tag>
-         
         <tag>Leaflet</tag>
+         
+        <tag>Vue</tag>
          
          
            
@@ -253,24 +297,6 @@
            
              
               <breadCrumb title="计算机" url="https://giser.xyz/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://giser.xyz/2018/02/28/20180228-GISCollection/</loc>
-    <lastmod>2018-04-11T09:34:50.416Z</lastmod>
-    <data>
-        <display>
-        <title>GIS相关网站、社区、论坛收藏</title>
-        <pubTime>2018-02-28T13:11:32.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="地理信息科学" url="https://giser.xyz/categories/%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6/"/>
           
         </display>
     </data>
