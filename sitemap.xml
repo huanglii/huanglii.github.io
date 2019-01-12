@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://giser.xyz/2018/04/25/20180425-GetDistrictByAMap/</loc>
+    
+    <lastmod>2019-01-12T04:18:22.522Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://giser.xyz/2018/12/14/20181214-Mapbox-First-Acquaintance/</loc>
     
     <lastmod>2018-12-18T13:29:13.960Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>https://giser.xyz/2018/10/07/20181007-LBS-Game/</loc>
     
     <lastmod>2018-11-04T11:43:25.291Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://giser.xyz/2018/04/25/20180425-GetDistrictByAMap/</loc>
-    
-    <lastmod>2018-09-22T07:09:58.000Z</lastmod>
     
   </url>
   
