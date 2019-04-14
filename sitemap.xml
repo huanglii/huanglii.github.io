@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://giser.xyz/2019/04/10/20190410-City-Selector-Control/</loc>
+    
+    <lastmod>2019-04-14T03:31:26.936Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://giser.xyz/2018/12/14/20181214-Mapbox-First-Acquaintance/</loc>
+    
+    <lastmod>2019-04-03T13:59:06.807Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://giser.xyz/2018/12/04/20181204-Mapbox-Minedata/</loc>
     
     <lastmod>2019-01-15T14:54:07.348Z</lastmod>
@@ -12,13 +26,6 @@
     <loc>https://giser.xyz/2018/04/25/20180425-GetDistrictByAMap/</loc>
     
     <lastmod>2019-01-12T04:18:22.522Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://giser.xyz/2018/12/14/20181214-Mapbox-First-Acquaintance/</loc>
-    
-    <lastmod>2018-12-18T13:29:13.960Z</lastmod>
     
   </url>
   
