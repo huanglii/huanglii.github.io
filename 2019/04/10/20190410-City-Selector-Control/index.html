@@ -122,20 +122,20 @@
 
 
 
-  <meta name="description" content="可快速定位城市的城市选择器。">
+  <meta name="description" content="可快速定位城市的 城市选择器 - GitHub">
 <meta name="keywords" content="Mapbox">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mapbox GL 城市选择器">
 <meta property="og:url" content="https://giser.xyz/2019/04/10/20190410-City-Selector-Control/index.html">
 <meta property="og:site_name" content="GISer空间">
-<meta property="og:description" content="可快速定位城市的城市选择器。">
+<meta property="og:description" content="可快速定位城市的 城市选择器 - GitHub">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://giser.xyz/2019/04/10/20190410-City-Selector-Control/1.png">
 <meta property="og:image" content="https://giser.xyz/2019/04/10/20190410-City-Selector-Control/2.gif">
-<meta property="og:updated_time" content="2019-04-14T03:31:26.936Z">
+<meta property="og:updated_time" content="2019-04-21T11:24:33.094Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mapbox GL 城市选择器">
-<meta name="twitter:description" content="可快速定位城市的城市选择器。">
+<meta name="twitter:description" content="可快速定位城市的 城市选择器 - GitHub">
 <meta name="twitter:image" content="https://giser.xyz/2019/04/10/20190410-City-Selector-Control/1.png">
 
 
@@ -467,7 +467,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-14 11:31:26" itemprop="dateModified" datetime="2019-04-14T11:31:26+08:00">2019-04-14</time>
+                <time title="修改时间：2019-04-21 19:24:33" itemprop="dateModified" datetime="2019-04-21T19:24:33+08:00">2019-04-21</time>
               
             
           </span>
@@ -521,7 +521,7 @@
                 
                   <span class="post-meta-item-text">本文字数：</span>
                 
-                <span title="本文字数">736</span>
+                <span title="本文字数">749</span>
               
 
               
@@ -555,7 +555,7 @@
       
 
       
-        <blockquote class="blockquote-center"><p>可快速定位城市的城市选择器。 </p>
+        <blockquote class="blockquote-center"><p>可快速定位城市的 <a href="https://github.com/huanglii/city-selector-control" target="_blank" rel="noopener">城市选择器 - GitHub</a> </p>
 </blockquote>
 <p><img src="/2019/04/10/20190410-City-Selector-Control/1.png" alt="1"><br><a id="more"></a></p>
 <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i city-selector-control</span><br></pre></td></tr></table></figure>
@@ -601,7 +601,8 @@
 </tr>
 </tbody>
 </table>
-<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> CitySelectorControl <span class="keyword">from</span> <span class="string">'city-selector-control'</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">'cityselector-control/style.css'</span></span><br><span class="line"><span class="comment">// 默认配置项</span></span><br><span class="line">map.addControl(<span class="keyword">new</span> CitySelectorControl(), <span class="string">'top-right'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 自定义配置项</span></span><br><span class="line"><span class="keyword">const</span> citySelectorOptions = &#123;</span><br><span class="line">  theme: <span class="string">'dark'</span>,</span><br><span class="line">  placeholder: <span class="string">'全国'</span>,</span><br><span class="line">  hot: [<span class="string">'110000'</span>, <span class="string">'340500'</span>],</span><br><span class="line">  zoom: <span class="number">10</span></span><br><span class="line">&#125;;</span><br><span class="line">map.addControl(<span class="keyword">new</span> CitySelectorControl(citySelectorOptions), <span class="string">'top-right'</span>);</span><br></pre></td></tr></table></figure>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><p><a href="https://giser.xyz/demo/06-CitySelectorControl/index.html">预览</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> CitySelectorControl <span class="keyword">from</span> <span class="string">'city-selector-control'</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">'city-selector-control/style.css'</span></span><br><span class="line"><span class="comment">// 默认配置项</span></span><br><span class="line">map.addControl(<span class="keyword">new</span> CitySelectorControl(), <span class="string">'top-right'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 自定义配置项</span></span><br><span class="line"><span class="keyword">const</span> citySelectorOptions = &#123;</span><br><span class="line">  theme: <span class="string">'dark'</span>,</span><br><span class="line">  placeholder: <span class="string">'全国'</span>,</span><br><span class="line">  hot: [<span class="string">'110000'</span>, <span class="string">'340500'</span>],</span><br><span class="line">  zoom: <span class="number">10</span></span><br><span class="line">&#125;;</span><br><span class="line">map.addControl(<span class="keyword">new</span> CitySelectorControl(citySelectorOptions), <span class="string">'top-right'</span>);</span><br></pre></td></tr></table></figure>
 <h2 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h2><p><img src="2.gif" alt="default"></p>
 
       
