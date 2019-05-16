@@ -5,7 +5,7 @@
     
   <url>
     <loc>https://giser.xyz/2019/04/10/20190410-City-Selector-Control/</loc>
-    <lastmod>2019-05-16T12:31:21.841Z</lastmod>
+    <lastmod>2019-05-16T12:33:53.280Z</lastmod>
     <data>
         <display>
         <title>Mapbox GL 城市选择器</title>
@@ -218,6 +218,26 @@
 
     
   <url>
+    <loc>https://giser.xyz/2017/11/08/20171108-TalkingBeidouAboutInterstellarLink/</loc>
+    <lastmod>2019-05-11T07:51:07.834Z</lastmod>
+    <data>
+        <display>
+        <title>【转】漫谈北斗：“星间链路”到底是条什么路？</title>
+        <pubTime>2017-11-08T09:53:20.000Z</pubTime>
+        
+        <tag>北斗</tag>
+         
+         
+           
+             
+              <breadCrumb title="其他" url="https://giser.xyz/categories/%E5%85%B6%E4%BB%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://giser.xyz/2017/10/29/20171029-ArcMap-CalculatePolylineLength/</loc>
     <lastmod>2019-05-11T07:51:07.834Z</lastmod>
     <data>
@@ -245,26 +265,6 @@
         <title>不是所有的“GIS”都叫“地理信息科学”</title>
         <pubTime>2017-11-13T06:28:31.000Z</pubTime>
         
-         
-           
-             
-              <breadCrumb title="其他" url="https://giser.xyz/categories/%E5%85%B6%E4%BB%96/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://giser.xyz/2017/11/08/20171108-TalkingBeidouAboutInterstellarLink/</loc>
-    <lastmod>2019-05-11T07:51:07.834Z</lastmod>
-    <data>
-        <display>
-        <title>【转】漫谈北斗：“星间链路”到底是条什么路？</title>
-        <pubTime>2017-11-08T09:53:20.000Z</pubTime>
-        
-        <tag>北斗</tag>
-         
          
            
              
