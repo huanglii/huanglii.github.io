@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://giser.xyz/2019/04/10/20190410-City-Selector-Control/</loc>
+    <lastmod>2019-05-16T12:31:21.841Z</lastmod>
+    <data>
+        <display>
+        <title>Mapbox GL 城市选择器</title>
+        <pubTime>2019-04-10T13:52:02.000Z</pubTime>
+        
+        <tag>Mapbox</tag>
+         
+         
+           
+             
+              <breadCrumb title="WebGIS" url="https://giser.xyz/categories/WebGIS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://giser.xyz/2017/12/10/20171210-WEBDevToolsCollection/</loc>
     <lastmod>2019-05-11T07:54:29.581Z</lastmod>
     <data>
@@ -28,14 +48,14 @@
 
     
   <url>
-    <loc>https://giser.xyz/2017/10/21/20171021-CustomSublimeText3Editor/</loc>
+    <loc>https://giser.xyz/2018/04/22/20180422-CSSCodeSnippets/</loc>
     <lastmod>2019-05-11T07:54:29.537Z</lastmod>
     <data>
         <display>
-        <title>定制 Sublime Text 3 编辑器</title>
-        <pubTime>2017-10-21T06:22:29.000Z</pubTime>
+        <title>代码片段系列（一）之 CSS 篇</title>
+        <pubTime>2018-04-22T09:20:10.000Z</pubTime>
         
-        <tag>Sublime Text</tag>
+        <tag>CSS</tag>
          
          
            
@@ -48,14 +68,14 @@
 
     
   <url>
-    <loc>https://giser.xyz/2018/04/22/20180422-CSSCodeSnippets/</loc>
+    <loc>https://giser.xyz/2017/10/21/20171021-CustomSublimeText3Editor/</loc>
     <lastmod>2019-05-11T07:54:29.537Z</lastmod>
     <data>
         <display>
-        <title>代码片段系列（一）之 CSS 篇</title>
-        <pubTime>2018-04-22T09:20:10.000Z</pubTime>
+        <title>定制 Sublime Text 3 编辑器</title>
+        <pubTime>2017-10-21T06:22:29.000Z</pubTime>
         
-        <tag>CSS</tag>
+        <tag>Sublime Text</tag>
          
          
            
@@ -512,26 +532,6 @@
         <display>
         <title>解决Mapbox GL JS国内底图加载问题 - MineData替换</title>
         <pubTime>2018-12-04T11:56:01.000Z</pubTime>
-        
-        <tag>Mapbox</tag>
-         
-         
-           
-             
-              <breadCrumb title="WebGIS" url="https://giser.xyz/categories/WebGIS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://giser.xyz/2019/04/10/20190410-City-Selector-Control/</loc>
-    <lastmod>2019-05-11T07:43:50.637Z</lastmod>
-    <data>
-        <display>
-        <title>Mapbox GL 城市选择器</title>
-        <pubTime>2019-04-10T13:52:02.000Z</pubTime>
         
         <tag>Mapbox</tag>
          
