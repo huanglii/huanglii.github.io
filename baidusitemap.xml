@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>https://giser.xyz/2018/12/04/20181204-Mapbox-Minedata/</loc>
+    <lastmod>2019-06-29T07:28:15.504Z</lastmod>
+    <data>
+        <display>
+        <title>解决Mapbox GL JS国内底图加载问题 - MineData替换</title>
+        <pubTime>2018-12-04T11:56:01.000Z</pubTime>
+        
+        <tag>Mapbox</tag>
+         
+         
+           
+             
+              <breadCrumb title="WebGIS" url="https://giser.xyz/categories/WebGIS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://giser.xyz/2019/04/10/20190410-City-Selector-Control/</loc>
     <lastmod>2019-05-16T12:33:53.280Z</lastmod>
     <data>
@@ -48,14 +68,14 @@
 
     
   <url>
-    <loc>https://giser.xyz/2018/04/22/20180422-CSSCodeSnippets/</loc>
+    <loc>https://giser.xyz/2017/10/21/20171021-CustomSublimeText3Editor/</loc>
     <lastmod>2019-05-11T07:54:29.537Z</lastmod>
     <data>
         <display>
-        <title>代码片段系列（一）之 CSS 篇</title>
-        <pubTime>2018-04-22T09:20:10.000Z</pubTime>
+        <title>定制 Sublime Text 3 编辑器</title>
+        <pubTime>2017-10-21T06:22:29.000Z</pubTime>
         
-        <tag>CSS</tag>
+        <tag>Sublime Text</tag>
          
          
            
@@ -68,14 +88,14 @@
 
     
   <url>
-    <loc>https://giser.xyz/2017/10/21/20171021-CustomSublimeText3Editor/</loc>
+    <loc>https://giser.xyz/2018/04/22/20180422-CSSCodeSnippets/</loc>
     <lastmod>2019-05-11T07:54:29.537Z</lastmod>
     <data>
         <display>
-        <title>定制 Sublime Text 3 编辑器</title>
-        <pubTime>2017-10-21T06:22:29.000Z</pubTime>
+        <title>代码片段系列（一）之 CSS 篇</title>
+        <pubTime>2018-04-22T09:20:10.000Z</pubTime>
         
-        <tag>Sublime Text</tag>
+        <tag>CSS</tag>
          
          
            
@@ -218,6 +238,24 @@
 
     
   <url>
+    <loc>https://giser.xyz/2017/11/13/20171113-NotAll%E2%80%9CGIS%E2%80%9DIsCalled%E2%80%9CGIS%E2%80%9D/</loc>
+    <lastmod>2019-05-11T07:51:07.834Z</lastmod>
+    <data>
+        <display>
+        <title>不是所有的“GIS”都叫“地理信息科学”</title>
+        <pubTime>2017-11-13T06:28:31.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="其他" url="https://giser.xyz/categories/%E5%85%B6%E4%BB%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://giser.xyz/2017/11/08/20171108-TalkingBeidouAboutInterstellarLink/</loc>
     <lastmod>2019-05-11T07:51:07.834Z</lastmod>
     <data>
@@ -251,24 +289,6 @@
            
              
               <breadCrumb title="地理信息科学(GIS)" url="https://giser.xyz/categories/%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6-GIS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://giser.xyz/2017/11/13/20171113-NotAll%E2%80%9CGIS%E2%80%9DIsCalled%E2%80%9CGIS%E2%80%9D/</loc>
-    <lastmod>2019-05-11T07:51:07.834Z</lastmod>
-    <data>
-        <display>
-        <title>不是所有的“GIS”都叫“地理信息科学”</title>
-        <pubTime>2017-11-13T06:28:31.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="其他" url="https://giser.xyz/categories/%E5%85%B6%E4%BB%96/"/>
           
         </display>
     </data>
@@ -404,13 +424,15 @@
 
     
   <url>
-    <loc>https://giser.xyz/2018/06/30/20180630-GeoServerDeveloperManual1/</loc>
+    <loc>https://giser.xyz/2018/05/16/20180516-RudimentsofGeoServer/</loc>
     <lastmod>2019-05-11T07:44:43.844Z</lastmod>
     <data>
         <display>
-        <title>GeoServer 2.14.x Developer Manual 1</title>
-        <pubTime>2018-06-30T04:00:00.000Z</pubTime>
+        <title>GeoServer 安装、发布</title>
+        <pubTime>2018-05-16T14:20:30.000Z</pubTime>
         
+        <tag>Leaflet</tag>
+         
         <tag>GeoServer</tag>
          
          
@@ -444,15 +466,13 @@
 
     
   <url>
-    <loc>https://giser.xyz/2018/05/16/20180516-RudimentsofGeoServer/</loc>
+    <loc>https://giser.xyz/2018/06/30/20180630-GeoServerDeveloperManual1/</loc>
     <lastmod>2019-05-11T07:44:43.844Z</lastmod>
     <data>
         <display>
-        <title>GeoServer 安装、发布</title>
-        <pubTime>2018-05-16T14:20:30.000Z</pubTime>
+        <title>GeoServer 2.14.x Developer Manual 1</title>
+        <pubTime>2018-06-30T04:00:00.000Z</pubTime>
         
-        <tag>Leaflet</tag>
-         
         <tag>GeoServer</tag>
          
          
@@ -512,26 +532,6 @@
         <display>
         <title>初识 Mapbox</title>
         <pubTime>2018-12-14T12:54:47.000Z</pubTime>
-        
-        <tag>Mapbox</tag>
-         
-         
-           
-             
-              <breadCrumb title="WebGIS" url="https://giser.xyz/categories/WebGIS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://giser.xyz/2018/12/04/20181204-Mapbox-Minedata/</loc>
-    <lastmod>2019-05-11T07:43:50.638Z</lastmod>
-    <data>
-        <display>
-        <title>解决Mapbox GL JS国内底图加载问题 - MineData替换</title>
-        <pubTime>2018-12-04T11:56:01.000Z</pubTime>
         
         <tag>Mapbox</tag>
          
