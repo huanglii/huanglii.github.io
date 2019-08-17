@@ -4,6 +4,48 @@
 
     
   <url>
+    <loc>https://giser.xyz/2019/08/02/20190802-Mapbox-GL-JS-Cookbook/</loc>
+    <lastmod>2019-08-17T13:16:59.779Z</lastmod>
+    <data>
+        <display>
+        <title>Mapbox-GL-JS-Cookbook - 可视化中心</title>
+        <pubTime>2019-08-02T13:08:29.000Z</pubTime>
+        
+        <tag>Mapbox</tag>
+         
+         
+           
+             
+              <breadCrumb title="WebGIS" url="https://giser.xyz/categories/WebGIS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://giser.xyz/2018/04/25/20180425-GetDistrictByAMap/</loc>
+    <lastmod>2019-08-17T13:13:41.355Z</lastmod>
+    <data>
+        <display>
+        <title>高德地图行政区域下载</title>
+        <pubTime>2018-04-25T07:03:52.000Z</pubTime>
+        
+        <tag>高德地图</tag>
+         
+        <tag>行政区域</tag>
+         
+         
+           
+             
+              <breadCrumb title="WebGIS" url="https://giser.xyz/categories/WebGIS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://giser.xyz/2018/12/04/20181204-Mapbox-Minedata/</loc>
     <lastmod>2019-06-29T07:28:15.504Z</lastmod>
     <data>
@@ -382,16 +424,14 @@
 
     
   <url>
-    <loc>https://giser.xyz/2018/04/25/20180425-GetDistrictByAMap/</loc>
-    <lastmod>2019-05-11T07:45:09.820Z</lastmod>
+    <loc>https://giser.xyz/2018/06/30/20180630-GeoServerDeveloperManual2/</loc>
+    <lastmod>2019-05-11T07:44:43.846Z</lastmod>
     <data>
         <display>
-        <title>高德地图行政区域下载</title>
-        <pubTime>2018-04-25T07:03:52.000Z</pubTime>
+        <title>GeoServer 2.14.x Developer Manual 2</title>
+        <pubTime>2018-06-30T04:01:00.000Z</pubTime>
         
-        <tag>高德地图</tag>
-         
-        <tag>行政区域</tag>
+        <tag>GeoServer</tag>
          
          
            
@@ -404,12 +444,12 @@
 
     
   <url>
-    <loc>https://giser.xyz/2018/06/30/20180630-GeoServerDeveloperManual2/</loc>
-    <lastmod>2019-05-11T07:44:43.846Z</lastmod>
+    <loc>https://giser.xyz/2018/06/30/20180630-GeoServerDeveloperManual1/</loc>
+    <lastmod>2019-05-11T07:44:43.844Z</lastmod>
     <data>
         <display>
-        <title>GeoServer 2.14.x Developer Manual 2</title>
-        <pubTime>2018-06-30T04:01:00.000Z</pubTime>
+        <title>GeoServer 2.14.x Developer Manual 1</title>
+        <pubTime>2018-06-30T04:00:00.000Z</pubTime>
         
         <tag>GeoServer</tag>
          
@@ -454,26 +494,6 @@
         <pubTime>2018-06-24T00:08:08.000Z</pubTime>
         
         <tag>OpenLayers</tag>
-         
-         
-           
-             
-              <breadCrumb title="WebGIS" url="https://giser.xyz/categories/WebGIS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://giser.xyz/2018/06/30/20180630-GeoServerDeveloperManual1/</loc>
-    <lastmod>2019-05-11T07:44:43.844Z</lastmod>
-    <data>
-        <display>
-        <title>GeoServer 2.14.x Developer Manual 1</title>
-        <pubTime>2018-06-30T04:00:00.000Z</pubTime>
-        
-        <tag>GeoServer</tag>
          
          
            
