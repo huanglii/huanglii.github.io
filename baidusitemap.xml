@@ -4,14 +4,16 @@
 
     
   <url>
-    <loc>https://giser.xyz/2019/08/02/20190802-Mapbox-GL-JS-Cookbook/</loc>
-    <lastmod>2019-08-31T04:35:27.408Z</lastmod>
+    <loc>https://giser.xyz/2018/04/25/20180425-GetDistrictByAMap/</loc>
+    <lastmod>2019-11-06T09:53:01.930Z</lastmod>
     <data>
         <display>
-        <title>Mapbox-GL-JS-Cookbook - 可视化中心</title>
-        <pubTime>2019-08-02T13:08:29.000Z</pubTime>
+        <title>高德地图行政区域下载</title>
+        <pubTime>2018-04-25T07:03:52.000Z</pubTime>
         
-        <tag>Mapbox</tag>
+        <tag>高德地图</tag>
+         
+        <tag>行政区域</tag>
          
          
            
@@ -24,16 +26,14 @@
 
     
   <url>
-    <loc>https://giser.xyz/2018/04/25/20180425-GetDistrictByAMap/</loc>
-    <lastmod>2019-08-31T04:32:52.469Z</lastmod>
+    <loc>https://giser.xyz/2019/08/02/20190802-Mapbox-GL-JS-Cookbook/</loc>
+    <lastmod>2019-08-31T04:35:27.408Z</lastmod>
     <data>
         <display>
-        <title>高德地图行政区域下载</title>
-        <pubTime>2018-04-25T07:03:52.000Z</pubTime>
+        <title>Mapbox-GL-JS-Cookbook - 可视化中心</title>
+        <pubTime>2019-08-02T13:08:29.000Z</pubTime>
         
-        <tag>高德地图</tag>
-         
-        <tag>行政区域</tag>
+        <tag>Mapbox</tag>
          
          
            
@@ -280,19 +280,17 @@
 
     
   <url>
-    <loc>https://giser.xyz/2017/10/29/20171029-ArcMap-CalculatePolylineLength/</loc>
+    <loc>https://giser.xyz/2017/11/13/20171113-NotAll%E2%80%9CGIS%E2%80%9DIsCalled%E2%80%9CGIS%E2%80%9D/</loc>
     <lastmod>2019-05-11T07:51:07.834Z</lastmod>
     <data>
         <display>
-        <title>ArcMap中如何计算Polyline的直线长度</title>
-        <pubTime>2017-10-29T02:33:29.000Z</pubTime>
+        <title>不是所有的“GIS”都叫“地理信息科学”</title>
+        <pubTime>2017-11-13T06:28:31.000Z</pubTime>
         
-        <tag>ArcGIS</tag>
-         
          
            
              
-              <breadCrumb title="地理信息科学(GIS)" url="https://giser.xyz/categories/%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6-GIS/"/>
+              <breadCrumb title="其他" url="https://giser.xyz/categories/%E5%85%B6%E4%BB%96/"/>
           
         </display>
     </data>
@@ -320,17 +318,19 @@
 
     
   <url>
-    <loc>https://giser.xyz/2017/11/13/20171113-NotAll%E2%80%9CGIS%E2%80%9DIsCalled%E2%80%9CGIS%E2%80%9D/</loc>
+    <loc>https://giser.xyz/2017/10/29/20171029-ArcMap-CalculatePolylineLength/</loc>
     <lastmod>2019-05-11T07:51:07.834Z</lastmod>
     <data>
         <display>
-        <title>不是所有的“GIS”都叫“地理信息科学”</title>
-        <pubTime>2017-11-13T06:28:31.000Z</pubTime>
+        <title>ArcMap中如何计算Polyline的直线长度</title>
+        <pubTime>2017-10-29T02:33:29.000Z</pubTime>
         
+        <tag>ArcGIS</tag>
+         
          
            
              
-              <breadCrumb title="其他" url="https://giser.xyz/categories/%E5%85%B6%E4%BB%96/"/>
+              <breadCrumb title="地理信息科学(GIS)" url="https://giser.xyz/categories/%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6-GIS/"/>
           
         </display>
     </data>
@@ -444,16 +444,14 @@
 
     
   <url>
-    <loc>https://giser.xyz/2018/05/16/20180516-RudimentsofGeoServer/</loc>
+    <loc>https://giser.xyz/2018/06/24/20180624-OpenLayersDemos/</loc>
     <lastmod>2019-05-11T07:44:43.844Z</lastmod>
     <data>
         <display>
-        <title>GeoServer 安装、发布</title>
-        <pubTime>2018-05-16T14:20:30.000Z</pubTime>
+        <title>OpenLayers 示例</title>
+        <pubTime>2018-06-24T00:08:08.000Z</pubTime>
         
-        <tag>Leaflet</tag>
-         
-        <tag>GeoServer</tag>
+        <tag>OpenLayers</tag>
          
          
            
@@ -466,14 +464,16 @@
 
     
   <url>
-    <loc>https://giser.xyz/2018/06/24/20180624-OpenLayersDemos/</loc>
+    <loc>https://giser.xyz/2018/05/16/20180516-RudimentsofGeoServer/</loc>
     <lastmod>2019-05-11T07:44:43.844Z</lastmod>
     <data>
         <display>
-        <title>OpenLayers 示例</title>
-        <pubTime>2018-06-24T00:08:08.000Z</pubTime>
+        <title>GeoServer 安装、发布</title>
+        <pubTime>2018-05-16T14:20:30.000Z</pubTime>
         
-        <tag>OpenLayers</tag>
+        <tag>Leaflet</tag>
+         
+        <tag>GeoServer</tag>
          
          
            
