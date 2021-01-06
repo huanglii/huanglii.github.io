@@ -4,21 +4,19 @@
 
     
   <url>
-    <loc>https://giser.xyz/2018/04/25/20180425-GetDistrictByAMap/</loc>
-    <lastmod>2019-11-06T09:53:01.930Z</lastmod>
+    <loc>https://huanglii.github.io/2018/06/24/20180624-OpenLayersDemos/</loc>
+    <lastmod>2021-01-06T05:15:03.928Z</lastmod>
     <data>
         <display>
-        <title>高德地图行政区域下载</title>
-        <pubTime>2018-04-25T07:03:52.000Z</pubTime>
+        <title>OpenLayers 示例</title>
+        <pubTime>2018-06-24T00:08:08.000Z</pubTime>
         
-        <tag>高德地图</tag>
-         
-        <tag>行政区域</tag>
+        <tag>OpenLayers</tag>
          
          
            
              
-              <breadCrumb title="WebGIS" url="https://giser.xyz/categories/WebGIS/"/>
+              <breadCrumb title="WebGIS" url="https://huanglii.github.io/categories/WebGIS/"/>
           
         </display>
     </data>
@@ -26,19 +24,21 @@
 
     
   <url>
-    <loc>https://giser.xyz/2019/08/02/20190802-Mapbox-GL-JS-Cookbook/</loc>
-    <lastmod>2019-08-31T04:35:27.408Z</lastmod>
+    <loc>https://huanglii.github.io/2017/10/28/20171028-ArcGISAPIforJavaScript-TianDiTuWMTS/</loc>
+    <lastmod>2021-01-06T05:15:03.928Z</lastmod>
     <data>
         <display>
-        <title>Mapbox-GL-JS-Cookbook - 可视化中心</title>
-        <pubTime>2019-08-02T13:08:29.000Z</pubTime>
+        <title>ArcGIS API for JavaScript 加载天地图WMTS图层</title>
+        <pubTime>2017-10-28T11:21:52.000Z</pubTime>
         
-        <tag>Mapbox</tag>
+        <tag>ArcGIS API for JavaScript</tag>
+         
+        <tag>WMTS</tag>
          
          
            
              
-              <breadCrumb title="WebGIS" url="https://giser.xyz/categories/WebGIS/"/>
+              <breadCrumb title="WebGIS" url="https://huanglii.github.io/categories/WebGIS/"/>
           
         </display>
     </data>
@@ -46,28 +46,8 @@
 
     
   <url>
-    <loc>https://giser.xyz/2018/12/04/20181204-Mapbox-Minedata/</loc>
-    <lastmod>2019-06-29T07:28:15.504Z</lastmod>
-    <data>
-        <display>
-        <title>解决Mapbox GL JS国内底图加载问题 - MineData替换</title>
-        <pubTime>2018-12-04T11:56:01.000Z</pubTime>
-        
-        <tag>Mapbox</tag>
-         
-         
-           
-             
-              <breadCrumb title="WebGIS" url="https://giser.xyz/categories/WebGIS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://giser.xyz/2019/04/10/20190410-City-Selector-Control/</loc>
-    <lastmod>2019-05-16T12:33:53.280Z</lastmod>
+    <loc>https://huanglii.github.io/2019/04/10/20190410-City-Selector-Control/</loc>
+    <lastmod>2021-01-06T05:15:03.898Z</lastmod>
     <data>
         <display>
         <title>Mapbox GL 城市选择器</title>
@@ -78,7 +58,7 @@
          
            
              
-              <breadCrumb title="WebGIS" url="https://giser.xyz/categories/WebGIS/"/>
+              <breadCrumb title="WebGIS" url="https://huanglii.github.io/categories/WebGIS/"/>
           
         </display>
     </data>
@@ -86,23 +66,19 @@
 
     
   <url>
-    <loc>https://giser.xyz/2017/12/10/20171210-WEBDevToolsCollection/</loc>
-    <lastmod>2019-05-11T07:54:29.581Z</lastmod>
+    <loc>https://huanglii.github.io/2018/08/19/20180819-MarsCoordinate/</loc>
+    <lastmod>2021-01-06T05:15:03.898Z</lastmod>
     <data>
         <display>
-        <title>WEB开发库、插件、工具收藏</title>
-        <pubTime>2017-12-10T14:09:10.000Z</pubTime>
+        <title>一张图看懂“火星坐标系”</title>
+        <pubTime>2018-08-19T08:54:17.000Z</pubTime>
         
-        <tag>动画</tag>
-         
-        <tag>可视化</tag>
-         
-        <tag>工具</tag>
+        <tag>火星坐标系</tag>
          
          
            
              
-              <breadCrumb title="Web 前端" url="https://giser.xyz/categories/Web-%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="WebGIS" url="https://huanglii.github.io/categories/WebGIS/"/>
           
         </display>
     </data>
@@ -110,19 +86,21 @@
 
     
   <url>
-    <loc>https://giser.xyz/2018/04/22/20180422-CSSCodeSnippets/</loc>
-    <lastmod>2019-05-11T07:54:29.537Z</lastmod>
+    <loc>https://huanglii.github.io/2017/10/28/20171028-ArcGISAPIforJavaScript-GeoJSON/</loc>
+    <lastmod>2021-01-06T05:15:03.898Z</lastmod>
     <data>
         <display>
-        <title>代码片段系列（一）之 CSS 篇</title>
-        <pubTime>2018-04-22T09:20:10.000Z</pubTime>
+        <title>ArcGIS API for JavaScript 加载 GeoJSON 数据</title>
+        <pubTime>2017-10-28T06:08:33.000Z</pubTime>
         
-        <tag>CSS</tag>
+        <tag>ArcGIS API for JavaScript</tag>
+         
+        <tag>GeoJSON</tag>
          
          
            
              
-              <breadCrumb title="Web 前端" url="https://giser.xyz/categories/Web-%E5%89%8D%E7%AB%AF/"/>
+              <breadCrumb title="WebGIS" url="https://huanglii.github.io/categories/WebGIS/"/>
           
         </display>
     </data>
@@ -130,28 +108,8 @@
 
     
   <url>
-    <loc>https://giser.xyz/2017/10/21/20171021-CustomSublimeText3Editor/</loc>
-    <lastmod>2019-05-11T07:54:29.537Z</lastmod>
-    <data>
-        <display>
-        <title>定制 Sublime Text 3 编辑器</title>
-        <pubTime>2017-10-21T06:22:29.000Z</pubTime>
-        
-        <tag>Sublime Text</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web 前端" url="https://giser.xyz/categories/Web-%E5%89%8D%E7%AB%AF/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://giser.xyz/2018/08/25/20180228-GISCollection/</loc>
-    <lastmod>2019-05-11T07:52:26.077Z</lastmod>
+    <loc>https://huanglii.github.io/2018/08/25/20180228-GISCollection/</loc>
+    <lastmod>2021-01-06T05:15:03.898Z</lastmod>
     <data>
         <display>
         <title>落灰书签(GIS)</title>
@@ -186,7 +144,7 @@
          
            
              
-              <breadCrumb title="地理信息科学(GIS)" url="https://giser.xyz/categories/%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6-GIS/"/>
+              <breadCrumb title="地理信息科学(GIS)" url="https://huanglii.github.io/categories/%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6-GIS/"/>
           
         </display>
     </data>
@@ -194,7 +152,155 @@
 
     
   <url>
-    <loc>https://giser.xyz/2017/10/22/20171022-TutorialofGMap.NET/</loc>
+    <loc>https://huanglii.github.io/2018/01/16/20180116-WordPresstoHexo/</loc>
+    <lastmod>2021-01-06T05:15:03.898Z</lastmod>
+    <data>
+        <display>
+        <title>WordPress 迁移到 Hexo</title>
+        <pubTime>2018-01-16T10:30:00.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>WordPress</tag>
+         
+         
+           
+             
+              <breadCrumb title="其他" url="https://huanglii.github.io/categories/%E5%85%B6%E4%BB%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://huanglii.github.io/2018/04/25/20180425-GetDistrictByAMap/</loc>
+    <lastmod>2021-01-06T05:15:03.898Z</lastmod>
+    <data>
+        <display>
+        <title>高德地图行政区域下载</title>
+        <pubTime>2018-04-25T07:03:52.000Z</pubTime>
+        
+        <tag>高德地图</tag>
+         
+        <tag>行政区域</tag>
+         
+         
+           
+             
+              <breadCrumb title="WebGIS" url="https://huanglii.github.io/categories/WebGIS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://huanglii.github.io/2019/08/02/20190802-Mapbox-GL-JS-Cookbook/</loc>
+    <lastmod>2021-01-06T05:15:03.898Z</lastmod>
+    <data>
+        <display>
+        <title>Mapbox-GL-JS-Cookbook - 可视化中心</title>
+        <pubTime>2019-08-02T13:08:29.000Z</pubTime>
+        
+        <tag>Mapbox</tag>
+         
+         
+           
+             
+              <breadCrumb title="WebGIS" url="https://huanglii.github.io/categories/WebGIS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://huanglii.github.io/2018/12/04/20181204-Mapbox-Minedata/</loc>
+    <lastmod>2019-06-29T07:28:15.504Z</lastmod>
+    <data>
+        <display>
+        <title>解决Mapbox GL JS国内底图加载问题 - MineData替换</title>
+        <pubTime>2018-12-04T11:56:01.000Z</pubTime>
+        
+        <tag>Mapbox</tag>
+         
+         
+           
+             
+              <breadCrumb title="WebGIS" url="https://huanglii.github.io/categories/WebGIS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://huanglii.github.io/2017/12/10/20171210-WEBDevToolsCollection/</loc>
+    <lastmod>2019-05-11T07:54:29.581Z</lastmod>
+    <data>
+        <display>
+        <title>WEB开发库、插件、工具收藏</title>
+        <pubTime>2017-12-10T14:09:10.000Z</pubTime>
+        
+        <tag>动画</tag>
+         
+        <tag>可视化</tag>
+         
+        <tag>工具</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web 前端" url="https://huanglii.github.io/categories/Web-%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://huanglii.github.io/2017/10/21/20171021-CustomSublimeText3Editor/</loc>
+    <lastmod>2019-05-11T07:54:29.537Z</lastmod>
+    <data>
+        <display>
+        <title>定制 Sublime Text 3 编辑器</title>
+        <pubTime>2017-10-21T06:22:29.000Z</pubTime>
+        
+        <tag>Sublime Text</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web 前端" url="https://huanglii.github.io/categories/Web-%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://huanglii.github.io/2018/04/22/20180422-CSSCodeSnippets/</loc>
+    <lastmod>2019-05-11T07:54:29.537Z</lastmod>
+    <data>
+        <display>
+        <title>代码片段系列（一）之 CSS 篇</title>
+        <pubTime>2018-04-22T09:20:10.000Z</pubTime>
+        
+        <tag>CSS</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web 前端" url="https://huanglii.github.io/categories/Web-%E5%89%8D%E7%AB%AF/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://huanglii.github.io/2017/10/22/20171022-TutorialofGMap.NET/</loc>
     <lastmod>2019-05-11T07:51:46.825Z</lastmod>
     <data>
         <display>
@@ -206,7 +312,7 @@
          
            
              
-              <breadCrumb title="地理信息科学(GIS)" url="https://giser.xyz/categories/%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6-GIS/"/>
+              <breadCrumb title="地理信息科学(GIS)" url="https://huanglii.github.io/categories/%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6-GIS/"/>
           
         </display>
     </data>
@@ -214,7 +320,7 @@
 
     
   <url>
-    <loc>https://giser.xyz/2017/10/24/20171024-DealOSMByOsmSharp/</loc>
+    <loc>https://huanglii.github.io/2017/10/24/20171024-DealOSMByOsmSharp/</loc>
     <lastmod>2019-05-11T07:51:36.183Z</lastmod>
     <data>
         <display>
@@ -230,7 +336,7 @@
          
            
              
-              <breadCrumb title="地理信息科学(GIS)" url="https://giser.xyz/categories/%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6-GIS/"/>
+              <breadCrumb title="地理信息科学(GIS)" url="https://huanglii.github.io/categories/%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6-GIS/"/>
           
         </display>
     </data>
@@ -238,29 +344,7 @@
 
     
   <url>
-    <loc>https://giser.xyz/2017/10/28/20171028-ArcGISAPIforJavaScript-GeoJSON/</loc>
-    <lastmod>2019-05-11T07:51:25.398Z</lastmod>
-    <data>
-        <display>
-        <title>ArcGIS API for JavaScript 加载 GeoJSON 数据</title>
-        <pubTime>2017-10-28T06:08:33.000Z</pubTime>
-        
-        <tag>ArcGIS API for JavaScript</tag>
-         
-        <tag>GeoJSON</tag>
-         
-         
-           
-             
-              <breadCrumb title="WebGIS" url="https://giser.xyz/categories/WebGIS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://giser.xyz/2017/12/09/20171209-CartographicDesignTips/</loc>
+    <loc>https://huanglii.github.io/2017/12/09/20171209-CartographicDesignTips/</loc>
     <lastmod>2019-05-11T07:51:07.870Z</lastmod>
     <data>
         <display>
@@ -272,7 +356,7 @@
          
            
              
-              <breadCrumb title="地理信息科学(GIS)" url="https://giser.xyz/categories/%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6-GIS/"/>
+              <breadCrumb title="地理信息科学(GIS)" url="https://huanglii.github.io/categories/%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6-GIS/"/>
           
         </display>
     </data>
@@ -280,7 +364,7 @@
 
     
   <url>
-    <loc>https://giser.xyz/2017/10/29/20171029-ArcMap-CalculatePolylineLength/</loc>
+    <loc>https://huanglii.github.io/2017/10/29/20171029-ArcMap-CalculatePolylineLength/</loc>
     <lastmod>2019-05-11T07:51:07.834Z</lastmod>
     <data>
         <display>
@@ -292,7 +376,7 @@
          
            
              
-              <breadCrumb title="地理信息科学(GIS)" url="https://giser.xyz/categories/%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6-GIS/"/>
+              <breadCrumb title="地理信息科学(GIS)" url="https://huanglii.github.io/categories/%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6-GIS/"/>
           
         </display>
     </data>
@@ -300,7 +384,25 @@
 
     
   <url>
-    <loc>https://giser.xyz/2017/11/08/20171108-TalkingBeidouAboutInterstellarLink/</loc>
+    <loc>https://huanglii.github.io/2017/11/13/20171113-NotAll%E2%80%9CGIS%E2%80%9DIsCalled%E2%80%9CGIS%E2%80%9D/</loc>
+    <lastmod>2019-05-11T07:51:07.834Z</lastmod>
+    <data>
+        <display>
+        <title>不是所有的“GIS”都叫“地理信息科学”</title>
+        <pubTime>2017-11-13T06:28:31.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="其他" url="https://huanglii.github.io/categories/%E5%85%B6%E4%BB%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://huanglii.github.io/2017/11/08/20171108-TalkingBeidouAboutInterstellarLink/</loc>
     <lastmod>2019-05-11T07:51:07.834Z</lastmod>
     <data>
         <display>
@@ -312,7 +414,7 @@
          
            
              
-              <breadCrumb title="其他" url="https://giser.xyz/categories/%E5%85%B6%E4%BB%96/"/>
+              <breadCrumb title="其他" url="https://huanglii.github.io/categories/%E5%85%B6%E4%BB%96/"/>
           
         </display>
     </data>
@@ -320,47 +422,7 @@
 
     
   <url>
-    <loc>https://giser.xyz/2017/11/13/20171113-NotAll%E2%80%9CGIS%E2%80%9DIsCalled%E2%80%9CGIS%E2%80%9D/</loc>
-    <lastmod>2019-05-11T07:51:07.834Z</lastmod>
-    <data>
-        <display>
-        <title>不是所有的“GIS”都叫“地理信息科学”</title>
-        <pubTime>2017-11-13T06:28:31.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="其他" url="https://giser.xyz/categories/%E5%85%B6%E4%BB%96/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://giser.xyz/2017/10/28/20171028-ArcGISAPIforJavaScript-TianDiTuWMTS/</loc>
-    <lastmod>2019-05-11T07:51:05.595Z</lastmod>
-    <data>
-        <display>
-        <title>ArcGIS API for JavaScript 加载天地图WMTS图层</title>
-        <pubTime>2017-10-28T11:21:52.000Z</pubTime>
-        
-        <tag>ArcGIS API for JavaScript</tag>
-         
-        <tag>WMTS</tag>
-         
-         
-           
-             
-              <breadCrumb title="WebGIS" url="https://giser.xyz/categories/WebGIS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://giser.xyz/2017/12/12/20171212-QAofCoordination/</loc>
+    <loc>https://huanglii.github.io/2017/12/12/20171212-QAofCoordination/</loc>
     <lastmod>2019-05-11T07:49:35.505Z</lastmod>
     <data>
         <display>
@@ -372,7 +434,7 @@
          
            
              
-              <breadCrumb title="地理信息科学(GIS)" url="https://giser.xyz/categories/%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6-GIS/"/>
+              <breadCrumb title="地理信息科学(GIS)" url="https://huanglii.github.io/categories/%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6-GIS/"/>
           
         </display>
     </data>
@@ -380,29 +442,7 @@
 
     
   <url>
-    <loc>https://giser.xyz/2018/01/16/20180116-WordPresstoHexo/</loc>
-    <lastmod>2019-05-11T07:49:20.690Z</lastmod>
-    <data>
-        <display>
-        <title>WordPress 迁移到 Hexo</title>
-        <pubTime>2018-01-16T10:30:00.000Z</pubTime>
-        
-        <tag>Hexo</tag>
-         
-        <tag>WordPress</tag>
-         
-         
-           
-             
-              <breadCrumb title="其他" url="https://giser.xyz/categories/%E5%85%B6%E4%BB%96/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://giser.xyz/2018/04/02/20180402-Vue-Leaflet/</loc>
+    <loc>https://huanglii.github.io/2018/04/02/20180402-Vue-Leaflet/</loc>
     <lastmod>2019-05-11T07:46:15.594Z</lastmod>
     <data>
         <display>
@@ -416,7 +456,7 @@
          
            
              
-              <breadCrumb title="WebGIS" url="https://giser.xyz/categories/WebGIS/"/>
+              <breadCrumb title="WebGIS" url="https://huanglii.github.io/categories/WebGIS/"/>
           
         </display>
     </data>
@@ -424,7 +464,7 @@
 
     
   <url>
-    <loc>https://giser.xyz/2018/06/30/20180630-GeoServerDeveloperManual2/</loc>
+    <loc>https://huanglii.github.io/2018/06/30/20180630-GeoServerDeveloperManual2/</loc>
     <lastmod>2019-05-11T07:44:43.846Z</lastmod>
     <data>
         <display>
@@ -436,7 +476,7 @@
          
            
              
-              <breadCrumb title="WebGIS" url="https://giser.xyz/categories/WebGIS/"/>
+              <breadCrumb title="WebGIS" url="https://huanglii.github.io/categories/WebGIS/"/>
           
         </display>
     </data>
@@ -444,19 +484,19 @@
 
     
   <url>
-    <loc>https://giser.xyz/2018/06/24/20180624-OpenLayersDemos/</loc>
+    <loc>https://huanglii.github.io/2018/06/30/20180630-GeoServerDeveloperManual1/</loc>
     <lastmod>2019-05-11T07:44:43.844Z</lastmod>
     <data>
         <display>
-        <title>OpenLayers 示例</title>
-        <pubTime>2018-06-24T00:08:08.000Z</pubTime>
+        <title>GeoServer 2.14.x Developer Manual 1</title>
+        <pubTime>2018-06-30T04:00:00.000Z</pubTime>
         
-        <tag>OpenLayers</tag>
+        <tag>GeoServer</tag>
          
          
            
              
-              <breadCrumb title="WebGIS" url="https://giser.xyz/categories/WebGIS/"/>
+              <breadCrumb title="WebGIS" url="https://huanglii.github.io/categories/WebGIS/"/>
           
         </display>
     </data>
@@ -464,7 +504,7 @@
 
     
   <url>
-    <loc>https://giser.xyz/2018/05/16/20180516-RudimentsofGeoServer/</loc>
+    <loc>https://huanglii.github.io/2018/05/16/20180516-RudimentsofGeoServer/</loc>
     <lastmod>2019-05-11T07:44:43.844Z</lastmod>
     <data>
         <display>
@@ -478,7 +518,7 @@
          
            
              
-              <breadCrumb title="WebGIS" url="https://giser.xyz/categories/WebGIS/"/>
+              <breadCrumb title="WebGIS" url="https://huanglii.github.io/categories/WebGIS/"/>
           
         </display>
     </data>
@@ -486,47 +526,7 @@
 
     
   <url>
-    <loc>https://giser.xyz/2018/06/30/20180630-GeoServerDeveloperManual1/</loc>
-    <lastmod>2019-05-11T07:44:43.844Z</lastmod>
-    <data>
-        <display>
-        <title>GeoServer 2.14.x Developer Manual 1</title>
-        <pubTime>2018-06-30T04:00:00.000Z</pubTime>
-        
-        <tag>GeoServer</tag>
-         
-         
-           
-             
-              <breadCrumb title="WebGIS" url="https://giser.xyz/categories/WebGIS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://giser.xyz/2018/08/19/20180819-MarsCoordinate/</loc>
-    <lastmod>2019-05-11T07:44:10.766Z</lastmod>
-    <data>
-        <display>
-        <title>一张图看懂“火星坐标系”</title>
-        <pubTime>2018-08-19T08:54:17.000Z</pubTime>
-        
-        <tag>火星坐标系</tag>
-         
-         
-           
-             
-              <breadCrumb title="WebGIS" url="https://giser.xyz/categories/WebGIS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://giser.xyz/2018/08/18/20180818-EsriLoader/</loc>
+    <loc>https://huanglii.github.io/2018/08/18/20180818-EsriLoader/</loc>
     <lastmod>2019-05-11T07:44:10.766Z</lastmod>
     <data>
         <display>
@@ -538,7 +538,7 @@
          
            
              
-              <breadCrumb title="WebGIS" url="https://giser.xyz/categories/WebGIS/"/>
+              <breadCrumb title="WebGIS" url="https://huanglii.github.io/categories/WebGIS/"/>
           
         </display>
     </data>
@@ -546,7 +546,7 @@
 
     
   <url>
-    <loc>https://giser.xyz/2018/12/14/20181214-Mapbox-First-Acquaintance/</loc>
+    <loc>https://huanglii.github.io/2018/12/14/20181214-Mapbox-First-Acquaintance/</loc>
     <lastmod>2019-05-11T07:43:50.645Z</lastmod>
     <data>
         <display>
@@ -558,7 +558,7 @@
          
            
              
-              <breadCrumb title="WebGIS" url="https://giser.xyz/categories/WebGIS/"/>
+              <breadCrumb title="WebGIS" url="https://huanglii.github.io/categories/WebGIS/"/>
           
         </display>
     </data>
@@ -566,7 +566,7 @@
 
     
   <url>
-    <loc>https://giser.xyz/2018/10/07/20181007-LBS-Game/</loc>
+    <loc>https://huanglii.github.io/2018/10/07/20181007-LBS-Game/</loc>
     <lastmod>2019-05-11T07:43:50.634Z</lastmod>
     <data>
         <display>
@@ -580,7 +580,7 @@
          
            
              
-              <breadCrumb title="地理信息科学(GIS)" url="https://giser.xyz/categories/%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6-GIS/"/>
+              <breadCrumb title="地理信息科学(GIS)" url="https://huanglii.github.io/categories/%E5%9C%B0%E7%90%86%E4%BF%A1%E6%81%AF%E7%A7%91%E5%AD%A6-GIS/"/>
           
         </display>
     </data>
@@ -588,7 +588,7 @@
 
     
   <url>
-    <loc>https://giser.xyz/2019/05/10/20190510-GDAL-ReProject/</loc>
+    <loc>https://huanglii.github.io/2019/05/10/20190510-GDAL-ReProject/</loc>
     <lastmod>2019-05-11T07:40:28.178Z</lastmod>
     <data>
         <display>
@@ -602,7 +602,7 @@
          
            
              
-              <breadCrumb title="Python 空间分析" url="https://giser.xyz/categories/Python-%E7%A9%BA%E9%97%B4%E5%88%86%E6%9E%90/"/>
+              <breadCrumb title="Python 空间分析" url="https://huanglii.github.io/categories/Python-%E7%A9%BA%E9%97%B4%E5%88%86%E6%9E%90/"/>
           
         </display>
     </data>
@@ -610,7 +610,7 @@
 
     
   <url>
-    <loc>https://giser.xyz/2017/11/07/20171107-EsriUc15th-Share/</loc>
+    <loc>https://huanglii.github.io/2017/11/07/20171107-EsriUc15th-Share/</loc>
     <lastmod>2018-04-11T09:32:30.000Z</lastmod>
     <data>
         <display>
@@ -620,7 +620,7 @@
          
            
              
-              <breadCrumb title="资源共享" url="https://giser.xyz/categories/%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%AB/"/>
+              <breadCrumb title="资源共享" url="https://huanglii.github.io/categories/%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%AB/"/>
           
         </display>
     </data>
@@ -628,7 +628,7 @@
 
     
   <url>
-    <loc>https://giser.xyz/2018/03/17/20180317-GISerTutorial-2nd/</loc>
+    <loc>https://huanglii.github.io/2018/03/17/20180317-GISerTutorial-2nd/</loc>
     <lastmod>2018-04-11T09:25:02.000Z</lastmod>
     <data>
         <display>
@@ -646,7 +646,7 @@
          
            
              
-              <breadCrumb title="资源共享" url="https://giser.xyz/categories/%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%AB/"/>
+              <breadCrumb title="资源共享" url="https://huanglii.github.io/categories/%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%AB/"/>
           
         </display>
     </data>
