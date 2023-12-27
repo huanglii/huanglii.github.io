@@ -33,8 +33,8 @@ Extended Map of `mapboxgl.Map`.
 
 Morph smoothly between Polygons or MultiPolygons.
 
-## 6️⃣[Contour](https://github.com/huanglii/wcontour-js)
+## 6️⃣[Location Picker](https://www.naivemap.com/location-picker)
 
-A JavaScript Library of wContour.
+Location Picker.
 
 ## 7️⃣[Administrative Division Downloader](https://huanglii.github.io/admin-cn-downloader/)
