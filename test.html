@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>huanglii@github:~$</title>
+  <meta name="description" content="huanglii's developer portfolio - 中文黑客 / 数字矩阵风格" />
+
+  <!-- JetBrains Mono 等宽字体 + 中文等宽 fallback -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome 图标 -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <style>
+    :root {
+      --bg: #0a0e14;
+      --bg-soft: #0f151d;
+      --fg: #c8d3e0;
+      --green: #00ff9c;
+      --cyan: #00e5ff;
+      --purple: #bd00ff;
+      --yellow: #ffd500;
+      --red: #ff4d6d;
+      --gray: #5c6773;
+      --border: rgba(0, 229, 255, 0.2);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "JetBrains Mono", "Sarasa Mono SC", "Microsoft YaHei Mono", "Noto Sans Mono CJK SC", "Consolas", monospace;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.7;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* 背景网格 */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0, 225, 156, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 156, 0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* CRT 扫描线 */
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(0, 255, 156, 0.03) 0px,
+        rgba(0, 255, 156, 0.03) 1px,
+        transparent 1px,
+        transparent 3px
+      );
+      pointer-events: none;
+      z-index: 9999;
+      animation: flicker 4s infinite;
+    }
+
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      92% { opacity: 1; }
+      93% { opacity: 0.8; }
+      94% { opacity: 1; }
+    }
+
+    /* Canvas 中文代码雨 */
+    #matrix {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      opacity: 0.18;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* 顶部导航 */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+      margin-bottom: 3rem;
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .logo {
+      color: var(--green);
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-shadow: 0 0 8px rgba(0, 255, 156, 0.6);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--fg);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s, text-shadow 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--cyan);
+      text-shadow: 0 0 8px var(--cyan);
+    }
+
+    /* Hero 终端窗口 */
+    .terminal {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow:
+        0 0 30px rgba(0, 255, 156, 0.15),
+        inset 0 0 30px rgba(0, 0, 0, 0.5);
+      margin-bottom: 3rem;
+    }
+
+    .terminal-header {
+      background: #161d27;
+      padding: 0.7rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    .dot.red { background: #ff5f56; }
+    .dot.yellow { background: #ffbd2e; }
+    .dot.green { background: #27c93f; }
+
+    .terminal-title {
+      margin-left: 1rem;
+      color: var(--gray);
+      font-size: 0.8rem;
+    }
+
+    .terminal-body {
+      padding: 1.5rem;
+      font-size: 0.95rem;
+    }
+
+    .prompt {
+      color: var(--green);
+    }
+    .prompt .path { color: var(--cyan); }
+    .prompt .sym { color: var(--purple); }
+
+    #typed {
+      color: var(--fg);
+      min-height: 1.5em;
+      display: inline;
+    }
+
+    .cursor {
+      display: inline-block;
+      background: var(--green);
+      width: 8px;
+      height: 1.1em;
+      vertical-align: text-bottom;
+      animation: blink 1s step-end infinite;
+      margin-left: 2px;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    .hero-info {
+      margin-top: 1.2rem;
+      color: var(--fg);
+    }
+    .hero-info .key { color: var(--cyan); }
+    .hero-info .val { color: var(--yellow); }
+
+    /* Section 通用 */
+    section {
+      margin-bottom: 3.5rem;
+    }
+
+    h2 {
+      color: var(--green);
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px dashed var(--border);
+      text-shadow: 0 0 10px rgba(0, 255, 156, 0.4);
+    }
+
+    h2::before {
+      content: "## ";
+      color: var(--purple);
+    }
+
+    /* About 代码块 */
+    .code-block {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.2rem 1.5rem;
+      white-space: pre-wrap;
+      font-size: 0.9rem;
+      overflow-x: auto;
+    }
+    .code-block .comment { color: var(--gray); }
+    .code-block .prop { color: var(--cyan); }
+    .code-block .str { color: var(--green); }
+    .code-block .num { color: var(--yellow); }
+
+    /* 技能标签 */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .tag {
+      background: rgba(0, 229, 255, 0.08);
+      border: 1px solid rgba(0, 229, 255, 0.3);
+      color: var(--cyan);
+      padding: 0.35rem 0.8rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      transition: all 0.2s;
+    }
+    .tag:hover {
+      background: rgba(0, 229, 255, 0.18);
+      box-shadow: 0 0 12px rgba(0, 229, 255, 0.5);
+      transform: translateY(-2px);
+    }
+
+    /* 项目卡片 */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.2rem;
+    }
+    .project {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.2rem;
+      transition: all 0.25s;
+      position: relative;
+    }
+    .project:hover {
+      border-color: var(--cyan);
+      box-shadow: 0 0 20px rgba(0, 229, 255, 0.25);
+      transform: translateY(-4px);
+    }
+    .project h3 {
+      color: var(--green);
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+    }
+    .project h3::before {
+      content: "📁 ";
+    }
+    .project p {
+      color: var(--fg);
+      font-size: 0.88rem;
+      margin-bottom: 0.8rem;
+    }
+    .project .stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 0.8rem;
+    }
+    .project .stack span {
+      font-size: 0.75rem;
+      color: var(--yellow);
+      background: rgba(255, 213, 0, 0.08);
+      padding: 0.15rem 0.5rem;
+      border-radius: 3px;
+      border: 1px solid rgba(255, 213, 0, 0.2);
+    }
+    .project .links {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.85rem;
+    }
+    .project .links a {
+      color: var(--cyan);
+      text-decoration: none;
+    }
+    .project .links a:hover {
+      text-decoration: underline;
+    }
+
+    /* GitHub 统计 */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+    .stats img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    /* 时间线 */
+    .timeline {
+      list-style: none;
+      border-left: 2px solid var(--border);
+      padding-left: 1.5rem;
+    }
+    .timeline li {
+      position: relative;
+      margin-bottom: 1.2rem;
+      font-size: 0.9rem;
+    }
+    .timeline li::before {
+      content: "";
+      position: absolute;
+      left: -1.95rem;
+      top: 0.5rem;
+      width: 10px;
+      height: 10px;
+      background: var(--green);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--green);
+    }
+    .timeline .date {
+      color: var(--purple);
+      font-size: 0.8rem;
+    }
+
+    /* 联系 */
+    .contact {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+    }
+    .contact p {
+      margin-bottom: 0.6rem;
+      font-size: 0.9rem;
+    }
+    .contact a {
+      color: var(--cyan);
+      text-decoration: none;
+    }
+    .contact a:hover {
+      text-decoration: underline;
+    }
+    .contact .cmd {
+      color: var(--green);
+    }
+
+    /* 页脚 */
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      color: var(--gray);
+      font-size: 0.8rem;
+      border-top: 1px solid var(--border);
+    }
+
+    /* 响应式 */
+    @media (max-width: 600px) {
+      .terminal-body { font-size: 0.85rem; padding: 1rem; }
+      h2 { font-size: 1.1rem; }
+      .nav-links { gap: 1rem; font-size: 0.85rem; }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="matrix"></canvas>
+
+  <div class="container">
+    <!-- 导航 -->
+    <nav>
+      <div class="logo">~/huanglii</div>
+      <ul class="nav-links">
+        <li><a href="#about">关于</a></li>
+        <li><a href="#skills">技能</a></li>
+        <li><a href="#projects">项目</a></li>
+        <li><a href="#stats">数据</a></li>
+        <li><a href="#contact">联系</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero 终端 -->
+    <div class="terminal">
+      <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-title">huanglii@github: ~</span>
+      </div>
+      <div class="terminal-body">
+        <div>
+          <span class="prompt">
+            <span class="path">huanglii@github</span><span class="sym">:</span><span class="path">~</span><span class="sym">$</span>
+          </span>
+          <span id="typed"></span><span class="cursor"></span>
+        </div>
+        <div class="hero-info" style="margin-top: 1.2rem;">
+          <p><span class="key">姓名</span>: <span class="val">huanglii</span></p>
+          <p><span class="key">身份</span>: <span class="val">全栈开发者 / 开源爱好者</span></p>
+          <p><span class="key">方向</span>: <span class="val">前端工程化 / 开发者工具 / 网络安全</span></p>
+          <p><span class="key">状态</span>: <span class="val" id="status">编码中...</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- About -->
+    <section id="about">
+      <h2>关于我</h2>
+      <div class="code-block"><span class="comment">/**
+ * 欢迎来到我的数字空间 👋
+ * 热爱代码，痴迷于底层原理与安全技术
+ */</span>
+<span class="prop">const</span> 开发者 = {
+  <span class="prop">昵称</span>: <span class="str">"huanglii"</span>,
+  <span class="prop">坐标</span>: <span class="str">"中国"</span>,
+  <span class="prop">领域</span>: [<span class="str">"Web 前端"</span>, <span class="str">"Node.js"</span>, <span class="str">"逆向工程"</span>],
+  <span class="prop">正在学习</span>: <span class="str">"Rust / 二进制安全 / 内核原理"</span>,
+  <span class="prop">开源协作</span>: <span class="num">true</span>,
+};</div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>技术栈</h2>
+      <div class="tags">
+        <span class="tag">JavaScript</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">Vue</span>
+        <span class="tag">React</span>
+        <span class="tag">Node.js</span>
+        <span class="tag">HTML/CSS</span>
+        <span class="tag">Python</span>
+        <span class="tag">Go</span>
+        <span class="tag">Rust</span>
+        <span class="tag">Git</span>
+        <span class="tag">Docker</span>
+        <span class="tag">Linux</span>
+        <span class="tag">逆向工程</span>
+        <span class="tag">渗透测试</span>
+        <span class="tag">Vite</span>
+        <span class="tag">MySQL</span>
+        <span class="tag">Redis</span>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>精选项目</h2>
+      <div class="projects">
+        <div class="project">
+          <h3>project-one</h3>
+          <p>一个用 Rust 编写的高性能命令行工具，用于批量处理代码工程。</p>
+          <div class="stack">
+            <span>Rust</span><span>CLI</span><span>高性能</span>
+          </div>
+          <div class="links">
+            <a href="https://github.com/huanglii" target="_blank"><i class="fa-brands fa-github"></i> 源码</a>
+            <a href="#" target="_blank"><i class="fa-solid fa-up-right-from-square"></i> 演示</a>
+          </div>
+        </div>
+        <div class="project">
+          <h3>project-two</h3>
+          <p>轻量级前端安全扫描工具，检测 XSS、依赖漏洞与敏感信息泄露。</p>
+          <div class="stack">
+            <span>Node.js</span><span>安全</span><span>AST</span>
+          </div>
+          <div class="links">
+            <a href="https://github.com/huanglii" target="_blank"><i class="fa-brands fa-github"></i> 源码</a>
+            <a href="#" target="_blank"><i class="fa-solid fa-up-right-from-square"></i> 演示</a>
+          </div>
+        </div>
+        <div class="project">
+          <h3>project-three</h3>
+          <p>基于 Vue 3 + Vite 的极客风个人知识库，支持 Markdown 与代码高亮。</p>
+          <div class="stack">
+            <span>Vue 3</span><span>Vite</span><span>VitePress</span>
+          </div>
+          <div class="links">
+            <a href="https://github.com/huanglii" target="_blank"><i class="fa-brands fa-github"></i> 源码</a>
+            <a href="#" target="_blank"><i class="fa-solid fa-up-right-from-square"></i> 演示</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GitHub Stats -->
+    <section id="stats">
+      <h2>GitHub 数据</h2>
+      <div class="stats">
+        <img
+          src="https://github-readme-stats.vercel.app/api?username=huanglii&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0f151d&title_color=00ff9c&icon_color=00e5ff&text_color=c8d3e0"
+          alt="GitHub Stats"
+        />
+        <img
+          src="https://github-readme-stats.vercel.app/api/top-langs/?username=huanglii&layout=compact&theme=tokyonight&hide_border=true&bg_color=0f151d&title_color=00ff9c&text_color=c8d3e0"
+          alt="Top Languages"
+        />
+      </div>
+    </section>
+
+    <!-- Timeline -->
+    <section id="timeline">
+      <h2>时间线</h2>
+      <ul class="timeline">
+        <li>
+          <div class="date">2026-08</div>
+          <div>个人主页升级为中文黑客 / 数字矩阵风格 🎨</div>
+        </li>
+        <li>
+          <div class="date">2026</div>
+          <div>深入研究 Rust 与二进制安全，发布首个安全工具</div>
+        </li>
+        <li>
+          <div class="date">2025</div>
+          <div>专注前端工程化，主导团队构建体系升级</div>
+        </li>
+        <li>
+          <div class="date">2024</div>
+          <div>第一个开源项目破百 Star，持续迭代中</div>
+        </li>
+        <li>
+          <div class="date">earlier</div>
+          <div>深耕 Web 全栈开发与 Linux 运维</div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>联系方式</h2>
+      <div class="contact">
+        <p><span class="cmd">huanglii@github:~$</span> contact --email</p>
+        <p style="padding-left: 1rem;">📧 <a href="mailto:your@email.com">your@email.com</a></p>
+        <p style="margin-top: 0.8rem;"><span class="cmd">huanglii@github:~$</span> contact --github</p>
+        <p style="padding-left: 1rem;">🐙 <a href="https://github.com/huanglii" target="_blank">github.com/huanglii</a></p>
+        <p style="margin-top: 0.8rem;"><span class="cmd">huanglii@github:~$</span> contact --blog</p>
+        <p style="padding-left: 1rem;">🌐 <a href="https://huanglii.github.io" target="_blank">huanglii.github.io</a></p>
+      </div>
+    </section>
+
+    <footer>
+      <p>© <span id="year"></span> huanglii · 用 ❤️ 与 ☕ 构建 · 代码即自由</p>
+      <p style="margin-top: 0.3rem;">// 道生一，一生二，二生三，三生万物 //</p>
+    </footer>
+  </div>
+
+  <!-- typed.js 打字效果 -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    // 终端打字机
+    new Typed("#typed", {
+      strings: [
+        "whoami",
+        "cat 自我介绍.md",
+        "ls -la 项目/",
+        "neofetch",
+        "echo '道可道，非常道；码可码，非常码'",
+        "nmap -sV 127.0.0.1",
+      ],
+      typeSpeed: 70,
+      backSpeed: 30,
+      backDelay: 1500,
+      loop: true,
+    });
+
+    // 自动年份
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // 状态切换
+    const statuses = ["编码中...", "调试中...", "逆向中...", "渗透测试中...", "重构中...", "部署上线 🚀"];
+    let i = 0;
+    setInterval(() => {
+      i = (i + 1) % statuses.length;
+      const el = document.getElementById("status");
+      el.style.opacity = 0;
+      setTimeout(() => {
+        el.textContent = statuses[i];
+        el.style.opacity = 1;
+      }, 200);
+    }, 3000);
+    document.getElementById("status").style.transition = "opacity 0.2s";
+
+    // 中文黑客风代码雨
+    const canvas = document.getElementById("matrix");
+    const ctx = canvas.getContext("2d");
+
+    function resize() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resize();
+    window.addEventListener("resize", () => {
+      resize();
+      columns = Math.floor(canvas.width / fontSize);
+      drops = Array(columns).fill(1);
+    });
+
+    // 中文黑客字符集：数字、天干地支、八卦、网安术语、编程词汇、科技概念
+    const chars = (
+      "零壹贰叁肆伍陆柒捌玖拾佰仟万亿" +
+      "甲乙丙丁戊己庚辛壬癸" +
+      "子丑寅卯辰巳午未申酉戌亥" +
+      "乾坤震巽坎离艮兑" +
+      "道法术器势" +
+      "代码程序漏洞攻防渗透加密解密编译执行网络协议数据包防火墙" +
+      "黑客极客系统终端指令算法函数变量指针堆栈线程进程内存磁盘" +
+      "二进制比特字节云服务器端客户端数据库爬虫逆向破解病毒木马" +
+      "区块链量子人工智能神经网络深度学习赛博数字矩阵虚空幽冥幻" +
+      "金木水火土风雷光电"
+    ).split("");
+
+    const fontSize = 15;
+    let columns = Math.floor(canvas.width / fontSize);
+    let drops = Array(columns).fill(1);
+
+    function draw() {
+      // 半透明背景形成拖尾效果
+      ctx.fillStyle = "rgba(10, 14, 20, 0.08)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = "#00ff9c";
+      ctx.font = `${fontSize}px "JetBrains Mono", "Sarasa Mono SC", "Microsoft YaHei Mono", "Noto Sans Mono CJK SC", monospace`;
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = chars[Math.floor(Math.random() * chars.length)];
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        // 随机重置下落位置
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+        drops[i]++;
+      }
+    }
+
+    setInterval(draw, 45);
+  </script>
+</body>
+</html>
